@@ -3,6 +3,7 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import ClubCard from '../../components/ClubCard.astro';
 import clubs from '../../data/clubs.json';
 import leagues from '../../data/leagues.json';
+import unsplashImages from '../../data/unsplash-images.json';
 
 const leagueLabels: Record<string, string> = Object.fromEntries(
   leagues.map(l => [l.slug, l.name])
@@ -56,6 +57,7 @@ const clubsByLeague = leagues.map(league => ({
               city={club.city}
               league={club.league}
               stadiumCapacity={club.stadiumCapacity}
+              imageUrl={(unsplashImages as Record<string, any>)[club.city]?.url}
             />
           ))}
         </div>

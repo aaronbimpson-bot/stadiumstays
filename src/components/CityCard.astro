@@ -5,19 +5,29 @@ interface Props {
   country: string;
   description: string;
   clubCount: number;
+  imageUrl?: string;
 }
 
-const { slug, name, country, description, clubCount } = Astro.props;
+const { slug, name, country, description, clubCount, imageUrl } = Astro.props;
 ---
 
 <a href={`/cities/${slug}/`} class="card group hover:border-zinc-700 transition-all hover:-translate-y-0.5 block">
   <!-- Image area -->
   <div class="relative aspect-[16/9] bg-gradient-to-br from-zinc-800 to-zinc-900 overflow-hidden">
-    <div class="absolute inset-0 flex items-center justify-center">
-      <svg class="w-16 h-16 text-zinc-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M3 21h18M9 21V10l3-9 3 9v11M6 21V15h12v6" />
-      </svg>
-    </div>
+    {imageUrl ? (
+      <img
+        src={imageUrl}
+        alt={`${name} cityscape`}
+        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        loading="lazy"
+      />
+    ) : (
+      <div class="absolute inset-0 flex items-center justify-center">
+        <svg class="w-16 h-16 text-zinc-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M3 21h18M9 21V10l3-9 3 9v11M6 21V15h12v6" />
+        </svg>
+      </div>
+    )}
     <div class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-zinc-900/80 to-transparent" aria-hidden="true"></div>
   </div>
 
