@@ -161,27 +161,29 @@ const hotels = [
     {heroImage && (
       <div class="mb-8 rounded-xl overflow-hidden relative">
         <img
-          src={`${heroImage.url}?w=1200&q=80`}
+          src={heroImage.url}
           alt={heroImage.altDescription}
           class="w-full h-56 sm:h-72 object-cover"
           loading="eager"
         />
-        <p class="absolute bottom-0 right-0 bg-black/60 text-white/80 text-xs px-3 py-1.5">
-          Photo by{' '}
-          <a
-            href={`https://unsplash.com/@${heroImage.photographerUsername}?utm_source=stadiumstays&utm_medium=referral`}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline hover:text-white"
-          >{heroImage.photographer}</a>
-          {' '}on{' '}
-          <a
-            href="https://unsplash.com/?utm_source=stadiumstays&utm_medium=referral"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline hover:text-white"
-          >Unsplash</a>
-        </p>
+        {heroImage.photographer && (
+          <p class="absolute bottom-0 right-0 bg-black/60 text-white/80 text-xs px-3 py-1.5">
+            Photo by{' '}
+            <a
+              href={`https://unsplash.com/@${heroImage.photographerUsername}?utm_source=stadiumstays&utm_medium=referral`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-white"
+            >{heroImage.photographer}</a>
+            {' '}on{' '}
+            <a
+              href="https://unsplash.com/?utm_source=stadiumstays&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-white"
+            >Unsplash</a>
+          </p>
+        )}
       </div>
     )}
 
