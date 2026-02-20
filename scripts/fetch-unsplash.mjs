@@ -16,8 +16,8 @@ const OUTPUT_PATH = join(__dirname, '../src/data/unsplash-images.json');
 
 const ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 if (!ACCESS_KEY) {
-  console.error('ERROR: UNSPLASH_ACCESS_KEY environment variable is not set.');
-  process.exit(1);
+  console.warn('Warning: UNSPLASH_ACCESS_KEY not set — skipping image fetch, pages will build without hero images.');
+  process.exit(0);
 }
 
 // All cities needed across UK city guide pages and European club pages.
