@@ -11,11 +11,17 @@
     "lng": -0.1084,
     "colors": ["#EF0107", "#FFFFFF"],
     "founded": 1886,
-    "description": "One of England's most successful clubs, Arsenal play at the 60,000-seat Emirates Stadium in Holloway, North London.",
+    "description": "The Emirates is one of English football's great modern cathedrals — 60,000 seats, pristine sight lines, and an atmosphere that builds beautifully on big European nights. Arriving via Arsenal tube, you're swept along Holloway Road in a river of red and white, past scarf sellers and street food stalls, into a neighbourhood that reinvents itself entirely for football. The away end is steep and loud; the home crowd can veer between thunderous and polite depending on the game, but get the right match — a close second half, a north London derby, a Champions League knockout — and the Emirates genuinely shakes.",
     "hotelSearchArea": "Arsenal, Holloway, Islington, London",
     "nearbyAreas": ["Islington", "King's Cross", "Highbury"],
-    "travelTips": "The Emirates is well served by Arsenal tube station on the Piccadilly line. Highbury & Islington station is also nearby.",
-    "matchDayTips": "Book hotels in Islington or King's Cross for easy access. Avoid driving as parking is extremely limited."
+    "travelTips": "Arsenal tube station (Piccadilly line) is a 3-minute walk from the Emirates — it doesn't get more straightforward than that. Highbury & Islington (Victoria line and Overground) is around 15 minutes on foot. Driving is strongly discouraged: match day parking restrictions cover the surrounding streets and residents-only zones extend in every direction.",
+    "matchDayTips": [
+      "The Tollington Arms on Hornsey Road is the pre-match pub of choice for many Arsenal fans — arrive at least 90 minutes before kick-off as it fills fast on big days.",
+      "Piebury Corner on Holloway Road is an Arsenal institution for pre-match food — genuinely great pies, close to the ground, and open from midday on match days.",
+      "Don't bother queuing for food inside at half-time. The concourse queues are long and the options mediocre. Eat well on Holloway Road before you go in.",
+      "For hotels, skip the immediate area and stay in King's Cross or Islington — better choice, lower prices, and only 15 minutes on the Piccadilly line.",
+      "The north London derby against Spurs is the hardest ticket in English football. For other games, away tickets are often more available than you'd expect for a club this size."
+    ]
   },
   {
     "slug": "chelsea",
@@ -29,11 +35,17 @@
     "lng": -0.1910,
     "colors": ["#034694", "#FFFFFF"],
     "founded": 1905,
-    "description": "A powerhouse of modern English football, Chelsea play at Stamford Bridge in Fulham, West London.",
+    "description": "Stamford Bridge is one of English football's most characterful venues — tight, atmospheric, and unmistakably west London. On match day the Fulham Road turns blue: flags in pub windows, replica shirts everywhere, the buzz of one of the most globally-followed clubs in the game. The ground itself is a glorious old patchwork — each stand redeveloped at different times — and that uneven quality only adds to its charm. The Shed End still roars, the Matthew Harding Stand bounces when things are going well, and arriving at Fulham Broadway tube to find you're already at the stadium is one of football's great convenient pleasures.",
     "hotelSearchArea": "Chelsea, Fulham, Earls Court, London",
     "nearbyAreas": ["Fulham", "Earls Court", "Kensington"],
-    "travelTips": "Fulham Broadway tube station (District line) is steps from the ground. West Brompton is also walkable.",
-    "matchDayTips": "The Kings Road and Fulham Broadway have great pre-match options. Book early for West London hotels on match days."
+    "travelTips": "Fulham Broadway tube station (District line) is quite literally outside the stadium gates — one of the easiest stadium arrivals in football. Buses run along Fulham Road from Hammersmith and Chelsea. From central London take the District line westbound from Earls Court or Victoria (about 20-25 minutes). Driving is not recommended on match days.",
+    "matchDayTips": [
+      "The Butcher's Hook on Fulham Road is Chelsea's best-known pre-match pub — loud, passionate, and very busy. Arrive at least 90 minutes before kick-off to get in comfortably.",
+      "After the match, avoid the Fulham Broadway tube bottleneck for at least 20 minutes. Walk south to Parsons Green for a quieter journey on a less congested service.",
+      "Fulham Road has excellent cafes and restaurants for pre-match food — the stretch between Fulham Broadway and the ground is well-catered. Earls Court has more evening options.",
+      "Stamford Bridge has active redevelopment plans — check the club website before your visit as parts of the stadium experience may change depending on when you go.",
+      "King's Road, two minutes from the ground, is one of London's most famous shopping streets — perfect for a post-match wander if you're making a full day of it."
+    ]
   },
   {
     "slug": "liverpool",
@@ -47,11 +59,17 @@
     "lng": -2.9608,
     "colors": ["#C8102E", "#FFFFFF"],
     "founded": 1892,
-    "description": "One of the most iconic clubs in world football, Liverpool play at the legendary Anfield in the north of the city.",
+    "description": "Anfield is a religion, not just a football ground. Walking down Anfield Road before kick-off, beneath the shadow of the Kop, with You'll Never Walk Alone drifting from pub speakers onto the cobblestones — there are few sporting experiences in the world to compare. The atmosphere is extraordinary, emotional, and occasionally overwhelming. The Kop — 12,500 voices in one vast end — needs to be heard to be believed. Whether you're a Liverpool fan making a pilgrimage or a neutral wanting to understand why English football has this grip on the world, Anfield delivers with every single decibel.",
     "hotelSearchArea": "Anfield, Liverpool city centre",
     "nearbyAreas": ["Liverpool City Centre", "Everton", "Kirkdale"],
-    "travelTips": "Regular shuttle buses run from the city centre on match days. The stadium is about 2 miles from Lime Street station.",
-    "matchDayTips": "Stay in the city centre and take the shuttle. The Stanley Park area fills up fast on big match days."
+    "travelTips": "There is no direct rail link to Anfield. Match day shuttle buses run from Queen Square bus station in Liverpool city centre (every 10 minutes, from 2 hours before kick-off). Merseyrail to Kirkdale station is about 20 minutes on foot. Taxis from the city centre take 10-15 minutes; Uber tends to be quicker getting away after the match than a traditional cab.",
+    "matchDayTips": [
+      "The Albert pub on Walton Breck Road is Anfield's great institution — a genuine Victorian local serving Liverpool fans for over a century. Arrive two hours early on big match days.",
+      "Take the match day shuttle bus from Queen Square bus station in the city centre — buses run every 10 minutes from two hours before kick-off. Far easier than navigating a taxi.",
+      "The Sandon pub on Oakfield Road is considered the spiritual birthplace of Liverpool FC — the club was effectively founded there. Worth a visit for history as much as the pint.",
+      "Stay in Liverpool city centre rather than near the ground. The Anfield area has very limited accommodation; the city centre puts you next to brilliant restaurants, bars and the waterfront.",
+      "The stadium tour is outstanding — one of the best in English football. If you can't get match tickets, book it in advance. The museum walk-through alone justifies the trip to Liverpool."
+    ]
   },
   {
     "slug": "manchester-city",
@@ -65,11 +83,17 @@
     "lng": -2.2004,
     "colors": ["#6CABDD", "#FFFFFF"],
     "founded": 1880,
-    "description": "Champions of England multiple times over, Manchester City play at the state-of-the-art Etihad Stadium in East Manchester.",
+    "description": "The Etihad hits you the moment you emerge from the tram. A vast, immaculate arena on the eastern edge of Manchester, purpose-built for the Premier League era, it hums with the confidence of a club that has spent the last decade redefining English football. The atmosphere took time to match the ambitions on the pitch, but City's extraordinary run of success has filled the Etihad with genuine noise. The surrounding Etihad Campus is impressive too — glass, steel and open plazas. On a big European night, with the floodlights blazing and 53,000 voices in full song, this is as good as modern football gets.",
     "hotelSearchArea": "Manchester city centre, Etihad Campus, Ancoats",
     "nearbyAreas": ["Ancoats", "Northern Quarter", "City Centre"],
-    "travelTips": "The Etihad is on the Metrolink tram network — take the Ashton line to Etihad Campus stop.",
-    "matchDayTips": "Manchester city centre has the widest hotel selection. The tram makes getting to the ground easy."
+    "travelTips": "Metrolink tram from Manchester Piccadilly to Etihad Campus (Ashton or Tameside line, around 10 minutes) is the go-to option. Buses also run from Piccadilly Gardens. The stadium is about 2 miles from the city centre — a 35-minute walk if you prefer. Driving is possible but the surrounding roads get congested after the final whistle; public transport is strongly recommended.",
+    "matchDayTips": [
+      "Drinking in the city centre and taking the tram out is the preferred approach for most City fans. The Northern Quarter, Ancoats, and Piccadilly Gardens all have excellent pre-match bar options.",
+      "Take the Metrolink Ashton or Tameside line from Manchester Piccadilly to Etihad Campus — about 10 minutes, and it drops you right at the stadium gates. Buy your tram ticket before you go.",
+      "After the match, the tram gets packed immediately. Either wait 30 minutes with a post-match beer, or walk five minutes east to Velopark stop to board at a noticeably quieter point.",
+      "The Etihad campus has a club museum and stadium tour — worthwhile even on non-match days. The City store is one of the most well-stocked club shops in the Premier League.",
+      "Manchester city centre is the right base: Ancoats, Spinningfields, and the Northern Quarter are excellent for food the night before. Treat the tram as your match day commute."
+    ]
   },
   {
     "slug": "manchester-united",
@@ -83,11 +107,17 @@
     "lng": -2.2913,
     "colors": ["#DA291C", "#FFFFFF"],
     "founded": 1878,
-    "description": "The most famous club in the world, Manchester United play at Old Trafford — the Theatre of Dreams — in Trafford, Greater Manchester.",
+    "description": "Old Trafford. The Theatre of Dreams. Walking Sir Matt Busby Way on match day — past the Busby, Law and Best statues, through a thick river of red — is one of English football's great ceremonial experiences. The stadium is vast and imposing: 74,000 seats, three enormous stands, the Stretford End massed at one end. On European knockout nights the noise is extraordinary and the history presses down from the rafters. Even in quieter league games, there's a frisson here you can't quite shake — a sense that this ground has witnessed so much that it carries the weight of the sport itself.",
     "hotelSearchArea": "Old Trafford, Salford, Manchester city centre",
     "nearbyAreas": ["Salford", "Stretford", "City Centre"],
-    "travelTips": "Old Trafford Metrolink stop is right next to the ground. From Manchester Piccadilly, trains run to Deansgate then tram.",
-    "matchDayTips": "Salford Quays hotels are well-positioned. The Media City area is modern with good transport links."
+    "travelTips": "Old Trafford Metrolink stop (Altrincham line) is right next to the stadium — about 15 minutes from Manchester Piccadilly. Regular bus services run along Chester Road from the city centre. The stadium is 3 miles from central Manchester. Match day driving is not advisable: traffic backs up significantly and parking is scarce.",
+    "matchDayTips": [
+      "The Bishop Blaize on Chester Road is one of the most famous United pubs — arrive early as it gets very busy. The Tollgate nearby is another solid option closer to the turnstiles.",
+      "Old Trafford (the area) is light on good restaurants. Eat in Manchester city centre before making your way out — the Northern Quarter and Ancoats are both excellent options.",
+      "Take the Metrolink Altrincham line from Manchester Piccadilly or Deansgate to Old Trafford stop — the tram runs right to the stadium entrance and takes about 15 minutes.",
+      "After the match, Old Trafford congestion is severe. Walk back toward Salford Quays and board the tram at MediaCityUK, where it's much quieter. Or stay put for 40 minutes until the crowds clear.",
+      "Salford Quays hotels — the Lowry and Premier Inn MediaCity are popular — are well-positioned for both Old Trafford and the city centre. The tram connection from MediaCityUK is excellent."
+    ]
   },
   {
     "slug": "tottenham-hotspur",
@@ -101,11 +131,17 @@
     "lng": -0.0665,
     "colors": ["#132257", "#FFFFFF"],
     "founded": 1882,
-    "description": "Spurs play at their stunning new stadium in N17, one of the finest football arenas in the world.",
+    "description": "Tottenham's stadium — opened in 2019 — is a genuine architectural marvel, and one of the best reasons to visit English football right now. The largest club stadium in London seats 62,850, with sight lines so steep the upper tier feels suspended directly over the pitch. The south stand — a single continuous tier of 17,500 — creates a wall of noise unlike anything else in the Premier League. There's also a retractable pitch, a rooftop walk, and a microbrewery inside the building. Whatever your allegiance, this is a ground that makes you proud football can produce something this ambitious. Coming here once is not enough.",
     "hotelSearchArea": "Tottenham, Wood Green, Edmonton, North London",
     "nearbyAreas": ["Wood Green", "Edmonton", "Enfield"],
-    "travelTips": "Seven Sisters tube (Victoria line) then a short bus ride, or White Hart Lane overground station is walkable.",
-    "matchDayTips": "For bigger hotel choice, stay in the West End or King's Cross and use the tube. Local options are limited."
+    "travelTips": "White Hart Lane rail station (London Overground from Liverpool Street via Stratford) is a 5-minute walk — the best option from central and east London. Seven Sisters tube (Victoria line) plus the 149 or 259 bus, or a 25-minute walk along Tottenham High Road. No match day parking available anywhere near the ground.",
+    "matchDayTips": [
+      "The Bricklayers Arms on Tottenham High Road is a traditional Spurs local with good atmosphere. The Antwerp Arms in Bruce Grove is slightly more relaxed and worth the 10-minute walk.",
+      "White Hart Lane rail station (Overground from Liverpool Street via Stratford) is a 5-minute walk from the stadium — often overlooked but by far the easiest route from east and central London.",
+      "Many Spurs fans drink in the West End, King's Cross, or London Bridge first, then head north. The Overground from Seven Sisters makes this entirely practical and comfortable.",
+      "Don't drive — there is no match day parking near the stadium and the surrounding Tottenham streets grid to a halt after the final whistle. Even Ubers struggle to get through.",
+      "Tottenham High Road has fast food options, but Bruce Grove has better independent restaurants. For a proper meal, eat in central London before heading north for the match."
+    ]
   },
   {
     "slug": "newcastle-united",
@@ -119,11 +155,17 @@
     "lng": -1.6218,
     "colors": ["#241F20", "#FFFFFF"],
     "founded": 1892,
-    "description": "St. James' Park sits right in the heart of Newcastle city centre — one of the most atmospheric grounds in England.",
+    "description": "St. James' Park is one of English football's most visceral experiences. The ground rears up from the city centre like a cathedral — there is simply no preparing for how enormous it looks against the Newcastle skyline the first time you see it. Walk up from the Bigg Market on match day and the noise starts long before you reach the gates. Newcastle fans are among the most passionate in the country — 52,000 of them, in a city-centre ground, roaring for a club that means everything to this community. Even in difficult seasons, the atmosphere is extraordinary. St. James' delivers every single time.",
     "hotelSearchArea": "Newcastle city centre, Jesmond",
     "nearbyAreas": ["Jesmond", "City Centre", "Quayside"],
-    "travelTips": "St James' metro station (Yellow line) is right outside the ground. From Newcastle Central Station it's a 15-min walk.",
-    "matchDayTips": "City centre hotels are ideal — you can walk to the stadium. The Quayside has great pre-match bars and restaurants."
+    "travelTips": "St James' metro station (Tyne and Wear Metro, Yellow Line) is directly outside the ground — the quickest and most painless stadium arrival outside London. Newcastle Central station is 12 minutes on foot through the city centre. Driving is possible but city-centre parking fills quickly on match days; public transport is far more practical.",
+    "matchDayTips": [
+      "The Strawberry on Strawberry Place is probably the most famous match day pub in English football — right outside the stadium gates, always packed, absolutely electric. Get there early.",
+      "Grey Street and the Bigg Market have brilliant bars and restaurants for pre-match. Newcastle is a genuinely great night out — plan to stay for the evening and explore the city properly.",
+      "St James' metro station (Tyne and Wear Metro, Yellow Line) is right outside the stadium. Trains run frequently from Newcastle Central station (3 minutes) and across the whole network.",
+      "The ground is walkable from Newcastle Central Station in about 12 minutes uphill through the city centre — a lovely route if you want to take in the atmosphere building around you.",
+      "City centre hotels are ideal — you can walk to the stadium from virtually anywhere in central Newcastle. Monument, Grey Street and the Quayside are all excellent areas to stay."
+    ]
   },
   {
     "slug": "aston-villa",
@@ -137,11 +179,17 @@
     "lng": -1.8847,
     "colors": ["#95BFE5", "#770020"],
     "founded": 1874,
-    "description": "One of England's founding clubs, Aston Villa play at the iconic Villa Park in the Aston area of Birmingham.",
+    "description": "Villa Park is one of English football's grandest traditional grounds — a stadium that has hosted FA Cup semi-finals, European Cup nights, and some of the most dramatic moments in the game's history. The Holte End, which once held 20,000 standing fans and still commands 13,500 seats today, remains among the great home ends in England: loud, colourful, and intimidating. The surrounding Aston neighbourhood has a lived-in feel — corner pubs, chippy shops, streets that have been doing this for 150 years. This is proper traditional English football. Slightly scruffy in the best possible way, and deeply, authentically passionate.",
     "hotelSearchArea": "Aston, Birmingham city centre",
     "nearbyAreas": ["Aston", "City Centre", "Jewellery Quarter"],
-    "travelTips": "Witton train station is right next to Villa Park. From Birmingham New Street it's a short train ride.",
-    "matchDayTips": "Birmingham city centre has the best hotel selection. Witton station makes getting to the ground straightforward."
+    "travelTips": "Witton station (Cross-City line from Birmingham New Street, about 8 minutes) is right next to the ground. Aston station is about 15 minutes on foot. Buses run from Birmingham city centre on match days. Driving is difficult with limited parking near the ground; the train is strongly recommended.",
+    "matchDayTips": [
+      "The Aston Hotel on Trinity Road and the Witton Arms near Witton station are the go-to pre-match pubs close to the ground. Both get very busy — arrive 90 minutes before kick-off.",
+      "Birmingham city centre is the best base for food and a proper evening out. The Bullring area, Brindleyplace, and the Jewellery Quarter all have excellent restaurants and bars worth exploring.",
+      "Witton train station is right next to Villa Park — trains from Birmingham New Street take around 8 minutes on the Cross-City line. One of the most straightforward stadium arrivals in the Midlands.",
+      "The Aston area around Villa Park has limited restaurants — eat a proper meal in Birmingham city centre before heading out, rather than relying on options near the ground.",
+      "The Holte End is extraordinary on big match days. If you can get tickets near that end as a neutral, the atmosphere alone makes the entire trip worthwhile."
+    ]
   },
   {
     "slug": "west-ham-united",
@@ -155,11 +203,17 @@
     "lng": -0.0164,
     "colors": ["#7A263A", "#1BB1E7"],
     "founded": 1895,
-    "description": "West Ham play at the London Stadium in the Queen Elizabeth Olympic Park, Stratford — a former Olympic venue.",
+    "description": "The London Stadium is a genuine statement of scale — 60,000 seats inside the Queen Elizabeth Olympic Park, all glass and steel and wide open spaces. It took time for West Ham's famously raucous east London atmosphere to fill a venue designed for the Olympics rather than football, but the club has worked hard to make it feel like home. On big nights the noise builds and the place genuinely shakes. The Olympic Park itself is a brilliant setting: arrive early, wander the park, grab street food from the market stalls, and take in an architecture that belongs to an entirely different world from Upton Park.",
     "hotelSearchArea": "Stratford, Westfield, East London",
     "nearbyAreas": ["Stratford", "Westfield", "Hackney Wick"],
-    "travelTips": "Stratford station (Elizabeth line, Central line, DLR, Overground) is a 10-minute walk from the stadium.",
-    "matchDayTips": "Stratford has good hotel options near Westfield. The Elizabeth line makes central London hotels very accessible too."
+    "travelTips": "Stratford station (Elizabeth line, Central line, DLR, Overground) is 7 minutes' walk from the stadium through the Olympic Park. From Liverpool Street, the Elizabeth line gets you to Stratford in 7 minutes. Driving is not recommended on match days.",
+    "matchDayTips": [
+      "The King Edward VII pub on Broadway in Stratford has a great West Ham atmosphere before matches. The East Village area and Westfield itself also have plenty of options for food and a drink.",
+      "Westfield Stratford City, right next to the station, has essentially every restaurant chain you could want — and it's vastly better value than buying food inside the ground.",
+      "Stratford station — Elizabeth line, Central line, DLR, and Overground — is 7 minutes' walk from the stadium. From Liverpool Street it's 7 minutes on the Elizabeth line. Superb connections.",
+      "Allow extra time after the match. Post-match crowds at Stratford station can be significant — give yourself 40-45 minutes and consider grabbing a post-match drink rather than rushing out.",
+      "Hotels in Stratford are good value compared to central London, and the Elizabeth line means you're 15 minutes from the West End. A genuinely practical and affordable base for visiting London."
+    ]
   },
   {
     "slug": "brighton",
@@ -173,11 +227,17 @@
     "lng": -0.0831,
     "colors": ["#0057B8", "#FFFFFF"],
     "founded": 1901,
-    "description": "Brighton play at the Amex Stadium in Falmer on the outskirts of the city, set in the stunning South Downs.",
+    "description": "The Amex sits in the South Downs like it was always meant to be there — a modern, purpose-built arena with chalk hills rising behind it, sea breezes off the Channel, and 32,000 fans who make far more noise than you'd expect. Brighton supporters are vocal, knowledgeable and genuinely passionate. The ground has developed a wonderful atmosphere since the club moved here in 2011. And the broader context makes it special: you can be on Brighton seafront 15 minutes after the final whistle. Football in a seaside city, surrounded by beautiful countryside, is a combination worth seeking out wherever you're travelling from.",
     "hotelSearchArea": "Brighton city centre, Hove, Falmer",
     "nearbyAreas": ["Brighton City Centre", "Hove", "Lewes"],
-    "travelTips": "Falmer train station is right next to the Amex. Direct trains from Brighton station run on match days.",
-    "matchDayTips": "Brighton seafront hotels are wonderful for a weekend trip. The Lanes area is great for pre-match food."
+    "travelTips": "Falmer station is right next to the stadium — trains run from Brighton station every few minutes on match days (8 minutes). Direct services also arrive from Lewes and Eastbourne. Driving is possible with advance car park booking, but the single-road approach causes significant post-match congestion. The train is almost always the better choice.",
+    "matchDayTips": [
+      "The best approach is to eat and drink in Brighton's Lanes or on the seafront, then take the 8-minute train to Falmer — far better than staying near the stadium, where options are limited.",
+      "Falmer station is right next to the Amex — trains from Brighton run every few minutes on match days. Buy your ticket in advance to avoid queuing at the machine on the way back.",
+      "Brighton seafront hotels are excellent for a weekend trip — combine a match with a proper seaside break. The Grand Hotel and the seafront area generally are well worth the stay.",
+      "Don't drive to the Amex unless you have to. The single road into Falmer backs up badly after the match and takes a long time to clear. Trains are genuinely far easier.",
+      "The Lanes in central Brighton is perfect for pre-match food — independent restaurants, great coffee, brilliant atmosphere. Allow an hour to eat before catching the 8-minute train to Falmer."
+    ]
   },
   {
     "slug": "everton",
@@ -191,11 +251,17 @@
     "lng": -2.9662,
     "colors": ["#003399", "#FFFFFF"],
     "founded": 1878,
-    "description": "The Blues play at the historic Goodison Park — one of England's oldest major football grounds — in Walton, Liverpool.",
+    "description": "Goodison Park is pure old English football — a ground that oozes history from every brick and girder. Four stands, built across four different eras, create a cramped, noisy bowl that feels genuinely lived-in. The Gwladys Street End is among the most atmospheric home ends in England, roaring behind the goal, packed with Everton's most devoted supporters. Walk to Goodison through the terrace streets of north Liverpool and you understand what people mean when they talk about football's working-class roots — this is unpolished, authentic, and utterly irreplaceable. Goodison may be ageing, but the experience it delivers is completely ageless.",
     "hotelSearchArea": "Liverpool city centre, Everton, Walton",
     "nearbyAreas": ["Walton", "Stanley Park", "City Centre"],
-    "travelTips": "No direct rail to Goodison. Buses run from Liverpool city centre. Kirkdale station (Merseyrail) is walkable.",
-    "matchDayTips": "Liverpool city centre is the best base. Everton and Liverpool stadiums are close together near Stanley Park."
+    "travelTips": "There is no direct rail or metro link to Goodison Park. Match day buses run from Liverpool city centre. Kirkdale Merseyrail station is about 20 minutes on foot. Taxis from the city centre take around 10-15 minutes depending on traffic. The ground is roughly 3 miles north of Liverpool Lime Street station.",
+    "matchDayTips": [
+      "The Winslow Hotel near the ground and the Spellow pub on County Road are both well-liked pre-match locals. Arrive early — the area gets congested well before kick-off.",
+      "Liverpool city centre is the best base, full stop — brilliant hotels, restaurants and bars. Match day shuttle buses run to Goodison from the city centre, making the trip straightforward.",
+      "There is no direct train or metro to Goodison. Buses run from the city centre, and Kirkdale Merseyrail station is about 20 minutes on foot. Taxis and Ubers are practical alternatives.",
+      "Stanley Park connects Goodison with Anfield — both stadiums are a short walk apart via the park. An interesting walk for any football fan, even on a non-match day.",
+      "Liverpool as a city is outstanding — the waterfront, the museums, the music venues and the food scene make it a proper destination beyond the football. Build a full weekend around the visit."
+    ]
   },
   {
     "slug": "fulham",
@@ -209,11 +275,17 @@
     "lng": -0.2217,
     "colors": ["#CC0000", "#FFFFFF"],
     "founded": 1879,
-    "description": "Fulham play at the charming riverside Craven Cottage on the banks of the Thames in West London.",
+    "description": "Craven Cottage is English football's great hidden gem — a Victorian riverside ground that feels like it belongs to a gentler era of the sport. Walk from Putney Bridge tube through Bishop's Park along the Thames path, the river to your right, planes descending to Heathrow overhead, the old Cottage peeking over the grandstand ahead. The Cottage itself is an actual building in the corner of the pitch — unique in English football. The atmosphere is intimate, warm, and genuinely welcoming. Craven Cottage is the answer to anyone who thinks football grounds all feel the same now. This one doesn't, and long may it stay that way.",
     "hotelSearchArea": "Fulham, Putney, Hammersmith, West London",
     "nearbyAreas": ["Putney", "Hammersmith", "Earls Court"],
-    "travelTips": "Putney Bridge tube (District line) is the closest station, about 10 minutes walk. Buses also serve the area.",
-    "matchDayTips": "The riverside walk to Craven Cottage is one of football's great pre-match experiences. Arrive early to enjoy it."
+    "travelTips": "Putney Bridge tube station (District line) is a 12-minute walk through Bishop's Park — the classic and most enjoyable route to the ground. Alternatively, Hammersmith station is about 15-20 minutes on foot along the river. No match day parking near the ground. Thames Clipper river services from central London sometimes operate on match days — worth checking for a memorable arrival.",
+    "matchDayTips": [
+      "The pre-match walk along the Thames path from Putney Bridge is one of English football's great approaches — allow 15 minutes through Bishop's Park and take it slowly. It's genuinely beautiful.",
+      "The Eight Bells pub on Fulham High Street and the Temperance on King Street in Hammersmith are both well-regarded pre-match options: friendly, not too heaving, and in a lovely part of London.",
+      "Putney Bridge tube station (District line) is the closest — about a 12-minute walk through the park. Parsons Green is a similar distance from the other direction, useful for the journey back.",
+      "After the match, avoid the Hammersmith Broadway area — bus and tube queues get very long. Walk back through Bishop's Park to Putney Bridge for a much calmer journey home.",
+      "Craven Cottage's capacity is the smallest in the Premier League — tickets for big games sell out early. Book well in advance. Away fans consistently rate it one of the best grounds to visit in the league."
+    ]
   },
   {
     "slug": "celtic",
