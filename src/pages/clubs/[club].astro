@@ -319,7 +319,18 @@ const hotels = [
               </svg>
               Match Day Tips
             </h3>
-            <p class="text-zinc-400 text-sm leading-relaxed">{club.matchDayTips}</p>
+            {Array.isArray(club.matchDayTips) ? (
+              <ul class="space-y-3">
+                {club.matchDayTips.map((tip: string) => (
+                  <li class="flex gap-2.5 text-zinc-400 text-sm leading-relaxed">
+                    <span class="text-emerald-400 font-bold flex-shrink-0 mt-0.5">•</span>
+                    <span>{tip}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p class="text-zinc-400 text-sm leading-relaxed">{club.matchDayTips}</p>
+            )}
           </div>
         )}
 
