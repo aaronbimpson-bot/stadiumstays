@@ -13,7 +13,7 @@ export function getStaticPaths() {
   }));
 
   const european = (clubsEurope as Record<string, any>[])
-    .filter((club) => club.leagueSlug === 'la-liga')
+    .filter((club) => club.leagueSlug === 'la-liga' || club.leagueSlug === 'serie-a')
     .map((club) => ({
       params: { club: club.slug },
       props: { club, isEuropean: true },
