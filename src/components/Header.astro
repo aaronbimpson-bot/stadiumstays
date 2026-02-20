@@ -1,0 +1,111 @@
+---
+const navLinks = [
+  { href: '/leagues/', label: 'Leagues' },
+  { href: '/clubs/', label: 'Clubs' },
+  { href: '/cities/', label: 'Cities' },
+  { href: '/about/', label: 'About' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800">
+  <div class="container-wide">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2.5 group" aria-label="StadiumStays home">
+        <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-400 transition-colors">
+          <svg class="w-5 h-5 text-zinc-950" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.58L19 9l-8 8z"/>
+          </svg>
+        </div>
+        <span class="font-bold text-lg text-white">Stadium<span class="text-emerald-400">Stays</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
+        {navLinks.map(({ href, label }) => {
+          const isActive = currentPath.startsWith(href);
+          return (
+            <a
+              href={href}
+              class:list={[
+                'px-3 py-2 rounded-md text-sm font-medium transition-colors',
+                isActive
+                  ? 'text-white bg-zinc-800'
+                  : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
+              ]}
+            >
+              {label}
+            </a>
+          );
+        })}
+      </nav>
+
+      <!-- CTA -->
+      <a href="/clubs/" class="hidden md:inline-flex btn-primary text-sm">
+        Find Hotels
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
+        aria-label="Toggle mobile menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg id="menu-icon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden border-t border-zinc-800 bg-zinc-950"
+  >
+    <nav class="container-wide py-3 flex flex-col gap-1" aria-label="Mobile navigation">
+      {navLinks.map(({ href, label }) => {
+        const isActive = currentPath.startsWith(href);
+        return (
+          <a
+            href={href}
+            class:list={[
+              'px-3 py-2.5 rounded-md text-sm font-medium transition-colors',
+              isActive
+                ? 'text-white bg-zinc-800'
+                : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
+            ]}
+          >
+            {label}
+          </a>
+        );
+      })}
+      <a href="/clubs/" class="mt-2 btn-primary justify-center">Find Hotels</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden', isOpen);
+    menuIcon?.classList.toggle('hidden', !isOpen);
+    closeIcon?.classList.toggle('hidden', isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+</script>

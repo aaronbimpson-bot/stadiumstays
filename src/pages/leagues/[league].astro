@@ -1,0 +1,97 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import ClubCard from '../../components/ClubCard.astro';
+import leagues from '../../data/leagues.json';
+import clubs from '../../data/clubs.json';
+
+export function getStaticPaths() {
+  return leagues.map((league) => ({
+    params: { league: league.slug },
+    props: { league },
+  }));
+}
+
+const { league } = Astro.props;
+const leagueClubs = clubs.filter((c) => c.league === league.slug);
+---
+
+<PageLayout
+  title={`${league.name} — Hotels Near Every Stadium`}
+  description={`Find hotels near every ${league.name} stadium. Compare accommodation options for all ${league.teams} clubs in the ${league.season} season.`}
+>
+  <div class="container-wide py-12 lg:py-16">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-sm text-zinc-500 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-zinc-300 transition-colors">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/leagues/" class="hover:text-zinc-300 transition-colors">Leagues</a>
+      <span aria-hidden="true">/</span>
+      <span class="text-zinc-300">{league.name}</span>
+    </nav>
+
+    <!-- Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">{league.country}</span>
+        <span class="badge bg-zinc-800 text-zinc-400 border border-zinc-700/50">{league.season}</span>
+      </div>
+      <h1 class="text-3xl lg:text-4xl font-bold text-white mb-3">{league.name}</h1>
+      <p class="text-zinc-400 text-lg leading-relaxed max-w-3xl">{league.description}</p>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="grid grid-cols-3 gap-4 mb-12 p-5 rounded-xl bg-zinc-900 border border-zinc-800">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-white">{league.teams}</div>
+        <div class="text-zinc-500 text-sm">Teams</div>
+      </div>
+      <div class="text-center border-x border-zinc-800">
+        <div class="text-2xl font-bold text-white">{leagueClubs.length}</div>
+        <div class="text-zinc-500 text-sm">Clubs listed</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-emerald-400">1000s</div>
+        <div class="text-zinc-500 text-sm">Hotels nearby</div>
+      </div>
+    </div>
+
+    <!-- Clubs grid -->
+    {leagueClubs.length > 0 ? (
+      <>
+        <h2 class="text-xl font-bold text-white mb-6">
+          {league.name} Clubs ({leagueClubs.length})
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+          {leagueClubs.map((club) => (
+            <ClubCard
+              slug={club.slug}
+              name={club.name}
+              stadium={club.stadium}
+              city={club.city}
+              league={club.league}
+              stadiumCapacity={club.stadiumCapacity}
+            />
+          ))}
+        </div>
+      </>
+    ) : (
+      <div class="text-center py-16 text-zinc-500">
+        <p>Clubs for this league are coming soon.</p>
+      </div>
+    )}
+
+    <!-- CTA -->
+    <div class="mt-16 p-8 rounded-2xl bg-emerald-500/5 border border-emerald-500/20 text-center">
+      <h3 class="text-xl font-bold text-white mb-2">Planning an away trip?</h3>
+      <p class="text-zinc-400 text-sm mb-6 max-w-md mx-auto">
+        Browse our city guides for tips on transport, best areas to stay, and things to do around match day.
+      </p>
+      <a href="/cities/" class="btn-primary">
+        Explore City Guides
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</PageLayout>

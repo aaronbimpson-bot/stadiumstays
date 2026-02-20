@@ -1,0 +1,113 @@
+---
+const currentYear = new Date().getFullYear();
+
+const footerLinks = {
+  leagues: [
+    { href: '/leagues/premier-league/', label: 'Premier League' },
+    { href: '/leagues/championship/', label: 'Championship' },
+    { href: '/leagues/league-one/', label: 'League One' },
+    { href: '/leagues/scottish-premiership/', label: 'Scottish Premiership' },
+  ],
+  clubs: [
+    { href: '/clubs/arsenal/', label: 'Arsenal' },
+    { href: '/clubs/manchester-city/', label: 'Manchester City' },
+    { href: '/clubs/liverpool/', label: 'Liverpool' },
+    { href: '/clubs/chelsea/', label: 'Chelsea' },
+    { href: '/clubs/', label: 'View all clubs →' },
+  ],
+  cities: [
+    { href: '/cities/london/', label: 'London' },
+    { href: '/cities/manchester/', label: 'Manchester' },
+    { href: '/cities/liverpool/', label: 'Liverpool' },
+    { href: '/cities/glasgow/', label: 'Glasgow' },
+    { href: '/cities/', label: 'View all cities →' },
+  ],
+  company: [
+    { href: '/about/', label: 'About' },
+    { href: '/contact/', label: 'Contact' },
+    { href: '/privacy/', label: 'Privacy Policy' },
+    { href: '/terms/', label: 'Terms of Use' },
+  ],
+};
+---
+
+<footer class="bg-zinc-900 border-t border-zinc-800 mt-20">
+  <div class="container-wide py-12 lg:py-16">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+      <!-- Brand -->
+      <div class="col-span-2 md:col-span-1">
+        <a href="/" class="flex items-center gap-2 mb-4 group" aria-label="StadiumStays home">
+          <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-400 transition-colors">
+            <svg class="w-5 h-5 text-zinc-950" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.58L19 9l-8 8z"/>
+            </svg>
+          </div>
+          <span class="font-bold text-white">Stadium<span class="text-emerald-400">Stays</span></span>
+        </a>
+        <p class="text-zinc-500 text-sm leading-relaxed">
+          Find the best hotels near football stadiums across the UK.
+        </p>
+        <p class="text-zinc-600 text-xs mt-4">
+          StadiumStays is an affiliate partner. We may earn a commission on bookings made through our links.
+        </p>
+      </div>
+
+      <!-- Leagues -->
+      <div>
+        <h3 class="text-white font-semibold text-sm mb-3">Leagues</h3>
+        <ul class="space-y-2">
+          {footerLinks.leagues.map(({ href, label }) => (
+            <li>
+              <a href={href} class="text-zinc-500 hover:text-zinc-200 text-sm transition-colors">{label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Clubs -->
+      <div>
+        <h3 class="text-white font-semibold text-sm mb-3">Popular Clubs</h3>
+        <ul class="space-y-2">
+          {footerLinks.clubs.map(({ href, label }) => (
+            <li>
+              <a href={href} class="text-zinc-500 hover:text-zinc-200 text-sm transition-colors">{label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Cities -->
+      <div>
+        <h3 class="text-white font-semibold text-sm mb-3">Cities</h3>
+        <ul class="space-y-2">
+          {footerLinks.cities.map(({ href, label }) => (
+            <li>
+              <a href={href} class="text-zinc-500 hover:text-zinc-200 text-sm transition-colors">{label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="text-white font-semibold text-sm mb-3">Company</h3>
+        <ul class="space-y-2">
+          {footerLinks.company.map(({ href, label }) => (
+            <li>
+              <a href={href} class="text-zinc-500 hover:text-zinc-200 text-sm transition-colors">{label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10 pt-8 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-zinc-600 text-sm">
+        &copy; {currentYear} StadiumStays. All rights reserved.
+      </p>
+      <p class="text-zinc-700 text-xs">
+        Hotel prices and availability are subject to change. All bookings subject to supplier terms.
+      </p>
+    </div>
+  </div>
+</footer>

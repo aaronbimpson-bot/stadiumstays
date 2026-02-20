@@ -1,0 +1,66 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonicalUrl?: string;
+  noIndex?: boolean;
+}
+
+const {
+  title,
+  description = 'Find the best hotels near football stadiums across the UK. StadiumStays helps fans book accommodation close to the ground for every match.',
+  image = '/images/og-default.jpg',
+  canonicalUrl,
+  noIndex = false,
+} = Astro.props;
+
+const siteUrl = 'https://stadiumstays.com';
+const canonical = canonicalUrl ?? new URL(Astro.url.pathname, siteUrl).href;
+const fullTitle = title.includes('StadiumStays') ? title : `${title} | StadiumStays`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${siteUrl}${image}`} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}${image}`} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <title>{fullTitle}</title>
+
+    <!-- Preconnect for Google Fonts (loaded in CSS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <slot name="header">
+      <slot name="nav" />
+    </slot>
+    <main>
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
+</html>

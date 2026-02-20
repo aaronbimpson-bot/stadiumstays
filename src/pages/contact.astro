@@ -1,0 +1,107 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Contact StadiumStays"
+  description="Get in touch with StadiumStays. Questions, suggestions, or partnership enquiries — we'd love to hear from you."
+>
+  <div class="container-narrow py-12 lg:py-16">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-sm text-zinc-500 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-zinc-300 transition-colors">Home</a>
+      <span aria-hidden="true">/</span>
+      <span class="text-zinc-300">Contact</span>
+    </nav>
+
+    <h1 class="text-3xl lg:text-4xl font-bold text-white mb-4">Contact Us</h1>
+    <p class="text-zinc-400 mb-10">
+      Got a question, found something wrong, or want to work with us? Drop us a message below.
+    </p>
+
+    <div class="grid lg:grid-cols-3 gap-10">
+      <div class="lg:col-span-2">
+        <form
+          action="https://formspree.io/f/placeholder"
+          method="POST"
+          class="space-y-5"
+        >
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="name" class="block text-sm font-medium text-zinc-300 mb-1.5">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your name"
+                class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-zinc-300 mb-1.5">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="you@example.com"
+                class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="subject" class="block text-sm font-medium text-zinc-300 mb-1.5">Subject</label>
+            <select
+              id="subject"
+              name="subject"
+              class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+            >
+              <option value="">Select a topic</option>
+              <option value="general">General enquiry</option>
+              <option value="error">Report an error</option>
+              <option value="suggestion">Club/city suggestion</option>
+              <option value="partnership">Partnership / advertising</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-zinc-300 mb-1.5">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              required
+              placeholder="Your message..."
+              class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors resize-none"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary w-full justify-center py-3">
+            Send Message
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <aside class="space-y-5">
+        <div class="card p-5">
+          <h3 class="font-semibold text-white text-sm mb-2">Response Time</h3>
+          <p class="text-zinc-400 text-sm">We aim to reply to all messages within 2 business days.</p>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-semibold text-white text-sm mb-2">Partnerships</h3>
+          <p class="text-zinc-400 text-sm">Interested in working with us? Select "Partnership" above and tell us about your proposal.</p>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-semibold text-white text-sm mb-2">Missing a Club?</h3>
+          <p class="text-zinc-400 text-sm">We're always expanding our coverage. Let us know which clubs or cities you'd like to see added.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</PageLayout>

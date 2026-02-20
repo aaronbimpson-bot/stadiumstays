@@ -1,0 +1,68 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+const lastUpdated = 'February 2026';
+---
+
+<PageLayout
+  title="Terms of Use — StadiumStays"
+  description="StadiumStays terms of use. Your agreement with us when using this website."
+  noIndex={true}
+>
+  <div class="container-narrow py-12 lg:py-16">
+    <nav class="flex items-center gap-2 text-sm text-zinc-500 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-zinc-300 transition-colors">Home</a>
+      <span aria-hidden="true">/</span>
+      <span class="text-zinc-300">Terms of Use</span>
+    </nav>
+
+    <h1 class="text-3xl lg:text-4xl font-bold text-white mb-2">Terms of Use</h1>
+    <p class="text-zinc-500 text-sm mb-10">Last updated: {lastUpdated}</p>
+
+    <div class="space-y-8 text-zinc-400 text-sm leading-relaxed">
+      <section>
+        <h2 class="text-lg font-semibold text-white mb-3">1. Acceptance of Terms</h2>
+        <p>By accessing and using StadiumStays (stadiumstays.com), you accept these Terms of Use in full. If you disagree with these terms, please do not use this website.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-white mb-3">2. Nature of the Service</h2>
+        <p>StadiumStays is a hotel comparison and affiliate website. We provide information about hotels near football stadiums in the UK to assist fans in planning their trips. We do not operate as a hotel booking agent ourselves — all bookings are made directly with third-party providers.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-white mb-3">3. Accuracy of Information</h2>
+        <p>We endeavour to keep all information on this site accurate and up to date. However, we cannot guarantee the accuracy of hotel prices, availability, distances, or stadium information. All hotel prices shown are indicative and subject to change. Always verify details directly with the hotel or booking platform before making a reservation.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-white mb-3">4. Affiliate Links</h2>
+        <p>StadiumStays contains affiliate links to hotel booking platforms. When you click these links and make a booking, we may receive a commission at no additional cost to you. These commercial relationships do not influence our editorial recommendations.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-white mb-3">5. Limitation of Liability</h2>
+        <p>StadiumStays is provided on an "as is" basis. To the fullest extent permitted by law, we exclude all liability for any loss or damage arising from your use of this website or from bookings made through third-party platforms linked from this site.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-white mb-3">6. Intellectual Property</h2>
+        <p>All content on StadiumStays — including text, design, and code — is owned by StadiumStays unless otherwise stated. You may not reproduce or redistribute content without our permission. Club names, crests, and league branding are the property of their respective owners.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-white mb-3">7. Changes to These Terms</h2>
+        <p>We reserve the right to update these terms at any time. Continued use of the website after changes constitutes acceptance of the updated terms.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-white mb-3">8. Governing Law</h2>
+        <p>These terms are governed by the laws of England and Wales.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold text-white mb-3">9. Contact</h2>
+        <p>Questions about these terms? <a href="/contact/" class="text-emerald-400 hover:underline">Contact us here</a>.</p>
+      </section>
+    </div>
+  </div>
+</PageLayout>

@@ -1,0 +1,171 @@
+[
+  {
+    "slug": "london",
+    "name": "London",
+    "country": "England",
+    "description": "The world's greatest football city, with six Premier League clubs and countless lower-league sides spread across its boroughs.",
+    "longDescription": "London is unlike any other football city in the world. From the Emirates in North London to Craven Cottage by the Thames, from Stamford Bridge in Fulham to the London Stadium in Stratford, the capital offers football fans an unparalleled choice of clubs, stadiums, and matchday experiences. With world-class transport links, iconic landmarks, and some of Europe's finest hotels and restaurants, a football trip to London is genuinely special.",
+    "heroImage": "/images/cities/london.jpg",
+    "clubs": ["arsenal", "chelsea", "tottenham-hotspur", "west-ham-united", "fulham", "crystal-palace"],
+    "airports": ["Heathrow (LHR)", "Gatwick (LGW)", "Stansted (STN)", "City (LCY)"],
+    "mainStation": "London Euston / King's Cross / Paddington",
+    "highlights": ["Premier League football", "Historic stadiums", "World-class restaurants", "Museums and culture", "The Thames"],
+    "bestAreas": [
+      { "name": "King's Cross", "description": "Central location with easy tube access to Arsenal and Spurs. Great transport hub." },
+      { "name": "Westfield Stratford", "description": "Right next to the London Stadium. Modern hotels with the Elizabeth line nearby." },
+      { "name": "Chelsea / Fulham", "description": "Close to Stamford Bridge and Craven Cottage. Upscale neighbourhood with great dining." },
+      { "name": "Central London", "description": "Covent Garden, Soho, and the West End give access to all stadiums via tube." }
+    ]
+  },
+  {
+    "slug": "manchester",
+    "name": "Manchester",
+    "country": "England",
+    "description": "Home to two of the world's most famous clubs, Manchester is England's second football city and a brilliant destination.",
+    "longDescription": "Manchester has two of the most famous clubs on the planet — United and City — and a football culture that runs through the city's veins. Old Trafford, the Theatre of Dreams, sits in Trafford, while the Etihad Stadium has transformed East Manchester. The city centre itself is buzzing with culture, great food, and nightlife. Whether you're here for a Premier League blockbuster or just soaking in the football atmosphere, Manchester never disappoints.",
+    "heroImage": "/images/cities/manchester.jpg",
+    "clubs": ["manchester-city", "manchester-united"],
+    "airports": ["Manchester Airport (MAN)"],
+    "mainStation": "Manchester Piccadilly / Manchester Victoria",
+    "highlights": ["Old Trafford", "Etihad Stadium", "Northern Quarter", "Metrolink tram", "Great music scene"],
+    "bestAreas": [
+      { "name": "City Centre", "description": "The ideal base for both clubs. The Northern Quarter has great bars and restaurants." },
+      { "name": "Salford Quays", "description": "Close to Old Trafford and Media City. Modern hotels with easy tram access." },
+      { "name": "Ancoats", "description": "Trendy neighbourhood near the Etihad. Great food scene and walkable." },
+      { "name": "Deansgate", "description": "Central Manchester with good Metrolink connections to both stadiums." }
+    ]
+  },
+  {
+    "slug": "liverpool",
+    "name": "Liverpool",
+    "country": "England",
+    "description": "Home to two legendary clubs sharing the same park, Liverpool is a passionate football city with incredible culture.",
+    "longDescription": "Liverpool is one of England's great football cities. Anfield and Goodison Park sit just across Stanley Park from each other, making Liverpool unique in hosting two major clubs so close together. The city itself is warm, welcoming, and packed with culture — the Merseyside accent is the friendliest in England. From the Albert Dock to the Beatles Story, from the incredible cathedral to the buzzing pub scene, Liverpool is a brilliant destination whether you're supporting the Reds or the Blues.",
+    "heroImage": "/images/cities/liverpool.jpg",
+    "clubs": ["liverpool", "everton"],
+    "airports": ["Liverpool John Lennon Airport (LPL)"],
+    "mainStation": "Liverpool Lime Street",
+    "highlights": ["Anfield", "Goodison Park", "The Albert Dock", "Beatles legacy", "Vibrant pub culture"],
+    "bestAreas": [
+      { "name": "City Centre", "description": "Best base for both clubs. Shuttle buses run to Anfield and Goodison on match days." },
+      { "name": "Albert Dock", "description": "Waterfront location with boutique hotels. 2 miles from both stadiums." },
+      { "name": "Baltic Triangle", "description": "Liverpool's creative quarter with cool hotels and restaurants." }
+    ]
+  },
+  {
+    "slug": "birmingham",
+    "name": "Birmingham",
+    "country": "England",
+    "description": "England's second city is home to Aston Villa and Birmingham City, with great transport links and a fantastic food scene.",
+    "longDescription": "Birmingham is England's second city and a brilliant football destination. Aston Villa's Villa Park is one of the country's most historic grounds, steeped in tradition. The city has undergone a major transformation in recent years with fantastic restaurants, bars, and cultural attractions. The Grand Central shopping centre and Brindleyplace are highlights. With great train connections from London (just 90 minutes) and a welcoming local culture, Birmingham makes for a great matchday trip.",
+    "heroImage": "/images/cities/birmingham.jpg",
+    "clubs": ["aston-villa"],
+    "airports": ["Birmingham Airport (BHX)"],
+    "mainStation": "Birmingham New Street",
+    "highlights": ["Villa Park", "Bullring Shopping", "Balti Triangle restaurants", "Cadbury World", "Great transport links"],
+    "bestAreas": [
+      { "name": "City Centre", "description": "The ideal base with direct trains to Witton for Villa Park. Excellent hotels and dining." },
+      { "name": "Jewellery Quarter", "description": "Trendy area with boutique accommodation. Easy access to the city centre and Witton." },
+      { "name": "Brindleyplace", "description": "Canal-side area with upscale hotels near the ICC." }
+    ]
+  },
+  {
+    "slug": "newcastle",
+    "name": "Newcastle upon Tyne",
+    "country": "England",
+    "description": "One of England's most passionate football cities, Newcastle is famous for its Geordie culture and the iconic St James' Park.",
+    "longDescription": "Newcastle is quite simply one of the most football-mad cities in England. St James' Park sits right in the heart of the city centre — you can see it from miles around — and the Geordie faithful are among the most passionate supporters in the country. The city itself is brilliant: the Quayside is one of the most vibrant urban waterfronts in England, Jesmond is a lovely leafy suburb with great restaurants, and the nightlife is legendary. Newcastle is genuinely one of the best away-day destinations in the Premier League.",
+    "heroImage": "/images/cities/newcastle.jpg",
+    "clubs": ["newcastle-united"],
+    "airports": ["Newcastle Airport (NCL)"],
+    "mainStation": "Newcastle Central",
+    "highlights": ["St James' Park", "The Quayside", "Grey Street", "Angel of the North", "Jesmond dining"],
+    "bestAreas": [
+      { "name": "City Centre", "description": "Steps from St James' Park. Grey Street has beautiful Georgian architecture and excellent hotels." },
+      { "name": "Quayside", "description": "The most atmospheric part of Newcastle. Boutique hotels with river views." },
+      { "name": "Jesmond", "description": "Residential suburb with independent restaurants and B&Bs. Easy Metro access to the stadium." }
+    ]
+  },
+  {
+    "slug": "brighton",
+    "name": "Brighton & Hove",
+    "country": "England",
+    "description": "England's coolest seaside city, Brighton is a fantastic destination for football with the Amex Stadium on its doorstep.",
+    "longDescription": "Brighton is genuinely one of the best destinations for a football trip in England. The Amex Stadium in Falmer is modern and easy to reach, and the city itself is one of the most vibrant, creative, and welcoming places in the country. The seafront is spectacular, the Lanes are full of independent shops and cafés, and the food scene is exceptional. Whether you're visiting for a Premier League match or a trip to the coast, Brighton never disappoints.",
+    "heroImage": "/images/cities/brighton.jpg",
+    "clubs": ["brighton"],
+    "airports": ["Gatwick (LGW — 30 mins)"],
+    "mainStation": "Brighton",
+    "highlights": ["The Seafront & Pier", "The Lanes", "Amex Stadium", "LGBTQ+ scene", "Independent food culture"],
+    "bestAreas": [
+      { "name": "City Centre / North Laine", "description": "The best base. Direct train to Falmer on match days. Huge hotel choice." },
+      { "name": "Seafront", "description": "Classic Brighton experience. Hotels with sea views and easy access to the city." },
+      { "name": "Hove", "description": "Quieter and more residential. Good value hotels and easy links to Brighton station." }
+    ]
+  },
+  {
+    "slug": "glasgow",
+    "name": "Glasgow",
+    "country": "Scotland",
+    "description": "Scotland's largest city and the home of the greatest club rivalry in world football — Celtic vs Rangers.",
+    "longDescription": "Glasgow is Scotland's greatest football city and one of the best in Britain. Celtic Park and Ibrox Stadium are iconic grounds that generate some of the most incredible atmosphere in world football. The Old Firm rivalry between Celtic and Rangers is unlike anything else in sport. But Glasgow is much more than football — it's a genuinely exciting city with world-class museums, a thriving music scene, excellent restaurants, and some of the friendliest people you'll ever meet. Don't miss the West End, the Merchant City, and the incredible Kelvingrove Art Gallery.",
+    "heroImage": "/images/cities/glasgow.jpg",
+    "clubs": ["celtic", "rangers"],
+    "airports": ["Glasgow Airport (GLA)", "Glasgow Prestwick (PIK)"],
+    "mainStation": "Glasgow Central / Queen Street",
+    "highlights": ["Celtic Park", "Ibrox Stadium", "Kelvingrove Art Gallery", "West End", "Merchant City"],
+    "bestAreas": [
+      { "name": "City Centre", "description": "Ideal for both clubs. Close to Central and Queen Street stations." },
+      { "name": "Merchant City", "description": "Trendy area with great bars, restaurants and boutique hotels. Close to the subway." },
+      { "name": "West End", "description": "Beautiful Victorian neighbourhoods with independent hotels and the famous Ashton Lane." }
+    ]
+  },
+  {
+    "slug": "leeds",
+    "name": "Leeds",
+    "country": "England",
+    "description": "Yorkshire's biggest city and home to Leeds United — one of England's most passionate and storied clubs.",
+    "longDescription": "Leeds is a brilliant football destination and one of England's most underrated cities. Elland Road is a fortress with a wall of noise on match days — the Leeds faithful are among the most vocal in the country. The city centre has been transformed in recent years with excellent restaurants, bars, and the Trinity Leeds shopping centre. The Victoria Quarter with its stunning Victorian arcades is unmissable. It's a great city for a weekend away.",
+    "heroImage": "/images/cities/leeds.jpg",
+    "clubs": ["leeds-united"],
+    "airports": ["Leeds Bradford Airport (LBA)"],
+    "mainStation": "Leeds",
+    "highlights": ["Elland Road", "Victoria Quarter", "Kirkgate Market", "Headingley (cricket)", "Great nightlife"],
+    "bestAreas": [
+      { "name": "City Centre", "description": "Perfect base with shuttle buses to Elland Road. Excellent hotels and dining." },
+      { "name": "Headingley", "description": "Student area with good value hotels. Regular buses to the city centre." }
+    ]
+  },
+  {
+    "slug": "sheffield",
+    "name": "Sheffield",
+    "country": "England",
+    "description": "The Steel City is home to England's oldest football clubs and a proud football heritage.",
+    "longDescription": "Sheffield has a unique place in football history — it's home to the world's oldest football club (Sheffield FC), the world's oldest professional club (Sheffield United), and Bramall Lane is the world's oldest major football ground still in use. Sheffield Wednesday at Hillsborough add to the city's incredible football heritage. The city itself is lively and welcoming, with a great independent food and bar scene centred around the Kelham Island and Broomhill areas.",
+    "heroImage": "/images/cities/sheffield.jpg",
+    "clubs": ["sheffield-united"],
+    "airports": ["Sheffield City (Doncaster) Airport (DSA)"],
+    "mainStation": "Sheffield",
+    "highlights": ["Bramall Lane", "Kelham Island", "Peak District nearby", "Crucible Theatre", "Street food scene"],
+    "bestAreas": [
+      { "name": "City Centre", "description": "Walking distance from Bramall Lane. Good range of hotels." },
+      { "name": "Kelham Island", "description": "Trendy area with craft beer bars and independent restaurants." }
+    ]
+  },
+  {
+    "slug": "sunderland",
+    "name": "Sunderland",
+    "country": "England",
+    "description": "A passionate football city in the North East, home to the Stadium of Light and the famous Black Cats.",
+    "longDescription": "Sunderland is one of the most passionate football cities in England. The Stadium of Light is a modern, impressive ground and the Sunderland faithful are among the most dedicated supporters you'll find anywhere. The city sits on the River Wear in the North East, with a proud industrial heritage and a warm community spirit. It's also well-positioned for exploring the North East — Newcastle is just 15 miles away.",
+    "heroImage": "/images/cities/sunderland.jpg",
+    "clubs": ["sunderland"],
+    "airports": ["Newcastle Airport (NCL — 20 mins)"],
+    "mainStation": "Sunderland",
+    "highlights": ["Stadium of Light", "Roker Beach", "River Wear", "Wearmouth Bridge", "North East hospitality"],
+    "bestAreas": [
+      { "name": "City Centre", "description": "The best base with easy Metro access to the Stadium of Light." },
+      { "name": "Roker", "description": "Seaside suburb with guest houses and a beach. A mile from the city centre." }
+    ]
+  }
+]

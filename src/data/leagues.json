@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "premier-league",
+    "name": "Premier League",
+    "country": "England",
+    "logo": "/images/leagues/premier-league.svg",
+    "description": "The top tier of English football, featuring 20 clubs competing for the most prestigious domestic title.",
+    "season": "2024/25",
+    "teams": 20
+  },
+  {
+    "slug": "championship",
+    "name": "Championship",
+    "country": "England",
+    "logo": "/images/leagues/championship.svg",
+    "description": "The second tier of English football with 24 clubs battling for promotion to the Premier League.",
+    "season": "2024/25",
+    "teams": 24
+  },
+  {
+    "slug": "league-one",
+    "name": "League One",
+    "country": "England",
+    "logo": "/images/leagues/league-one.svg",
+    "description": "The third tier of English football, known for competitive matches and passionate fan bases.",
+    "season": "2024/25",
+    "teams": 24
+  },
+  {
+    "slug": "scottish-premiership",
+    "name": "Scottish Premiership",
+    "country": "Scotland",
+    "logo": "/images/leagues/scottish-premiership.svg",
+    "description": "The top flight of Scottish football, dominated by the fierce Old Firm rivalry between Celtic and Rangers.",
+    "season": "2024/25",
+    "teams": 12
+  }
+]

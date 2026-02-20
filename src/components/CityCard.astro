@@ -1,0 +1,44 @@
+---
+interface Props {
+  slug: string;
+  name: string;
+  country: string;
+  description: string;
+  clubCount: number;
+}
+
+const { slug, name, country, description, clubCount } = Astro.props;
+---
+
+<a href={`/cities/${slug}/`} class="card group hover:border-zinc-700 transition-all hover:-translate-y-0.5 block">
+  <!-- Image area -->
+  <div class="relative aspect-[16/9] bg-gradient-to-br from-zinc-800 to-zinc-900 overflow-hidden">
+    <div class="absolute inset-0 flex items-center justify-center">
+      <svg class="w-16 h-16 text-zinc-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M3 21h18M9 21V10l3-9 3 9v11M6 21V15h12v6" />
+      </svg>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-zinc-900/80 to-transparent" aria-hidden="true"></div>
+  </div>
+
+  <div class="p-5">
+    <div class="flex items-start justify-between mb-2">
+      <div>
+        <h3 class="font-bold text-white text-xl group-hover:text-emerald-400 transition-colors">{name}</h3>
+        <p class="text-zinc-500 text-sm">{country}</p>
+      </div>
+      <span class="badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+        {clubCount} {clubCount === 1 ? 'club' : 'clubs'}
+      </span>
+    </div>
+
+    <p class="text-zinc-400 text-sm leading-relaxed line-clamp-2">{description}</p>
+
+    <div class="mt-4 flex items-center text-emerald-400 text-sm font-medium group-hover:underline">
+      Explore hotels
+      <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </div>
+  </div>
+</a>

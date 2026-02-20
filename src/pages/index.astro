@@ -1,0 +1,225 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import ClubCard from '../components/ClubCard.astro';
+import CityCard from '../components/CityCard.astro';
+import clubs from '../data/clubs.json';
+import cities from '../data/cities.json';
+import leagues from '../data/leagues.json';
+
+// Featured clubs for homepage
+const featuredClubs = clubs.filter(c =>
+  ['arsenal', 'manchester-city', 'liverpool', 'chelsea', 'manchester-united', 'tottenham-hotspur'].includes(c.slug)
+);
+
+// Featured cities
+const featuredCities = cities.slice(0, 4).map(city => ({
+  ...city,
+  clubCount: clubs.filter(c => c.city === city.slug).length,
+}));
+
+const stats = [
+  { value: `${clubs.length}+`, label: 'Clubs covered' },
+  { value: `${cities.length}`, label: 'Cities' },
+  { value: `${leagues.length}`, label: 'Leagues' },
+  { value: '1000s', label: 'Hotels listed' },
+];
+---
+
+<PageLayout
+  title="StadiumStays — Hotels Near Football Stadiums in the UK"
+  description="Find the best hotels near football stadiums across the UK. Book accommodation close to the ground for Arsenal, Liverpool, Manchester City, Chelsea and more."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-zinc-950 pt-20 pb-24 lg:pt-28 lg:pb-32">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-40 -right-40 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container-narrow relative text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
+        Hotels near every stadium
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+        Sleep Closer to
+        <span class="text-emerald-400">the Action</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl text-zinc-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+        Find and book hotels near football stadiums across the UK. Whether you're an away fan travelling far or a home fan wanting to make a weekend of it — we've got you covered.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/clubs/" class="btn-primary text-base px-6 py-3 w-full sm:w-auto justify-center">
+          Browse All Clubs
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="/cities/" class="btn-secondary text-base px-6 py-3 w-full sm:w-auto justify-center">
+          Explore by City
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto">
+        {stats.map(({ value, label }) => (
+          <div class="text-center">
+            <div class="text-3xl font-bold text-white mb-1">{value}</div>
+            <div class="text-zinc-500 text-sm">{label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Clubs -->
+  <section class="py-16 lg:py-20">
+    <div class="container-wide">
+      <div class="flex items-end justify-between mb-8">
+        <div>
+          <h2 class="section-title">Popular Clubs</h2>
+          <p class="section-subtitle">Find hotels near the biggest clubs in the UK</p>
+        </div>
+        <a href="/clubs/" class="text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors hidden sm:inline">
+          View all clubs →
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+        {featuredClubs.map((club) => (
+          <ClubCard
+            slug={club.slug}
+            name={club.name}
+            stadium={club.stadium}
+            city={club.city}
+            league={club.league}
+            stadiumCapacity={club.stadiumCapacity}
+          />
+        ))}
+      </div>
+
+      <div class="mt-6 text-center sm:hidden">
+        <a href="/clubs/" class="btn-secondary">View all clubs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="py-16 lg:py-20 bg-zinc-900/50 border-y border-zinc-800">
+    <div class="container-wide">
+      <div class="text-center mb-12">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle max-w-xl mx-auto">Planning a football trip has never been easier</p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-8">
+        {[
+          {
+            step: '1',
+            icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z',
+            title: 'Find your club',
+            desc: 'Search for any club across the Premier League, Championship, and more. We cover stadiums across England and Scotland.',
+          },
+          {
+            step: '2',
+            icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
+            title: 'Browse nearby hotels',
+            desc: 'We surface the best-rated hotels sorted by distance from the stadium. Filter by price, rating, or amenities.',
+          },
+          {
+            step: '3',
+            icon: 'M5 13l4 4L19 7',
+            title: 'Book with confidence',
+            desc: 'Click through to book securely with trusted partners. Our links go directly to verified hotel booking platforms.',
+          },
+        ].map(({ step, icon, title, desc }) => (
+          <div class="text-center">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-5">
+              <svg class="w-7 h-7 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d={icon} />
+              </svg>
+            </div>
+            <div class="text-xs font-bold text-emerald-500 uppercase tracking-widest mb-2">Step {step}</div>
+            <h3 class="text-white font-semibold text-lg mb-2">{title}</h3>
+            <p class="text-zinc-500 text-sm leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Cities -->
+  <section class="py-16 lg:py-20">
+    <div class="container-wide">
+      <div class="flex items-end justify-between mb-8">
+        <div>
+          <h2 class="section-title">Explore by City</h2>
+          <p class="section-subtitle">Plan your whole trip around a football destination</p>
+        </div>
+        <a href="/cities/" class="text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors hidden sm:inline">
+          View all cities →
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        {featuredCities.map((city) => (
+          <CityCard
+            slug={city.slug}
+            name={city.name}
+            country={city.country}
+            description={city.description}
+            clubCount={city.clubCount}
+          />
+        ))}
+      </div>
+
+      <div class="mt-6 text-center sm:hidden">
+        <a href="/cities/" class="btn-secondary">View all cities</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leagues -->
+  <section class="py-16 lg:py-20 bg-zinc-900/50 border-y border-zinc-800">
+    <div class="container-wide">
+      <div class="text-center mb-10">
+        <h2 class="section-title">Browse by League</h2>
+        <p class="section-subtitle">From the Premier League to League One</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {leagues.map((league) => {
+          const leagueClubs = clubs.filter(c => c.league === league.slug);
+          return (
+            <a
+              href={`/leagues/${league.slug}/`}
+              class="card p-5 hover:border-zinc-700 transition-all hover:-translate-y-0.5 group block"
+            >
+              <div class="text-3xl font-bold text-emerald-400/30 group-hover:text-emerald-400/50 transition-colors mb-3 font-mono">
+                {league.teams}
+              </div>
+              <h3 class="font-bold text-white text-lg mb-1 group-hover:text-emerald-400 transition-colors">{league.name}</h3>
+              <p class="text-zinc-500 text-sm mb-4">{league.country} · {league.teams} teams</p>
+              <span class="text-emerald-400 text-sm font-medium group-hover:underline">
+                {leagueClubs.length} clubs listed →
+              </span>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust / disclaimer banner -->
+  <section class="py-10">
+    <div class="container-narrow text-center">
+      <p class="text-zinc-600 text-sm leading-relaxed max-w-2xl mx-auto">
+        StadiumStays is an independent hotel comparison and affiliate website. We earn a small commission when you book through our links, at no extra cost to you. All hotel recommendations are based on proximity to stadiums and guest ratings.
+      </p>
+    </div>
+  </section>
+</PageLayout>

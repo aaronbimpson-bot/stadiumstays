@@ -1,0 +1,153 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import ClubCard from '../../components/ClubCard.astro';
+import cities from '../../data/cities.json';
+import clubs from '../../data/clubs.json';
+
+export function getStaticPaths() {
+  return cities.map((city) => ({
+    params: { city: city.slug },
+    props: { city },
+  }));
+}
+
+const { city } = Astro.props;
+const cityClubs = clubs.filter((c) => c.city === city.slug);
+---
+
+<PageLayout
+  title={`${city.name} Football Hotels — Stadium Stays Guide`}
+  description={`Hotels near football stadiums in ${city.name}. ${city.description} Find the best places to stay on match day.`}
+>
+  <div class="container-wide py-12 lg:py-16">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-sm text-zinc-500 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-zinc-300 transition-colors">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/cities/" class="hover:text-zinc-300 transition-colors">Cities</a>
+      <span aria-hidden="true">/</span>
+      <span class="text-zinc-300">{city.name}</span>
+    </nav>
+
+    <!-- Hero -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="badge bg-zinc-800 text-zinc-400 border border-zinc-700/50">{city.country}</span>
+        <span class="badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          {cityClubs.length} {cityClubs.length === 1 ? 'club' : 'clubs'}
+        </span>
+      </div>
+      <h1 class="text-3xl lg:text-4xl font-bold text-white mb-4">{city.name} Football Guide</h1>
+      <p class="text-zinc-400 text-lg leading-relaxed max-w-3xl">{city.longDescription}</p>
+    </div>
+
+    <div class="lg:grid lg:grid-cols-3 lg:gap-10">
+      <div class="lg:col-span-2">
+        <!-- Clubs in city -->
+        {cityClubs.length > 0 && (
+          <section class="mb-12">
+            <h2 class="text-xl font-bold text-white mb-6">
+              Football Clubs in {city.name}
+            </h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+              {cityClubs.map((club) => (
+                <ClubCard
+                  slug={club.slug}
+                  name={club.name}
+                  stadium={club.stadium}
+                  city={club.city}
+                  league={club.league}
+                  stadiumCapacity={club.stadiumCapacity}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- Best areas to stay -->
+        <section class="mb-12">
+          <h2 class="text-xl font-bold text-white mb-6">Best Areas to Stay</h2>
+          <div class="space-y-4">
+            {city.bestAreas.map((area, i) => (
+              <div class="card p-5 flex gap-4">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0 text-emerald-400 text-sm font-bold">
+                  {i + 1}
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white mb-1">{area.name}</h3>
+                  <p class="text-zinc-400 text-sm leading-relaxed">{area.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- Highlights -->
+        <section class="mb-12">
+          <h2 class="text-xl font-bold text-white mb-6">City Highlights</h2>
+          <div class="flex flex-wrap gap-3">
+            {city.highlights.map((highlight) => (
+              <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-sm">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                {highlight}
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="mt-10 lg:mt-0 space-y-6">
+        <!-- Getting there -->
+        <div class="card p-5">
+          <h3 class="font-semibold text-white mb-3 flex items-center gap-2 text-sm">
+            <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
+            </svg>
+            Airports
+          </h3>
+          <ul class="space-y-1.5">
+            {city.airports.map((airport) => (
+              <li class="text-zinc-400 text-sm flex items-center gap-2">
+                <svg class="w-3.5 h-3.5 text-zinc-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                {airport}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="card p-5">
+          <h3 class="font-semibold text-white mb-2 text-sm">Main Train Station</h3>
+          <p class="text-zinc-400 text-sm">{city.mainStation}</p>
+        </div>
+
+        <!-- Quick links to clubs -->
+        {cityClubs.length > 0 && (
+          <div class="card p-5">
+            <h3 class="font-semibold text-white mb-3 text-sm">Find Hotels Near</h3>
+            <div class="space-y-2">
+              {cityClubs.map((club) => (
+                <a
+                  href={`/clubs/${club.slug}/`}
+                  class="flex items-center justify-between p-3 rounded-lg bg-zinc-800/50 hover:bg-zinc-800 border border-transparent hover:border-zinc-700 transition-all group"
+                >
+                  <div>
+                    <div class="text-sm font-medium text-white group-hover:text-emerald-400 transition-colors">{club.name}</div>
+                    <div class="text-xs text-zinc-500">{club.stadium}</div>
+                  </div>
+                  <svg class="w-4 h-4 text-zinc-600 group-hover:text-emerald-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </aside>
+    </div>
+  </div>
+</PageLayout>

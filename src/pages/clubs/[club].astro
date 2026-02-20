@@ -1,0 +1,285 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import HotelCard from '../../components/HotelCard.astro';
+import clubs from '../../data/clubs.json';
+import leagues from '../../data/leagues.json';
+import cities from '../../data/cities.json';
+
+export function getStaticPaths() {
+  return clubs.map((club) => ({
+    params: { club: club.slug },
+    props: { club },
+  }));
+}
+
+const { club } = Astro.props;
+const league = leagues.find(l => l.slug === club.league);
+const city = cities.find(c => c.slug === club.city);
+
+// Generate affiliate hotel search URL (Travelpayouts/Booking.com)
+// Using a generic affiliate link pattern — in production, replace with real affiliate token
+const AFFILIATE_MARKER = 'stadiumstays';
+const bookingBaseUrl = 'https://www.booking.com/searchresults.html';
+
+function getBookingUrl(hotelName: string, cityName: string) {
+  const params = new URLSearchParams({
+    ss: `${hotelName}, ${cityName}`,
+    aid: '304142', // Booking.com affiliate ID placeholder
+    label: AFFILIATE_MARKER,
+    lang: 'en-gb',
+    sb: '1',
+  });
+  return `${bookingBaseUrl}?${params}`;
+}
+
+function getStadiumSearchUrl() {
+  const params = new URLSearchParams({
+    ss: club.hotelSearchArea,
+    aid: '304142',
+    label: AFFILIATE_MARKER,
+    lang: 'en-gb',
+    sb: '1',
+    checkin: '',
+    checkout: '',
+    group_adults: '2',
+  });
+  return `${bookingBaseUrl}?${params}`;
+}
+
+// Static hotel data — in production these would be fetched at build time from Travelpayouts API
+const hotels = [
+  {
+    name: `Premier Inn ${club.city.charAt(0).toUpperCase() + club.city.slice(1)} City Centre`,
+    stars: 3,
+    distanceKm: 1.2,
+    priceFrom: 79,
+    rating: 8.2,
+    reviewCount: 3241,
+    amenities: ['Free WiFi', 'Restaurant', 'Bar'],
+    badge: 'Great value',
+  },
+  {
+    name: `Travelodge ${club.stadium} Area`,
+    stars: 3,
+    distanceKm: 0.6,
+    priceFrom: 59,
+    rating: 7.6,
+    reviewCount: 1854,
+    amenities: ['Free WiFi', '24hr reception'],
+    badge: 'Closest to stadium',
+  },
+  {
+    name: `Holiday Inn ${club.city.charAt(0).toUpperCase() + club.city.slice(1)}`,
+    stars: 4,
+    distanceKm: 1.8,
+    priceFrom: 105,
+    rating: 8.5,
+    reviewCount: 2109,
+    amenities: ['Free WiFi', 'Pool', 'Gym', 'Restaurant'],
+  },
+  {
+    name: `ibis ${club.city.charAt(0).toUpperCase() + club.city.slice(1)} Centre`,
+    stars: 3,
+    distanceKm: 2.1,
+    priceFrom: 69,
+    rating: 8.0,
+    reviewCount: 987,
+    amenities: ['Free WiFi', 'Bar'],
+  },
+  {
+    name: `DoubleTree by Hilton ${club.city.charAt(0).toUpperCase() + club.city.slice(1)}`,
+    stars: 4,
+    distanceKm: 2.4,
+    priceFrom: 135,
+    rating: 8.8,
+    reviewCount: 1678,
+    amenities: ['Free WiFi', 'Spa', 'Gym', 'Restaurant', 'Bar'],
+    badge: 'Top rated',
+  },
+  {
+    name: `Courtyard by Marriott ${club.city.charAt(0).toUpperCase() + club.city.slice(1)}`,
+    stars: 4,
+    distanceKm: 2.9,
+    priceFrom: 119,
+    rating: 8.6,
+    reviewCount: 1234,
+    amenities: ['Free WiFi', 'Gym', 'Restaurant'],
+  },
+];
+---
+
+<PageLayout
+  title={`Hotels Near ${club.stadium} — ${club.name} | StadiumStays`}
+  description={`Find the best hotels near ${club.stadium}, home of ${club.name}. Compare accommodation options close to the ground with prices from £${Math.min(...hotels.map(h => h.priceFrom))}/night.`}
+>
+  <div class="container-wide py-12 lg:py-16">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-sm text-zinc-500 mb-8 flex-wrap" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-zinc-300 transition-colors">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/clubs/" class="hover:text-zinc-300 transition-colors">Clubs</a>
+      <span aria-hidden="true">/</span>
+      {league && (
+        <>
+          <a href={`/leagues/${league.slug}/`} class="hover:text-zinc-300 transition-colors">{league.name}</a>
+          <span aria-hidden="true">/</span>
+        </>
+      )}
+      <span class="text-zinc-300">{club.name}</span>
+    </nav>
+
+    <div class="lg:grid lg:grid-cols-3 lg:gap-10">
+      <!-- Main content -->
+      <div class="lg:col-span-2">
+        <!-- Club header -->
+        <div class="mb-8">
+          <div class="flex flex-wrap items-center gap-3 mb-4">
+            {league && (
+              <a href={`/leagues/${league.slug}/`} class="badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20 transition-colors">
+                {league.name}
+              </a>
+            )}
+            {city && (
+              <a href={`/cities/${city.slug}/`} class="badge bg-zinc-800 text-zinc-400 border border-zinc-700/50 hover:border-zinc-600 transition-colors">
+                <svg class="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                </svg>
+                {city.name}
+              </a>
+            )}
+          </div>
+
+          <h1 class="text-3xl lg:text-4xl font-bold text-white mb-2">Hotels Near {club.stadium}</h1>
+          <p class="text-zinc-400 text-lg">{club.name}</p>
+        </div>
+
+        <!-- Club info -->
+        <div class="card p-6 mb-8">
+          <h2 class="font-semibold text-white mb-4">About {club.name}</h2>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-5">{club.description}</p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-zinc-800">
+            <div>
+              <div class="text-xs text-zinc-500 mb-1">Stadium</div>
+              <div class="text-sm font-medium text-white">{club.stadium}</div>
+            </div>
+            <div>
+              <div class="text-xs text-zinc-500 mb-1">Capacity</div>
+              <div class="text-sm font-medium text-white">{club.stadiumCapacity.toLocaleString()}</div>
+            </div>
+            <div>
+              <div class="text-xs text-zinc-500 mb-1">Founded</div>
+              <div class="text-sm font-medium text-white">{club.founded}</div>
+            </div>
+            <div>
+              <div class="text-xs text-zinc-500 mb-1">City</div>
+              {city ? (
+                <a href={`/cities/${city.slug}/`} class="text-sm font-medium text-emerald-400 hover:underline">{city.name}</a>
+              ) : (
+                <div class="text-sm font-medium text-white">{club.city}</div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotels section -->
+        <div class="mb-8">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-xl font-bold text-white">
+              Nearby Hotels
+              <span class="text-zinc-500 font-normal text-base ml-2">({hotels.length} options)</span>
+            </h2>
+            <a
+              href={getStadiumSearchUrl()}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              class="btn-secondary text-sm"
+            >
+              Search all hotels
+            </a>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            {hotels.map((hotel) => (
+              <HotelCard
+                name={hotel.name}
+                stars={hotel.stars}
+                distanceKm={hotel.distanceKm}
+                priceFrom={hotel.priceFrom}
+                rating={hotel.rating}
+                reviewCount={hotel.reviewCount}
+                amenities={hotel.amenities}
+                badge={hotel.badge}
+                bookingUrl={getBookingUrl(hotel.name, club.city)}
+              />
+            ))}
+          </div>
+
+          <p class="text-zinc-600 text-xs mt-4 text-center">
+            Prices shown are indicative. Actual prices depend on dates and availability. Affiliate links — we may earn a commission.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="mt-10 lg:mt-0">
+        <!-- Getting there -->
+        <div class="card p-5 mb-6">
+          <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+            </svg>
+            Getting There
+          </h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">{club.travelTips}</p>
+        </div>
+
+        <!-- Match day tips -->
+        <div class="card p-5 mb-6">
+          <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Match Day Tips
+          </h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">{club.matchDayTips}</p>
+        </div>
+
+        <!-- Nearby areas -->
+        <div class="card p-5 mb-6">
+          <h3 class="font-semibold text-white mb-3">Nearby Areas</h3>
+          <div class="flex flex-wrap gap-2">
+            {club.nearbyAreas.map((area) => (
+              <span class="badge bg-zinc-800 text-zinc-400 border border-zinc-700/50">{area}</span>
+            ))}
+          </div>
+        </div>
+
+        <!-- Stadium address -->
+        <div class="card p-5 mb-6">
+          <h3 class="font-semibold text-white mb-2 text-sm">Stadium Address</h3>
+          <address class="text-zinc-400 text-sm not-italic leading-relaxed">{club.address}</address>
+        </div>
+
+        <!-- City guide CTA -->
+        {city && (
+          <a
+            href={`/cities/${city.slug}/`}
+            class="card p-5 hover:border-zinc-700 transition-colors block group"
+          >
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-xs text-zinc-500 mb-1">City Guide</div>
+                <div class="font-semibold text-white group-hover:text-emerald-400 transition-colors">{city.name}</div>
+                <div class="text-zinc-500 text-xs mt-1">Hotels, transport & local tips</div>
+              </div>
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </a>
+        )}
+      </aside>
+    </div>
+  </div>
+</PageLayout>

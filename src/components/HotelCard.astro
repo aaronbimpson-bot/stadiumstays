@@ -1,0 +1,123 @@
+---
+interface Props {
+  name: string;
+  stars: number;
+  distanceKm: number;
+  priceFrom: number;
+  rating?: number;
+  reviewCount?: number;
+  amenities?: string[];
+  bookingUrl: string;
+  imageUrl?: string;
+  badge?: string;
+}
+
+const {
+  name,
+  stars,
+  distanceKm,
+  priceFrom,
+  rating,
+  reviewCount,
+  amenities = [],
+  bookingUrl,
+  imageUrl,
+  badge,
+} = Astro.props;
+
+const distanceText = distanceKm < 1
+  ? `${Math.round(distanceKm * 1000)}m from stadium`
+  : `${distanceKm.toFixed(1)}km from stadium`;
+
+const starsArr = Array.from({ length: 5 }, (_, i) => i < stars);
+---
+
+<article class="card flex flex-col hover:border-zinc-700 transition-colors">
+  <!-- Image -->
+  <div class="relative aspect-[16/9] bg-zinc-800 overflow-hidden">
+    {imageUrl ? (
+      <img
+        src={imageUrl}
+        alt={name}
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    ) : (
+      <div class="w-full h-full flex items-center justify-center text-zinc-700">
+        <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      </div>
+    )}
+    {badge && (
+      <span class="absolute top-3 left-3 badge bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+        {badge}
+      </span>
+    )}
+  </div>
+
+  <!-- Content -->
+  <div class="p-4 flex flex-col flex-1">
+    <!-- Stars -->
+    <div class="flex items-center gap-0.5 mb-1.5" aria-label={`${stars} star hotel`}>
+      {starsArr.map((filled) => (
+        <svg
+          class:list={['w-3.5 h-3.5', filled ? 'text-amber-400' : 'text-zinc-700']}
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      ))}
+    </div>
+
+    <h3 class="font-semibold text-white text-base leading-snug mb-1">{name}</h3>
+
+    <!-- Distance + rating row -->
+    <div class="flex items-center gap-3 mb-3">
+      <span class="flex items-center gap-1 text-xs text-zinc-400">
+        <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        {distanceText}
+      </span>
+      {rating && (
+        <span class="flex items-center gap-1 text-xs">
+          <span class="font-semibold text-white">{rating.toFixed(1)}</span>
+          {reviewCount && <span class="text-zinc-500">({reviewCount.toLocaleString()})</span>}
+        </span>
+      )}
+    </div>
+
+    <!-- Amenities -->
+    {amenities.length > 0 && (
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        {amenities.slice(0, 3).map((a) => (
+          <span class="badge bg-zinc-800 text-zinc-400 border border-zinc-700/50 text-xs">{a}</span>
+        ))}
+      </div>
+    )}
+
+    <!-- Price + CTA -->
+    <div class="mt-auto flex items-center justify-between">
+      <div>
+        <span class="text-xs text-zinc-500">From</span>
+        <div class="text-lg font-bold text-white">£{priceFrom}<span class="text-sm font-normal text-zinc-400">/night</span></div>
+      </div>
+      <a
+        href={bookingUrl}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        class="btn-primary"
+        aria-label={`Book ${name}`}
+      >
+        Book
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</article>

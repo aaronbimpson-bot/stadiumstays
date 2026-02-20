@@ -1,0 +1,57 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="About StadiumStays — Hotels Near Football Stadiums"
+  description="StadiumStays helps football fans find the best hotels near stadiums across the UK. Learn about our mission and how we work."
+>
+  <div class="container-narrow py-12 lg:py-16">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-sm text-zinc-500 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-zinc-300 transition-colors">Home</a>
+      <span aria-hidden="true">/</span>
+      <span class="text-zinc-300">About</span>
+    </nav>
+
+    <h1 class="text-3xl lg:text-4xl font-bold text-white mb-6">About StadiumStays</h1>
+
+    <div class="prose prose-zinc prose-invert max-w-none space-y-6 text-zinc-400 leading-relaxed">
+      <p class="text-lg text-zinc-300">
+        StadiumStays was built for football fans who want to make the most of their away day or weekend trip — without the hassle of hunting for a decent hotel close to the ground.
+      </p>
+
+      <p>
+        We know the experience. You've got tickets, you've sorted the train, but then you spend hours on various booking sites trying to figure out which hotel is actually walkable to the stadium and which ones are too far out. We've done that work for you.
+      </p>
+
+      <h2 class="text-xl font-bold text-white mt-10 mb-4">What We Do</h2>
+
+      <p>
+        StadiumStays aggregates hotel options near football stadiums across the UK and presents them simply — sorted by distance from the ground, with price, rating, and key amenities at a glance. We cover clubs in the Premier League, Championship, League One, and the Scottish Premiership.
+      </p>
+
+      <p>
+        Alongside hotel listings, we publish city guides that give you the lay of the land: which areas to base yourself in, how to get to the stadium, and what the matchday experience is like. We write these ourselves, drawing on real knowledge of UK football culture and its cities.
+      </p>
+
+      <h2 class="text-xl font-bold text-white mt-10 mb-4">How We Make Money</h2>
+
+      <p>
+        StadiumStays is an affiliate website. When you click through to a hotel and complete a booking, we may earn a small commission from the hotel booking platform. This comes at no extra cost to you — you pay the same price you'd pay booking direct.
+      </p>
+
+      <p>
+        Our recommendations are based on proximity to stadiums and guest ratings, not on commission rates. We aim to surface the best options regardless of who we partner with.
+      </p>
+
+      <h2 class="text-xl font-bold text-white mt-10 mb-4">Get in Touch</h2>
+
+      <p>
+        Got a question, found an error, or want to suggest a club or city we should cover?
+        <a href="/contact/" class="text-emerald-400 hover:underline">Contact us here</a>.
+        We read every message.
+      </p>
+    </div>
+  </div>
+</PageLayout>

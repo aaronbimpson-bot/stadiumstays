@@ -1,0 +1,57 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import leagues from '../../data/leagues.json';
+import clubs from '../../data/clubs.json';
+---
+
+<PageLayout
+  title="Football Leagues — Hotels Near Every Stadium"
+  description="Browse hotels near stadiums by football league. Premier League, Championship, League One, Scottish Premiership and more."
+>
+  <div class="container-wide py-12 lg:py-16">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-sm text-zinc-500 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-zinc-300 transition-colors">Home</a>
+      <span aria-hidden="true">/</span>
+      <span class="text-zinc-300">Leagues</span>
+    </nav>
+
+    <div class="mb-10">
+      <h1 class="section-title text-3xl lg:text-4xl mb-3">Browse by League</h1>
+      <p class="section-subtitle text-base">Find hotels near stadiums across the UK's top football leagues</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      {leagues.map((league) => {
+        const leagueClubs = clubs.filter(c => c.league === league.slug);
+        return (
+          <a
+            href={`/leagues/${league.slug}/`}
+            class="card group hover:border-zinc-700 transition-all hover:-translate-y-0.5 block p-6"
+          >
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs font-bold text-emerald-500 uppercase tracking-widest">{league.country}</span>
+                <h2 class="text-2xl font-bold text-white mt-1 group-hover:text-emerald-400 transition-colors">{league.name}</h2>
+              </div>
+              <div class="text-4xl font-bold text-zinc-800 font-mono">{league.teams}</div>
+            </div>
+
+            <p class="text-zinc-400 text-sm leading-relaxed mb-6">{league.description}</p>
+
+            <div class="flex items-center justify-between border-t border-zinc-800 pt-4">
+              <div class="flex items-center gap-4 text-sm text-zinc-500">
+                <span>{league.teams} teams</span>
+                <span>{leagueClubs.length} clubs listed</span>
+                <span>{league.season}</span>
+              </div>
+              <span class="text-emerald-400 font-medium text-sm group-hover:underline">
+                Browse hotels →
+              </span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</PageLayout>

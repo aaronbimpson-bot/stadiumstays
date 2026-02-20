@@ -1,0 +1,42 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import CityCard from '../../components/CityCard.astro';
+import cities from '../../data/cities.json';
+import clubs from '../../data/clubs.json';
+
+const citiesWithCount = cities.map(city => ({
+  ...city,
+  clubCount: clubs.filter(c => c.city === city.slug).length,
+}));
+---
+
+<PageLayout
+  title="Football City Guides — Hotels & Travel Tips"
+  description="Explore UK football cities with our travel guides. Hotels, transport, and tips for London, Manchester, Liverpool, Glasgow and more."
+>
+  <div class="container-wide py-12 lg:py-16">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-sm text-zinc-500 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-zinc-300 transition-colors">Home</a>
+      <span aria-hidden="true">/</span>
+      <span class="text-zinc-300">Cities</span>
+    </nav>
+
+    <div class="mb-10">
+      <h1 class="section-title text-3xl lg:text-4xl mb-3">City Guides</h1>
+      <p class="section-subtitle text-base">Plan your football trip with our destination guides</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
+      {citiesWithCount.map((city) => (
+        <CityCard
+          slug={city.slug}
+          name={city.name}
+          country={city.country}
+          description={city.description}
+          clubCount={city.clubCount}
+        />
+      ))}
+    </div>
+  </div>
+</PageLayout>
