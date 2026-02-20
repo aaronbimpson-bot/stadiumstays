@@ -20,6 +20,47 @@ if (!ACCESS_KEY) {
   process.exit(0);
 }
 
+// Per-club stadium images — searched by stadium name, city skyline as fallback.
+// key = club slug from clubs.json
+const CLUBS = [
+  // Premier League
+  { key: 'arsenal',           query: 'Emirates Stadium Arsenal London' },
+  { key: 'chelsea',           query: 'Stamford Bridge Chelsea London' },
+  { key: 'liverpool',         query: 'Anfield stadium Liverpool' },
+  { key: 'manchester-city',   query: 'Etihad Stadium Manchester City' },
+  { key: 'manchester-united', query: 'Old Trafford Manchester United stadium' },
+  { key: 'tottenham-hotspur', query: 'Tottenham Hotspur Stadium London' },
+  { key: 'newcastle-united',  query: "St James Park Newcastle United stadium" },
+  { key: 'aston-villa',       query: 'Villa Park Birmingham Aston Villa' },
+  { key: 'west-ham-united',   query: 'London Stadium Olympic Park West Ham' },
+  { key: 'brighton',          query: 'Amex Stadium Brighton football' },
+  { key: 'everton',           query: 'Goodison Park Everton Liverpool stadium' },
+  { key: 'fulham',            query: 'Craven Cottage Fulham Thames stadium' },
+  // Championship
+  { key: 'leeds-united',      query: 'Elland Road Leeds United stadium' },
+  { key: 'sunderland',        query: 'Stadium of Light Sunderland football' },
+  { key: 'sheffield-united',  query: 'Bramall Lane Sheffield United stadium' },
+];
+
+// City fallback queries, used when a stadium search returns no results
+const CLUB_CITY_FALLBACKS = {
+  'arsenal':           'London city skyline',
+  'chelsea':           'London city skyline',
+  'tottenham-hotspur': 'London city skyline',
+  'west-ham-united':   'London city skyline',
+  'fulham':            'London city skyline',
+  'liverpool':         'Liverpool city waterfront',
+  'everton':           'Liverpool city waterfront',
+  'manchester-city':   'Manchester city skyline',
+  'manchester-united': 'Manchester city skyline',
+  'newcastle-united':  'Newcastle upon Tyne city',
+  'aston-villa':       'Birmingham city UK',
+  'brighton':          'Brighton seafront',
+  'leeds-united':      'Leeds city UK',
+  'sunderland':        'Sunderland city UK',
+  'sheffield-united':  'Sheffield city UK',
+};
+
 // All cities needed across UK city guide pages and European club pages.
 // key = slug used in cities.json / citySlug in clubs-europe.json
 // query = what we search on Unsplash
@@ -102,10 +143,39 @@ async function fetchCity({ key, query }) {
 }
 
 async function main() {
-  console.log(`Fetching Unsplash images for ${CITIES.length} cities…`);
   const results = {};
   const errors = [];
 
+  // Fetch club stadium images first
+  console.log(`Fetching Unsplash images for ${CLUBS.length} clubs…`);
+  for (const club of CLUBS) {
+    try {
+      const { key, value } = await fetchCity(club);
+      results[key] = value;
+      console.log(`  ✓ ${key} — Photo by ${value.photographer}`);
+    } catch (err) {
+      // Try city fallback query
+      const fallbackQuery = CLUB_CITY_FALLBACKS[club.key];
+      if (fallbackQuery) {
+        try {
+          const { value } = await fetchCity({ key: club.key, query: fallbackQuery });
+          results[club.key] = value;
+          console.log(`  ✓ ${club.key} (fallback) — Photo by ${value.photographer}`);
+        } catch (fbErr) {
+          errors.push(club.key);
+          console.warn(`  ✗ ${club.key}: ${fbErr.message}`);
+        }
+        await sleep(250);
+      } else {
+        errors.push(club.key);
+        console.warn(`  ✗ ${club.key}: ${err.message}`);
+      }
+    }
+    await sleep(250);
+  }
+
+  // Fetch city images
+  console.log(`\nFetching Unsplash images for ${CITIES.length} cities…`);
   for (const city of CITIES) {
     try {
       const { key, value } = await fetchCity(city);
@@ -122,7 +192,7 @@ async function main() {
   writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
   console.log(`\nWrote ${Object.keys(results).length} images to src/data/unsplash-images.json`);
   if (errors.length) {
-    console.warn(`Failed cities: ${errors.join(', ')}`);
+    console.warn(`Failed: ${errors.join(', ')}`);
   }
 }
 
