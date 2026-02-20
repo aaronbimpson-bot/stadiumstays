@@ -82,16 +82,23 @@ const heroImage = (unsplashImages as Record<string, any>)[city.slug] ?? null;
               Football Clubs in {city.name}
             </h2>
             <div class="grid sm:grid-cols-2 gap-4">
-              {cityClubs.map((club) => (
-                <ClubCard
-                  slug={club.slug}
-                  name={club.name}
-                  stadium={club.stadium}
-                  city={club.city}
-                  league={club.league}
-                  stadiumCapacity={club.stadiumCapacity}
-                />
-              ))}
+              {cityClubs.map((club) => {
+                const img = (unsplashImages as Record<string, any>)[club.slug];
+                return (
+                  <ClubCard
+                    slug={club.slug}
+                    name={club.name}
+                    stadium={club.stadium}
+                    city={club.city}
+                    league={club.league}
+                    stadiumCapacity={club.stadiumCapacity}
+                    imageUrl={img?.url}
+                    imageAlt={img?.altDescription}
+                    photographer={img?.photographer}
+                    photographerUsername={img?.photographerUsername}
+                  />
+                );
+              })}
             </div>
           </section>
         )}

@@ -72,8 +72,9 @@ function getStadiumSearchUrl() {
   return `${bookingBaseUrl}?${params}`;
 }
 
-// Hero image from Unsplash (keyed by city slug)
-const heroImage = (unsplashImages as Record<string, any>)[cityLookupSlug] ?? null;
+// Hero image: prefer club-specific stadium image, fall back to city image
+const _images = unsplashImages as Record<string, any>;
+const heroImage = _images[club.slug] ?? _images[cityLookupSlug] ?? null;
 
 // Static hotel data — in production these would be fetched at build time from Travelpayouts API
 const hotels = [
@@ -161,7 +162,7 @@ const hotels = [
     {heroImage && (
       <div class="mb-8 rounded-xl overflow-hidden relative">
         <img
-          src={heroImage.url}
+          src={`${heroImage.url}&w=1400&q=80`}
           alt={heroImage.altDescription}
           class="w-full h-56 sm:h-72 object-cover"
           loading="eager"
