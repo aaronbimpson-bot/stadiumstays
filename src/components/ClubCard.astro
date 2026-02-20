@@ -38,7 +38,12 @@ const initial = name.charAt(0).toUpperCase();
 const leagueLabel = leagueLabels[league] ?? league;
 ---
 
-<a href={`/clubs/${slug}/`} class="card group hover:border-zinc-700 transition-all hover:-translate-y-0.5 block">
+<!-- Card is a div to avoid invalid nested <a> elements. A stretched link covers the whole card.
+     The photographer credit <a> sits above it (later in DOM = higher paint order). -->
+<div class="card group hover:border-zinc-700 transition-all hover:-translate-y-0.5 relative">
+  <!-- Stretched link — covers the entire card, sits below all other content -->
+  <a href={`/clubs/${slug}/`} class="absolute inset-0 z-0" aria-label={`Find hotels near ${name}`}></a>
+
   <!-- Visual banner -->
   <div class={`relative aspect-[16/9] bg-gradient-to-br ${gradient} overflow-hidden`}>
     {imageUrl ? (
@@ -60,11 +65,12 @@ const leagueLabel = leagueLabels[league] ?? league;
       <span class="text-xl font-bold text-white leading-tight">{name}</span>
     </div>
     {imageUrl && photographer && (
+      <!-- Photographer credit — comes after the stretched link in DOM so it paints on top and is clickable -->
       <a
         href={`https://unsplash.com/@${photographerUsername}?utm_source=stadiumstays&utm_medium=referral`}
         target="_blank"
         rel="noopener noreferrer"
-        class="absolute bottom-0 right-0 bg-black/50 text-white/60 text-[10px] px-2 py-0.5 hover:text-white transition-colors"
+        class="absolute bottom-0 right-0 bg-black/50 text-white/60 text-[10px] px-2 py-0.5 hover:text-white transition-colors z-10"
         aria-label={`Photo by ${photographer} on Unsplash`}
       >
         {photographer} / Unsplash
@@ -94,4 +100,4 @@ const leagueLabel = leagueLabels[league] ?? league;
       <span class="text-emerald-400 text-sm font-medium group-hover:underline">Find hotels →</span>
     </div>
   </div>
-</a>
+</div>
