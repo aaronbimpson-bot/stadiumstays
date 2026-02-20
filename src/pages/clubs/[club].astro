@@ -5,6 +5,7 @@ import clubs from '../../data/clubs.json';
 import clubsEurope from '../../data/clubs-europe.json';
 import leagues from '../../data/leagues.json';
 import cities from '../../data/cities.json';
+import unsplashImages from '../../data/unsplash-images.json';
 
 export function getStaticPaths() {
   const existing = clubs.map((club) => ({
@@ -70,6 +71,9 @@ function getStadiumSearchUrl() {
   });
   return `${bookingBaseUrl}?${params}`;
 }
+
+// Hero image from Unsplash (keyed by city slug)
+const heroImage = (unsplashImages as Record<string, any>)[cityLookupSlug] ?? null;
 
 // Static hotel data — in production these would be fetched at build time from Travelpayouts API
 const hotels = [
@@ -152,6 +156,34 @@ const hotels = [
       )}
       <span class="text-zinc-300">{club.name}</span>
     </nav>
+
+    <!-- City hero image -->
+    {heroImage && (
+      <div class="mb-8 rounded-xl overflow-hidden relative">
+        <img
+          src={`${heroImage.url}?w=1200&q=80`}
+          alt={heroImage.altDescription}
+          class="w-full h-56 sm:h-72 object-cover"
+          loading="eager"
+        />
+        <p class="absolute bottom-0 right-0 bg-black/60 text-white/80 text-xs px-3 py-1.5">
+          Photo by{' '}
+          <a
+            href={`https://unsplash.com/@${heroImage.photographerUsername}?utm_source=stadiumstays&utm_medium=referral`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline hover:text-white"
+          >{heroImage.photographer}</a>
+          {' '}on{' '}
+          <a
+            href="https://unsplash.com/?utm_source=stadiumstays&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline hover:text-white"
+          >Unsplash</a>
+        </p>
+      </div>
+    )}
 
     <div class="lg:grid lg:grid-cols-3 lg:gap-10">
       <!-- Main content -->

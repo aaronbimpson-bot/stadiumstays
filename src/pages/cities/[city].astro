@@ -3,6 +3,7 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import ClubCard from '../../components/ClubCard.astro';
 import cities from '../../data/cities.json';
 import clubs from '../../data/clubs.json';
+import unsplashImages from '../../data/unsplash-images.json';
 
 export function getStaticPaths() {
   return cities.map((city) => ({
@@ -13,6 +14,7 @@ export function getStaticPaths() {
 
 const { city } = Astro.props;
 const cityClubs = clubs.filter((c) => c.city === city.slug);
+const heroImage = (unsplashImages as Record<string, any>)[city.slug] ?? null;
 ---
 
 <PageLayout
@@ -28,6 +30,34 @@ const cityClubs = clubs.filter((c) => c.city === city.slug);
       <span aria-hidden="true">/</span>
       <span class="text-zinc-300">{city.name}</span>
     </nav>
+
+    <!-- City hero image -->
+    {heroImage && (
+      <div class="mb-8 rounded-xl overflow-hidden relative">
+        <img
+          src={`${heroImage.url}?w=1200&q=80`}
+          alt={heroImage.altDescription}
+          class="w-full h-56 sm:h-72 object-cover"
+          loading="eager"
+        />
+        <p class="absolute bottom-0 right-0 bg-black/60 text-white/80 text-xs px-3 py-1.5">
+          Photo by{' '}
+          <a
+            href={`https://unsplash.com/@${heroImage.photographerUsername}?utm_source=stadiumstays&utm_medium=referral`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline hover:text-white"
+          >{heroImage.photographer}</a>
+          {' '}on{' '}
+          <a
+            href="https://unsplash.com/?utm_source=stadiumstays&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline hover:text-white"
+          >Unsplash</a>
+        </p>
+      </div>
+    )}
 
     <!-- Hero -->
     <div class="mb-12">

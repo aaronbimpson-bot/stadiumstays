@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/fetch-unsplash.mjs && astro build",
     "preview": "astro preview",
+    "fetch-unsplash": "node scripts/fetch-unsplash.mjs",
     "fetch-data": "node scripts/fetch-hotels.mjs && node scripts/fetch-images.mjs"
   },
   "dependencies": {
