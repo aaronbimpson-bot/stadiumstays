@@ -3,12 +3,10 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import CityCard from '../../components/CityCard.astro';
 import cities from '../../data/cities.json';
 import clubs from '../../data/clubs.json';
-import unsplashImages from '../../data/unsplash-images.json';
 
 const citiesWithCount = cities.map(city => ({
   ...city,
   clubCount: clubs.filter(c => c.city === city.slug).length,
-  imageUrl: (unsplashImages as Record<string, any>)[city.slug]?.url ?? undefined,
 }));
 ---
 
@@ -37,7 +35,6 @@ const citiesWithCount = cities.map(city => ({
           country={city.country}
           description={city.description}
           clubCount={city.clubCount}
-          imageUrl={city.imageUrl}
         />
       ))}
     </div>

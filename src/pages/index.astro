@@ -5,7 +5,6 @@ import CityCard from '../components/CityCard.astro';
 import clubs from '../data/clubs.json';
 import cities from '../data/cities.json';
 import leagues from '../data/leagues.json';
-import unsplashImages from '../data/unsplash-images.json';
 
 // Featured clubs for homepage
 const featuredClubs = clubs.filter(c =>
@@ -16,7 +15,6 @@ const featuredClubs = clubs.filter(c =>
 const featuredCities = cities.slice(0, 4).map(city => ({
   ...city,
   clubCount: clubs.filter(c => c.city === city.slug).length,
-  imageUrl: (unsplashImages as Record<string, any>)[city.slug]?.url ?? undefined,
 }));
 
 const stats = [
@@ -100,7 +98,6 @@ const stats = [
             city={club.city}
             league={club.league}
             stadiumCapacity={club.stadiumCapacity}
-            imageUrl={(unsplashImages as Record<string, any>)[club.city]?.url}
           />
         ))}
       </div>
@@ -176,7 +173,6 @@ const stats = [
             country={city.country}
             description={city.description}
             clubCount={city.clubCount}
-            imageUrl={city.imageUrl}
           />
         ))}
       </div>
