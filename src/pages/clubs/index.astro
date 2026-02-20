@@ -50,7 +50,7 @@ const clubsByLeague = leagues.map(league => ({
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {leagueClubs.map((club) => {
-            const img = (unsplashImages as Record<string, any>)[club.slug];
+            const img = (unsplashImages as any)[club.slug];
             return (
               <ClubCard
                 slug={club.slug}
