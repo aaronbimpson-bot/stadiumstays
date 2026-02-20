@@ -11,22 +11,46 @@ interface Props {
 const { slug, name, stadium, city, league, stadiumCapacity } = Astro.props;
 
 const leagueLabels: Record<string, string> = {
-  'premier-league': 'Premier League',
-  'championship': 'Championship',
-  'league-one': 'League One',
-  'scottish-premiership': 'Scottish Premiership',
+  'premier-league':      'Premier League',
+  'championship':        'Championship',
+  'league-one':          'League One',
+  'scottish-premiership':'Scottish Premiership',
+  'la-liga':             'La Liga',
+  'serie-a':             'Serie A',
 };
+
+// Gradient palette keyed by league slug
+const gradients: Record<string, string> = {
+  'premier-league':       'from-blue-900 via-blue-950 to-indigo-950',
+  'championship':         'from-sky-900 via-sky-950 to-blue-950',
+  'league-one':           'from-cyan-900 via-cyan-950 to-blue-950',
+  'scottish-premiership': 'from-indigo-900 via-indigo-950 to-blue-950',
+  'la-liga':              'from-red-900 via-rose-950 to-red-950',
+  'serie-a':              'from-emerald-900 via-green-950 to-teal-950',
+};
+const gradient = gradients[league] ?? 'from-zinc-800 via-zinc-900 to-zinc-950';
+
+const initial = name.charAt(0).toUpperCase();
+const leagueLabel = leagueLabels[league] ?? league;
 ---
 
 <a href={`/clubs/${slug}/`} class="card group hover:border-zinc-700 transition-all hover:-translate-y-0.5 block">
-  <div class="p-5">
-    <!-- Club crest placeholder -->
-    <div class="w-12 h-12 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center mb-4 group-hover:border-emerald-500/50 transition-colors">
-      <svg class="w-6 h-6 text-zinc-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2l2.4 6.4H21l-5.5 4 2.1 6.4-5.6-4-5.6 4 2.1-6.4L3 8.4h6.6z" />
-      </svg>
+  <!-- Visual banner -->
+  <div class={`relative aspect-[16/9] bg-gradient-to-br ${gradient} overflow-hidden`}>
+    <!-- Large faded club initial -->
+    <span
+      class="absolute inset-0 flex items-center justify-center text-[9rem] font-black text-white/5 select-none leading-none"
+      aria-hidden="true"
+    >{initial}</span>
+    <!-- Club name overlay -->
+    <div class="absolute inset-0 flex flex-col items-start justify-end p-4">
+      <span class="text-xs font-semibold tracking-widest uppercase text-white/40 mb-1">{leagueLabel}</span>
+      <span class="text-xl font-bold text-white/80 leading-tight">{name}</span>
     </div>
+    <div class="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-zinc-900/60 to-transparent" aria-hidden="true"></div>
+  </div>
 
+  <div class="p-5">
     <h3 class="font-bold text-white text-lg leading-tight mb-1 group-hover:text-emerald-400 transition-colors">{name}</h3>
 
     <p class="text-zinc-500 text-sm mb-4">{stadium}</p>
@@ -39,7 +63,7 @@ const leagueLabels: Record<string, string> = {
         {city.charAt(0).toUpperCase() + city.slice(1)}
       </span>
       <span class="badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs">
-        {leagueLabels[league] ?? league}
+        {leagueLabel}
       </span>
     </div>
 

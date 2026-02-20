@@ -1,0 +1,260 @@
+{
+  "london": {
+    "url": "https://picsum.photos/seed/london-uk/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "London city skyline"
+  },
+  "manchester": {
+    "url": "https://picsum.photos/seed/manchester-uk/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Manchester city"
+  },
+  "liverpool": {
+    "url": "https://picsum.photos/seed/liverpool-uk/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Liverpool city"
+  },
+  "birmingham": {
+    "url": "https://picsum.photos/seed/birmingham-uk/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Birmingham city"
+  },
+  "newcastle": {
+    "url": "https://picsum.photos/seed/newcastle-uk/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Newcastle upon Tyne"
+  },
+  "brighton": {
+    "url": "https://picsum.photos/seed/brighton-seafront/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Brighton seafront"
+  },
+  "glasgow": {
+    "url": "https://picsum.photos/seed/glasgow-scotland/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Glasgow city Scotland"
+  },
+  "leeds": {
+    "url": "https://picsum.photos/seed/leeds-uk/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Leeds city"
+  },
+  "sheffield": {
+    "url": "https://picsum.photos/seed/sheffield-uk/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Sheffield city"
+  },
+  "sunderland": {
+    "url": "https://picsum.photos/seed/sunderland-uk/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Sunderland city"
+  },
+  "madrid": {
+    "url": "https://picsum.photos/seed/madrid-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Madrid city Spain"
+  },
+  "barcelona": {
+    "url": "https://picsum.photos/seed/barcelona-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Barcelona city Spain"
+  },
+  "bilbao": {
+    "url": "https://picsum.photos/seed/bilbao-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Bilbao city Spain"
+  },
+  "villarreal": {
+    "url": "https://picsum.photos/seed/villarreal-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Villarreal city Spain"
+  },
+  "seville": {
+    "url": "https://picsum.photos/seed/seville-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Seville city Spain"
+  },
+  "san-sebastian": {
+    "url": "https://picsum.photos/seed/san-sebastian-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "San Sebastián city Spain"
+  },
+  "vigo": {
+    "url": "https://picsum.photos/seed/vigo-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Vigo city Spain"
+  },
+  "pamplona": {
+    "url": "https://picsum.photos/seed/pamplona-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Pamplona city Spain"
+  },
+  "getafe": {
+    "url": "https://picsum.photos/seed/getafe-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Getafe city Spain"
+  },
+  "palma": {
+    "url": "https://picsum.photos/seed/palma-mallorca/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Palma Mallorca"
+  },
+  "girona": {
+    "url": "https://picsum.photos/seed/girona-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Girona city Spain"
+  },
+  "vitoria-gasteiz": {
+    "url": "https://picsum.photos/seed/vitoria-gasteiz-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Vitoria-Gasteiz city Spain"
+  },
+  "leganes": {
+    "url": "https://picsum.photos/seed/leganes-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Leganés city Spain"
+  },
+  "eibar": {
+    "url": "https://picsum.photos/seed/eibar-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Eibar city Spain"
+  },
+  "zaragoza": {
+    "url": "https://picsum.photos/seed/zaragoza-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Zaragoza city Spain"
+  },
+  "gijon": {
+    "url": "https://picsum.photos/seed/gijon-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Gijón city Spain"
+  },
+  "milan": {
+    "url": "https://picsum.photos/seed/milan-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Milan city Italy"
+  },
+  "turin": {
+    "url": "https://picsum.photos/seed/turin-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Turin city Italy"
+  },
+  "naples": {
+    "url": "https://picsum.photos/seed/naples-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Naples city Italy"
+  },
+  "bergamo": {
+    "url": "https://picsum.photos/seed/bergamo-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Bergamo city Italy"
+  },
+  "rome": {
+    "url": "https://picsum.photos/seed/rome-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Rome city Italy"
+  },
+  "florence": {
+    "url": "https://picsum.photos/seed/florence-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Florence city Italy"
+  },
+  "bologna": {
+    "url": "https://picsum.photos/seed/bologna-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Bologna city Italy"
+  },
+  "udine": {
+    "url": "https://picsum.photos/seed/udine-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Udine city Italy"
+  },
+  "genoa": {
+    "url": "https://picsum.photos/seed/genoa-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Genoa city Italy"
+  },
+  "cagliari": {
+    "url": "https://picsum.photos/seed/cagliari-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Cagliari city Italy"
+  },
+  "empoli": {
+    "url": "https://picsum.photos/seed/empoli-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Empoli city Italy"
+  },
+  "verona": {
+    "url": "https://picsum.photos/seed/verona-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Verona city Italy"
+  },
+  "parma": {
+    "url": "https://picsum.photos/seed/parma-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Parma city Italy"
+  },
+  "como": {
+    "url": "https://picsum.photos/seed/como-lake-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Como lake Italy"
+  },
+  "reggio-emilia": {
+    "url": "https://picsum.photos/seed/reggio-emilia-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Reggio Emilia city Italy"
+  },
+  "pisa": {
+    "url": "https://picsum.photos/seed/pisa-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Pisa city Italy"
+  },
+  "la-spezia": {
+    "url": "https://picsum.photos/seed/la-spezia-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "La Spezia city Italy"
+  }
+}
