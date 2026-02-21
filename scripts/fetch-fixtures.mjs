@@ -26,6 +26,14 @@ const TEAM_SLUG_MAP = {
   'Brighton & Hove Albion': 'brighton',
   'Everton': 'everton',
   'Fulham': 'fulham',
+  'Brentford': 'brentford',
+  'Crystal Palace': 'crystal-palace',
+  'Nottingham Forest': 'nottingham-forest',
+  'Burnley': 'burnley',
+  'Wolverhampton Wanderers': 'wolverhampton-wanderers',
+  'AFC Bournemouth': 'afc-bournemouth',
+  'Leeds United': 'leeds-united',
+  'Sunderland': 'sunderland',
 };
 
 function todayDate() {

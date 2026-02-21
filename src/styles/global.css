@@ -9,7 +9,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-zinc-950 text-zinc-100 font-sans antialiased;
+    @apply bg-zinc-950 text-zinc-100 font-sans antialiased overflow-x-hidden;
   }
   a {
     @apply transition-colors duration-200;

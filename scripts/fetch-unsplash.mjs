@@ -36,10 +36,16 @@ const CLUBS = [
   { key: 'brighton',          query: 'Amex Stadium Brighton football' },
   { key: 'everton',           query: 'Goodison Park Everton Liverpool stadium' },
   { key: 'fulham',            query: 'Craven Cottage Fulham Thames stadium' },
-  // Championship
-  { key: 'leeds-united',      query: 'Elland Road Leeds United stadium' },
-  { key: 'sunderland',        query: 'Stadium of Light Sunderland football' },
-  { key: 'sheffield-united',  query: 'Bramall Lane Sheffield United stadium' },
+  // Championship / other Premier League
+  { key: 'leeds-united',              query: 'Elland Road Leeds United stadium' },
+  { key: 'sunderland',                query: 'Stadium of Light Sunderland football' },
+  { key: 'sheffield-united',          query: 'Bramall Lane Sheffield United stadium' },
+  { key: 'brentford',                 query: 'Gtech Community Stadium Brentford London' },
+  { key: 'crystal-palace',            query: 'Selhurst Park Crystal Palace stadium London' },
+  { key: 'nottingham-forest',         query: 'City Ground Nottingham Forest River Trent' },
+  { key: 'burnley',                   query: 'Turf Moor Burnley FC stadium Lancashire' },
+  { key: 'wolverhampton-wanderers',   query: 'Molineux Stadium Wolverhampton Wanderers' },
+  { key: 'afc-bournemouth',           query: 'Vitality Stadium Bournemouth Dean Court' },
   // La Liga
   { key: 'real-madrid',       query: 'Santiago Bernabéu stadium Madrid' },
   { key: 'barcelona',         query: 'Camp Nou Barcelona stadium' },
@@ -98,9 +104,15 @@ const CLUB_CITY_FALLBACKS = {
   'newcastle-united':  'Newcastle upon Tyne city',
   'aston-villa':       'Birmingham city UK',
   'brighton':          'Brighton seafront',
-  'leeds-united':      'Leeds city UK',
-  'sunderland':        'Sunderland city UK',
-  'sheffield-united':  'Sheffield city UK',
+  'leeds-united':                'Leeds city UK',
+  'sunderland':                  'Sunderland city UK',
+  'sheffield-united':            'Sheffield city UK',
+  'brentford':                   'London west skyline Thames',
+  'crystal-palace':              'London south Croydon skyline',
+  'nottingham-forest':           'Nottingham city River Trent',
+  'burnley':                     'Burnley Lancashire town',
+  'wolverhampton-wanderers':     'Wolverhampton city West Midlands',
+  'afc-bournemouth':             'Bournemouth beach seafront Dorset',
   // La Liga
   'real-madrid':       'Madrid city Spain',
   'barcelona':         'Barcelona city Spain',
@@ -159,7 +171,11 @@ const CITIES = [
   { key: 'glasgow',     query: 'Glasgow city Scotland' },
   { key: 'leeds',       query: 'Leeds city UK' },
   { key: 'sheffield',   query: 'Sheffield city UK' },
-  { key: 'sunderland',  query: 'Sunderland city UK' },
+  { key: 'sunderland',      query: 'Sunderland city UK' },
+  { key: 'nottingham',      query: 'Nottingham city UK River Trent' },
+  { key: 'wolverhampton',   query: 'Wolverhampton city West Midlands UK' },
+  { key: 'burnley',         query: 'Burnley Lancashire town UK' },
+  { key: 'bournemouth',     query: 'Bournemouth beach seafront Dorset England' },
   // La Liga
   { key: 'madrid',        query: 'Madrid city Spain' },
   { key: 'barcelona',     query: 'Barcelona city Spain' },
@@ -232,6 +248,33 @@ async function fetchCity({ key, query }) {
   };
 }
 
+/** Fetches up to 3 photos for a city and returns entries keyed as `${key}-life-1/2/3`. */
+async function fetchCityTriple({ key, query }) {
+  const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=3&orientation=landscape`;
+  const res = await fetch(url, {
+    headers: { Authorization: `Client-ID ${ACCESS_KEY}` },
+  });
+
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status} for ${key}`);
+  }
+
+  const data = await res.json();
+  if (!data.results?.length) {
+    throw new Error(`No results for "${query}"`);
+  }
+
+  return data.results.slice(0, 3).map((photo, i) => ({
+    key: `${key}-life-${i + 1}`,
+    value: {
+      url: photo.urls.raw,
+      photographer: photo.user.name,
+      photographerUsername: photo.user.username,
+      altDescription: photo.alt_description || `${query} photo`,
+    },
+  }));
+}
+
 async function main() {
   const results = {};
   const errors = [];
@@ -264,13 +307,15 @@ async function main() {
     await sleep(250);
   }
 
-  // Fetch city images
+  // Fetch city images (3 per city for the match page lifestyle grid)
   console.log(`\nFetching Unsplash images for ${CITIES.length} cities…`);
   for (const city of CITIES) {
     try {
-      const { key, value } = await fetchCity(city);
-      results[key] = value;
-      console.log(`  ✓ ${key} — Photo by ${value.photographer}`);
+      const entries = await fetchCityTriple(city);
+      for (const { key, value } of entries) {
+        results[key] = value;
+      }
+      console.log(`  ✓ ${city.key} (×${entries.length}) — Photo by ${entries[0].value.photographer}`);
     } catch (err) {
       errors.push(city.key);
       console.warn(`  ✗ ${city.key}: ${err.message}`);

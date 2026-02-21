@@ -6,7 +6,7 @@
     "description": "The world's greatest football city, with six Premier League clubs and countless lower-league sides spread across its boroughs.",
     "longDescription": "London is unlike any other football city in the world. From the Emirates in North London to Craven Cottage by the Thames, from Stamford Bridge in Fulham to the London Stadium in Stratford, the capital offers football fans an unparalleled choice of clubs, stadiums, and matchday experiences. With world-class transport links, iconic landmarks, and some of Europe's finest hotels and restaurants, a football trip to London is genuinely special.",
     "heroImage": "/images/cities/london.jpg",
-    "clubs": ["arsenal", "chelsea", "tottenham-hotspur", "west-ham-united", "fulham", "crystal-palace"],
+    "clubs": ["arsenal", "chelsea", "tottenham-hotspur", "west-ham-united", "fulham", "crystal-palace", "brentford"],
     "airports": ["Heathrow (LHR)", "Gatwick (LGW)", "Stansted (STN)", "City (LCY)"],
     "mainStation": "London Euston / King's Cross / Paddington",
     "highlights": ["Premier League football", "Historic stadiums", "World-class restaurants", "Museums and culture", "The Thames"],
@@ -166,6 +166,73 @@
     "bestAreas": [
       { "name": "City Centre", "description": "The best base with easy Metro access to the Stadium of Light." },
       { "name": "Roker", "description": "Seaside suburb with guest houses and a beach. A mile from the city centre." }
+    ]
+  },
+  {
+    "slug": "nottingham",
+    "name": "Nottingham",
+    "country": "England",
+    "description": "A city of remarkable football heritage — home to Nottingham Forest, two-time European Cup winners, and rivals Notts County, the world's oldest professional football club.",
+    "longDescription": "Nottingham punches well above its weight as a football city. The City Ground on the banks of the River Trent is home to one of English football's greatest clubs — Nottingham Forest won back-to-back European Cups in 1979 and 1980 under the legendary Brian Clough, a feat that remains one of the most astonishing achievements in the history of the game. The city itself is lively and compact, with a strong nightlife scene centred around the Lace Market, and the leafy suburb of West Bridgford right across the river from the City Ground making an excellent base. The Peak District is within easy reach for those making a weekend of it.",
+    "heroImage": "/images/cities/nottingham.jpg",
+    "clubs": ["nottingham-forest"],
+    "airports": ["East Midlands Airport (EMA — 15 mins)"],
+    "mainStation": "Nottingham",
+    "highlights": ["City Ground", "Trent Bridge cricket ground", "Lace Market", "Robin Hood connections", "River Trent"],
+    "bestAreas": [
+      { "name": "West Bridgford", "description": "Leafy suburb directly across the Trent from the City Ground. Great pubs and restaurants." },
+      { "name": "City Centre / Lace Market", "description": "Historic area with excellent bars, restaurants, and a vibrant nightlife scene." },
+      { "name": "Trent Bridge", "description": "Home to the famous cricket ground and a short walk to the City Ground." }
+    ]
+  },
+  {
+    "slug": "wolverhampton",
+    "name": "Wolverhampton",
+    "country": "England",
+    "description": "A proud West Midlands city with a rich football heritage, home to Wolves and one of England's most historic stadiums.",
+    "longDescription": "Wolverhampton — Wolves to football fans — is a proud West Midlands city with a history in the game that stretches back to the 19th century. Molineux, one of English football's oldest grounds, has been substantially modernised but retains its character and generates a real atmosphere when full. The city is well-connected by rail — just over an hour from London Euston — and Birmingham is only 15 minutes away, making it easy to extend your trip. The Black Country is an area of deep industrial history, and the wider region has a lot to offer visitors willing to explore beyond the stadium.",
+    "heroImage": "/images/cities/wolverhampton.jpg",
+    "clubs": ["wolverhampton-wanderers"],
+    "airports": ["Birmingham Airport (BHX — 30 mins)"],
+    "mainStation": "Wolverhampton",
+    "highlights": ["Molineux Stadium", "Wolverhampton Art Gallery", "West Midlands Safari Park nearby", "Black Country history", "Bantock House"],
+    "bestAreas": [
+      { "name": "City Centre", "description": "Walking distance from Molineux, with the best range of hotels and restaurants." },
+      { "name": "Penn", "description": "Quieter residential area with good local pubs — a short taxi from the ground." },
+      { "name": "Tettenhall", "description": "Pleasant village suburb to the west, popular with visitors looking for a quieter base." }
+    ]
+  },
+  {
+    "slug": "burnley",
+    "name": "Burnley",
+    "country": "England",
+    "description": "A proud Lancashire mill town with a passionate football culture and one of England's most historic grounds in Turf Moor.",
+    "longDescription": "Burnley is one of English football's great small-town clubs — a founding member of the Football League, with a loyal fanbase and a ground that carries the history of a century and a half of football. Turf Moor sits in the heart of the town, surrounded by terraced streets, and attending a match here feels genuinely authentic in a way that's increasingly rare in the Premier League. The surrounding Lancashire countryside is beautiful — the Pennines and Forest of Bowland are accessible for those making a proper trip of it. Manchester is 50 minutes away by train, making Burnley easy to combine with a broader visit to the North West.",
+    "heroImage": "/images/cities/burnley.jpg",
+    "clubs": ["burnley"],
+    "airports": ["Manchester Airport (MAN — 45 mins)"],
+    "mainStation": "Burnley Manchester Road",
+    "highlights": ["Turf Moor", "Pendle Hill", "Pennine Way nearby", "Lancashire countryside", "Forest of Bowland"],
+    "bestAreas": [
+      { "name": "Town Centre", "description": "Walking distance from Turf Moor, with the best selection of pubs and places to eat." },
+      { "name": "Padiham", "description": "Nearby village with a quieter feel and good local pubs." }
+    ]
+  },
+  {
+    "slug": "bournemouth",
+    "name": "Bournemouth",
+    "country": "England",
+    "description": "A beautiful south coast resort town with seven miles of sandy beach, and home to one of the Premier League's great underdog clubs.",
+    "longDescription": "Bournemouth is one of England's finest seaside towns — seven miles of sandy beach, a mild climate that earns it the nickname the 'English Riviera', and a vibrant town centre with excellent restaurants, bars, and shops. Attending a Bournemouth match combines one of the Premier League's most intimate stadiums with a genuinely lovely destination — you can walk the pier on Saturday morning, watch the match in the afternoon, and dine in style in the evening. The Dorset countryside surrounding the town is spectacular, with the Jurassic Coast (a UNESCO World Heritage Site) and Poole Harbour among the highlights. It's one of the Premier League's most genuinely enjoyable away trips.",
+    "heroImage": "/images/cities/bournemouth.jpg",
+    "clubs": ["afc-bournemouth"],
+    "airports": ["Bournemouth Airport (BOH — 10 mins)", "Southampton Airport (SOU — 30 mins)"],
+    "mainStation": "Bournemouth",
+    "highlights": ["Bournemouth Beach", "Bournemouth Pier", "Jurassic Coast", "Poole Harbour", "Boscombe Overcliff"],
+    "bestAreas": [
+      { "name": "Town Centre", "description": "Best range of hotels, restaurants, and nightlife. 30-minute walk from the Vitality Stadium." },
+      { "name": "Boscombe", "description": "Closest area to the Vitality Stadium, with a good range of pubs and takeaways." },
+      { "name": "Southbourne", "description": "Quieter coastal suburb with a village feel and easy beach access." }
     ]
   }
 ]

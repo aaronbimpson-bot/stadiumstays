@@ -4,6 +4,7 @@ import fixtures from '../../data/fixtures.json';
 import clubs from '../../data/clubs.json';
 import cities from '../../data/cities.json';
 import hotels from '../../data/hotels.json';
+import unsplashImages from '../../data/unsplash-images.json';
 
 export function getStaticPaths() {
   // Helper defined inside getStaticPaths so it's always in scope
@@ -144,26 +145,27 @@ function priceSymbol(level: number | string | null) {
         <!-- ── City lifestyle images ─────────────────────────────────────── -->
         {homeCity && (
           <section>
-            <div class="grid grid-cols-3 gap-2 sm:gap-3 rounded-xl overflow-hidden">
-              <img
-                src={`https://picsum.photos/seed/${homeCity.slug}-life-1/600/400`}
-                alt={`${homeCity.name} city`}
-                class="w-full aspect-[4/3] object-cover"
-                loading="eager"
-              />
-              <img
-                src={`https://picsum.photos/seed/${homeCity.slug}-life-2/600/400`}
-                alt={`${homeCity.name} lifestyle`}
-                class="w-full aspect-[4/3] object-cover"
-                loading="eager"
-              />
-              <img
-                src={`https://picsum.photos/seed/${homeCity.slug}-life-3/600/400`}
-                alt={`${homeCity.name} culture`}
-                class="w-full aspect-[4/3] object-cover"
-                loading="eager"
-              />
-            </div>
+            {(() => {
+              const alts = [`${homeCity.name} city`, `${homeCity.name} lifestyle`, `${homeCity.name} culture`];
+              return (
+                <div class="grid grid-cols-3 gap-2 sm:gap-3 rounded-xl overflow-hidden">
+                  {[1, 2, 3].map((n, i) => {
+                    const img = (unsplashImages as any)[`${homeCity.slug}-life-${n}`] ?? (unsplashImages as any)[homeCity.slug];
+                    const src = img
+                      ? `${img.url}&w=600&h=400&fit=crop&q=80&auto=format`
+                      : `https://picsum.photos/seed/${homeCity.slug}-city-${n}/600/400`;
+                    return (
+                      <img
+                        src={src}
+                        alt={alts[i]}
+                        class="w-full aspect-[4/3] object-cover"
+                        loading="eager"
+                      />
+                    );
+                  })}
+                </div>
+              );
+            })()}
             <p class="text-zinc-600 text-xs mt-2 text-center">Your weekend in {homeCity.name}</p>
           </section>
         )}
