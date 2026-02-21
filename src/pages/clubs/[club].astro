@@ -225,7 +225,7 @@ const topRatedHotelId = hasHotels ? hotels[0].id : null;
                     priceLevel={hotel.priceLevel ?? undefined}
                     rating={hotel.rating ?? undefined}
                     reviewCount={hotel.reviewCount ?? undefined}
-                    imageUrl={hotel.photos?.[0] ?? undefined}
+                    imageUrl={hotel.photos?.[0] ?? `https://picsum.photos/seed/${hotel.id}/800/450`}
                     badge={hotel.id === topRatedHotelId ? 'Top rated' : undefined}
                     bookingUrl={getHotelUrl(hotel.id)}
                   />
