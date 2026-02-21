@@ -102,15 +102,15 @@ function haversineKm(lat1, lng1, lat2, lng2) {
 }
 
 /**
- * Map Google priceLevel string to a rough star rating integer.
- * PRICE_LEVEL_INEXPENSIVE → 2, MODERATE → 3, EXPENSIVE → 4, VERY_EXPENSIVE → 5
+ * Map Google priceLevel string to an integer 1–4 for display as £/££/£££/££££.
+ * PRICE_LEVEL_INEXPENSIVE → 1, MODERATE → 2, EXPENSIVE → 3, VERY_EXPENSIVE → 4
  */
-function priceLevelToStars(priceLevel) {
+function priceLevelToInt(priceLevel) {
   const map = {
-    PRICE_LEVEL_INEXPENSIVE: 2,
-    PRICE_LEVEL_MODERATE: 3,
-    PRICE_LEVEL_EXPENSIVE: 4,
-    PRICE_LEVEL_VERY_EXPENSIVE: 5,
+    PRICE_LEVEL_INEXPENSIVE: 1,
+    PRICE_LEVEL_MODERATE: 2,
+    PRICE_LEVEL_EXPENSIVE: 3,
+    PRICE_LEVEL_VERY_EXPENSIVE: 4,
   };
   return map[priceLevel] ?? null;
 }
@@ -176,7 +176,8 @@ async function fetchHotelsForClub(club) {
       return {
         id: p.id,
         name: p.displayName?.text ?? 'Unknown',
-        stars: priceLevelToStars(p.priceLevel),
+        stars: null,
+        priceLevel: priceLevelToInt(p.priceLevel),
         rating: p.rating ?? null,
         reviewCount: p.userRatingCount ?? null,
         photo,

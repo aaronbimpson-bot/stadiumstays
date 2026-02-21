@@ -4,6 +4,7 @@ interface Props {
   stars: number | null;
   distanceKm: number | null;
   priceFrom?: number;
+  priceLevel?: number | null;
   rating?: number;
   reviewCount?: number;
   amenities?: string[];
@@ -17,6 +18,7 @@ const {
   stars,
   distanceKm,
   priceFrom,
+  priceLevel,
   rating,
   reviewCount,
   amenities = [],
@@ -24,6 +26,8 @@ const {
   imageUrl,
   badge,
 } = Astro.props;
+
+const priceLevelText = priceLevel ? '£'.repeat(priceLevel) : null;
 
 const distanceText =
   distanceKm === null || distanceKm === undefined
@@ -113,6 +117,11 @@ const starsArr = stars ? Array.from({ length: 5 }, (_, i) => i < stars) : [];
         <div>
           <span class="text-xs text-zinc-500">From</span>
           <div class="text-lg font-bold text-white">£{priceFrom}<span class="text-sm font-normal text-zinc-400">/night</span></div>
+        </div>
+      ) : priceLevelText ? (
+        <div>
+          <span class="text-xs text-zinc-500">Price guide</span>
+          <div class="text-sm font-semibold text-emerald-400">{priceLevelText}</div>
         </div>
       ) : (
         <div />

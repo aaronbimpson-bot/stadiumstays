@@ -222,6 +222,7 @@ const topRatedHotelId = hasHotels ? hotels[0].id : null;
                     name={hotel.name}
                     stars={hotel.stars}
                     distanceKm={hotel.distanceKm}
+                    priceLevel={hotel.priceLevel ?? undefined}
                     rating={hotel.rating ?? undefined}
                     reviewCount={hotel.reviewCount ?? undefined}
                     imageUrl={hotel.photo ?? undefined}
