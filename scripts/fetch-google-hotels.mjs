@@ -121,12 +121,13 @@ function priceLevelToStars(priceLevel) {
  */
 function fetchPhotoUrl(photoName) {
   try {
-    const mediaUrl = `https://places.googleapis.com/v1/${photoName}/media?maxWidthPx=800&key=${API_KEY}&skipHttpRedirect=false`;
+    const mediaUrl = `https://places.googleapis.com/v1/${photoName}/media?maxWidthPx=800&key=${API_KEY}`;
     const response = execSync(
-      `curl -sf -o /dev/null -w "%{redirect_url}" -L0 "${mediaUrl}"`,
+      `curl -sf -L -o /dev/null -w "%{url_effective}" "${mediaUrl}"`,
       { encoding: 'utf8', timeout: 10000 },
     ).trim();
-    return response || null;
+    // url_effective returns the original URL if no redirect occurred
+    return response && !response.includes('places.googleapis.com') ? response : null;
   } catch {
     return null;
   }
