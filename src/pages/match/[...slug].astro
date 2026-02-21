@@ -15,24 +15,27 @@ function dateSlug(isoDate: string) {
 }
 
 export function getStaticPaths() {
-  return fixtures.map((fixture) => {
-    const homeSlug = fixture.homeSlug ?? nameToSlug(fixture.homeTeam);
-    const awaySlug = fixture.awaySlug ?? nameToSlug(fixture.awayTeam);
-    const slug = `${homeSlug}-vs-${awaySlug}-${dateSlug(fixture.date)}`;
-
-    return {
-      params: { slug },
-      props: { fixture },
-    };
-  });
+  const seen = new Set<string>();
+  return (fixtures as any[])
+    .filter((f: any) => f.homeTeam && f.awayTeam && f.date)
+    .map((fixture: any) => {
+      const homeSlug = fixture.homeSlug ?? nameToSlug(String(fixture.homeTeam));
+      const awaySlug = fixture.awaySlug ?? nameToSlug(String(fixture.awayTeam));
+      const slug = `${homeSlug}-vs-${awaySlug}-${dateSlug(String(fixture.date))}`;
+      return { params: { slug }, props: { fixture } };
+    })
+    .filter(({ params }: { params: { slug: string } }) => {
+      if (seen.has(params.slug)) return false;
+      seen.add(params.slug);
+      return true;
+    });
 }
 
 const { fixture } = Astro.props;
 
 // ── Lookup data ──────────────────────────────────────────────────────────────
-const homeClub  = fixture.homeSlug ? (clubs as any[]).find(c => c.slug === fixture.homeSlug) : null;
-const awayClub  = fixture.awaySlug ? (clubs as any[]).find(c => c.slug === fixture.awaySlug) : null;
-const homeCity  = homeClub ? (cities as any[]).find(c => c.slug === homeClub.city) : null;
+const homeClub  = fixture.homeSlug ? (clubs as any[]).find((c: any) => c.slug === fixture.homeSlug) ?? null : null;
+const homeCity  = homeClub ? (cities as any[]).find((c: any) => c.slug === homeClub.city) ?? null : null;
 
 const homeHotels: any[] = fixture.homeSlug ? ((hotels as any)[fixture.homeSlug] ?? []) : [];
 const topHotels = [...homeHotels]
@@ -152,7 +155,7 @@ function priceSymbol(level: string | null) {
               </div>
               {homeCity && (
                 <div class="grid sm:grid-cols-2 gap-4">
-                  {homeCity.airports?.length > 0 && (
+                  {homeCity.airports?.length && (
                     <div class="card p-4">
                       <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
                         <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
@@ -267,9 +270,9 @@ function priceSymbol(level: string | null) {
           <h2 class="section-title mb-2">Pre-Match</h2>
           <p class="section-subtitle mb-6">Pubs, food & tips for away fans near {fixture.venue ?? `${fixture.homeTeam}'s ground`}</p>
 
-          {homeClub?.matchDayTips?.length > 0 ? (
+          {homeClub?.matchDayTips?.length ? (
             <ul class="space-y-3">
-              {(Array.isArray(homeClub.matchDayTips) ? homeClub.matchDayTips : homeClub.matchDayTips.split('\n').filter(Boolean)).map((tip: string) => (
+              {(Array.isArray(homeClub.matchDayTips) ? homeClub.matchDayTips as string[] : String(homeClub.matchDayTips).split('\n').filter(Boolean)).map((tip: string) => (
                 <li class="card p-4 flex gap-3">
                   <span class="text-emerald-400 mt-0.5 flex-shrink-0">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -295,7 +298,7 @@ function priceSymbol(level: string | null) {
             <p class="section-subtitle mb-6">Make the most of your evening in {homeCity.name}</p>
 
             <div class="space-y-4">
-              {homeCity.highlights?.length > 0 && (
+              {homeCity.highlights?.length && (
                 <div class="card p-5">
                   <h3 class="font-semibold text-white mb-3">Highlights of {homeCity.name}</h3>
                   <div class="flex flex-wrap gap-2">
@@ -306,7 +309,7 @@ function priceSymbol(level: string | null) {
                 </div>
               )}
 
-              {homeCity.bestAreas?.length > 0 && (
+              {homeCity.bestAreas?.length && (
                 <div class="space-y-3">
                   <h3 class="font-semibold text-white">Best areas to explore</h3>
                   {homeCity.bestAreas.slice(0, 3).map((area: any) => (
