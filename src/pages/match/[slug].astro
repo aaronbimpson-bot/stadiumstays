@@ -310,7 +310,7 @@ function priceSymbol(level: number | string | null) {
                   <span class="text-emerald-400 mt-0.5 flex-shrink-0">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                   </span>
-                  <p class="text-zinc-300 text-sm leading-relaxed">{tip}</p>
+                  <p class="text-zinc-300 text-sm leading-relaxed flex-1 min-w-0">{tip}</p>
                 </li>
               ))}
             </ul>
@@ -336,7 +336,7 @@ function priceSymbol(level: number | string | null) {
                   <h3 class="font-semibold text-white mb-3">Highlights of {homeCity.name}</h3>
                   <div class="flex flex-wrap gap-2">
                     {homeCity.highlights.map((h: string) => (
-                      <span class="badge">{h}</span>
+                      <span class="badge max-w-full"><span class="break-words">{h}</span></span>
                     ))}
                   </div>
                 </div>
