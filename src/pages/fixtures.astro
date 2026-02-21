@@ -63,9 +63,9 @@ const teamsJson = JSON.stringify(allTeams);
   <!-- Filters -->
   <section class="sticky top-16 z-40 bg-zinc-950/95 backdrop-blur border-b border-zinc-800 py-3">
     <div class="container-wide">
-      <div class="flex flex-col sm:flex-row gap-3">
-        <!-- Club filter -->
-        <div class="flex-1 min-w-0">
+      <div class="flex flex-col gap-2">
+        <!-- Row 1: Club filter -->
+        <div>
           <label for="club-filter" class="sr-only">Filter by club</label>
           <select
             id="club-filter"
@@ -78,33 +78,28 @@ const teamsJson = JSON.stringify(allTeams);
           </select>
         </div>
 
-        <!-- Date from -->
-        <div class="flex-1 min-w-0">
+        <!-- Row 2: Date range + Reset (always on one row) -->
+        <div class="flex gap-2 items-center">
           <label for="date-from" class="sr-only">From date</label>
           <input
             id="date-from"
             type="date"
-            class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-emerald-500"
+            class="flex-1 min-w-0 bg-zinc-900 border border-zinc-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-emerald-500"
           />
-        </div>
-
-        <!-- Date to -->
-        <div class="flex-1 min-w-0">
+          <span class="text-zinc-600 text-sm flex-shrink-0">–</span>
           <label for="date-to" class="sr-only">To date</label>
           <input
             id="date-to"
             type="date"
-            class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-emerald-500"
+            class="flex-1 min-w-0 bg-zinc-900 border border-zinc-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-emerald-500"
           />
+          <button
+            id="reset-filters"
+            class="flex-shrink-0 px-3 py-2 text-sm text-zinc-400 hover:text-white border border-zinc-700 hover:border-zinc-500 rounded-lg transition-colors"
+          >
+            Reset
+          </button>
         </div>
-
-        <!-- Reset -->
-        <button
-          id="reset-filters"
-          class="px-4 py-2 text-sm text-zinc-400 hover:text-white border border-zinc-700 hover:border-zinc-500 rounded-lg transition-colors whitespace-nowrap"
-        >
-          Reset
-        </button>
       </div>
     </div>
   </section>

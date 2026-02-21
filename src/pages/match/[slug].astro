@@ -5,33 +5,26 @@ import clubs from '../../data/clubs.json';
 import cities from '../../data/cities.json';
 import hotels from '../../data/hotels.json';
 
-// Build a slug from any team name
+export function getStaticPaths() {
+  // Helper defined inside getStaticPaths so it's always in scope
+  // (Astro runs getStaticPaths in isolation from other frontmatter code)
+  const toSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const seen = new Set<string>();
+  const paths: { params: { slug: string }; props: { fixture: any } }[] = [];
+  for (const f of fixtures) {
+    const homeSlug = f.homeSlug ?? toSlug(f.homeTeam);
+    const awaySlug = f.awaySlug ?? toSlug(f.awayTeam);
+    const slug = `${homeSlug}-vs-${awaySlug}-${f.date.substring(0, 10)}`;
+    if (seen.has(slug)) continue;
+    seen.add(slug);
+    paths.push({ params: { slug }, props: { fixture: f } });
+  }
+  return paths;
+}
+
+// Build a slug from any team name (used in rendering, outside getStaticPaths)
 function nameToSlug(name: string) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-}
-
-function dateSlug(isoDate: string) {
-  return isoDate.substring(0, 10); // YYYY-MM-DD
-}
-
-export function getStaticPaths() {
-  try {
-    const seen = new Set<string>();
-    const paths: { params: { slug: string }; props: { fixture: any } }[] = [];
-    for (const f of (fixtures as any[])) {
-      if (!f.homeTeam || !f.awayTeam || !f.date) continue;
-      const homeSlug: string = f.homeSlug ?? nameToSlug(String(f.homeTeam));
-      const awaySlug: string = f.awaySlug ?? nameToSlug(String(f.awayTeam));
-      const slug = `${homeSlug}-vs-${awaySlug}-${dateSlug(String(f.date))}`;
-      if (seen.has(slug)) continue;
-      seen.add(slug);
-      paths.push({ params: { slug }, props: { fixture: f } });
-    }
-    return paths;
-  } catch (err: any) {
-    console.error('[match/getStaticPaths] ERROR:', err?.message ?? String(err));
-    return [];
-  }
 }
 
 const { fixture } = Astro.props;
