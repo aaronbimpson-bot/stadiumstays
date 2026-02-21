@@ -1,1 +1,5246 @@
-{}
+{
+  "arsenal": [
+    {
+      "id": "lpe7b9b",
+      "name": "Covent Garden - The Strand Apartment",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.09,
+      "latitude": 51.51,
+      "longitude": -0.12306
+    },
+    {
+      "id": "lp10101b",
+      "name": "Luxury on the Strand",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.09,
+      "latitude": 51.51001,
+      "longitude": -0.12263
+    },
+    {
+      "id": "lp65753d08",
+      "name": "The Z Hotel Strand",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/311994533.jpg",
+      "distanceKm": 5.09,
+      "latitude": 51.510011,
+      "longitude": -0.122961
+    },
+    {
+      "id": "lp6587b5aa",
+      "name": "Stylish Air-con Flat in the Heart of Covent Garden",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_0132167e_z.jpg",
+      "distanceKm": 5.1,
+      "latitude": 51.51,
+      "longitude": -0.123795
+    },
+    {
+      "id": "lp6577686a",
+      "name": "Hidden gem in Covent Garden",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/459623286.jpg",
+      "distanceKm": 5.1,
+      "latitude": 51.510005,
+      "longitude": -0.123333
+    },
+    {
+      "id": "lp655787fe",
+      "name": "The Leicester Square Apartment By Hok Living",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/484884746.jpg",
+      "distanceKm": 5.19,
+      "latitude": 51.509992,
+      "longitude": -0.129057
+    },
+    {
+      "id": "lp1df1a",
+      "name": "Radisson Blu Hotel, London Leicester Square",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/246586350.jpg",
+      "distanceKm": 5.21,
+      "latitude": 51.509989,
+      "longitude": -0.129692
+    },
+    {
+      "id": "lp226b32",
+      "name": "Luxury Flat with Panoramic View of Piccadilly Circus",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_f4c1fd8f_z.jpg",
+      "distanceKm": 5.27,
+      "latitude": 51.510007,
+      "longitude": -0.13299
+    },
+    {
+      "id": "lp6572becc",
+      "name": "Mayfair Pied de Tier sleeps 6ppl",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/514540920.jpg",
+      "distanceKm": 5.49,
+      "latitude": 51.50999,
+      "longitude": -0.14125
+    },
+    {
+      "id": "lp65847a8b",
+      "name": "Mayfair Residencies",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/596404869.jpg",
+      "distanceKm": 5.66,
+      "latitude": 51.51,
+      "longitude": -0.146896
+    }
+  ],
+  "chelsea": [
+    {
+      "id": "lp2707c0",
+      "name": "Spacious 4 Bedroom Property With Garden",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 4.96,
+      "latitude": 51.437327,
+      "longitude": -0.182207
+    },
+    {
+      "id": "lpb0ab2",
+      "name": "Veeve - Wimbledon Park",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.02,
+      "latitude": 51.436721,
+      "longitude": -0.198942
+    },
+    {
+      "id": "lp656f396e",
+      "name": "Lovely 3-bed 20 minutes to Central London",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/562500926.jpg",
+      "distanceKm": 5.33,
+      "latitude": 51.436843,
+      "longitude": -0.163388
+    },
+    {
+      "id": "lp1a0f9d",
+      "name": "Luxurious Apartment in SW17",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.48,
+      "latitude": 51.43695,
+      "longitude": -0.15749
+    },
+    {
+      "id": "lp6573a278",
+      "name": "Veeve - Brilliance in Balham",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/577436725.jpg",
+      "distanceKm": 5.73,
+      "latitude": 51.4374,
+      "longitude": -0.14838
+    },
+    {
+      "id": "lp1eed21",
+      "name": "Spacious 2 Bedroom Apartment in South London",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.82,
+      "latitude": 51.436916,
+      "longitude": -0.147222
+    },
+    {
+      "id": "lp65561a83",
+      "name": "Charming 2 Bedroom Flat in Balham",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.91,
+      "latitude": 51.43758,
+      "longitude": -0.143151
+    },
+    {
+      "id": "lp6557b911",
+      "name": "Pereira House",
+      "stars": null,
+      "photo": "https://liteapi-travel-static-data.s3.amazonaws.com/images/hotels/main/1700247825.jpg",
+      "distanceKm": 6.37,
+      "latitude": 51.437575,
+      "longitude": -0.249814
+    },
+    {
+      "id": "lp657c0b7d",
+      "name": "De Montfort House",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/488768595.jpg",
+      "distanceKm": 6.48,
+      "latitude": 51.436793,
+      "longitude": -0.131094
+    },
+    {
+      "id": "lp656cdbcb",
+      "name": "The Streatham Penthouse",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_661fe97e_z.jpg",
+      "distanceKm": 6.65,
+      "latitude": 51.437345,
+      "longitude": -0.126343
+    }
+  ],
+  "liverpool": [
+    {
+      "id": "lp65702c5d",
+      "name": "Large 65 Inch TV Full Kitchen Long-Stay Ready",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/399243181.jpg",
+      "distanceKm": 4.91,
+      "latitude": 53.386983,
+      "longitude": -2.969453
+    },
+    {
+      "id": "lp657c7255",
+      "name": "Host Stay Belvidere Church",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_f3314ef9_z.jpg",
+      "distanceKm": 4.95,
+      "latitude": 53.386302,
+      "longitude": -2.959122
+    },
+    {
+      "id": "lp656cb6d2",
+      "name": "The Liverpool Escape - Captivating 1bdr Flat With Parking",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_3979f66a_z.jpg",
+      "distanceKm": 4.98,
+      "latitude": 53.386534,
+      "longitude": -2.94964
+    },
+    {
+      "id": "lp656cb6bf",
+      "name": "Immaculate 4-bed Apartment in Liverpool",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_49b760c0_z.jpg",
+      "distanceKm": 5,
+      "latitude": 53.385965,
+      "longitude": -2.966539
+    },
+    {
+      "id": "lp65583a2f",
+      "name": "Remarkable 2-bed Apartment in Leafy Sefton Park",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_14e840a1_z.jpg",
+      "distanceKm": 5.04,
+      "latitude": 53.38619,
+      "longitude": -2.946986
+    },
+    {
+      "id": "lp655f7c39",
+      "name": "Olu Apartments Belem Tower Sefton Park",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/340522765.jpg",
+      "distanceKm": 5.04,
+      "latitude": 53.38625,
+      "longitude": -2.94699
+    },
+    {
+      "id": "lp656eaea6",
+      "name": "Linnet House - Relaxing - Leafy - Whole Apt- 2 Bed",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/516375509.jpg",
+      "distanceKm": 5.05,
+      "latitude": 53.385902,
+      "longitude": -2.948873
+    },
+    {
+      "id": "lp65724558",
+      "name": "Spacious 1 Bed Apartment in Liverpool - Sleeps 6",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/576411067.jpg",
+      "distanceKm": 6.03,
+      "latitude": 53.386619,
+      "longitude": -2.908018
+    },
+    {
+      "id": "lp6577b570",
+      "name": "Lavish 2BR Bungalow Retreat in Birkenhead",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/542757853.jpg",
+      "distanceKm": 6.53,
+      "latitude": 53.38672,
+      "longitude": -3.0258
+    },
+    {
+      "id": "lp65724592",
+      "name": "Entire 5 Bedroom home in Birkenhead-Free Parking, Group & Family-Friendly, Free Internet",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/582394817.jpg",
+      "distanceKm": 6.64,
+      "latitude": 53.386989,
+      "longitude": -3.028953
+    }
+  ],
+  "manchester-city": [
+    {
+      "id": "lp656fc6d2",
+      "name": "Suite 4 - Comfy Bedroom near MCR Centre",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/408776245.jpg",
+      "distanceKm": 4.99,
+      "latitude": 53.43895,
+      "longitude": -2.18648
+    },
+    {
+      "id": "lp656feba5",
+      "name": "Suite 2 - Chic Private Room near City Centre",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/562387045.jpg",
+      "distanceKm": 4.99,
+      "latitude": 53.43895,
+      "longitude": -2.18648
+    },
+    {
+      "id": "lp2888e6",
+      "name": "Levenshulme Self-Catering Townhouse",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_456eac40_z.jpg",
+      "distanceKm": 4.99,
+      "latitude": 53.439008,
+      "longitude": -2.186509
+    },
+    {
+      "id": "lp656f07ff",
+      "name": "Comfy Private Room near MCR Centre",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/562104386.jpg",
+      "distanceKm": 5,
+      "latitude": 53.438947,
+      "longitude": -2.186484
+    },
+    {
+      "id": "lp65708bdc",
+      "name": "Lovely Private Rooms near MCR Centre",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/561838403.jpg",
+      "distanceKm": 5,
+      "latitude": 53.438947,
+      "longitude": -2.186484
+    },
+    {
+      "id": "lp65708bf1",
+      "name": "Homely Ensuite Room near City Centre",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/562029959.jpg",
+      "distanceKm": 5,
+      "latitude": 53.438947,
+      "longitude": -2.186484
+    },
+    {
+      "id": "lp2d899",
+      "name": "Manchester South Hotel, Sure Hotel Collection by BW",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_8afdc813_z.jpg",
+      "distanceKm": 5.02,
+      "latitude": 53.43954,
+      "longitude": -2.22058
+    },
+    {
+      "id": "lp6556a65d",
+      "name": "Hotel 346",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/405457416.jpg",
+      "distanceKm": 5.1,
+      "latitude": 53.438982,
+      "longitude": -2.22143
+    },
+    {
+      "id": "lpb18d4",
+      "name": "The Fallowfield Lodge",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_25977299_z.jpg",
+      "distanceKm": 5.15,
+      "latitude": 53.43861,
+      "longitude": -2.22187
+    },
+    {
+      "id": "lp6586a1cd",
+      "name": "6guests-parking-petsok-familyfriendly-garden",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_ac46e14e_z.jpg",
+      "distanceKm": 5.51,
+      "latitude": 53.43931,
+      "longitude": -2.239403
+    }
+  ],
+  "manchester-united": [
+    {
+      "id": "lp6576773a",
+      "name": "Beautifully Decorated 1-bed Apartment in Sale",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_7316aca4_z.jpg",
+      "distanceKm": 4.83,
+      "latitude": 53.420413,
+      "longitude": -2.304973
+    },
+    {
+      "id": "lp657ccf9f",
+      "name": "Stylish Town House",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/567591500.jpg",
+      "distanceKm": 5.02,
+      "latitude": 53.41873,
+      "longitude": -2.305654
+    },
+    {
+      "id": "lp65737dc6",
+      "name": "Renovated 2-Bedroom Apartment in Sale with Free WiFi, Private Entrance, and Easy Access to Trafford Centre & Manchester Airport",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/596628333.jpg",
+      "distanceKm": 5.55,
+      "latitude": 53.42077,
+      "longitude": -2.33558
+    },
+    {
+      "id": "lp1fc717",
+      "name": "OYO Cornerstone Manor Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/536895678.jpg",
+      "distanceKm": 5.63,
+      "latitude": 53.419053,
+      "longitude": -2.333125
+    },
+    {
+      "id": "lp655480a2",
+      "name": "Spath Place- West Didsbury",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_5ebc2312_z.jpg",
+      "distanceKm": 5.63,
+      "latitude": 53.420532,
+      "longitude": -2.245338
+    },
+    {
+      "id": "lp6571e818",
+      "name": "Luxury 5 Star Didsbury Home by City SuperHost",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/586163338.jpg",
+      "distanceKm": 5.69,
+      "latitude": 53.420691,
+      "longitude": -2.243133
+    },
+    {
+      "id": "lp65764a97",
+      "name": "Stunning 4-Bedroom Didsbury Home",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/609539388.jpg",
+      "distanceKm": 5.7,
+      "latitude": 53.418947,
+      "longitude": -2.247465
+    },
+    {
+      "id": "lp1d5481",
+      "name": "Stylish & Artistic Open Plan Flat in W.didsbury",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.74,
+      "latitude": 53.41916,
+      "longitude": -2.245678
+    },
+    {
+      "id": "lp6572a3a8",
+      "name": "Heart of Didsbury Luxury 2 Bed Apartment by HASS HAUS",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/538521591.jpg",
+      "distanceKm": 6.26,
+      "latitude": 53.420807,
+      "longitude": -2.228963
+    },
+    {
+      "id": "lp658664bb",
+      "name": "Spacious 4-bed, Free Parking, Short or Long Stays",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_20f571cd_z.jpg",
+      "distanceKm": 6.85,
+      "latitude": 53.420658,
+      "longitude": -2.216435
+    }
+  ],
+  "tottenham-hotspur": [
+    {
+      "id": "lp657d2abd",
+      "name": "Stoke Newington Deluxe Flat",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/504160213.jpg",
+      "distanceKm": 5.02,
+      "latitude": 51.559431,
+      "longitude": -0.074317
+    },
+    {
+      "id": "lpfec11",
+      "name": "Highbury skylight",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.4,
+      "latitude": 51.55948,
+      "longitude": -0.09669
+    },
+    {
+      "id": "lp656f9dd8",
+      "name": "Entire 3 BR Home - Minutes to Emirates Stadium!",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/513473139.jpg",
+      "distanceKm": 5.97,
+      "latitude": 51.559395,
+      "longitude": -0.113837
+    },
+    {
+      "id": "lp6578b78e",
+      "name": "Savers Apartment Close to Emirates Stadium!",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/558602902.jpg",
+      "distanceKm": 5.97,
+      "latitude": 51.559397,
+      "longitude": -0.113845
+    },
+    {
+      "id": "lp656ec430",
+      "name": "3 BR House - Close to Emirates Stadium!",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/493018479.jpg",
+      "distanceKm": 5.97,
+      "latitude": 51.5594,
+      "longitude": -0.11384
+    },
+    {
+      "id": "lp65722542",
+      "name": "Evergreen Apartments- Flat 1, London",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/481340005.jpg",
+      "distanceKm": 5.97,
+      "latitude": 51.559422,
+      "longitude": -0.113967
+    },
+    {
+      "id": "lp65722c29",
+      "name": "Evergreen Apartments, Flat 3, London",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/553928134.jpg",
+      "distanceKm": 5.97,
+      "latitude": 51.559422,
+      "longitude": -0.113967
+    },
+    {
+      "id": "lp6573bc33",
+      "name": "Evergreen Apartments- Flat 2",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/598829455.jpg",
+      "distanceKm": 5.97,
+      "latitude": 51.559447,
+      "longitude": -0.113887
+    },
+    {
+      "id": "lp65746dfe",
+      "name": "Evergreen Apartments-Flat 4, London",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/481345997.jpg",
+      "distanceKm": 5.97,
+      "latitude": 51.559459,
+      "longitude": -0.114053
+    },
+    {
+      "id": "lp657564a1",
+      "name": "Quiet Room Near Arsenal Stadium Islington Zone 2 Cental",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/492072559.jpg",
+      "distanceKm": 5.97,
+      "latitude": 51.559464,
+      "longitude": -0.11399
+    }
+  ],
+  "newcastle-united": [
+    {
+      "id": "lp6556a1d2",
+      "name": "Embassy Newcastle, Sure Hotel Collection by Best Western",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_33df24fe_z.jpg",
+      "distanceKm": 3.9,
+      "latitude": 54.940765,
+      "longitude": -1.62909
+    },
+    {
+      "id": "lp21a03b",
+      "name": "Heathfield Place",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_4a51bf31_z.jpg",
+      "distanceKm": 3.95,
+      "latitude": 54.94199,
+      "longitude": -1.601875
+    },
+    {
+      "id": "lp6561a978",
+      "name": "Stylish 2 Bedroom Flat - Close To Newcastle City Centre",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/349983460.jpg",
+      "distanceKm": 4.45,
+      "latitude": 54.939597,
+      "longitude": -1.591345
+    },
+    {
+      "id": "lp6fa96",
+      "name": "Ravensdene Lodge Hotel",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 4.53,
+      "latitude": 54.93663,
+      "longitude": -1.64264
+    },
+    {
+      "id": "lp43aaa",
+      "name": "Eslington Villa",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/28992305.jpg",
+      "distanceKm": 4.54,
+      "latitude": 54.935547,
+      "longitude": -1.60825
+    },
+    {
+      "id": "lp658892e3",
+      "name": "Eslington Villa",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/28992305.jpg",
+      "distanceKm": 4.54,
+      "latitude": 54.935547,
+      "longitude": -1.60825
+    },
+    {
+      "id": "lp65724926",
+      "name": "Large 2 Double Bed Private Apartment with sofa-bed and balcony in the Centre of Low Fell, Gateshead! Close to Queen Elizabeth Hospital!",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/554046840.jpg",
+      "distanceKm": 4.73,
+      "latitude": 54.93499,
+      "longitude": -1.59982
+    },
+    {
+      "id": "lp655ba458",
+      "name": "Sutherlands Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/101055729.jpg",
+      "distanceKm": 4.84,
+      "latitude": 54.94132,
+      "longitude": -1.575001
+    },
+    {
+      "id": "lp6572870c",
+      "name": "1 bedroom Windy Nook -Great monthly offers",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/527715735.jpg",
+      "distanceKm": 5.52,
+      "latitude": 54.938401,
+      "longitude": -1.564542
+    },
+    {
+      "id": "lp65745342",
+      "name": "The Nest At The Woodmans Arms",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/483050264.jpg",
+      "distanceKm": 6.47,
+      "latitude": 54.935552,
+      "longitude": -1.695389
+    }
+  ],
+  "aston-villa": [
+    {
+      "id": "lp65788a07",
+      "name": "2bdroom city center house Perfect for contractors",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/599487302.jpg",
+      "distanceKm": 5.06,
+      "latitude": 52.465414,
+      "longitude": -1.905124
+    },
+    {
+      "id": "lp6585b57e",
+      "name": "Domo Boutique Hotel Birmingham",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_81b95501_z.jpg",
+      "distanceKm": 5.09,
+      "latitude": 52.464807,
+      "longitude": -1.903153
+    },
+    {
+      "id": "lp6570d02e",
+      "name": "Cosy entire flat 5 min from Citycentre sleeps 4",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/587536567.jpg",
+      "distanceKm": 5.11,
+      "latitude": 52.464616,
+      "longitude": -1.902748
+    },
+    {
+      "id": "lp6586a2f8",
+      "name": "Solo Stay Contractor Pad Near New St Station",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_31f159d3_z.jpg",
+      "distanceKm": 5.11,
+      "latitude": 52.464618,
+      "longitude": -1.902775
+    },
+    {
+      "id": "lp656f7d05",
+      "name": "Birmingham City Centre One Bedroom Apartment - FREE Parking, FREE & Fast WiFi, 24HR Check-in, Nearby O2 Academy, The Mailbox & Broad Street",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/524104826.jpg",
+      "distanceKm": 5.11,
+      "latitude": 52.46462,
+      "longitude": -1.90275
+    },
+    {
+      "id": "lp65759329",
+      "name": "Cosy 1 Bedroom Apartment With Parking",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/598415084.jpg",
+      "distanceKm": 5.12,
+      "latitude": 52.46449,
+      "longitude": -1.9025
+    },
+    {
+      "id": "lpbe455",
+      "name": "Lanchester House",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.12,
+      "latitude": 52.46451,
+      "longitude": -1.86661
+    },
+    {
+      "id": "lp657cbc26",
+      "name": "Modern Apartment Free Parking Wifi Edgbaston",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/610785772.jpg",
+      "distanceKm": 5.55,
+      "latitude": 52.46456,
+      "longitude": -1.92122
+    },
+    {
+      "id": "lp6587240e",
+      "name": "Modern Apartment Free Parking Wifi Edgbaston",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/610785772.jpg",
+      "distanceKm": 5.55,
+      "latitude": 52.46456,
+      "longitude": -1.92122
+    },
+    {
+      "id": "lp6556d033",
+      "name": "Charming 5-bed House in Birmingham",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_5e83df01_z.jpg",
+      "distanceKm": 6.33,
+      "latitude": 52.464332,
+      "longitude": -1.827168
+    }
+  ],
+  "west-ham-united": [
+    {
+      "id": "lp656f31cd",
+      "name": "Modern 3 bedroom, 3 bathroom, Parking, River view",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/567310816.jpg",
+      "distanceKm": 5.18,
+      "latitude": 51.493815,
+      "longitude": -0.037265
+    },
+    {
+      "id": "lp1ee0cc",
+      "name": "Cosy 3 Bedroom House in Bermondsey",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 6.02,
+      "latitude": 51.493946,
+      "longitude": -0.065605
+    },
+    {
+      "id": "lp657c8aae",
+      "name": "Homely and Stylish Bermondsey Apartment with Parking",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/445744577.jpg",
+      "distanceKm": 6.35,
+      "latitude": 51.49392,
+      "longitude": -0.07345
+    },
+    {
+      "id": "lpa3a7b",
+      "name": "The Grange Pub",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/93201187.jpg",
+      "distanceKm": 6.41,
+      "latitude": 51.493904,
+      "longitude": -0.074877
+    },
+    {
+      "id": "lp657b11ab",
+      "name": "Central Cosy Apartment in Quiet Location",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/603488849.jpg",
+      "distanceKm": 6.51,
+      "latitude": 51.493913,
+      "longitude": -0.077272
+    },
+    {
+      "id": "lp657497f2",
+      "name": "Charming 2BD Flat Near Tower Bridge, Bermondsey",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/586695425.jpg",
+      "distanceKm": 6.78,
+      "latitude": 51.49395,
+      "longitude": -0.08318
+    },
+    {
+      "id": "lpdef9e",
+      "name": "Central 1 Bedroom Apartment With Parking",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 6.82,
+      "latitude": 51.49387,
+      "longitude": -0.08385
+    },
+    {
+      "id": "lp65744a24",
+      "name": "Affordable 1 Bed in Southwark",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/503672366.jpg",
+      "distanceKm": 6.82,
+      "latitude": 51.49396,
+      "longitude": -0.08395
+    },
+    {
+      "id": "lp6587e628",
+      "name": "Elegant 1 Bedroom in Bermondsey",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_57bf8731_z.jpg",
+      "distanceKm": 6.83,
+      "latitude": 51.493908,
+      "longitude": -0.084062
+    },
+    {
+      "id": "lp6555663f",
+      "name": "A Higher Perspective",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 7.02,
+      "latitude": 51.493842,
+      "longitude": -0.087887
+    }
+  ],
+  "brighton": [
+    {
+      "id": "lp6576c19a",
+      "name": "Wanderdown House near the Beach with a Parking Space",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/543503160.jpg",
+      "distanceKm": 5.05,
+      "latitude": 50.81735,
+      "longitude": -0.06841
+    },
+    {
+      "id": "lp65562921",
+      "name": "3 Bed in Ovingdean oc-bbwand",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/471592993.jpg",
+      "distanceKm": 5.07,
+      "latitude": 50.817097,
+      "longitude": -0.068766
+    },
+    {
+      "id": "lp6584fb02",
+      "name": "Sandpipers",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/471592993.jpg",
+      "distanceKm": 5.07,
+      "latitude": 50.817097,
+      "longitude": -0.068766
+    },
+    {
+      "id": "lp656cdb54",
+      "name": "Beautiful 2BD Flat With a Garden - East Brighton",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_0beee30c_z.jpg",
+      "distanceKm": 5.29,
+      "latitude": 50.817348,
+      "longitude": -0.110083
+    },
+    {
+      "id": "lp656f3f0a",
+      "name": "FLASH SALE Kemptown Studio BN224EAT01",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/478003719.jpg",
+      "distanceKm": 5.45,
+      "latitude": 50.81741,
+      "longitude": -0.116089
+    },
+    {
+      "id": "lp656ff53c",
+      "name": "FLASH SALE Kemptown 4 Bedroom Flat BN224BEAT",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/571758220.jpg",
+      "distanceKm": 5.45,
+      "latitude": 50.81741,
+      "longitude": -0.116089
+    },
+    {
+      "id": "lp656cb581",
+      "name": "Kemptown Coastal By My Getaways",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_3efb2d73_z.jpg",
+      "distanceKm": 5.48,
+      "latitude": 50.816908,
+      "longitude": -0.11538
+    },
+    {
+      "id": "lp658157d9",
+      "name": "Royal Studio",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/521040890.jpg",
+      "distanceKm": 5.48,
+      "latitude": 50.81695,
+      "longitude": -0.11558
+    },
+    {
+      "id": "lp655f93c0",
+      "name": "Kemp Town Balcony Flat",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/122282022.jpg",
+      "distanceKm": 5.5,
+      "latitude": 50.81752,
+      "longitude": -0.11789
+    },
+    {
+      "id": "lp656ff8b7",
+      "name": "The Brighton Parlour with Hot Tub",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/490913438.jpg",
+      "distanceKm": 5.54,
+      "latitude": 50.817086,
+      "longitude": -0.117924
+    }
+  ],
+  "everton": [
+    {
+      "id": "lp65779a70",
+      "name": "Host Stay Princes Place Hideaway V",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_d3d95189_z.jpg",
+      "distanceKm": 4.88,
+      "latitude": 53.394877,
+      "longitude": -2.965862
+    },
+    {
+      "id": "lp65779bc5",
+      "name": "Host Stay Princes Place Hideaway I",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_66d8adb3_z.jpg",
+      "distanceKm": 4.88,
+      "latitude": 53.394877,
+      "longitude": -2.965862
+    },
+    {
+      "id": "lp65873dda",
+      "name": "Host Stay Princes Place Hideaway II",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_c4fef993_z.jpg",
+      "distanceKm": 4.89,
+      "latitude": 53.3948,
+      "longitude": -2.965093
+    },
+    {
+      "id": "lp65754f69",
+      "name": "5 Star Brand New Liverpool City Centre Apartment",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_4d6e2153_edited_b884_z.jpg",
+      "distanceKm": 4.96,
+      "latitude": 53.394811,
+      "longitude": -2.978274
+    },
+    {
+      "id": "lp224fb8",
+      "name": "Apartment in Parliament Brewery Village",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_46be2b1f_z.jpg",
+      "distanceKm": 4.99,
+      "latitude": 53.394414,
+      "longitude": -2.977397
+    },
+    {
+      "id": "lp37c62",
+      "name": "Dolby Hotel Liverpool",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_e38a9681_z.jpg",
+      "distanceKm": 5.07,
+      "latitude": 53.3944,
+      "longitude": -2.98372
+    },
+    {
+      "id": "lp65812558",
+      "name": "Great Apartman Liverpool",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/494576534.jpg",
+      "distanceKm": 5.36,
+      "latitude": 53.3946,
+      "longitude": -2.93403
+    },
+    {
+      "id": "lp6578b572",
+      "name": "Modern Stylish 1Bed Apartment in Birkenhead",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/509541353.jpg",
+      "distanceKm": 5.8,
+      "latitude": 53.3948,
+      "longitude": -3.01311
+    },
+    {
+      "id": "lp656cda4c",
+      "name": "2-bed Flat in Hamilton Square",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_2c539527_z.jpg",
+      "distanceKm": 6.01,
+      "latitude": 53.394047,
+      "longitude": -3.017118
+    },
+    {
+      "id": "lp6580283e",
+      "name": "Open planned apartment",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/593286874.jpg",
+      "distanceKm": 6.04,
+      "latitude": 53.394004,
+      "longitude": -3.017844
+    }
+  ],
+  "fulham": [
+    {
+      "id": "lp952aa",
+      "name": "onefinestay - Wimbledon private homes",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5,
+      "latitude": 51.43034,
+      "longitude": -0.21232
+    },
+    {
+      "id": "lp19a550",
+      "name": "2 Bedroom Apartment in Wimbledon Village",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.02,
+      "latitude": 51.430098,
+      "longitude": -0.212349
+    },
+    {
+      "id": "lpec724",
+      "name": "Beautiful 2BR Home in Wimbledon Village W/parking",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.02,
+      "latitude": 51.430131,
+      "longitude": -0.212472
+    },
+    {
+      "id": "lp656fcaa9",
+      "name": "Chic 3BR Home - Eats and Sights Closeby",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/549660150.jpg",
+      "distanceKm": 5.62,
+      "latitude": 51.430169,
+      "longitude": -0.259588
+    },
+    {
+      "id": "lp657521ca",
+      "name": "Amazing Bright 1bed flat",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/608686165.jpg",
+      "distanceKm": 5.92,
+      "latitude": 51.430381,
+      "longitude": -0.17479
+    },
+    {
+      "id": "lp6578bb90",
+      "name": "Retreat Private Rooftop 3 Bedroom Apartment",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_bcbdbd7a_z.jpg",
+      "distanceKm": 5.94,
+      "latitude": 51.430367,
+      "longitude": -0.174246
+    },
+    {
+      "id": "lp657b3f55",
+      "name": "Spectacular 3Bed Rooftop Skyview",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/587879432.jpg",
+      "distanceKm": 5.94,
+      "latitude": 51.43038,
+      "longitude": -0.17432
+    },
+    {
+      "id": "lp656fc4a7",
+      "name": "The Vicarage Tooting, SW17",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/499954948.jpg",
+      "distanceKm": 5.99,
+      "latitude": 51.430359,
+      "longitude": -0.173149
+    },
+    {
+      "id": "lp6577c27b",
+      "name": "Studio style room, near Tooting Broadway station",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/587563813.jpg",
+      "distanceKm": 6.28,
+      "latitude": 51.4301,
+      "longitude": -0.166421
+    },
+    {
+      "id": "lp65739312",
+      "name": "Full equiped rooms, Tooting Broadway station",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/573640986.jpg",
+      "distanceKm": 6.29,
+      "latitude": 51.430054,
+      "longitude": -0.16644
+    }
+  ],
+  "celtic": [
+    {
+      "id": "lp8baed",
+      "name": "Rutherglen Villa",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 4.53,
+      "latitude": 55.80959,
+      "longitude": -4.18866
+    },
+    {
+      "id": "lp6583f945",
+      "name": "2 BDR House By Caledonia Luxe Stays Short Lets & Serviced Accommodation Glasgow",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/611120198.jpg",
+      "distanceKm": 4.84,
+      "latitude": 55.806394,
+      "longitude": -4.191559
+    },
+    {
+      "id": "lp8ba77",
+      "name": "Cathkin Apartments",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.03,
+      "latitude": 55.80524,
+      "longitude": -4.18699
+    },
+    {
+      "id": "lp65731b8a",
+      "name": "Greenlees Clubhouse 2 bed - Cambuslang",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_84589d02_z.jpg",
+      "distanceKm": 5.26,
+      "latitude": 55.805442,
+      "longitude": -4.173408
+    },
+    {
+      "id": "lp65731b86",
+      "name": "Greenlees Clubhouse 3 bed - Cambuslang",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_6fa46eab_z.jpg",
+      "distanceKm": 5.34,
+      "latitude": 55.804553,
+      "longitude": -4.174172
+    },
+    {
+      "id": "lp655f923c",
+      "name": "Greenlees Clubhouse 3 Bed",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/hd/577101608.jpg",
+      "distanceKm": 5.35,
+      "latitude": 55.80449,
+      "longitude": -4.17375
+    },
+    {
+      "id": "lp9b855",
+      "name": "The Barony Suite Apartment",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_a90b61b3_z.jpg",
+      "distanceKm": 6.17,
+      "latitude": 55.80991,
+      "longitude": -4.13531
+    },
+    {
+      "id": "lp6573cce0",
+      "name": "Modern 2 bedroom flat with free parking in Cambuslang, Glasgow",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/390012138.jpg",
+      "distanceKm": 6.21,
+      "latitude": 55.809801,
+      "longitude": -4.134694
+    },
+    {
+      "id": "lp65652b07",
+      "name": "Saphire Glasgow Apartments",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/340170989.jpg",
+      "distanceKm": 6.25,
+      "latitude": 55.807843,
+      "longitude": -4.272488
+    },
+    {
+      "id": "lpbcfd6",
+      "name": "Diamond - Redwood House",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 6.56,
+      "latitude": 55.81056,
+      "longitude": -4.12585
+    }
+  ],
+  "rangers": [
+    {
+      "id": "lp65864965",
+      "name": "3 Bedroom, Sleeps 6, Free Parking",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_1cf741e9_z.jpg",
+      "distanceKm": 4.12,
+      "latitude": 55.815774,
+      "longitude": -4.315213
+    },
+    {
+      "id": "lp6560ede0",
+      "name": "Southside Apartment Glasgow",
+      "stars": null,
+      "photo": "https://liteapi-travel-static-data.s3.amazonaws.com/images/hotels/main/1700851168.jpg",
+      "distanceKm": 4.17,
+      "latitude": 55.81614,
+      "longitude": -4.2946
+    },
+    {
+      "id": "lp9ce9d",
+      "name": "Southside Apartments",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 4.18,
+      "latitude": 55.81597,
+      "longitude": -4.29488
+    },
+    {
+      "id": "lp655f7fe8",
+      "name": "Bemersyde Guest House",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/328155306.jpg",
+      "distanceKm": 4.26,
+      "latitude": 55.814509,
+      "longitude": -4.303125
+    },
+    {
+      "id": "lp65890153",
+      "name": "2 Bedroom Apartment - Sleeps 4, Free Parking, Wifi",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_bbde93a3_z.jpg",
+      "distanceKm": 4.78,
+      "latitude": 55.811317443847656,
+      "longitude": -4.330183029174805
+    },
+    {
+      "id": "lp6580395a",
+      "name": "Ranjha Home",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/592993486.jpg",
+      "distanceKm": 4.98,
+      "latitude": 55.81086,
+      "longitude": -4.33774
+    },
+    {
+      "id": "lpcba2c",
+      "name": "Peat Road Gardens - 3 Bedroom",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.21,
+      "latitude": 55.81495,
+      "longitude": -4.35853
+    },
+    {
+      "id": "lp6586433a",
+      "name": "The Coach House - Holmwood",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_1b85afe4_z.jpg",
+      "distanceKm": 5.42,
+      "latitude": 55.812687,
+      "longitude": -4.259505
+    },
+    {
+      "id": "lp65652b07",
+      "name": "Saphire Glasgow Apartments",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/340170989.jpg",
+      "distanceKm": 5.49,
+      "latitude": 55.807843,
+      "longitude": -4.272488
+    },
+    {
+      "id": "lp6579aeff",
+      "name": "Attractive 3 Bedroom Apartment",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/411290500.jpg",
+      "distanceKm": 6.71,
+      "latitude": 55.812401,
+      "longitude": -4.229323
+    }
+  ],
+  "leeds-united": [
+    {
+      "id": "lp656ee4ce",
+      "name": "Homestay by BIC Melbourne 14 - LEEDS",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/512509857.jpg",
+      "distanceKm": 4.1,
+      "latitude": 53.74346,
+      "longitude": -1.59613
+    },
+    {
+      "id": "lp656e1b58",
+      "name": "*5SM* Setup for your most relaxed & amazing stay + Free Parking + Free Fast WiFi *",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/410518410.jpg",
+      "distanceKm": 4.14,
+      "latitude": 53.742307,
+      "longitude": -1.592915
+    },
+    {
+      "id": "lp19a167",
+      "name": "1 Bed Apartment",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_c602c91f_z.jpg",
+      "distanceKm": 4.26,
+      "latitude": 53.74292,
+      "longitude": -1.60008
+    },
+    {
+      "id": "lp65701de9",
+      "name": "Luxury Large Leeds 10bed 2.5bath Modern House Free Parking",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/484407889.jpg",
+      "distanceKm": 4.46,
+      "latitude": 53.743747,
+      "longitude": -1.535641
+    },
+    {
+      "id": "lp65576999",
+      "name": "The Halfway House",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_deeaf32d_z.jpg",
+      "distanceKm": 4.99,
+      "latitude": 53.736607,
+      "longitude": -1.603617
+    },
+    {
+      "id": "lp4c763",
+      "name": "Village Hotel Leeds South",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/423057102.jpg",
+      "distanceKm": 5,
+      "latitude": 53.733255,
+      "longitude": -1.586087
+    },
+    {
+      "id": "lp42fe2",
+      "name": "The Old Vicarage Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_50090425_z.jpg",
+      "distanceKm": 5.11,
+      "latitude": 53.74065,
+      "longitude": -1.61876
+    },
+    {
+      "id": "lp656e1b3e",
+      "name": "*6B7R* Setup for your most relaxed & amazing stay + Free Parking + Free Fast WiFi*",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/403801486.jpg",
+      "distanceKm": 5.12,
+      "latitude": 53.737492,
+      "longitude": -1.610891
+    },
+    {
+      "id": "lp65785941",
+      "name": "The Halfway House Inn",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/321667505.jpg",
+      "distanceKm": 5.18,
+      "latitude": 53.737594,
+      "longitude": -1.612955
+    },
+    {
+      "id": "lp657149e0",
+      "name": "Peaceful Haven - Spacious 3Bd Home2Home",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/507233448.jpg",
+      "distanceKm": 5.19,
+      "latitude": 53.73734,
+      "longitude": -1.61257
+    }
+  ],
+  "sunderland": [
+    {
+      "id": "lp657a8994",
+      "name": "Urban Escape by Victoria Gardens",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/601070015.jpg",
+      "distanceKm": 2.49,
+      "latitude": 54.893251,
+      "longitude": -1.374737
+    },
+    {
+      "id": "lp6557e164",
+      "name": "Victoria Gardens",
+      "stars": null,
+      "photo": "https://liteapi-travel-static-data.s3.amazonaws.com/images/hotels/main/1700258148.jpg",
+      "distanceKm": 2.51,
+      "latitude": 54.893069,
+      "longitude": -1.37467
+    },
+    {
+      "id": "lp6572b96e",
+      "name": "Entire 4-bed House in Sunderland",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_2690a8d1_z.jpg",
+      "distanceKm": 2.66,
+      "latitude": 54.892537,
+      "longitude": -1.370748
+    },
+    {
+      "id": "lp656d7911",
+      "name": "Sommerset Cottages",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_c4a32d41_z.jpg",
+      "distanceKm": 4.1,
+      "latitude": 54.878861,
+      "longitude": -1.405677
+    },
+    {
+      "id": "lp657003af",
+      "name": "Sommerset Cottages - 2 BR House",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/390716873.jpg",
+      "distanceKm": 4.16,
+      "latitude": 54.878106,
+      "longitude": -1.404696
+    },
+    {
+      "id": "lp657c06cb",
+      "name": "cosy and spacious",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/559692998.jpg",
+      "distanceKm": 4.38,
+      "latitude": 54.89028,
+      "longitude": -1.44246
+    },
+    {
+      "id": "lp657a6ae2",
+      "name": "Studio Near Beach Garden Parking PetsOK",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/611765542.jpg",
+      "distanceKm": 4.58,
+      "latitude": 54.883717,
+      "longitude": -1.436084
+    },
+    {
+      "id": "lp65872b7f",
+      "name": "Studio Near Beach Garden Parking PetsOK",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/611765542.jpg",
+      "distanceKm": 4.58,
+      "latitude": 54.883717,
+      "longitude": -1.436084
+    },
+    {
+      "id": "lp656f9ae4",
+      "name": "NEW! 3 Bedroom Home in Sunderland by Stay With Us, Perfect for Families & Contractors, FREE WiFi!!",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/569687243.jpg",
+      "distanceKm": 5.13,
+      "latitude": 54.8699,
+      "longitude": -1.366479
+    },
+    {
+      "id": "lp6566de3b",
+      "name": "Albion Boutique Guest House",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/317619766.jpg",
+      "distanceKm": 5.33,
+      "latitude": 54.869573,
+      "longitude": -1.35797
+    }
+  ],
+  "sheffield-united": [
+    {
+      "id": "lp657cf353",
+      "name": "Luxurious Sheffield Villa with Stunning Views",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/608851272.jpg",
+      "distanceKm": 3.1,
+      "latitude": 53.34252,
+      "longitude": -1.47476
+    },
+    {
+      "id": "lp6570a291",
+      "name": "Spacious, High Spec & Modern",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/615597778.jpg",
+      "distanceKm": 3.34,
+      "latitude": 53.340472,
+      "longitude": -1.477513
+    },
+    {
+      "id": "lp7da78",
+      "name": "No. 15 Tyzack Road",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 3.35,
+      "latitude": 53.34111,
+      "longitude": -1.48369
+    },
+    {
+      "id": "lp65808941",
+      "name": "Five Gables",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/563691181.jpg",
+      "distanceKm": 3.59,
+      "latitude": 53.338833,
+      "longitude": -1.458976
+    },
+    {
+      "id": "lp65862485",
+      "name": "Millhouses Hideaway",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_d00c22eb_z.jpg",
+      "distanceKm": 4.47,
+      "latitude": 53.336553,
+      "longitude": -1.507681
+    },
+    {
+      "id": "lp656d6256",
+      "name": "Bright & Airy 3BR Home with Parking",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_4e4cfa62_z.jpg",
+      "distanceKm": 4.51,
+      "latitude": 53.331079,
+      "longitude": -1.488296
+    },
+    {
+      "id": "lp656d7c7b",
+      "name": "Spacious 4 Bedroom House with Garden and Parking",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/499223902.jpg",
+      "distanceKm": 4.52,
+      "latitude": 53.34163,
+      "longitude": -1.51928
+    },
+    {
+      "id": "lp65793c3d",
+      "name": "Countryside Apartment nr. Dore Train station",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/493270196.jpg",
+      "distanceKm": 5.72,
+      "latitude": 53.326405,
+      "longitude": -1.516007
+    },
+    {
+      "id": "lp658688a3",
+      "name": "Causeway Hideaway",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_0446575c_z.jpg",
+      "distanceKm": 6.47,
+      "latitude": 53.330905,
+      "longitude": -1.542788
+    },
+    {
+      "id": "lp656a7c14",
+      "name": "Pat's Cottage",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/196277766.jpg",
+      "distanceKm": 6.98,
+      "latitude": 53.32602,
+      "longitude": -1.5456
+    }
+  ],
+  "real-madrid": [
+    {
+      "id": "lp65827454",
+      "name": "Retiro Studio",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/502937722.jpg",
+      "distanceKm": 5.02,
+      "latitude": 40.408212,
+      "longitude": -3.682299
+    },
+    {
+      "id": "lpf8d6d",
+      "name": "Luxury Flat Lavapies",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.03,
+      "latitude": 40.40823,
+      "longitude": -3.69596
+    },
+    {
+      "id": "lp6564630e",
+      "name": "BNBHolder Golden Triangle of Art CENTRE",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/120769149.jpg",
+      "distanceKm": 5.03,
+      "latitude": 40.40823,
+      "longitude": -3.69596
+    },
+    {
+      "id": "lpf9aab",
+      "name": "Sofia Suites",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/254593243.jpg",
+      "distanceKm": 5.09,
+      "latitude": 40.408188,
+      "longitude": -3.699941
+    },
+    {
+      "id": "lp657d8972",
+      "name": "Reina Sofia Center",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/586000397.jpg",
+      "distanceKm": 5.09,
+      "latitude": 40.408195,
+      "longitude": -3.699775
+    },
+    {
+      "id": "lp65737f2a",
+      "name": "For You Rentals Moderno y Cómodo Apartamento en el Centro Temporal EMB500",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/613915356.jpg",
+      "distanceKm": 5.18,
+      "latitude": 40.408225,
+      "longitude": -3.704768
+    },
+    {
+      "id": "lp657fd860",
+      "name": "BNBHolder Cuty Centre",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/442594001.jpg",
+      "distanceKm": 5.28,
+      "latitude": 40.40819,
+      "longitude": -3.70852
+    },
+    {
+      "id": "lp6577184f",
+      "name": "New Best location in central Madrid Loft",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/472456415.jpg",
+      "distanceKm": 5.28,
+      "latitude": 40.408194,
+      "longitude": -3.708451
+    },
+    {
+      "id": "lpf7f8c",
+      "name": "MLR Apartamentos Puerta de Toledo",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.3,
+      "latitude": 40.40819,
+      "longitude": -3.70934
+    },
+    {
+      "id": "lp65785a2b",
+      "name": "Porthos, bonito apartamento zona Puerta del Ángel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/527775097.jpg",
+      "distanceKm": 6.16,
+      "latitude": 40.408213,
+      "longitude": -3.730931
+    }
+  ],
+  "barcelona": [
+    {
+      "id": "lp3323c",
+      "name": "Best Western Plus Hotel Alfa Aeropuerto",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_f6a49899_z.jpg",
+      "distanceKm": 5.43,
+      "latitude": 41.3282,
+      "longitude": 2.1127
+    },
+    {
+      "id": "lp658645c7",
+      "name": "AEROHOTEL BARCELONA AEROPUERTO",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_7c4d0ee8_z.jpg",
+      "distanceKm": 6.02,
+      "latitude": 41.329714,
+      "longitude": 2.100787
+    },
+    {
+      "id": "lp6575a166",
+      "name": "Aerohotel Barcelona Airport 24h",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/600649983.jpg",
+      "distanceKm": 6.02,
+      "latitude": 41.329714,
+      "longitude": 2.100788
+    },
+    {
+      "id": "lp657356eb",
+      "name": "Cozy room next to el prat airport",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/551644602.jpg",
+      "distanceKm": 6.29,
+      "latitude": 41.32799,
+      "longitude": 2.09851
+    },
+    {
+      "id": "lp657bf914",
+      "name": "Luxury Sweet home",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/602935845.jpg",
+      "distanceKm": 6.4,
+      "latitude": 41.325818,
+      "longitude": 2.099244
+    },
+    {
+      "id": "lp656dae90",
+      "name": "Barcelona PR Guesthouse",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/459193150.jpg",
+      "distanceKm": 6.42,
+      "latitude": 41.328167,
+      "longitude": 2.096307
+    },
+    {
+      "id": "lp657e4ed2",
+      "name": "Bien en exclusivité",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/604775827.jpg",
+      "distanceKm": 6.58,
+      "latitude": 41.325028,
+      "longitude": 2.097341
+    },
+    {
+      "id": "lp655803f7",
+      "name": "Hotel Blauet by Bossh! Hotels",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/6787913.jpg",
+      "distanceKm": 6.69,
+      "latitude": 41.320937,
+      "longitude": 2.100973
+    },
+    {
+      "id": "lp657c7f92",
+      "name": "Sara's apartment Barcelona",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/510048098.jpg",
+      "distanceKm": 6.71,
+      "latitude": 41.324571,
+      "longitude": 2.095885
+    },
+    {
+      "id": "lp657868f4",
+      "name": "Sweet house close to airport",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/619402220.jpg",
+      "distanceKm": 6.94,
+      "latitude": 41.320659,
+      "longitude": 2.096913
+    }
+  ],
+  "atletico-madrid": [
+    {
+      "id": "lp65781e00",
+      "name": "Apartamento 2habs Madrid RFH",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/588957464.jpg",
+      "distanceKm": 5.8,
+      "latitude": 40.391575,
+      "longitude": -3.635445
+    },
+    {
+      "id": "lp6577bbc4",
+      "name": "Alojamiento ENTERO en Madrid, con ACCESO PRIVADO",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/474402956.jpg",
+      "distanceKm": 6.04,
+      "latitude": 40.391874,
+      "longitude": -3.64122
+    },
+    {
+      "id": "lp657fef33",
+      "name": "Espléndido Apartamento en Madrid VT-14944",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/622154481.jpg",
+      "distanceKm": 6.43,
+      "latitude": 40.391825,
+      "longitude": -3.648502
+    },
+    {
+      "id": "lp656dae86",
+      "name": "Alojamiento Buenos Aires",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_b2d4a88c_z.jpg",
+      "distanceKm": 6.56,
+      "latitude": 40.391678,
+      "longitude": -3.650641
+    },
+    {
+      "id": "lp65854df7",
+      "name": "Edsan",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/621847666.jpg",
+      "distanceKm": 6.82,
+      "latitude": 40.392575,
+      "longitude": -3.656407
+    },
+    {
+      "id": "lp6575ca0f",
+      "name": "Precioso apartamento en Puente Vallecas, Madrid. D",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/427108358.jpg",
+      "distanceKm": 6.84,
+      "latitude": 40.392426,
+      "longitude": -3.65656
+    },
+    {
+      "id": "lp65760596",
+      "name": "apartamentos en la avda de la albufera ALQUILER TEMPORAL",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/555537973.jpg",
+      "distanceKm": 6.91,
+      "latitude": 40.39262,
+      "longitude": -3.657987
+    },
+    {
+      "id": "lp6588161a",
+      "name": "Vallecano Apartments by Olala Homes",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_594626a4_z.jpg",
+      "distanceKm": 6.91,
+      "latitude": 40.392845,
+      "longitude": -3.65829
+    },
+    {
+      "id": "lp656dae7d",
+      "name": "Vallecas Suites by Olala Homes",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_9b859430_z.jpg",
+      "distanceKm": 6.91,
+      "latitude": 40.392852,
+      "longitude": -3.658269
+    },
+    {
+      "id": "lp657f3f61",
+      "name": "Rooms Rayo",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/608225326.jpg",
+      "distanceKm": 7.02,
+      "latitude": 40.391259,
+      "longitude": -3.658026
+    }
+  ],
+  "athletic-bilbao": [
+    {
+      "id": "lp656e83e7",
+      "name": "Zona tranquila, cerca del Casco Antiguo. EBI02480",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/476330579.jpg",
+      "distanceKm": 3,
+      "latitude": 43.246429,
+      "longitude": -2.921505
+    },
+    {
+      "id": "lp657f9114",
+      "name": "Zamakola Apartamento reformado y confortable con calefacción",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/570903610.jpg",
+      "distanceKm": 3.01,
+      "latitude": 43.246406,
+      "longitude": -2.921399
+    },
+    {
+      "id": "lp6579bfa1",
+      "name": "Bilbao, naturaleza, tranquilidad, ascensor, garaje",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/562784590.jpg",
+      "distanceKm": 3.07,
+      "latitude": 43.242768,
+      "longitude": -2.925415
+    },
+    {
+      "id": "lp657eaa5b",
+      "name": "Bonito Apartamento en Zamakola",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/511854880.jpg",
+      "distanceKm": 3.36,
+      "latitude": 43.241045,
+      "longitude": -2.922687
+    },
+    {
+      "id": "lp6574359a",
+      "name": "Habitacion en bilbao con Vistas",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/524279742.jpg",
+      "distanceKm": 3.37,
+      "latitude": 43.240917,
+      "longitude": -2.922681
+    },
+    {
+      "id": "lp99fdf",
+      "name": "Agroturismo Ordaola",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_173b483c_z.jpg",
+      "distanceKm": 4.63,
+      "latitude": 43.224223,
+      "longitude": -2.965197
+    },
+    {
+      "id": "lp655eeb19",
+      "name": "Apartamento KUIA en Gran Bilbao con vistas a un parque",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/280370345.jpg",
+      "distanceKm": 5.61,
+      "latitude": 43.235594,
+      "longitude": -2.892344
+    },
+    {
+      "id": "lp657d38d5",
+      "name": "Basetxea apartment by People Rentals",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/496816899.jpg",
+      "distanceKm": 5.67,
+      "latitude": 43.236404,
+      "longitude": -2.890724
+    },
+    {
+      "id": "lp657d515e",
+      "name": "Alojamiento rural cerca de Bilbao",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/538910970.jpg",
+      "distanceKm": 6.46,
+      "latitude": 43.220311,
+      "longitude": -2.897068
+    },
+    {
+      "id": "lp657790cd",
+      "name": "BILBO Near ático rural con terraza",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/534293142.jpg",
+      "distanceKm": 6.51,
+      "latitude": 43.220043,
+      "longitude": -2.896584
+    }
+  ],
+  "real-sociedad": [
+    {
+      "id": "lp219eb3",
+      "name": "Pensión Zinkoenea",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_03caa1b4_z.jpg",
+      "distanceKm": 3.81,
+      "latitude": 43.267636,
+      "longitude": -1.974213
+    },
+    {
+      "id": "lp6577224d",
+      "name": "Apartamento Elkano 1",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/508954166.jpg",
+      "distanceKm": 4.1,
+      "latitude": 43.265084,
+      "longitude": -1.976494
+    },
+    {
+      "id": "lp205ff4",
+      "name": "Apartamentos Aldagaia",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/53714338.jpg",
+      "distanceKm": 4.31,
+      "latitude": 43.26311,
+      "longitude": -1.974295
+    },
+    {
+      "id": "lp9d682",
+      "name": "HOTEL TXINTXUA",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_7e2e2bd2_z.jpg",
+      "distanceKm": 4.39,
+      "latitude": 43.262534,
+      "longitude": -1.968503
+    },
+    {
+      "id": "lp65877b46",
+      "name": "HOTEL TXINTXUA",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_7e2e2bd2_z.jpg",
+      "distanceKm": 4.39,
+      "latitude": 43.262534,
+      "longitude": -1.968503
+    },
+    {
+      "id": "lp6566be6d",
+      "name": "Agroturismo Kostegi",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/261896621.jpg",
+      "distanceKm": 5.22,
+      "latitude": 43.259239,
+      "longitude": -2.000297
+    },
+    {
+      "id": "lp6584d8e7",
+      "name": "Bidegurutzeta landetxea",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/473930541.jpg",
+      "distanceKm": 5.26,
+      "latitude": 43.25864,
+      "longitude": -1.999738
+    },
+    {
+      "id": "lp657c8e4f",
+      "name": "Salakobeta - baskeyrentals",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/482266107.jpg",
+      "distanceKm": 5.4,
+      "latitude": 43.263738,
+      "longitude": -2.014628
+    },
+    {
+      "id": "lp657fd59a",
+      "name": "Elegant Rooms Lasarte",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/438450860.jpg",
+      "distanceKm": 5.49,
+      "latitude": 43.267492,
+      "longitude": -2.022
+    },
+    {
+      "id": "lp71d82",
+      "name": "Hotel Txartel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/27896719.jpg",
+      "distanceKm": 5.84,
+      "latitude": 43.260273,
+      "longitude": -2.017237
+    }
+  ],
+  "real-betis": [
+    {
+      "id": "lp5f94e",
+      "name": "Apartamentos Puerta del Sur",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/569654835.jpg",
+      "distanceKm": 3.86,
+      "latitude": 37.322675,
+      "longitude": -5.969417
+    },
+    {
+      "id": "lp657ef17d",
+      "name": "Apartamentos RG Hospital Valme",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/516782354.jpg",
+      "distanceKm": 4.02,
+      "latitude": 37.32153,
+      "longitude": -5.96827
+    },
+    {
+      "id": "lp6584a6a5",
+      "name": "ApartHome Bellavista",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/614670590.jpg",
+      "distanceKm": 4.02,
+      "latitude": 37.32173,
+      "longitude": -5.96735
+    },
+    {
+      "id": "lp65865e7a",
+      "name": "Tinto Townhouse",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_020307d5_z.jpg",
+      "distanceKm": 4.24,
+      "latitude": 37.319637,
+      "longitude": -5.967332
+    },
+    {
+      "id": "lp6554895c",
+      "name": "Olala Vigo Apartment",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_dfa26a22_z.jpg",
+      "distanceKm": 4.24,
+      "latitude": 37.319639,
+      "longitude": -5.967334
+    },
+    {
+      "id": "lp6578cd83",
+      "name": "Los Olivos Apartments by Olala Homes",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/538487483.jpg",
+      "distanceKm": 4.27,
+      "latitude": 37.319161,
+      "longitude": -5.96805
+    },
+    {
+      "id": "lp65876df4",
+      "name": "Los Olivos Apartments by Olala Homes",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_fbeaa5ff_z.jpg",
+      "distanceKm": 4.27,
+      "latitude": 37.319191,
+      "longitude": -5.968052
+    },
+    {
+      "id": "lp452aa",
+      "name": "Bellavista Sevilla",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/460780029.jpg",
+      "distanceKm": 4.31,
+      "latitude": 37.318669,
+      "longitude": -5.968741
+    },
+    {
+      "id": "lp6584d9d9",
+      "name": "RentalSevilla Bellavista",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/583376112.jpg",
+      "distanceKm": 4.35,
+      "latitude": 37.318674,
+      "longitude": -5.966885
+    },
+    {
+      "id": "lp6584292d",
+      "name": "Balcon Buenavista",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/440035852.jpg",
+      "distanceKm": 4.91,
+      "latitude": 37.31464,
+      "longitude": -5.96223
+    }
+  ],
+  "sevilla": [
+    {
+      "id": "lp6581e012",
+      "name": "Hispalis Ático Bermejales",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/506002092.jpg",
+      "distanceKm": 3.93,
+      "latitude": 37.348714,
+      "longitude": -5.977647
+    },
+    {
+      "id": "lp1a8809",
+      "name": "Bonito Apartamento Familiar en Sevilla",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_3eb63504_z.jpg",
+      "distanceKm": 4.22,
+      "latitude": 37.34585,
+      "longitude": -5.9759
+    },
+    {
+      "id": "lp65814567",
+      "name": "Apartamento Reformado Parking gratis",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/288802702.jpg",
+      "distanceKm": 4.3,
+      "latitude": 37.346189,
+      "longitude": -5.982679
+    },
+    {
+      "id": "lp6579319b",
+      "name": "Hospedaje VillaDulce 2",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/517682732.jpg",
+      "distanceKm": 5.68,
+      "latitude": 37.34295,
+      "longitude": -5.9316
+    },
+    {
+      "id": "lp65819e5c",
+      "name": "vistas desde montequinto",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/530978348.jpg",
+      "distanceKm": 6.03,
+      "latitude": 37.340426,
+      "longitude": -5.929299
+    },
+    {
+      "id": "lp65748691",
+      "name": "Anfitriones de Glamour - Albor de Sevilla",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/612319920.jpg",
+      "distanceKm": 6.06,
+      "latitude": 37.339689,
+      "longitude": -5.929891
+    },
+    {
+      "id": "lp65685815",
+      "name": "Casa Juan Sebastian Elcano",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/490616639.jpg",
+      "distanceKm": 6.27,
+      "latitude": 37.347371,
+      "longitude": -6.024873
+    },
+    {
+      "id": "lp656455e4",
+      "name": "Piso Sevilla",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/237077840.jpg",
+      "distanceKm": 6.68,
+      "latitude": 37.341105,
+      "longitude": -6.023928
+    },
+    {
+      "id": "lp6570bb5d",
+      "name": "Casa en el río",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/375986989.jpg",
+      "distanceKm": 6.82,
+      "latitude": 37.33869,
+      "longitude": -6.02303
+    },
+    {
+      "id": "lp6574a71d",
+      "name": "Tu casa flotante en Sevilla! Barco en alquiler en el Guadalquivir",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/592349187.jpg",
+      "distanceKm": 6.83,
+      "latitude": 37.33935,
+      "longitude": -6.02402
+    }
+  ],
+  "villarreal": [
+    {
+      "id": "lp655ee87a",
+      "name": "Apartamento Roma, living suite en Vila real",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/289338622.jpg",
+      "distanceKm": 0.94,
+      "latitude": 39.936224,
+      "longitude": -0.101865
+    },
+    {
+      "id": "lp657d16c8",
+      "name": "Maravilloso piso a estrenar",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/490689340.jpg",
+      "distanceKm": 1.04,
+      "latitude": 39.936279,
+      "longitude": -0.09778
+    },
+    {
+      "id": "lp657ca34f",
+      "name": "Preciosas habitaciones en Vila-real",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/575298024.jpg",
+      "distanceKm": 1.24,
+      "latitude": 39.934936,
+      "longitude": -0.096119
+    },
+    {
+      "id": "lp6572c4e6",
+      "name": "JC 7 apartamento",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/579108123.jpg",
+      "distanceKm": 1.28,
+      "latitude": 39.93334,
+      "longitude": -0.10004
+    },
+    {
+      "id": "lpd2d67",
+      "name": "Hostal Restaurante La Masía",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/92101297.jpg",
+      "distanceKm": 1.29,
+      "latitude": 39.934009,
+      "longitude": -0.109515
+    },
+    {
+      "id": "lp65796c1c",
+      "name": "Hostal Restaurante La Masía",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/92101297.jpg",
+      "distanceKm": 1.29,
+      "latitude": 39.934009,
+      "longitude": -0.109515
+    },
+    {
+      "id": "lp5e5d0",
+      "name": "Hotel Vila-real Palace",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/345184255.jpg",
+      "distanceKm": 1.89,
+      "latitude": 39.927695,
+      "longitude": -0.105507
+    },
+    {
+      "id": "lp65543b8d",
+      "name": "HOTEL MARINA AZUL 2* MARINA D'OR",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 1.92,
+      "latitude": 39.927395,
+      "longitude": -0.10539762
+    },
+    {
+      "id": "lp5ed1d",
+      "name": "Villareal Marina Azul Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_25da5f58_z.jpg",
+      "distanceKm": 1.96,
+      "latitude": 39.92703,
+      "longitude": -0.105191
+    },
+    {
+      "id": "lp696f4",
+      "name": "Hotel Sercotel Plana Parc",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/53200819.jpg",
+      "distanceKm": 4.96,
+      "latitude": 39.902292,
+      "longitude": -0.12181
+    }
+  ],
+  "girona": [
+    {
+      "id": "lp65773332",
+      "name": "Casa Itram Fantástica casa en el Gironès",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/586271355.jpg",
+      "distanceKm": 0.54,
+      "latitude": 41.96108,
+      "longitude": 2.82098
+    },
+    {
+      "id": "lp9dd0f",
+      "name": "Residencia Universitaria Resa Campus de Montilivi",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/75695364.jpg",
+      "distanceKm": 0.64,
+      "latitude": 41.959666,
+      "longitude": 2.820289
+    },
+    {
+      "id": "lp65888c91",
+      "name": "Residencia Universitaria Resa Campus de Montilivi",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/75695364.jpg",
+      "distanceKm": 0.64,
+      "latitude": 41.959666,
+      "longitude": 2.820289
+    },
+    {
+      "id": "lp6575f028",
+      "name": "Exclusiva Casa de Lujo con Piscinas y Amplio Jardín en Zona Tranquila",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/559760084.jpg",
+      "distanceKm": 1.25,
+      "latitude": 41.95259,
+      "longitude": 2.81855
+    },
+    {
+      "id": "lp657b0112",
+      "name": "Masia Can Clotas",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/565351239.jpg",
+      "distanceKm": 1.52,
+      "latitude": 41.95393,
+      "longitude": 2.8426
+    },
+    {
+      "id": "lp65722142",
+      "name": "Ca La Iaia Casa con piscina y jardín",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/622277128.jpg",
+      "distanceKm": 1.88,
+      "latitude": 41.94859,
+      "longitude": 2.84195
+    },
+    {
+      "id": "lp6589118f",
+      "name": "Mimosa Lodge",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_61d61540_z.jpg",
+      "distanceKm": 2.98,
+      "latitude": 41.93708801269531,
+      "longitude": 2.8416619300842285
+    },
+    {
+      "id": "lp657794ca",
+      "name": "Casa Rustica con piscina en Girona - WeHost Costa Brava",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/334748929.jpg",
+      "distanceKm": 3.59,
+      "latitude": 41.930469,
+      "longitude": 2.838272
+    },
+    {
+      "id": "lp657617f4",
+      "name": "El Molí de Fornells",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/538711710.jpg",
+      "distanceKm": 3.81,
+      "latitude": 41.928652,
+      "longitude": 2.815136
+    },
+    {
+      "id": "lp657a3aee",
+      "name": "Torre els Rosers - villa familiar",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/536158438.jpg",
+      "distanceKm": 4.63,
+      "latitude": 41.921814,
+      "longitude": 2.843411
+    }
+  ],
+  "osasuna": [
+    {
+      "id": "lp5c0fc",
+      "name": "Hotel Bed4U Pamplona",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/508153909.jpg",
+      "distanceKm": 0.76,
+      "latitude": 42.790456,
+      "longitude": -1.640117
+    },
+    {
+      "id": "lp3efd4",
+      "name": "Hotel Zenit Pamplona",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/267299377.jpg",
+      "distanceKm": 1.12,
+      "latitude": 42.787307,
+      "longitude": -1.632092
+    },
+    {
+      "id": "lp408f8",
+      "name": "Holiday Inn Express Pamplona by IHG",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/447823380.jpg",
+      "distanceKm": 1.67,
+      "latitude": 42.783193,
+      "longitude": -1.628149
+    },
+    {
+      "id": "lp657e097b",
+      "name": "Iraipe Izaga Hostal",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/89549174.jpg",
+      "distanceKm": 2.58,
+      "latitude": 42.773603,
+      "longitude": -1.636235
+    },
+    {
+      "id": "lpa2906",
+      "name": "Iraipe Izaga Hostal",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_fbc57222_z.jpg",
+      "distanceKm": 2.58,
+      "latitude": 42.773631,
+      "longitude": -1.636381
+    },
+    {
+      "id": "lp3a2d7",
+      "name": "ibis Styles Pamplona Noain",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/178747036.jpg",
+      "distanceKm": 3.54,
+      "latitude": 42.765021,
+      "longitude": -1.633605
+    },
+    {
+      "id": "lp655aa3d9",
+      "name": "ibis Styles Pamplona Noain",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/178747036.jpg",
+      "distanceKm": 3.54,
+      "latitude": 42.765021,
+      "longitude": -1.633605
+    },
+    {
+      "id": "lp39950",
+      "name": "Exe Zizur Pamplona",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/402422342.jpg",
+      "distanceKm": 4.65,
+      "latitude": 42.790667,
+      "longitude": -1.693134
+    },
+    {
+      "id": "lp6588a628",
+      "name": "Exe Zizur Pamplona",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/402422342.jpg",
+      "distanceKm": 4.65,
+      "latitude": 42.790667,
+      "longitude": -1.693134
+    },
+    {
+      "id": "lp48c03",
+      "name": "Hotel Agorreta",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/11552547.jpg",
+      "distanceKm": 5.05,
+      "latitude": 42.752441,
+      "longitude": -1.649942
+    }
+  ],
+  "celta-vigo": [
+    {
+      "id": "lp65824266",
+      "name": "Pensión Celtia",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/537749649.jpg",
+      "distanceKm": 3.62,
+      "latitude": 42.187419,
+      "longitude": -8.711351
+    },
+    {
+      "id": "lp657f3cfc",
+      "name": "Casa Ramos",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/459285821.jpg",
+      "distanceKm": 3.76,
+      "latitude": 42.17907,
+      "longitude": -8.729992
+    },
+    {
+      "id": "lp65826753",
+      "name": "Villa Emérita",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/509687418.jpg",
+      "distanceKm": 4.01,
+      "latitude": 42.17844,
+      "longitude": -8.72224
+    },
+    {
+      "id": "lp65800f42",
+      "name": "Sweet Stone",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/474094154.jpg",
+      "distanceKm": 4.05,
+      "latitude": 42.180181,
+      "longitude": -8.764188
+    },
+    {
+      "id": "lp65685841",
+      "name": "Chalet en Canido",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/268010498.jpg",
+      "distanceKm": 5.38,
+      "latitude": 42.188938,
+      "longitude": -8.797582
+    },
+    {
+      "id": "lp65766e99",
+      "name": "Chalet adosado independiente en Vigo - Canido",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/590343476.jpg",
+      "distanceKm": 5.4,
+      "latitude": 42.190845,
+      "longitude": -8.799197
+    },
+    {
+      "id": "lp657df36c",
+      "name": "Chalet Canido Playa",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/585010269.jpg",
+      "distanceKm": 5.47,
+      "latitude": 42.19039,
+      "longitude": -8.79991
+    },
+    {
+      "id": "lp6575ca88",
+      "name": "Canido, casa de invitados",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/562543825.jpg",
+      "distanceKm": 5.83,
+      "latitude": 42.18182,
+      "longitude": -8.79808
+    },
+    {
+      "id": "lp65566e83",
+      "name": "Residencia Universitaria O Castro - Campus Accommodation",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_39f4b1ad_z.jpg",
+      "distanceKm": 6.37,
+      "latitude": 42.170983,
+      "longitude": -8.686251
+    },
+    {
+      "id": "lp65805184",
+      "name": "Residencia Universitaria Resa O Castro",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/140042202.jpg",
+      "distanceKm": 6.37,
+      "latitude": 42.170986,
+      "longitude": -8.686162
+    }
+  ],
+  "mallorca": [
+    {
+      "id": "lp8c44f",
+      "name": "Hotel Ciutat Jardi",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/583682279.jpg",
+      "distanceKm": 4.84,
+      "latitude": 39.552349,
+      "longitude": 2.690991
+    },
+    {
+      "id": "lp3fd39",
+      "name": "Portofino Mallorca",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/19649566.jpg",
+      "distanceKm": 4.95,
+      "latitude": 39.551574,
+      "longitude": 2.691916
+    },
+    {
+      "id": "lp6577a5ce",
+      "name": "Las Rocas Beach-Ciutat Jardi Playa",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/499265272.jpg",
+      "distanceKm": 5.15,
+      "latitude": 39.549545,
+      "longitude": 2.691883
+    },
+    {
+      "id": "lpf3a7b",
+      "name": "Dream Weaver Pool Duplex",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.43,
+      "latitude": 39.55197,
+      "longitude": 2.62267
+    },
+    {
+      "id": "lp656ad0e5",
+      "name": "Villa Mar Felostal",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/365831819.jpg",
+      "distanceKm": 5.47,
+      "latitude": 39.54691,
+      "longitude": 2.69351
+    },
+    {
+      "id": "lp656869e7",
+      "name": "Hermanos Gallego ETV9492",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/188330521.jpg",
+      "distanceKm": 5.5,
+      "latitude": 39.54901,
+      "longitude": 2.69868
+    },
+    {
+      "id": "lp656d091f",
+      "name": "Belle Marivent Mediterranean Petit Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/581126137.jpg",
+      "distanceKm": 6.12,
+      "latitude": 39.551677,
+      "longitude": 2.611189
+    },
+    {
+      "id": "lp6588a5a4",
+      "name": "Belle Marivent Mediterranean Petit Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/581126137.jpg",
+      "distanceKm": 6.12,
+      "latitude": 39.551677,
+      "longitude": 2.611189
+    },
+    {
+      "id": "lp886b5",
+      "name": "Priority Duplex Apartment",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 6.13,
+      "latitude": 39.55154,
+      "longitude": 2.61121
+    },
+    {
+      "id": "lp2d256",
+      "name": "Nixe Palace",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/167547854.jpg",
+      "distanceKm": 6.25,
+      "latitude": 39.552366,
+      "longitude": 2.608252
+    }
+  ],
+  "rayo-vallecano": [
+    {
+      "id": "lp6584f9e0",
+      "name": "PIRAMIDES",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/289900779.jpg",
+      "distanceKm": 4.71,
+      "latitude": 40.35192,
+      "longitude": -3.68028
+    },
+    {
+      "id": "lp6584fafe",
+      "name": "MANA",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/297383636.jpg",
+      "distanceKm": 4.79,
+      "latitude": 40.35125,
+      "longitude": -3.68048
+    },
+    {
+      "id": "lp65803a28",
+      "name": "Villa Verde",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/591758787.jpg",
+      "distanceKm": 4.96,
+      "latitude": 40.350867,
+      "longitude": -3.684696
+    },
+    {
+      "id": "lp658289dc",
+      "name": "Madrid Villaverde - Apartamentos acogedores, AC",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/547600491.jpg",
+      "distanceKm": 5.24,
+      "latitude": 40.349565,
+      "longitude": -3.688856
+    },
+    {
+      "id": "lp658495d7",
+      "name": "Aparment villaverde",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/594840566.jpg",
+      "distanceKm": 5.3,
+      "latitude": 40.349982,
+      "longitude": -3.691377
+    },
+    {
+      "id": "lp657c2c09",
+      "name": "Hostel Vida Verde",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/580496815.jpg",
+      "distanceKm": 5.53,
+      "latitude": 40.347633,
+      "longitude": -3.69134
+    },
+    {
+      "id": "lp6557eec8",
+      "name": "La Perla de Lujo - Hostel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_a232cdc4_z.jpg",
+      "distanceKm": 5.53,
+      "latitude": 40.347637,
+      "longitude": -3.691326
+    },
+    {
+      "id": "lp6558f29b",
+      "name": "Paseo Suites Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/443029536.jpg",
+      "distanceKm": 5.88,
+      "latitude": 40.348512,
+      "longitude": -3.701008
+    },
+    {
+      "id": "lp657be51e",
+      "name": "Habitación individual con baño exclusivo en casa particular",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/510807096.jpg",
+      "distanceKm": 5.88,
+      "latitude": 40.35188,
+      "longitude": -3.70655
+    },
+    {
+      "id": "lp657e5fd1",
+      "name": "Estudios Nuevos Madrid Centro",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/584727232.jpg",
+      "distanceKm": 5.94,
+      "latitude": 40.349335,
+      "longitude": -3.703607
+    }
+  ],
+  "getafe": [
+    {
+      "id": "lp6577142b",
+      "name": "Apartamento ABRIL en el Centro de Getafe",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/476964624.jpg",
+      "distanceKm": 2.7,
+      "latitude": 40.301712,
+      "longitude": -3.730722
+    },
+    {
+      "id": "lp6584103a",
+      "name": "keiny apartamento",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/475165829.jpg",
+      "distanceKm": 2.78,
+      "latitude": 40.30109,
+      "longitude": -3.73124
+    },
+    {
+      "id": "lp6567345f",
+      "name": "Hostal Tres Hermanos",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/405268496.jpg",
+      "distanceKm": 2.81,
+      "latitude": 40.302404,
+      "longitude": -3.734946
+    },
+    {
+      "id": "lp6581c446",
+      "name": "Rooms Aguila",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/585993336.jpg",
+      "distanceKm": 2.86,
+      "latitude": 40.3035,
+      "longitude": -3.73799
+    },
+    {
+      "id": "lp6558324a",
+      "name": "Hostal La Parada",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_e7cb1c65_z.jpg",
+      "distanceKm": 3.7,
+      "latitude": 40.295309,
+      "longitude": -3.694457
+    },
+    {
+      "id": "lp65798c96",
+      "name": "Hotel La Parada",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/432187980.jpg",
+      "distanceKm": 3.71,
+      "latitude": 40.295193,
+      "longitude": -3.694357
+    },
+    {
+      "id": "lp51f4a",
+      "name": "Gran Hotel Los Angeles",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/43623208.jpg",
+      "distanceKm": 3.8,
+      "latitude": 40.296016,
+      "longitude": -3.690902
+    },
+    {
+      "id": "lp66657",
+      "name": "Ramada by Wyndham Madrid Getafe",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/249605682.jpg",
+      "distanceKm": 4.15,
+      "latitude": 40.290206,
+      "longitude": -3.695719
+    },
+    {
+      "id": "lp65729b63",
+      "name": "Casa grande 14 personas Getafe Madrid",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/512627628.jpg",
+      "distanceKm": 5.09,
+      "latitude": 40.29118,
+      "longitude": -3.75939
+    },
+    {
+      "id": "lp54c18",
+      "name": "Holiday Inn Express Madrid Leganes by IHG",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/230122403.jpg",
+      "distanceKm": 5.31,
+      "latitude": 40.305156,
+      "longitude": -3.774877
+    }
+  ],
+  "alaves": [
+    {
+      "id": "lp65764d9a",
+      "name": "Piso en el barrio de Ariznavarra",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/604201794.jpg",
+      "distanceKm": 0.58,
+      "latitude": 42.841581,
+      "longitude": -2.691545
+    },
+    {
+      "id": "lp51224",
+      "name": "Hotel Jardines de Uleta Suites",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/8154373.jpg",
+      "distanceKm": 0.75,
+      "latitude": 42.833866,
+      "longitude": -2.696028
+    },
+    {
+      "id": "lp657ec958",
+      "name": "Vitoria-Gasteiz magnífica casa",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/540092220.jpg",
+      "distanceKm": 1.43,
+      "latitude": 42.833564,
+      "longitude": -2.671054
+    },
+    {
+      "id": "lp655ee497",
+      "name": "Apartamento céntrico",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/147990313.jpg",
+      "distanceKm": 1.53,
+      "latitude": 42.835319,
+      "longitude": -2.669354
+    },
+    {
+      "id": "lp655644db",
+      "name": "Residencia Resa Tomás Alfaro Fournier",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/235356174.jpg",
+      "distanceKm": 1.6,
+      "latitude": 42.836459,
+      "longitude": -2.668262
+    },
+    {
+      "id": "lp6574aab1",
+      "name": "Residencia Resa Tomás Alfaro Fournier",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/235356174.jpg",
+      "distanceKm": 1.6,
+      "latitude": 42.836459,
+      "longitude": -2.668262
+    },
+    {
+      "id": "lp65580cba",
+      "name": "Kora Green City - Aparthotel Passivhaus",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/420337750.jpg",
+      "distanceKm": 1.79,
+      "latitude": 42.841217,
+      "longitude": -2.666641
+    },
+    {
+      "id": "lp658484d4",
+      "name": "Apartamento Vitoria",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/585411921.jpg",
+      "distanceKm": 1.85,
+      "latitude": 42.83818,
+      "longitude": -2.66529
+    },
+    {
+      "id": "lp65846069",
+      "name": "apartamento centro",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/477253763.jpg",
+      "distanceKm": 1.92,
+      "latitude": 42.83528,
+      "longitude": -2.66446
+    },
+    {
+      "id": "lp65629919",
+      "name": "Gasteiz Etxea Il",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/484533835.jpg",
+      "distanceKm": 2.22,
+      "latitude": 42.835821,
+      "longitude": -2.660708
+    }
+  ],
+  "las-palmas": [
+    {
+      "id": "lp658462db",
+      "name": "vistas panoramicas",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/575435510.jpg",
+      "distanceKm": 4.29,
+      "latitude": 28.06214,
+      "longitude": -15.46302
+    },
+    {
+      "id": "lp657acb1b",
+      "name": "Casa El Caminito",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/601726180.jpg",
+      "distanceKm": 4.72,
+      "latitude": 28.058566,
+      "longitude": -15.4654
+    },
+    {
+      "id": "lp65699f09",
+      "name": "Villa con piscina privada Palmeras Home",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/356981544.jpg",
+      "distanceKm": 4.72,
+      "latitude": 28.05912,
+      "longitude": -15.44467
+    },
+    {
+      "id": "lp655dc81e",
+      "name": "Residencia Los Conejos - Bike & Motorbike",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/142646415.jpg",
+      "distanceKm": 4.76,
+      "latitude": 28.05853,
+      "longitude": -15.467074
+    },
+    {
+      "id": "lp65543c32",
+      "name": "HOTEL RURAL THE MAIPEZ SENSES COLLECTION",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 4.96,
+      "latitude": 28.058363,
+      "longitude": -15.473611
+    },
+    {
+      "id": "lpa9317",
+      "name": "Hotel Rural LIVVO Maipez",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/163628010.jpg",
+      "distanceKm": 4.97,
+      "latitude": 28.058321,
+      "longitude": -15.473817
+    },
+    {
+      "id": "lp657190dc",
+      "name": "El Rincón de la Laja",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/566481091.jpg",
+      "distanceKm": 5.18,
+      "latitude": 28.063112,
+      "longitude": -15.424531
+    },
+    {
+      "id": "lp65848cc5",
+      "name": "Autocaravana Camper",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/459800140.jpg",
+      "distanceKm": 5.43,
+      "latitude": 28.061865,
+      "longitude": -15.422258
+    },
+    {
+      "id": "lp657adcc0",
+      "name": "Casa Rural Siete Puertas",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/604134692.jpg",
+      "distanceKm": 5.47,
+      "latitude": 28.05727,
+      "longitude": -15.483343
+    },
+    {
+      "id": "lp3227b8",
+      "name": "Casa Rural con Piscina Privada en Las Palmas",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 6.77,
+      "latitude": 28.057552,
+      "longitude": -15.505524
+    }
+  ],
+  "valencia": [
+    {
+      "id": "lp657e7509",
+      "name": "APARTAMENTO CERCANO AL CENTRO",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/556641043.jpg",
+      "distanceKm": 4.61,
+      "latitude": 39.44055,
+      "longitude": -0.38898
+    },
+    {
+      "id": "lp6573c414",
+      "name": "APARTAMENTO CON PISCINA CERCA DE LA NUEVA FE.",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/507127024.jpg",
+      "distanceKm": 4.71,
+      "latitude": 39.439081,
+      "longitude": -0.388114
+    },
+    {
+      "id": "lp657f47be",
+      "name": "Luxury Holiday House",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/477780249.jpg",
+      "distanceKm": 5.03,
+      "latitude": 39.431,
+      "longitude": -0.34256
+    },
+    {
+      "id": "lp65740bc0",
+      "name": "Ático con 2 grandes terrazas y 2 habitaciones",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/406173550.jpg",
+      "distanceKm": 6.31,
+      "latitude": 39.4331,
+      "longitude": -0.408367
+    },
+    {
+      "id": "lp6571f3f3",
+      "name": "Casa de Patri y Xavi",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/587898701.jpg",
+      "distanceKm": 6.39,
+      "latitude": 39.43225,
+      "longitude": -0.40857
+    },
+    {
+      "id": "lp656dac80",
+      "name": "Hostal Garden Rous",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_87ad67c8_z.jpg",
+      "distanceKm": 6.61,
+      "latitude": 39.432819,
+      "longitude": -0.413037
+    },
+    {
+      "id": "lpa2a4b",
+      "name": "HRBonavista",
+      "stars": null,
+      "photo": "https://liteapi-travel-static-data.s3.amazonaws.com/images/hotels/main/666187.jpg",
+      "distanceKm": 6.63,
+      "latitude": 39.43273,
+      "longitude": -0.41325
+    },
+    {
+      "id": "lp657426e2",
+      "name": "Apartamento Valencia 17",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/507362392.jpg",
+      "distanceKm": 6.87,
+      "latitude": 39.431646,
+      "longitude": -0.415777
+    },
+    {
+      "id": "lp657f3285",
+      "name": "Apartamento tipo loft valencia",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/475893870.jpg",
+      "distanceKm": 6.88,
+      "latitude": 39.431604,
+      "longitude": -0.415884
+    },
+    {
+      "id": "lp6584998c",
+      "name": "Apartament Magnífico",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/92250975.jpg",
+      "distanceKm": 6.89,
+      "latitude": 39.431093,
+      "longitude": -0.415506
+    }
+  ],
+  "espanyol": [
+    {
+      "id": "lp3a7a2",
+      "name": "BAH Barcelona Airport Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/346386537.jpg",
+      "distanceKm": 3.22,
+      "latitude": 41.31799,
+      "longitude": 2.074254
+    },
+    {
+      "id": "lp67dfe",
+      "name": "Centre Esplai Hostel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_1a7eac89_z.jpg",
+      "distanceKm": 3.52,
+      "latitude": 41.31577,
+      "longitude": 2.08276
+    },
+    {
+      "id": "lp2b471",
+      "name": "INNSiDE by Meliá Barcelona Aeropuerto",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/596040214.jpg",
+      "distanceKm": 3.93,
+      "latitude": 41.31192,
+      "longitude": 2.067962
+    },
+    {
+      "id": "lp96ace",
+      "name": "Laura House - The Style Airport BCN",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/542682184.jpg",
+      "distanceKm": 5.22,
+      "latitude": 41.316948,
+      "longitude": 2.026915
+    },
+    {
+      "id": "lp657b7cef",
+      "name": "Four Points by Sheraton Barcelona Airport",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/612381643.jpg",
+      "distanceKm": 5.32,
+      "latitude": 41.312646,
+      "longitude": 2.030514
+    },
+    {
+      "id": "lp6586f873",
+      "name": "Four Points by Sheraton Barcelona Airport",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/612381643.jpg",
+      "distanceKm": 5.32,
+      "latitude": 41.312646,
+      "longitude": 2.030514
+    },
+    {
+      "id": "lp656233b7",
+      "name": "Maria House",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/519221493.jpg",
+      "distanceKm": 5.43,
+      "latitude": 41.315412,
+      "longitude": 2.025347
+    },
+    {
+      "id": "lp655efb9d",
+      "name": "Apartment Airport Barcelona Premium",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/47051707.jpg",
+      "distanceKm": 5.66,
+      "latitude": 41.311625,
+      "longitude": 2.026076
+    },
+    {
+      "id": "lp6d65e",
+      "name": "B&B HOTEL Barcelona Viladecans",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/565146713.jpg",
+      "distanceKm": 5.69,
+      "latitude": 41.310558,
+      "longitude": 2.027034
+    },
+    {
+      "id": "lp65736122",
+      "name": "Ca La Lidia",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/481389292.jpg",
+      "distanceKm": 6.11,
+      "latitude": 41.313283,
+      "longitude": 2.017088
+    }
+  ],
+  "leganes": [
+    {
+      "id": "lp65729b63",
+      "name": "Casa grande 14 personas Getafe Madrid",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/512627628.jpg",
+      "distanceKm": 3.56,
+      "latitude": 40.29118,
+      "longitude": -3.75939
+    },
+    {
+      "id": "lp32cfb",
+      "name": "Hotel Las Provincias",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/338287888.jpg",
+      "distanceKm": 3.71,
+      "latitude": 40.294163,
+      "longitude": -3.794671
+    },
+    {
+      "id": "lp5158f",
+      "name": "Hoteles Urbanos N Avenida de España",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/561125195.jpg",
+      "distanceKm": 4.07,
+      "latitude": 40.292215,
+      "longitude": -3.798432
+    },
+    {
+      "id": "lp657aae5e",
+      "name": "Piso de alquiler temporal en Fuenlabrada",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/600148322.jpg",
+      "distanceKm": 4.3,
+      "latitude": 40.284967,
+      "longitude": -3.785018
+    },
+    {
+      "id": "lp8e200",
+      "name": "B&B HOTEL Madrid Fuenlabrada",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/298666051.jpg",
+      "distanceKm": 4.39,
+      "latitude": 40.284125,
+      "longitude": -3.785069
+    },
+    {
+      "id": "lp6567fcf0",
+      "name": "HS Castilla Fuenlabrada",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/279514053.jpg",
+      "distanceKm": 4.5,
+      "latitude": 40.285044,
+      "longitude": -3.792276
+    },
+    {
+      "id": "lp6573ee99",
+      "name": "A y A apartamento",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/591326256.jpg",
+      "distanceKm": 4.66,
+      "latitude": 40.285058,
+      "longitude": -3.796425
+    },
+    {
+      "id": "lp65772bf4",
+      "name": "B&B HOTEL Madrid Fuenlabrada Retail Park",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/594502048.jpg",
+      "distanceKm": 4.85,
+      "latitude": 40.296808,
+      "longitude": -3.817329
+    },
+    {
+      "id": "lp65870de6",
+      "name": "B&B HOTEL Madrid Fuenlabrada Retail Park",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/594502048.jpg",
+      "distanceKm": 4.85,
+      "latitude": 40.296808,
+      "longitude": -3.817329
+    },
+    {
+      "id": "lp3d963",
+      "name": "LCB Hotel Fuenlabrada",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/120948481.jpg",
+      "distanceKm": 5.13,
+      "latitude": 40.282374,
+      "longitude": -3.80157
+    }
+  ],
+  "real-valladolid": [
+    {
+      "id": "lp656211a9",
+      "name": "Confortable y luminoso apartamento",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/462940935.jpg",
+      "distanceKm": 3.74,
+      "latitude": 41.610603,
+      "longitude": -4.754171
+    },
+    {
+      "id": "lp5392d",
+      "name": "Hotel Lasa Sport",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/490479986.jpg",
+      "distanceKm": 4.6,
+      "latitude": 41.602893,
+      "longitude": -4.754347
+    },
+    {
+      "id": "lp65755080",
+      "name": "Casa Ribera del Pisuerga - Piscina privada",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/606404871.jpg",
+      "distanceKm": 5.04,
+      "latitude": 41.609206,
+      "longitude": -4.791168
+    },
+    {
+      "id": "lp6573fe92",
+      "name": "Apartamentos GO - Arroyo San José",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/513714618.jpg",
+      "distanceKm": 5.24,
+      "latitude": 41.610306,
+      "longitude": -4.796469
+    },
+    {
+      "id": "lp65763899",
+      "name": "Jardin de la Abadia, Arroyo de la Encomienda",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/5503539.jpg",
+      "distanceKm": 5.27,
+      "latitude": 41.610106,
+      "longitude": -4.796796
+    },
+    {
+      "id": "lp8d8fe",
+      "name": "Hotel El Jardín de la Abadía",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_f83941b4_z.jpg",
+      "distanceKm": 5.28,
+      "latitude": 41.61,
+      "longitude": -4.79681
+    },
+    {
+      "id": "lp6579bf7e",
+      "name": "Apartamentos GO- Chalet Calera, Parking gratuito",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/558622292.jpg",
+      "distanceKm": 5.32,
+      "latitude": 41.610122,
+      "longitude": -4.797623
+    },
+    {
+      "id": "lp4af25",
+      "name": "Hotel Topacio",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 5.36,
+      "latitude": 41.60962,
+      "longitude": -4.70782
+    },
+    {
+      "id": "lp657576ec",
+      "name": "Apartamento GO- La Ermita -Parking Gratuito",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/512187125.jpg",
+      "distanceKm": 5.41,
+      "latitude": 41.60976,
+      "longitude": -4.798608
+    },
+    {
+      "id": "lp657532e9",
+      "name": "Apartamento con 2 dormitorios, garaje y terraza junto a Valladolid",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/557116938.jpg",
+      "distanceKm": 5.54,
+      "latitude": 41.60959,
+      "longitude": -4.80068
+    }
+  ],
+  "inter-milan": [
+    {
+      "id": "lp65724cfe",
+      "name": "A.P. Appartamento o camera",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/411072046.jpg",
+      "distanceKm": 5.08,
+      "latitude": 45.433469,
+      "longitude": 9.110313
+    },
+    {
+      "id": "lp657420d5",
+      "name": "Homeby, Loft Anna Maria",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/564565634.jpg",
+      "distanceKm": 5.13,
+      "latitude": 45.433195,
+      "longitude": 9.108737
+    },
+    {
+      "id": "lp5712d",
+      "name": "Hotel Kristall",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/426985477.jpg",
+      "distanceKm": 5.13,
+      "latitude": 45.433523,
+      "longitude": 9.10702
+    },
+    {
+      "id": "lp65752432",
+      "name": "Industrial House 3",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/534112021.jpg",
+      "distanceKm": 5.16,
+      "latitude": 45.43326,
+      "longitude": 9.10704
+    },
+    {
+      "id": "lp657f85b2",
+      "name": "Jcube Apartments Bocconi Milano",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/606390271.jpg",
+      "distanceKm": 6.33,
+      "latitude": 45.43347,
+      "longitude": 9.174455
+    },
+    {
+      "id": "lp6579d103",
+      "name": "Momigliano studio apartment - Naviglio Pavese",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/606605602.jpg",
+      "distanceKm": 6.52,
+      "latitude": 45.43358,
+      "longitude": 9.17848
+    },
+    {
+      "id": "lp65847526",
+      "name": "Elegant Appartament",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/619903244.jpg",
+      "distanceKm": 6.52,
+      "latitude": 45.43358,
+      "longitude": 9.17848
+    },
+    {
+      "id": "lp6582fff6",
+      "name": "Elegant Studio",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/612645789.jpg",
+      "distanceKm": 6.53,
+      "latitude": 45.4335,
+      "longitude": 9.17843
+    },
+    {
+      "id": "lp65715ad9",
+      "name": "[Navigli - Duomo] Magnificent View of the Skyline",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/505160556.jpg",
+      "distanceKm": 6.53,
+      "latitude": 45.433505,
+      "longitude": 9.178435
+    },
+    {
+      "id": "lp6581d117",
+      "name": "Stepandgo Milano Navigli",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/211760531.jpg",
+      "distanceKm": 6.75,
+      "latitude": 45.433266,
+      "longitude": 9.182267
+    }
+  ],
+  "ac-milan": [
+    {
+      "id": "lp65724cfe",
+      "name": "A.P. Appartamento o camera",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/411072046.jpg",
+      "distanceKm": 5.08,
+      "latitude": 45.433469,
+      "longitude": 9.110313
+    },
+    {
+      "id": "lp657420d5",
+      "name": "Homeby, Loft Anna Maria",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/564565634.jpg",
+      "distanceKm": 5.13,
+      "latitude": 45.433195,
+      "longitude": 9.108737
+    },
+    {
+      "id": "lp5712d",
+      "name": "Hotel Kristall",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/426985477.jpg",
+      "distanceKm": 5.13,
+      "latitude": 45.433523,
+      "longitude": 9.10702
+    },
+    {
+      "id": "lp65752432",
+      "name": "Industrial House 3",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/534112021.jpg",
+      "distanceKm": 5.16,
+      "latitude": 45.43326,
+      "longitude": 9.10704
+    },
+    {
+      "id": "lp657f85b2",
+      "name": "Jcube Apartments Bocconi Milano",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/606390271.jpg",
+      "distanceKm": 6.33,
+      "latitude": 45.43347,
+      "longitude": 9.174455
+    },
+    {
+      "id": "lp6579d103",
+      "name": "Momigliano studio apartment - Naviglio Pavese",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/606605602.jpg",
+      "distanceKm": 6.52,
+      "latitude": 45.43358,
+      "longitude": 9.17848
+    },
+    {
+      "id": "lp65847526",
+      "name": "Elegant Appartament",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/619903244.jpg",
+      "distanceKm": 6.52,
+      "latitude": 45.43358,
+      "longitude": 9.17848
+    },
+    {
+      "id": "lp6582fff6",
+      "name": "Elegant Studio",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/612645789.jpg",
+      "distanceKm": 6.53,
+      "latitude": 45.4335,
+      "longitude": 9.17843
+    },
+    {
+      "id": "lp65715ad9",
+      "name": "[Navigli - Duomo] Magnificent View of the Skyline",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/505160556.jpg",
+      "distanceKm": 6.53,
+      "latitude": 45.433505,
+      "longitude": 9.178435
+    },
+    {
+      "id": "lp6581d117",
+      "name": "Stepandgo Milano Navigli",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/211760531.jpg",
+      "distanceKm": 6.75,
+      "latitude": 45.433266,
+      "longitude": 9.182267
+    }
+  ],
+  "juventus": [
+    {
+      "id": "lp658589dc",
+      "name": "Monginevro",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/501274225.jpg",
+      "distanceKm": 5.01,
+      "latitude": 45.064765,
+      "longitude": 7.646945
+    },
+    {
+      "id": "lp6562d49a",
+      "name": "CASA FEMI",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/306368784.jpg",
+      "distanceKm": 5.1,
+      "latitude": 45.0647,
+      "longitude": 7.654337
+    },
+    {
+      "id": "lp321b6",
+      "name": "Principi di Piemonte | UNA Esperienze",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/222378475.jpg",
+      "distanceKm": 5.89,
+      "latitude": 45.064716,
+      "longitude": 7.681128
+    },
+    {
+      "id": "lp65888189",
+      "name": "Principi di Piemonte | UNA Esperienze",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/222378475.jpg",
+      "distanceKm": 5.89,
+      "latitude": 45.064716,
+      "longitude": 7.681128
+    },
+    {
+      "id": "lp657ba33a",
+      "name": "Elegante Appartamento nel centro storico di Torino",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/557785433.jpg",
+      "distanceKm": 5.93,
+      "latitude": 45.06476,
+      "longitude": 7.682145
+    },
+    {
+      "id": "lp65591636",
+      "name": "Casa Lagrange by Wonderful Italy",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/336923732.jpg",
+      "distanceKm": 5.93,
+      "latitude": 45.06481,
+      "longitude": 7.68231
+    },
+    {
+      "id": "lp6576111f",
+      "name": "Appartamento Torino Centro Lagrange 29",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/566246451.jpg",
+      "distanceKm": 5.93,
+      "latitude": 45.06481,
+      "longitude": 7.68231
+    },
+    {
+      "id": "lp657f5ee5",
+      "name": "Turin Central Cavour",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/571225826.jpg",
+      "distanceKm": 6.04,
+      "latitude": 45.064731,
+      "longitude": 7.684691
+    },
+    {
+      "id": "lp656b8013",
+      "name": "Vittorio 21",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/134959445.jpg",
+      "distanceKm": 6.62,
+      "latitude": 45.064694,
+      "longitude": 7.696655
+    },
+    {
+      "id": "lp657bdedf",
+      "name": "Piazza Vittorio Two-level Modern Apartment",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/606694578.jpg",
+      "distanceKm": 6.66,
+      "latitude": 45.064732,
+      "longitude": 7.697452
+    }
+  ],
+  "napoli": [
+    {
+      "id": "lp6569af4a",
+      "name": "KaMyHouse Una tranquilla struttura nel verde",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/hd/233197139.jpg",
+      "distanceKm": 2.92,
+      "latitude": 40.80165,
+      "longitude": 14.19254
+    },
+    {
+      "id": "lp657df045",
+      "name": "casa vacanze Mamilù",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/529962182.jpg",
+      "distanceKm": 3,
+      "latitude": 40.801297,
+      "longitude": 14.199122
+    },
+    {
+      "id": "lp657bf8f9",
+      "name": "casa Giulia Verde",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/615485022.jpg",
+      "distanceKm": 3.03,
+      "latitude": 40.801068,
+      "longitude": 14.199498
+    },
+    {
+      "id": "lpc5fa3",
+      "name": "Marechiaro15",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 3.17,
+      "latitude": 40.79957,
+      "longitude": 14.18924
+    },
+    {
+      "id": "lp656c648c",
+      "name": "Coroglio Apt 5 Minutes From The Sea",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_d979924d_z.jpg",
+      "distanceKm": 3.35,
+      "latitude": 40.80055,
+      "longitude": 14.17654
+    },
+    {
+      "id": "lp6569a6c5",
+      "name": "Residence Posillipo",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/hd/44440884.jpg",
+      "distanceKm": 3.36,
+      "latitude": 40.79787,
+      "longitude": 14.19791
+    },
+    {
+      "id": "lp65846ba4",
+      "name": "Charming Posillipo Sea View Ibiscus House",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/618802571.jpg",
+      "distanceKm": 3.53,
+      "latitude": 40.79614,
+      "longitude": 14.192081
+    },
+    {
+      "id": "lp657c718b",
+      "name": "Gaiola sea house Posillipo",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/442982653.jpg",
+      "distanceKm": 3.55,
+      "latitude": 40.796472,
+      "longitude": 14.185862
+    },
+    {
+      "id": "lp6585889b",
+      "name": "Greengoose",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/504148149.jpg",
+      "distanceKm": 3.57,
+      "latitude": 40.79967,
+      "longitude": 14.17296
+    },
+    {
+      "id": "lp656e78eb",
+      "name": "Yacht Lakura 55",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/360189985.jpg",
+      "distanceKm": 3.8,
+      "latitude": 40.79819,
+      "longitude": 14.17085
+    }
+  ],
+  "roma": [
+    {
+      "id": "lp65827fe1",
+      "name": "Oasis Apartment Trastevere",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/600936238.jpg",
+      "distanceKm": 5.11,
+      "latitude": 41.888718,
+      "longitude": 12.46792
+    },
+    {
+      "id": "lp657b0f4e",
+      "name": "iFlat Peaceful and Intimate Refuge in Trastevere",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/588901450.jpg",
+      "distanceKm": 5.11,
+      "latitude": 41.88872,
+      "longitude": 12.46792
+    },
+    {
+      "id": "lp65600ec4",
+      "name": "New studio a Trastevere",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/383513476.jpg",
+      "distanceKm": 5.17,
+      "latitude": 41.888693,
+      "longitude": 12.471085
+    },
+    {
+      "id": "lp656f74b4",
+      "name": "Suite San Calisto Trastevere - by romanhouseit",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/521947520.jpg",
+      "distanceKm": 5.17,
+      "latitude": 41.888716,
+      "longitude": 12.471008
+    },
+    {
+      "id": "lp6574bbc6",
+      "name": "iFlat Peaceful brand new 2beds apt in Trastevere",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/583022389.jpg",
+      "distanceKm": 5.33,
+      "latitude": 41.888688,
+      "longitude": 12.477129
+    },
+    {
+      "id": "lp1f72b9",
+      "name": "Appartamento Capo D'Africa 30",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_abd8601e_z.jpg",
+      "distanceKm": 6.04,
+      "latitude": 41.88871,
+      "longitude": 12.49584
+    },
+    {
+      "id": "lp6578e2c0",
+      "name": "ht bilo colosseo",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/522670343.jpg",
+      "distanceKm": 6.18,
+      "latitude": 41.888717,
+      "longitude": 12.498821
+    },
+    {
+      "id": "lp6571bf10",
+      "name": "La Casa di Efra",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/399734237.jpg",
+      "distanceKm": 6.63,
+      "latitude": 41.88869,
+      "longitude": 12.50739
+    },
+    {
+      "id": "lp8b19b",
+      "name": "Suite Paradise",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_4498a569_z.jpg",
+      "distanceKm": 6.64,
+      "latitude": 41.88871,
+      "longitude": 12.507539
+    },
+    {
+      "id": "lp37af1",
+      "name": "Scheppers Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/348961425.jpg",
+      "distanceKm": 6.69,
+      "latitude": 41.88871,
+      "longitude": 12.400873
+    }
+  ],
+  "lazio": [
+    {
+      "id": "lp65827fe1",
+      "name": "Oasis Apartment Trastevere",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/600936238.jpg",
+      "distanceKm": 5.11,
+      "latitude": 41.888718,
+      "longitude": 12.46792
+    },
+    {
+      "id": "lp657b0f4e",
+      "name": "iFlat Peaceful and Intimate Refuge in Trastevere",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/588901450.jpg",
+      "distanceKm": 5.11,
+      "latitude": 41.88872,
+      "longitude": 12.46792
+    },
+    {
+      "id": "lp65600ec4",
+      "name": "New studio a Trastevere",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/383513476.jpg",
+      "distanceKm": 5.17,
+      "latitude": 41.888693,
+      "longitude": 12.471085
+    },
+    {
+      "id": "lp656f74b4",
+      "name": "Suite San Calisto Trastevere - by romanhouseit",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/521947520.jpg",
+      "distanceKm": 5.17,
+      "latitude": 41.888716,
+      "longitude": 12.471008
+    },
+    {
+      "id": "lp6574bbc6",
+      "name": "iFlat Peaceful brand new 2beds apt in Trastevere",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/583022389.jpg",
+      "distanceKm": 5.33,
+      "latitude": 41.888688,
+      "longitude": 12.477129
+    },
+    {
+      "id": "lp1f72b9",
+      "name": "Appartamento Capo D'Africa 30",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_abd8601e_z.jpg",
+      "distanceKm": 6.04,
+      "latitude": 41.88871,
+      "longitude": 12.49584
+    },
+    {
+      "id": "lp6578e2c0",
+      "name": "ht bilo colosseo",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/522670343.jpg",
+      "distanceKm": 6.18,
+      "latitude": 41.888717,
+      "longitude": 12.498821
+    },
+    {
+      "id": "lp6571bf10",
+      "name": "La Casa di Efra",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/399734237.jpg",
+      "distanceKm": 6.63,
+      "latitude": 41.88869,
+      "longitude": 12.50739
+    },
+    {
+      "id": "lp8b19b",
+      "name": "Suite Paradise",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_4498a569_z.jpg",
+      "distanceKm": 6.64,
+      "latitude": 41.88871,
+      "longitude": 12.507539
+    },
+    {
+      "id": "lp37af1",
+      "name": "Scheppers Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/348961425.jpg",
+      "distanceKm": 6.69,
+      "latitude": 41.88871,
+      "longitude": 12.400873
+    }
+  ],
+  "atalanta": [
+    {
+      "id": "lp8bf39",
+      "name": "Like Home Boutique Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/442610723.jpg",
+      "distanceKm": 4.76,
+      "latitude": 45.66597,
+      "longitude": 9.674363
+    },
+    {
+      "id": "lp656bab08",
+      "name": "B&B Bed& Fly - Mamma Mia",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/588926070.jpg",
+      "distanceKm": 4.86,
+      "latitude": 45.665412,
+      "longitude": 9.670864
+    },
+    {
+      "id": "lp6571efb1",
+      "name": "[near Orio center]2BR The quiet and relaxing house",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/457894258.jpg",
+      "distanceKm": 4.89,
+      "latitude": 45.664926,
+      "longitude": 9.672534
+    },
+    {
+      "id": "lp657f034f",
+      "name": "Casa FLORI",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/603318547.jpg",
+      "distanceKm": 4.94,
+      "latitude": 45.66455,
+      "longitude": 9.67171
+    },
+    {
+      "id": "lp656acda3",
+      "name": "casa leonardo",
+      "stars": null,
+      "photo": "https://snaphotelapi.com/hotels/143992776.jpg",
+      "distanceKm": 4.94,
+      "latitude": 45.66455,
+      "longitude": 9.67174
+    },
+    {
+      "id": "lp855e4",
+      "name": "Bed & Breakfast Orio Easy Airport",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 4.96,
+      "latitude": 45.6641,
+      "longitude": 9.676761
+    },
+    {
+      "id": "lpba1fc",
+      "name": "ZZZleepandGo BGY",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_3e757e58_z.jpg",
+      "distanceKm": 5.02,
+      "latitude": 45.665476,
+      "longitude": 9.699219
+    },
+    {
+      "id": "lp3fc0b",
+      "name": "NH Orio Al Serio",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/596481468.jpg",
+      "distanceKm": 5.14,
+      "latitude": 45.664139,
+      "longitude": 9.698376
+    },
+    {
+      "id": "lp6588a1b9",
+      "name": "Bed &... Fly",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/611339131.jpg",
+      "distanceKm": 5.72,
+      "latitude": 45.663864,
+      "longitude": 9.716663
+    },
+    {
+      "id": "lp657671c6",
+      "name": "Appartamento Iris - Immobili e Soluzioni Rent",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/605743900.jpg",
+      "distanceKm": 6.47,
+      "latitude": 45.663971,
+      "longitude": 9.626796
+    }
+  ],
+  "fiorentina": [
+    {
+      "id": "lp657b5452",
+      "name": "Colonica chic in collina",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/513765067.jpg",
+      "distanceKm": 5.02,
+      "latitude": 43.736,
+      "longitude": 11.27414
+    },
+    {
+      "id": "lp65797a36",
+      "name": "Casa del Riccio",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/556970994.jpg",
+      "distanceKm": 5.25,
+      "latitude": 43.736646,
+      "longitude": 11.259174
+    },
+    {
+      "id": "lp6582f613",
+      "name": "Biliotti House",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/599497355.jpg",
+      "distanceKm": 6.3,
+      "latitude": 43.737756,
+      "longitude": 11.231276
+    },
+    {
+      "id": "lp65842878",
+      "name": "Rifugio Gianmarco",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/598563579.jpg",
+      "distanceKm": 6.3,
+      "latitude": 43.737786,
+      "longitude": 11.231057
+    },
+    {
+      "id": "lp657843f5",
+      "name": "La Casetta di Camilla",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/599483444.jpg",
+      "distanceKm": 6.31,
+      "latitude": 43.737691,
+      "longitude": 11.231099
+    },
+    {
+      "id": "lp657915ea",
+      "name": "La Dimora di Cristiano",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/599199140.jpg",
+      "distanceKm": 6.31,
+      "latitude": 43.737691,
+      "longitude": 11.231148
+    },
+    {
+      "id": "lpff30f",
+      "name": "Park apartment with Patio",
+      "stars": null,
+      "photo": "https://liteapi-travel-static-data.s3.amazonaws.com/images/hotels/main/1045263.jpg",
+      "distanceKm": 6.6,
+      "latitude": 43.73635,
+      "longitude": 11.22774
+    },
+    {
+      "id": "lp657628c4",
+      "name": "Messer Niccolò - Apartment in Florence",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/543165984.jpg",
+      "distanceKm": 6.66,
+      "latitude": 43.736817,
+      "longitude": 11.225906
+    },
+    {
+      "id": "lp657a952c",
+      "name": "The Chianti Rooster Flat",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/483612889.jpg",
+      "distanceKm": 6.73,
+      "latitude": 43.736765,
+      "longitude": 11.22462
+    },
+    {
+      "id": "lp65690aa1",
+      "name": "La Casa di Claudia",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/518672092.jpg",
+      "distanceKm": 6.74,
+      "latitude": 43.737045,
+      "longitude": 11.224035
+    }
+  ],
+  "bologna": [
+    {
+      "id": "lp657904d9",
+      "name": "Villa sui Colli Bolognesi by Wonderful Italy",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_8238f29a_z.jpg",
+      "distanceKm": 3.87,
+      "latitude": 44.458738,
+      "longitude": 11.323352
+    },
+    {
+      "id": "lp656b61bb",
+      "name": "B&B Monte Donato",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/266033424.jpg",
+      "distanceKm": 5.06,
+      "latitude": 44.461664,
+      "longitude": 11.357088
+    },
+    {
+      "id": "lp657c5794",
+      "name": "True Italian Stay",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/596854085.jpg",
+      "distanceKm": 5.07,
+      "latitude": 44.45431,
+      "longitude": 11.274169
+    },
+    {
+      "id": "lp656fa0d9",
+      "name": "House on the Hills, 10 minutes from city center",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/344605421.jpg",
+      "distanceKm": 5.08,
+      "latitude": 44.46173,
+      "longitude": 11.35757
+    },
+    {
+      "id": "lp1a1580",
+      "name": "B&B Il Picchio",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/99662018.jpg",
+      "distanceKm": 5.71,
+      "latitude": 44.461475,
+      "longitude": 11.367451
+    },
+    {
+      "id": "lp6571aadd",
+      "name": "A CASA DI GEMMA",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/348100776.jpg",
+      "distanceKm": 6.11,
+      "latitude": 44.455047,
+      "longitude": 11.366547
+    },
+    {
+      "id": "lp657ef47a",
+      "name": "Seven Nights Bologna",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/528615559.jpg",
+      "distanceKm": 6.16,
+      "latitude": 44.4544,
+      "longitude": 11.366596
+    },
+    {
+      "id": "lp65729ccc",
+      "name": "Elle Home: comfort e comodo al centro",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/520311775.jpg",
+      "distanceKm": 6.25,
+      "latitude": 44.45484,
+      "longitude": 11.368659
+    },
+    {
+      "id": "lp656eaf98",
+      "name": "We Home - Corelli21 Bologna",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/561435380.jpg",
+      "distanceKm": 6.3,
+      "latitude": 44.4574,
+      "longitude": 11.37244
+    },
+    {
+      "id": "lp657bc7d8",
+      "name": "home le colline bolognesi",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/604639545.jpg",
+      "distanceKm": 6.33,
+      "latitude": 44.4483,
+      "longitude": 11.3605
+    }
+  ],
+  "torino": [
+    {
+      "id": "lp45831",
+      "name": "Eurohotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/485310414.jpg",
+      "distanceKm": 4.73,
+      "latitude": 45.000744,
+      "longitude": 7.64183
+    },
+    {
+      "id": "lp657af1ae",
+      "name": "casa vacanza il tulipano",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/598836923.jpg",
+      "distanceKm": 4.81,
+      "latitude": 44.999966,
+      "longitude": 7.642612
+    },
+    {
+      "id": "lp65845062",
+      "name": "ALLOGGIO STUPINIGI",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/464687406.jpg",
+      "distanceKm": 4.91,
+      "latitude": 44.99918,
+      "longitude": 7.64094
+    },
+    {
+      "id": "lp6578bea3",
+      "name": "Casa Magnolia, tranquilla e centrale",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/552115487.jpg",
+      "distanceKm": 4.94,
+      "latitude": 44.99862,
+      "longitude": 7.64444
+    },
+    {
+      "id": "lp6573cf67",
+      "name": "Vicolo Muratori 1",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/553861093.jpg",
+      "distanceKm": 5.44,
+      "latitude": 44.999729,
+      "longitude": 7.682633
+    },
+    {
+      "id": "lp657b4748",
+      "name": "Nel centro storico di Moncalieri",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/540035070.jpg",
+      "distanceKm": 5.45,
+      "latitude": 44.999492,
+      "longitude": 7.682266
+    },
+    {
+      "id": "lp6583d3d6",
+      "name": "Appartamento mansardato iPatrizi",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/368106168.jpg",
+      "distanceKm": 5.5,
+      "latitude": 44.998064,
+      "longitude": 7.67959
+    },
+    {
+      "id": "lp6583a803",
+      "name": "Nicoletta House",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/449932380.jpg",
+      "distanceKm": 5.52,
+      "latitude": 45.00071,
+      "longitude": 7.68715
+    },
+    {
+      "id": "lp4921b",
+      "name": "Hotel Cavour Resort",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/621183747.jpg",
+      "distanceKm": 5.62,
+      "latitude": 45.00007,
+      "longitude": 7.68815
+    },
+    {
+      "id": "lp65630b42",
+      "name": "I Ciliegi",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/611077625.jpg",
+      "distanceKm": 6.11,
+      "latitude": 44.999379,
+      "longitude": 7.697599
+    }
+  ],
+  "monza": [
+    {
+      "id": "lp65657984",
+      "name": "Milano relax family house",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/435672387.jpg",
+      "distanceKm": 4.78,
+      "latitude": 45.543231,
+      "longitude": 9.29454
+    },
+    {
+      "id": "lp657c0194",
+      "name": "Milano Relax Room",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/506642790.jpg",
+      "distanceKm": 4.79,
+      "latitude": 45.543079,
+      "longitude": 9.294584
+    },
+    {
+      "id": "lp6577b732",
+      "name": "Mysa Properties - Romantico bilocale a Brugherio",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/599802224.jpg",
+      "distanceKm": 4.82,
+      "latitude": 45.5431,
+      "longitude": 9.2959
+    },
+    {
+      "id": "lp657fc23b",
+      "name": "Volturno Sweety House - 15 min di auto da Monza e 15 min da Metro M2",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/569610514.jpg",
+      "distanceKm": 4.82,
+      "latitude": 45.543105,
+      "longitude": 9.2959
+    },
+    {
+      "id": "lp656fa2a8",
+      "name": "Dorderio 41 - private parking and self check-in",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/421186689.jpg",
+      "distanceKm": 5.25,
+      "latitude": 45.5425,
+      "longitude": 9.30887
+    },
+    {
+      "id": "lp3b818",
+      "name": "Abacus Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/600128879.jpg",
+      "distanceKm": 5.77,
+      "latitude": 45.54173,
+      "longitude": 9.237042
+    },
+    {
+      "id": "lp657026e4",
+      "name": "Lux Flat Sesto",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/576825996.jpg",
+      "distanceKm": 5.98,
+      "latitude": 45.541745,
+      "longitude": 9.232329
+    },
+    {
+      "id": "lp6588fba6",
+      "name": "Stylish Penthouse in Sesto San Giovanni",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_5cbaaf52_z.jpg",
+      "distanceKm": 6.08,
+      "latitude": 45.54182052612305,
+      "longitude": 9.229966163635254
+    },
+    {
+      "id": "lp657dfc11",
+      "name": "DaNicolas via dei Partigiani apartment",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/561034309.jpg",
+      "distanceKm": 6.42,
+      "latitude": 45.541816,
+      "longitude": 9.22337
+    },
+    {
+      "id": "lp656fe9a7",
+      "name": "Alice&Leo's near METRO M1 RED parking gratis METRO LINE IN 14 MIN FOR CATHEDRAL",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/462844059.jpg",
+      "distanceKm": 6.48,
+      "latitude": 45.54054,
+      "longitude": 9.224227
+    }
+  ],
+  "genoa": [
+    {
+      "id": "lp6559145c",
+      "name": "Aurora 20 a Boccadasse",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_5c6b5517_z.jpg",
+      "distanceKm": 5.67,
+      "latitude": 44.389996,
+      "longitude": 8.973998
+    },
+    {
+      "id": "lp656405d3",
+      "name": "Baiàn Casa Vacanze",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/346030721.jpg",
+      "distanceKm": 5.67,
+      "latitude": 44.39007,
+      "longitude": 8.97415
+    },
+    {
+      "id": "lp65602b2e",
+      "name": "nel gozzo sul mare - Genovainrelax",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/527200453.jpg",
+      "distanceKm": 5.68,
+      "latitude": 44.389858,
+      "longitude": 8.974051
+    },
+    {
+      "id": "lp657e887d",
+      "name": "Happy Family Apartments Baia Boccadasse",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/593661627.jpg",
+      "distanceKm": 5.68,
+      "latitude": 44.390019,
+      "longitude": 8.974148
+    },
+    {
+      "id": "lp65870657",
+      "name": "Happy Family Apartments Baia Boccadasse",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/593661627.jpg",
+      "distanceKm": 5.68,
+      "latitude": 44.390019,
+      "longitude": 8.974148
+    },
+    {
+      "id": "lp65602cf5",
+      "name": "IL RIFUGIO SUL MARE Box incluso gratis - GenovaInRelax",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/492707665.jpg",
+      "distanceKm": 5.69,
+      "latitude": 44.389937,
+      "longitude": 8.97422
+    },
+    {
+      "id": "lp65763436",
+      "name": "Casa Iole a Boccadasse - Genovainrelax",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/555151775.jpg",
+      "distanceKm": 5.69,
+      "latitude": 44.390261,
+      "longitude": 8.974507
+    },
+    {
+      "id": "lp657b81b1",
+      "name": "Casa sulla spiaggia di Boccadasse",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/363177429.jpg",
+      "distanceKm": 5.7,
+      "latitude": 44.390008,
+      "longitude": 8.97447
+    },
+    {
+      "id": "lp65793ca0",
+      "name": "La Perla di Boccadasse",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/491342202.jpg",
+      "distanceKm": 5.7,
+      "latitude": 44.390238,
+      "longitude": 8.974652
+    },
+    {
+      "id": "lp65602d02",
+      "name": "Salsedine Relais",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/295383861.jpg",
+      "distanceKm": 5.73,
+      "latitude": 44.389951,
+      "longitude": 8.974859
+    }
+  ],
+  "cagliari": [
+    {
+      "id": "lp657ee426",
+      "name": "Villa Rosa",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/382472522.jpg",
+      "distanceKm": 2.54,
+      "latitude": 39.186164,
+      "longitude": 9.142645
+    },
+    {
+      "id": "lp656a45ae",
+      "name": "Villa Celeste",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/560873129.jpg",
+      "distanceKm": 2.56,
+      "latitude": 39.186375,
+      "longitude": 9.143232
+    },
+    {
+      "id": "lp658391ec",
+      "name": "Hotel Calamosca",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/80176633.jpg",
+      "distanceKm": 3.16,
+      "latitude": 39.186633,
+      "longitude": 9.15237
+    },
+    {
+      "id": "lpc703b",
+      "name": "Hotel Chentu Lunas",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/217629769.jpg",
+      "distanceKm": 3.19,
+      "latitude": 39.194281,
+      "longitude": 9.157491
+    },
+    {
+      "id": "lp1ce6a1",
+      "name": "LewisRooms Poetto Beach Cagliari",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_34a9f72e_z.jpg",
+      "distanceKm": 3.19,
+      "latitude": 39.195548,
+      "longitude": 9.158011
+    },
+    {
+      "id": "lp658528e0",
+      "name": "CasaPoetto",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/556004214.jpg",
+      "distanceKm": 3.22,
+      "latitude": 39.194775,
+      "longitude": 9.158051
+    },
+    {
+      "id": "lp657d042b",
+      "name": "Car'Loft beachside",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/44259177.jpg",
+      "distanceKm": 3.24,
+      "latitude": 39.19459,
+      "longitude": 9.15824
+    },
+    {
+      "id": "lp56791",
+      "name": "Hotel Ristorante Calamosca",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_91dcb1b4_z.jpg",
+      "distanceKm": 3.25,
+      "latitude": 39.186377,
+      "longitude": 9.153503
+    },
+    {
+      "id": "lpe4ed6",
+      "name": "The Homeboat Company Piccola - Cagliari",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 3.69,
+      "latitude": 39.19183,
+      "longitude": 9.16255
+    },
+    {
+      "id": "lp907b0",
+      "name": "Boat Sissi Cagliari",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_eccf721d_z.jpg",
+      "distanceKm": 3.7,
+      "latitude": 39.191736,
+      "longitude": 9.162672
+    }
+  ],
+  "udinese": [
+    {
+      "id": "lp65643bd3",
+      "name": "Nest Eco Guesthouse",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/571307687.jpg",
+      "distanceKm": 3.8,
+      "latitude": 46.04708,
+      "longitude": 13.22538
+    },
+    {
+      "id": "lp6574df8f",
+      "name": "Oasi Relax a Udine",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/604853310.jpg",
+      "distanceKm": 5.65,
+      "latitude": 46.038786,
+      "longitude": 13.250282
+    },
+    {
+      "id": "lp657ebf2a",
+      "name": "Piccola corte duplex",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/590454730.jpg",
+      "distanceKm": 5.83,
+      "latitude": 46.037736,
+      "longitude": 13.252175
+    },
+    {
+      "id": "lp657984d6",
+      "name": "Appartamento in Centro a Udine",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/541478967.jpg",
+      "distanceKm": 5.83,
+      "latitude": 46.038755,
+      "longitude": 13.253717
+    },
+    {
+      "id": "lp656b9341",
+      "name": "B&B Accanto al Focolare 2",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/173146056.jpg",
+      "distanceKm": 5.83,
+      "latitude": 46.039934,
+      "longitude": 13.255509
+    },
+    {
+      "id": "lp657d0c9e",
+      "name": "CASA CLEO",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/525593403.jpg",
+      "distanceKm": 5.86,
+      "latitude": 46.037677,
+      "longitude": 13.252641
+    },
+    {
+      "id": "lp65827dae",
+      "name": "Piccola Corte",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/590307831.jpg",
+      "distanceKm": 5.9,
+      "latitude": 46.037346,
+      "longitude": 13.25287
+    },
+    {
+      "id": "lp656b27e0",
+      "name": "B&B Karin - Rooms & Breakfast",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/215354084.jpg",
+      "distanceKm": 6.06,
+      "latitude": 46.041895,
+      "longitude": 13.262203
+    },
+    {
+      "id": "lpf789f",
+      "name": "Agriturismo Mestroni",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/173329027.jpg",
+      "distanceKm": 6.21,
+      "latitude": 46.036752,
+      "longitude": 13.147219
+    },
+    {
+      "id": "lp65828d66",
+      "name": "CASAL MICELIO",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/511433271.jpg",
+      "distanceKm": 6.87,
+      "latitude": 46.03273,
+      "longitude": 13.264136
+    }
+  ],
+  "empoli": [
+    {
+      "id": "lp6562fcb9",
+      "name": "Casale Poggimele",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/69960362.jpg",
+      "distanceKm": 4.54,
+      "latitude": 43.684317,
+      "longitude": 10.918354
+    },
+    {
+      "id": "lp6557a457",
+      "name": "Villa Gino 8 2 in Empoli",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_12b836a1_z.jpg",
+      "distanceKm": 4.61,
+      "latitude": 43.679842,
+      "longitude": 10.927245
+    },
+    {
+      "id": "lp6568d1ea",
+      "name": "Il Poggiale",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/103268039.jpg",
+      "distanceKm": 4.72,
+      "latitude": 43.68132,
+      "longitude": 10.98146
+    },
+    {
+      "id": "lp6583eca7",
+      "name": "Villa Bruschetti",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/472838795.jpg",
+      "distanceKm": 4.97,
+      "latitude": 43.680048,
+      "longitude": 10.984573
+    },
+    {
+      "id": "lp41bd0",
+      "name": "Empoli Hotel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_d552d0b4_z.jpg",
+      "distanceKm": 5.02,
+      "latitude": 43.685548,
+      "longitude": 10.906948
+    },
+    {
+      "id": "lp753f7",
+      "name": "Agriturismo Martignana Alta",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/20540142.jpg",
+      "distanceKm": 5.37,
+      "latitude": 43.68307,
+      "longitude": 10.99764
+    },
+    {
+      "id": "lp657c1960",
+      "name": "Ferienwohnung in Empoli mit Garten",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/572823416.jpg",
+      "distanceKm": 5.46,
+      "latitude": 43.67803,
+      "longitude": 10.99123
+    },
+    {
+      "id": "lp6571fd0e",
+      "name": "Ferienwohnung für 6 Personen ca 60 qm in Martignana, Toskana Provinz Florenz",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/545004821.jpg",
+      "distanceKm": 5.47,
+      "latitude": 43.67926,
+      "longitude": 10.99354
+    },
+    {
+      "id": "lp65855caa",
+      "name": "Martignana",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/493288685.jpg",
+      "distanceKm": 5.5,
+      "latitude": 43.679049,
+      "longitude": 10.993848
+    },
+    {
+      "id": "lp658283a8",
+      "name": "Casa Isabelle",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/577398073.jpg",
+      "distanceKm": 6.9,
+      "latitude": 43.673346,
+      "longitude": 10.890837
+    }
+  ],
+  "parma": [
+    {
+      "id": "lpc34f6",
+      "name": "B&B La Bugia di Villa Tanzi",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/367114910.jpg",
+      "distanceKm": 2.64,
+      "latitude": 44.775741,
+      "longitude": 10.319876
+    },
+    {
+      "id": "lp656b83b5",
+      "name": "B&b Campus",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/246040826.jpg",
+      "distanceKm": 2.78,
+      "latitude": 44.774213,
+      "longitude": 10.321709
+    },
+    {
+      "id": "lp65594754",
+      "name": "Rimmel Motel",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/84389891.jpg",
+      "distanceKm": 2.79,
+      "latitude": 44.775372,
+      "longitude": 10.339652
+    },
+    {
+      "id": "lp6584f4a2",
+      "name": "casadipippi",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/554781060.jpg",
+      "distanceKm": 2.96,
+      "latitude": 44.772516,
+      "longitude": 10.322042
+    },
+    {
+      "id": "lp6575ffb4",
+      "name": "Royal Suite Parma con Piscine Calda e Fredda",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/507026712.jpg",
+      "distanceKm": 3.24,
+      "latitude": 44.772161,
+      "longitude": 10.343597
+    },
+    {
+      "id": "lp69cc9",
+      "name": "Villa Meli Lupi - Residenze Temporanee",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/32574245.jpg",
+      "distanceKm": 3.26,
+      "latitude": 44.773612,
+      "longitude": 10.306292
+    },
+    {
+      "id": "lp6588710d",
+      "name": "FuoriPorta Affitti Brevi - Residenza da Antonia",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/209124436.jpg",
+      "distanceKm": 4.03,
+      "latitude": 44.762702,
+      "longitude": 10.32407
+    },
+    {
+      "id": "lp657a6013",
+      "name": "Appartamento CORTE DEGLI AVANZI a Parma",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/512965100.jpg",
+      "distanceKm": 4.03,
+      "latitude": 44.76297,
+      "longitude": 10.3205
+    },
+    {
+      "id": "lpfd508",
+      "name": "La Luna nel Pozzo",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/147486231.jpg",
+      "distanceKm": 4.26,
+      "latitude": 44.773817,
+      "longitude": 10.286521
+    },
+    {
+      "id": "lp2257d2",
+      "name": "Villino di Porporano",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/29595554.jpg",
+      "distanceKm": 5.37,
+      "latitude": 44.754075,
+      "longitude": 10.352715
+    }
+  ],
+  "hellas-verona": [
+    {
+      "id": "lp65649760",
+      "name": "La Magnolia",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/75628925.jpg",
+      "distanceKm": 4.69,
+      "latitude": 45.394851,
+      "longitude": 10.995405
+    },
+    {
+      "id": "lp22eafb",
+      "name": "Camping Verona Village",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/178987289.jpg",
+      "distanceKm": 4.83,
+      "latitude": 45.393058,
+      "longitude": 10.993251
+    },
+    {
+      "id": "lpbbcfe",
+      "name": "Locanda 7 Camini",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_41635a10_z.jpg",
+      "distanceKm": 5.52,
+      "latitude": 45.393169,
+      "longitude": 11.014603
+    },
+    {
+      "id": "lp620a7",
+      "name": "Agriturismo alle Quattro Stagioni",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_ed75efeb_z.jpg",
+      "distanceKm": 5.96,
+      "latitude": 45.395357,
+      "longitude": 10.924004
+    },
+    {
+      "id": "lp8cc4a",
+      "name": "B&B alla Cà di Rosa",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_91330271_z.jpg",
+      "distanceKm": 6.33,
+      "latitude": 45.391365,
+      "longitude": 10.923188
+    },
+    {
+      "id": "lp65884417",
+      "name": "Casa Nico",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/740031845.jpg",
+      "distanceKm": 6.44,
+      "latitude": 45.393486,
+      "longitude": 10.917803
+    },
+    {
+      "id": "lpfc075",
+      "name": "Casa Madonnina",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/106800729.jpg",
+      "distanceKm": 6.6,
+      "latitude": 45.393298,
+      "longitude": 10.915246
+    },
+    {
+      "id": "lp6e81f",
+      "name": "Hotel Europa",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/288399508.jpg",
+      "distanceKm": 6.65,
+      "latitude": 45.392804,
+      "longitude": 10.914931
+    },
+    {
+      "id": "lp657ebe7c",
+      "name": "IL VITIGNO",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/463878504.jpg",
+      "distanceKm": 6.67,
+      "latitude": 45.390961,
+      "longitude": 10.917238
+    },
+    {
+      "id": "lp336b6a",
+      "name": "Golf Club Le Vigne",
+      "stars": null,
+      "photo": "https://liteapi-travel-static-data.s3.amazonaws.com/images/hotels/main/3369834.jpg",
+      "distanceKm": 6.7,
+      "latitude": 45.39422,
+      "longitude": 10.9123
+    }
+  ],
+  "como": [
+    {
+      "id": "lp655a80e5",
+      "name": "Hotel Locanda dell'Oca Bianca",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/28983823.jpg",
+      "distanceKm": 4.77,
+      "latitude": 45.775336,
+      "longitude": 9.102162
+    },
+    {
+      "id": "lp6584db5c",
+      "name": "Appartamento Castiglioni",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/522133097.jpg",
+      "distanceKm": 4.85,
+      "latitude": 45.775965,
+      "longitude": 9.06282
+    },
+    {
+      "id": "lp657d7b01",
+      "name": "Appartamento Como- Grandate",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/591914490.jpg",
+      "distanceKm": 5.03,
+      "latitude": 45.775596,
+      "longitude": 9.058118
+    },
+    {
+      "id": "lp209cb6",
+      "name": "Ristorante Albergo Arcade",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/89733334.jpg",
+      "distanceKm": 5.05,
+      "latitude": 45.773635,
+      "longitude": 9.064186
+    },
+    {
+      "id": "lp65885b25",
+      "name": "LA'DELI - Como - grande appartamento con parcheggio, nefltix, giardino, terrazzo",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/749308866.jpg",
+      "distanceKm": 5.14,
+      "latitude": 45.773245,
+      "longitude": 9.108305
+    },
+    {
+      "id": "lp6579276f",
+      "name": "Near Como, charming apartment with fireplace",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/372272832.jpg",
+      "distanceKm": 5.2,
+      "latitude": 45.776091,
+      "longitude": 9.051867
+    },
+    {
+      "id": "lp65771ed4",
+      "name": "le camelie del Lario",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/515495197.jpg",
+      "distanceKm": 5.21,
+      "latitude": 45.773663,
+      "longitude": 9.058449
+    },
+    {
+      "id": "lp656c6510",
+      "name": "La Casa Nel Sole",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/457441418.jpg",
+      "distanceKm": 5.21,
+      "latitude": 45.77464,
+      "longitude": 9.05564
+    },
+    {
+      "id": "lp6586902f",
+      "name": "Country House Montorfano",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_0d5d2bf0_z.jpg",
+      "distanceKm": 6.12,
+      "latitude": 45.774972,
+      "longitude": 9.13701
+    },
+    {
+      "id": "lp3241b2",
+      "name": "Dandelion Como Suites & Park",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/264330681.jpg",
+      "distanceKm": 6.29,
+      "latitude": 45.771892,
+      "longitude": 9.035648
+    }
+  ],
+  "lecce": [
+    {
+      "id": "lp6569acea",
+      "name": "Il giardino del Salento - Lecce - Casa Vacanze",
+      "stars": null,
+      "photo": "https://liteapi-travel-static-data.s3.amazonaws.com/images/hotels/main/1701424362.jpg",
+      "distanceKm": 4.77,
+      "latitude": 40.31689,
+      "longitude": 18.18657
+    },
+    {
+      "id": "lp656bb1bd",
+      "name": "Le Camporelle In Campagna",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/21570441.jpg",
+      "distanceKm": 4.81,
+      "latitude": 40.317502,
+      "longitude": 18.180154
+    },
+    {
+      "id": "lp655c9a85",
+      "name": "Villa Tubola",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/190982305.jpg",
+      "distanceKm": 5,
+      "latitude": 40.318511,
+      "longitude": 18.218751
+    },
+    {
+      "id": "lp657d0756",
+      "name": "Il Giardino Deluxe",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/379932690.jpg",
+      "distanceKm": 5.5,
+      "latitude": 40.315383,
+      "longitude": 18.223675
+    },
+    {
+      "id": "lp65769c90",
+      "name": "Li Mori Rooms",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/579214127.jpg",
+      "distanceKm": 5.53,
+      "latitude": 40.31661,
+      "longitude": 18.227371
+    },
+    {
+      "id": "lp6586e0d2",
+      "name": "Li Mori Rooms",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/579214127.jpg",
+      "distanceKm": 5.53,
+      "latitude": 40.31661,
+      "longitude": 18.227371
+    },
+    {
+      "id": "lp6587fccf",
+      "name": "Giardino del Tempo",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_da9bbc6a_z.jpg",
+      "distanceKm": 6,
+      "latitude": 40.319261,
+      "longitude": 18.241465
+    },
+    {
+      "id": "lp90bbc",
+      "name": "Villa Pignatelli",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_ae080533_z.jpg",
+      "distanceKm": 6.46,
+      "latitude": 40.317152,
+      "longitude": 18.141803
+    },
+    {
+      "id": "lpdca5b",
+      "name": "Casina Romita",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/132033152.jpg",
+      "distanceKm": 6.49,
+      "latitude": 40.315152,
+      "longitude": 18.144225
+    },
+    {
+      "id": "lp655801ae",
+      "name": "MASSERIA LILEI",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/ex_3a41bb2c_z.jpg",
+      "distanceKm": 6.63,
+      "latitude": 40.317413,
+      "longitude": 18.249736
+    }
+  ],
+  "venezia": [
+    {
+      "id": "lp1b418d",
+      "name": "M Design Apartment",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 4.03,
+      "latitude": 45.39106,
+      "longitude": 12.351551
+    },
+    {
+      "id": "lp77c95",
+      "name": "Atlantic Do Archi Rent Apartaments",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 4.03,
+      "latitude": 45.3923,
+      "longitude": 12.34643
+    },
+    {
+      "id": "lp78aee",
+      "name": "Optyflat Apartments",
+      "stars": null,
+      "photo": "",
+      "distanceKm": 4.03,
+      "latitude": 45.3923,
+      "longitude": 12.34643
+    },
+    {
+      "id": "lp656f166f",
+      "name": "Ca' Victoria - tra laguna e mare",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/590873235.jpg",
+      "distanceKm": 4.21,
+      "latitude": 45.389656,
+      "longitude": 12.350443
+    },
+    {
+      "id": "lp656efd14",
+      "name": "Ca' del mare",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/596642599.jpg",
+      "distanceKm": 4.26,
+      "latitude": 45.389214,
+      "longitude": 12.350299
+    },
+    {
+      "id": "lp65623398",
+      "name": "Appartamento Alla Riviera",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/177212313.jpg",
+      "distanceKm": 4.38,
+      "latitude": 45.38842,
+      "longitude": 12.348469
+    },
+    {
+      "id": "lp65824f60",
+      "name": "Ca Alvisopoli",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/413740949.jpg",
+      "distanceKm": 5.02,
+      "latitude": 45.382497,
+      "longitude": 12.3483
+    },
+    {
+      "id": "lp656305d3",
+      "name": "Casa Murazzi",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/163224568.jpg",
+      "distanceKm": 5.02,
+      "latitude": 45.3825,
+      "longitude": 12.3483
+    },
+    {
+      "id": "lp65792535",
+      "name": "Casa Mary venezia lido",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/318250301.jpg",
+      "distanceKm": 5.08,
+      "latitude": 45.38182,
+      "longitude": 12.34865
+    },
+    {
+      "id": "lp4636e",
+      "name": "B&B Il Glicine Fiorito",
+      "stars": null,
+      "photo": "https://static.cupid.travel/hotels/63931576.jpg",
+      "distanceKm": 5.08,
+      "latitude": 45.38209,
+      "longitude": 12.34746
+    }
+  ]
+}

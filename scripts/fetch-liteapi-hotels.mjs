@@ -16,6 +16,7 @@
 import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { execSync } from 'child_process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -44,6 +45,7 @@ if (!API_KEY) {
 
 const LITEAPI_BASE = 'https://api.liteapi.travel/v3.0';
 const SEARCH_RADIUS_KM = 5;
+const SEARCH_RADIUS_M = SEARCH_RADIUS_KM * 1000;
 const MAX_RESULTS = 10;
 /** Delay between API requests (ms) — keeps us well within rate limits */
 const REQUEST_DELAY_MS = 600;
@@ -114,23 +116,16 @@ async function fetchHotelsForClub(club) {
   const params = new URLSearchParams({
     latitude: String(club.lat),
     longitude: String(club.lng),
-    radius: String(SEARCH_RADIUS_KM),
+    radius: String(SEARCH_RADIUS_M),
     limit: String(MAX_RESULTS),
   });
 
   const url = `${LITEAPI_BASE}/data/hotels?${params}`;
-  const res = await fetch(url, {
-    headers: {
-      'X-API-Key': API_KEY,
-      Accept: 'application/json',
-    },
-  });
-
-  if (!res.ok) {
-    throw new Error(`HTTP ${res.status} ${res.statusText}`);
-  }
-
-  const json = await res.json();
+  const curlOut = execSync(
+    `curl -sf -H "X-API-Key: ${API_KEY}" -H "Accept: application/json" "${url}"`,
+    { encoding: 'utf8', timeout: 15000 },
+  );
+  const json = JSON.parse(curlOut);
   const raw = json.data ?? [];
 
   if (!Array.isArray(raw) || raw.length === 0) {
