@@ -14,12 +14,16 @@ const europeanClubs = (clubsEurope as any[])
     name: c.name,
     stadium: c.stadium,
     city: c.city ?? c.leagueSlug,
+    citySlug: c.citySlug,
     league: c.leagueSlug,
     stadiumCapacity: c.capacity ?? null,
   }));
 
-// All clubs combined
-const allClubs: any[] = [...clubs, ...europeanClubs];
+// All clubs combined, excluding Championship
+const allClubs: any[] = [
+  ...clubs.filter((c: any) => c.league !== 'championship'),
+  ...europeanClubs,
+];
 
 // League display names (add European leagues not in leagues.json)
 const leagueLabels: Record<string, string> = {
@@ -28,8 +32,8 @@ const leagueLabels: Record<string, string> = {
   'serie-a': 'Serie A',
 };
 
-// Group by league — UK leagues first, then European
-const leagueOrder = [...leagues.map(l => l.slug), 'la-liga', 'serie-a'];
+// Group by league — UK leagues first (no Championship), then European
+const leagueOrder = [...leagues.map(l => l.slug).filter(s => s !== 'championship'), 'la-liga', 'serie-a'];
 const clubsByLeague = leagueOrder
   .map(slug => ({
     leagueSlug: slug,
@@ -41,7 +45,7 @@ const clubsByLeague = leagueOrder
 
 <PageLayout
   title="All Clubs — Hotels Near Every Stadium"
-  description="Find hotels near football clubs across the UK, Spain and Italy. Browse Premier League, La Liga, Serie A, Championship and Scottish Premiership clubs."
+  description="Find hotels near football clubs across the UK, Spain and Italy. Browse Premier League, La Liga, Serie A and Scottish Premiership clubs."
 >
   <div class="container-wide py-12 lg:py-16">
     <!-- Breadcrumb -->
@@ -74,7 +78,9 @@ const clubsByLeague = leagueOrder
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {leagueClubs.map((club) => {
-            const img = (unsplashImages as any)[club.slug];
+            const img = (unsplashImages as any)[club.slug]
+                     ?? (unsplashImages as any)[club.citySlug]
+                     ?? (unsplashImages as any)[club.city];
             return (
               <ClubCard
                 slug={club.slug}

@@ -256,5 +256,41 @@
     "photographer": "",
     "photographerUsername": "",
     "altDescription": "La Spezia city Italy"
+  },
+  "las-palmas": {
+    "url": "https://picsum.photos/seed/las-palmas-canaria/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Las Palmas Gran Canaria"
+  },
+  "valencia": {
+    "url": "https://picsum.photos/seed/valencia-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Valencia city Spain"
+  },
+  "valladolid": {
+    "url": "https://picsum.photos/seed/valladolid-spain/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Valladolid city Spain"
+  },
+  "monza": {
+    "url": "https://picsum.photos/seed/monza-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Monza city Italy"
+  },
+  "lecce": {
+    "url": "https://picsum.photos/seed/lecce-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Lecce city Italy"
+  },
+  "venice": {
+    "url": "https://picsum.photos/seed/venice-italy/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Venice city Italy"
   }
 }

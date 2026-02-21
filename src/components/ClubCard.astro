@@ -48,7 +48,7 @@ const leagueLabel = leagueLabels[league] ?? league;
   <div class={`relative aspect-[16/9] bg-gradient-to-br ${gradient} overflow-hidden`}>
     {imageUrl ? (
       <img
-        src={`${imageUrl}&w=800&q=80`}
+        src={imageUrl.includes('?') ? `${imageUrl}&w=800&q=80` : imageUrl}
         alt={imageAlt ?? `${stadium}`}
         class="absolute inset-0 w-full h-full object-cover"
         loading="lazy"

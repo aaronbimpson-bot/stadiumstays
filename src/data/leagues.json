@@ -9,15 +9,6 @@
     "teams": 20
   },
   {
-    "slug": "championship",
-    "name": "Championship",
-    "country": "England",
-    "logo": "/images/leagues/championship.svg",
-    "description": "The second tier of English football with 24 clubs battling for promotion to the Premier League.",
-    "season": "2024/25",
-    "teams": 24
-  },
-  {
     "slug": "league-one",
     "name": "League One",
     "country": "England",
