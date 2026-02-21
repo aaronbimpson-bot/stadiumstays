@@ -1,0 +1,441 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import fixtures from '../../data/fixtures.json';
+import clubs from '../../data/clubs.json';
+import cities from '../../data/cities.json';
+import hotels from '../../data/hotels.json';
+
+// Build a slug from any team name
+function nameToSlug(name: string) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+function dateSlug(isoDate: string) {
+  return isoDate.substring(0, 10); // YYYY-MM-DD
+}
+
+export function getStaticPaths() {
+  return fixtures.map((fixture) => {
+    const homeSlug = fixture.homeSlug ?? nameToSlug(fixture.homeTeam);
+    const awaySlug = fixture.awaySlug ?? nameToSlug(fixture.awayTeam);
+    const slug = `${homeSlug}-vs-${awaySlug}-${dateSlug(fixture.date)}`;
+
+    return {
+      params: { slug },
+      props: { fixture },
+    };
+  });
+}
+
+const { fixture } = Astro.props;
+
+// ── Lookup data ──────────────────────────────────────────────────────────────
+const homeClub  = fixture.homeSlug ? (clubs as any[]).find(c => c.slug === fixture.homeSlug) : null;
+const awayClub  = fixture.awaySlug ? (clubs as any[]).find(c => c.slug === fixture.awaySlug) : null;
+const homeCity  = homeClub ? (cities as any[]).find(c => c.slug === homeClub.city) : null;
+
+const homeHotels: any[] = fixture.homeSlug ? ((hotels as any)[fixture.homeSlug] ?? []) : [];
+const topHotels = [...homeHotels]
+  .sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0))
+  .slice(0, 10);
+
+// ── Date formatting ──────────────────────────────────────────────────────────
+const kickoffDate = new Date(fixture.date);
+const formattedDate = kickoffDate.toLocaleDateString('en-GB', {
+  weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
+  timeZone: 'Europe/London',
+});
+const formattedTime = kickoffDate.toLocaleTimeString('en-GB', {
+  hour: '2-digit', minute: '2-digit', timeZone: 'Europe/London',
+});
+const shortDate = kickoffDate.toLocaleDateString('en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/London',
+});
+
+// ── Meta ─────────────────────────────────────────────────────────────────────
+const metaTitle = `${fixture.awayTeam} vs ${fixture.homeTeam} Hotels & Travel Guide | ${shortDate}`;
+const metaDesc  = `Where to stay for ${fixture.awayTeam} vs ${fixture.homeTeam} on ${shortDate}. Hotels near ${fixture.venue ?? fixture.homeTeam + ' stadium'}, getting there, pre-match pubs and a weekend city break guide.`;
+
+// Price level symbols
+function priceSymbol(level: string | null) {
+  const map: Record<string, string> = {
+    PRICE_LEVEL_INEXPENSIVE: '£',
+    PRICE_LEVEL_MODERATE: '££',
+    PRICE_LEVEL_EXPENSIVE: '£££',
+    PRICE_LEVEL_VERY_EXPENSIVE: '££££',
+  };
+  return level ? (map[level] ?? '') : '';
+}
+---
+
+<PageLayout title={metaTitle} description={metaDesc}>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────────────── -->
+  <section class="bg-zinc-950 border-b border-zinc-800 pt-12 pb-16">
+    <div class="container-narrow text-center">
+
+      <!-- League badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+        Premier League · Match Day Travel Guide
+      </div>
+
+      <!-- Teams -->
+      <div class="flex items-center justify-center gap-4 sm:gap-8 mb-6">
+        <!-- Away team (visiting) -->
+        <div class="flex-1 text-right">
+          {fixture.awaySlug ? (
+            <a href={`/clubs/${fixture.awaySlug}/`} class="text-2xl sm:text-4xl font-bold text-white hover:text-emerald-400 transition-colors leading-tight block">
+              {fixture.awayTeam}
+            </a>
+          ) : (
+            <span class="text-2xl sm:text-4xl font-bold text-white leading-tight block">{fixture.awayTeam}</span>
+          )}
+          <span class="text-zinc-500 text-xs sm:text-sm mt-1 block">Away</span>
+        </div>
+
+        <div class="flex-shrink-0 text-center">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-400 font-bold text-lg sm:text-xl">
+            vs
+          </div>
+        </div>
+
+        <!-- Home team -->
+        <div class="flex-1 text-left">
+          {fixture.homeSlug ? (
+            <a href={`/clubs/${fixture.homeSlug}/`} class="text-2xl sm:text-4xl font-bold text-white hover:text-emerald-400 transition-colors leading-tight block">
+              {fixture.homeTeam}
+            </a>
+          ) : (
+            <span class="text-2xl sm:text-4xl font-bold text-white leading-tight block">{fixture.homeTeam}</span>
+          )}
+          <span class="text-zinc-500 text-xs sm:text-sm mt-1 block">Home</span>
+        </div>
+      </div>
+
+      <!-- Match details -->
+      <div class="flex flex-wrap items-center justify-center gap-4 text-sm">
+        <span class="flex items-center gap-1.5 text-zinc-300">
+          <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          {formattedDate}
+        </span>
+        <span class="flex items-center gap-1.5 text-zinc-300">
+          <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Kick-off {formattedTime}
+        </span>
+        {fixture.venue && (
+          <span class="flex items-center gap-1.5 text-zinc-300">
+            <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            {fixture.venue}{fixture.venueCity ? `, ${fixture.venueCity}` : ''}
+          </span>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Page body ─────────────────────────────────────────────────────────── -->
+  <div class="container-wide py-12 lg:py-16">
+    <div class="grid lg:grid-cols-3 gap-10 lg:gap-14">
+
+      <!-- Main content (2/3 width) -->
+      <div class="lg:col-span-2 space-y-14">
+
+        <!-- ── Getting There ──────────────────────────────────────────────── -->
+        <section>
+          <h2 class="section-title mb-2">Getting There</h2>
+          <p class="section-subtitle mb-6">As an away fan travelling to {fixture.venueCity ?? fixture.homeTeam}</p>
+
+          {homeClub?.travelTips ? (
+            <div class="space-y-4">
+              <div class="card p-5">
+                <p class="text-zinc-300 leading-relaxed">{homeClub.travelTips}</p>
+              </div>
+              {homeCity && (
+                <div class="grid sm:grid-cols-2 gap-4">
+                  {homeCity.airports?.length > 0 && (
+                    <div class="card p-4">
+                      <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                        Flying in
+                      </h3>
+                      <ul class="space-y-1">
+                        {homeCity.airports.map((a: string) => (
+                          <li class="text-zinc-400 text-sm">· {a}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {homeCity.mainStation && (
+                    <div class="card p-4">
+                      <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        By train
+                      </h3>
+                      <p class="text-zinc-400 text-sm">{homeCity.mainStation}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          ) : (
+            <div class="card p-5">
+              <p class="text-zinc-400 leading-relaxed">
+                {fixture.venue ? `${fixture.venue} is located in ${fixture.venueCity ?? 'the host city'}.` : ''}
+                {homeCity?.mainStation ? ` The nearest major rail terminal is ${homeCity.mainStation}.` : ''}
+                {homeCity?.airports?.length ? ` Airports serving the area include ${homeCity.airports.slice(0,2).join(' and ')}.` : ''}
+                {!homeCity ? ` Check National Rail or Google Maps for the best route from your departure point.` : ''}
+              </p>
+            </div>
+          )}
+        </section>
+
+        <!-- ── Where to Stay ──────────────────────────────────────────────── -->
+        <section>
+          <h2 class="section-title mb-2">Where to Stay</h2>
+          <p class="section-subtitle mb-6">
+            Top-rated hotels near {fixture.venue ?? `${fixture.homeTeam}'s stadium`}
+            {homeClub?.city && homeCity ? ` in ${homeCity.name}` : ''}
+          </p>
+
+          {topHotels.length > 0 ? (
+            <div class="space-y-3">
+              {topHotels.map((hotel: any, i: number) => (
+                <div class="card p-4 flex items-center gap-4">
+                  {i === 0 && (
+                    <span class="absolute -mt-8 text-[10px] font-bold text-emerald-400 uppercase tracking-wider hidden"></span>
+                  )}
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-start gap-2 flex-wrap">
+                      <h3 class="font-semibold text-white leading-tight">
+                        {hotel.website ? (
+                          <a href={hotel.website} target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">
+                            {hotel.name}
+                          </a>
+                        ) : hotel.name}
+                      </h3>
+                      {i === 0 && <span class="text-[10px] font-bold bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded uppercase tracking-wider">Top rated</span>}
+                    </div>
+                    {hotel.address && <p class="text-zinc-500 text-xs mt-0.5 truncate">{hotel.address}</p>}
+                    <div class="flex items-center gap-3 mt-1">
+                      {hotel.rating && (
+                        <span class="text-sm text-zinc-300">
+                          ★ <span class="font-medium">{hotel.rating}</span>
+                          {hotel.reviewCount && <span class="text-zinc-500"> ({hotel.reviewCount.toLocaleString()})</span>}
+                        </span>
+                      )}
+                      {hotel.priceLevel && <span class="text-zinc-500 text-sm">{priceSymbol(hotel.priceLevel)}</span>}
+                      {hotel.distance && <span class="text-zinc-600 text-xs">{hotel.distance.toFixed(1)} km from stadium</span>}
+                    </div>
+                  </div>
+                  {fixture.homeSlug && (
+                    <a
+                      href={`/hotels/${hotel.id}/`}
+                      class="flex-shrink-0 text-xs text-emerald-400 hover:text-emerald-300 border border-emerald-500/30 hover:border-emerald-500/60 rounded px-2 py-1.5 transition-colors whitespace-nowrap"
+                    >
+                      View →
+                    </a>
+                  )}
+                </div>
+              ))}
+              {fixture.homeSlug && (
+                <div class="text-center pt-2">
+                  <a href={`/clubs/${fixture.homeSlug}/`} class="text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors">
+                    See all hotels near {fixture.homeTeam} →
+                  </a>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div class="card p-6 text-center">
+              <p class="text-zinc-500">We're still adding hotel data for this stadium.</p>
+              {homeCity && (
+                <a
+                  href={`https://www.google.com/maps/search/hotels+near+${encodeURIComponent(fixture.venue ?? fixture.homeTeam)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-3 inline-flex btn-secondary text-sm"
+                >
+                  Search on Google Maps
+                </a>
+              )}
+            </div>
+          )}
+        </section>
+
+        <!-- ── Pre-Match ──────────────────────────────────────────────────── -->
+        <section>
+          <h2 class="section-title mb-2">Pre-Match</h2>
+          <p class="section-subtitle mb-6">Pubs, food & tips for away fans near {fixture.venue ?? `${fixture.homeTeam}'s ground`}</p>
+
+          {homeClub?.matchDayTips?.length > 0 ? (
+            <ul class="space-y-3">
+              {(Array.isArray(homeClub.matchDayTips) ? homeClub.matchDayTips : homeClub.matchDayTips.split('\n').filter(Boolean)).map((tip: string) => (
+                <li class="card p-4 flex gap-3">
+                  <span class="text-emerald-400 mt-0.5 flex-shrink-0">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  </span>
+                  <p class="text-zinc-300 text-sm leading-relaxed">{tip}</p>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div class="card p-5">
+              <p class="text-zinc-400 leading-relaxed">
+                Arrive early if you're an away fan — check with your club's supporters' trust for any designated away fan pubs.
+                {homeCity && ` ${homeCity.name} has a great range of bars and restaurants if you make a day of it.`}
+              </p>
+            </div>
+          )}
+        </section>
+
+        <!-- ── After the Match ────────────────────────────────────────────── -->
+        {homeCity && (
+          <section>
+            <h2 class="section-title mb-2">After the Match</h2>
+            <p class="section-subtitle mb-6">Make the most of your evening in {homeCity.name}</p>
+
+            <div class="space-y-4">
+              {homeCity.highlights?.length > 0 && (
+                <div class="card p-5">
+                  <h3 class="font-semibold text-white mb-3">Highlights of {homeCity.name}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {homeCity.highlights.map((h: string) => (
+                      <span class="badge">{h}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {homeCity.bestAreas?.length > 0 && (
+                <div class="space-y-3">
+                  <h3 class="font-semibold text-white">Best areas to explore</h3>
+                  {homeCity.bestAreas.slice(0, 3).map((area: any) => (
+                    <div class="card p-4">
+                      <div class="font-semibold text-white mb-1">{area.name}</div>
+                      <p class="text-zinc-400 text-sm leading-relaxed">{area.description}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
+        <!-- ── Weekend Trip ───────────────────────────────────────────────── -->
+        {homeCity && (
+          <section>
+            <h2 class="section-title mb-2">Turn It Into a Weekend Trip</h2>
+            <p class="section-subtitle mb-6">How to do {homeCity.name} as a 2-night city break</p>
+
+            <div class="card p-6">
+              {homeCity.longDescription ? (
+                <p class="text-zinc-300 leading-relaxed mb-5">{homeCity.longDescription}</p>
+              ) : (
+                <p class="text-zinc-300 leading-relaxed mb-5">
+                  {homeCity.name} is worth more than a day trip. Arrive the evening before, check into one of the hotels above, explore the city on match day morning, then catch the game. Stay the night after and spend Sunday at your leisure before heading home.
+                </p>
+              )}
+
+              <div class="grid sm:grid-cols-3 gap-3 mb-5">
+                <div class="bg-zinc-800/50 rounded-lg p-3 text-center">
+                  <div class="text-emerald-400 font-bold text-sm mb-1">Friday night</div>
+                  <p class="text-zinc-400 text-xs">Arrive, check in, explore {homeCity.bestAreas?.[0]?.name ?? 'the city centre'}</p>
+                </div>
+                <div class="bg-zinc-800/50 rounded-lg p-3 text-center">
+                  <div class="text-emerald-400 font-bold text-sm mb-1">Match day</div>
+                  <p class="text-zinc-400 text-xs">Pre-match pubs, kick-off, post-match drinks</p>
+                </div>
+                <div class="bg-zinc-800/50 rounded-lg p-3 text-center">
+                  <div class="text-emerald-400 font-bold text-sm mb-1">Sunday</div>
+                  <p class="text-zinc-400 text-xs">Brunch, sightseeing, head home</p>
+                </div>
+              </div>
+
+              <a
+                href={`/cities/${homeCity.slug}/`}
+                class="btn-primary inline-flex"
+              >
+                Full {homeCity.name} city guide
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </section>
+        )}
+
+      </div><!-- /main -->
+
+      <!-- ── Sidebar ────────────────────────────────────────────────────────── -->
+      <aside class="space-y-6">
+
+        <!-- Quick info card -->
+        <div class="card p-5 sticky top-24">
+          <h3 class="font-bold text-white mb-4">Match Info</h3>
+          <dl class="space-y-3 text-sm">
+            <div>
+              <dt class="text-zinc-500 text-xs uppercase tracking-wider mb-0.5">Date</dt>
+              <dd class="text-zinc-200">{formattedDate}</dd>
+            </div>
+            <div>
+              <dt class="text-zinc-500 text-xs uppercase tracking-wider mb-0.5">Kick-off</dt>
+              <dd class="text-zinc-200">{formattedTime} (UK)</dd>
+            </div>
+            {fixture.venue && (
+              <div>
+                <dt class="text-zinc-500 text-xs uppercase tracking-wider mb-0.5">Venue</dt>
+                <dd class="text-zinc-200">{fixture.venue}</dd>
+              </div>
+            )}
+            {fixture.venueCity && (
+              <div>
+                <dt class="text-zinc-500 text-xs uppercase tracking-wider mb-0.5">City</dt>
+                <dd class="text-zinc-200">{fixture.venueCity}</dd>
+              </div>
+            )}
+            {homeClub?.stadiumCapacity && (
+              <div>
+                <dt class="text-zinc-500 text-xs uppercase tracking-wider mb-0.5">Capacity</dt>
+                <dd class="text-zinc-200">{homeClub.stadiumCapacity.toLocaleString()}</dd>
+              </div>
+            )}
+          </dl>
+
+          <div class="mt-5 pt-4 border-t border-zinc-800 space-y-2">
+            {fixture.homeSlug && (
+              <a href={`/clubs/${fixture.homeSlug}/`} class="block text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                → {fixture.homeTeam} stadium guide
+              </a>
+            )}
+            {fixture.awaySlug && (
+              <a href={`/clubs/${fixture.awaySlug}/`} class="block text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                → {fixture.awayTeam} club page
+              </a>
+            )}
+            {homeCity && (
+              <a href={`/cities/${homeCity.slug}/`} class="block text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                → {homeCity.name} city guide
+              </a>
+            )}
+            <a href="/fixtures/" class="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors">
+              ← All fixtures
+            </a>
+          </div>
+        </div>
+
+        <!-- Hotels CTA -->
+        {fixture.homeSlug && topHotels.length > 0 && (
+          <div class="card p-5 bg-emerald-500/5 border-emerald-500/20">
+            <h3 class="font-bold text-white mb-2">Book your stay</h3>
+            <p class="text-zinc-400 text-sm mb-4">
+              {topHotels.length} hotels listed near {fixture.venue ?? `${fixture.homeTeam}'s stadium`}. Sort by distance, price, or rating.
+            </p>
+            <a href={`/clubs/${fixture.homeSlug}/`} class="btn-primary w-full justify-center text-sm">
+              Browse hotels
+            </a>
+          </div>
+        )}
+
+      </aside>
+    </div>
+  </div>
+
+</PageLayout>

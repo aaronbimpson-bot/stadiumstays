@@ -6,11 +6,42 @@ import clubs from '../data/clubs.json';
 import cities from '../data/cities.json';
 import leagues from '../data/leagues.json';
 import unsplashImages from '../data/unsplash-images.json';
+import allFixtures from '../data/fixtures.json';
 
 // Featured clubs for homepage
 const featuredClubs = clubs.filter(c =>
   ['arsenal', 'manchester-city', 'liverpool', 'chelsea', 'manchester-united', 'tottenham-hotspur'].includes(c.slug)
 );
+
+// Next 10 days of fixtures
+const now = new Date();
+const tenDaysLater = new Date(now);
+tenDaysLater.setDate(tenDaysLater.getDate() + 10);
+const upcomingFixtures = allFixtures.filter(f => {
+  const d = new Date(f.date);
+  return d >= now && d <= tenDaysLater && f.status === 'STATUS_SCHEDULED';
+}).slice(0, 12);
+
+function matchPageSlug(f: typeof allFixtures[0]) {
+  const toSlug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const home = f.homeSlug ?? toSlug(f.homeTeam);
+  const away = f.awaySlug ?? toSlug(f.awayTeam);
+  return `/match/${home}-vs-${away}-${f.date.substring(0, 10)}/`;
+}
+
+function fixtureDay(iso: string) {
+  const d = new Date(iso);
+  const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  if (d.toDateString() === today.toDateString()) return 'Today';
+  if (d.toDateString() === tomorrow.toDateString()) return 'Tomorrow';
+  return d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'Europe/London' });
+}
+
+function fixtureTime(iso: string) {
+  return new Date(iso).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/London' });
+}
 
 // Featured cities
 const featuredCities = cities.slice(0, 4).map(city => ({
@@ -130,6 +161,53 @@ const stats = [
       </div>
     </div>
   </section>
+
+  <!-- Next Fixtures -->
+  {upcomingFixtures.length > 0 && (
+    <section class="py-16 lg:py-20 bg-zinc-900/50 border-y border-zinc-800">
+      <div class="container-wide">
+        <div class="flex items-end justify-between mb-8">
+          <div>
+            <h2 class="section-title">Next Fixtures</h2>
+            <p class="section-subtitle">Premier League games in the next 10 days</p>
+          </div>
+          <a href="/fixtures/" class="text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors hidden sm:inline">
+            All fixtures →
+          </a>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {upcomingFixtures.map(fixture => (
+            <a href={matchPageSlug(fixture)} class="card p-4 flex items-center gap-3 hover:border-zinc-600 transition-colors group">
+              <!-- Away -->
+              <div class="flex-1 text-right min-w-0">
+                <span class="font-semibold text-white group-hover:text-emerald-400 transition-colors text-sm leading-tight block truncate">
+                  {fixture.awayTeam}
+                </span>
+              </div>
+
+              <!-- Time / date -->
+              <div class="flex-shrink-0 text-center">
+                <div class="text-xs font-bold text-emerald-400 whitespace-nowrap">{fixtureDay(fixture.date)}</div>
+                <div class="text-zinc-400 text-xs">{fixtureTime(fixture.date)}</div>
+              </div>
+
+              <!-- Home -->
+              <div class="flex-1 text-left min-w-0">
+                <span class="font-semibold text-white group-hover:text-emerald-400 transition-colors text-sm leading-tight block truncate">
+                  {fixture.homeTeam}
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-6 text-center sm:hidden">
+          <a href="/fixtures/" class="btn-secondary">All fixtures</a>
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- How it works -->
   <section class="py-16 lg:py-20 bg-zinc-900/50 border-y border-zinc-800">
