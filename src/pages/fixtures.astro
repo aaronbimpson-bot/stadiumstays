@@ -1,0 +1,255 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import fixtures from '../data/fixtures.json';
+
+// Build match page slug
+function matchSlug(fixture: typeof fixtures[0]) {
+  const toSlug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const homeSlug = fixture.homeSlug ?? toSlug(fixture.homeTeam);
+  const awaySlug = fixture.awaySlug ?? toSlug(fixture.awayTeam);
+  return `/match/${homeSlug}-vs-${awaySlug}-${fixture.date.substring(0, 10)}/`;
+}
+
+// Build unique team list for filter dropdown
+const allTeams = [...new Set(
+  fixtures.flatMap(f => [f.homeTeam, f.awayTeam])
+)].sort();
+
+// Format date for display (YYYY-MM-DD → "Sat 21 Feb")
+function formatDate(isoDate: string) {
+  const d = new Date(isoDate);
+  return d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'Europe/London' });
+}
+
+function formatTime(isoDate: string) {
+  const d = new Date(isoDate);
+  return d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/London' });
+}
+
+// Group fixtures by date (YYYY-MM-DD)
+function groupByDate(list: typeof fixtures) {
+  const groups: Record<string, typeof fixtures> = {};
+  for (const f of list) {
+    const key = f.date.substring(0, 10);
+    (groups[key] ??= []).push(f);
+  }
+  return groups;
+}
+
+const grouped = groupByDate(fixtures);
+const sortedDates = Object.keys(grouped).sort();
+
+// Pass data to client-side script as JSON
+const fixturesJson = JSON.stringify(fixtures);
+const teamsJson = JSON.stringify(allTeams);
+---
+
+<PageLayout
+  title="Premier League Fixtures 2025/26 | StadiumStays"
+  description="View all remaining Premier League fixtures for the 2025/26 season. Filter by date or club and find hotels near the ground."
+>
+  <!-- Page header -->
+  <section class="py-12 lg:py-16 bg-zinc-950 border-b border-zinc-800">
+    <div class="container-narrow">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-4">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        2025/26 Season
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-bold text-white mb-3">Premier League Fixtures</h1>
+      <p class="text-zinc-400 text-lg">All remaining fixtures for the season. Click a club name to find hotels near the ground.</p>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="sticky top-16 z-40 bg-zinc-950/95 backdrop-blur border-b border-zinc-800 py-3">
+    <div class="container-wide">
+      <div class="flex flex-col sm:flex-row gap-3">
+        <!-- Club filter -->
+        <div class="flex-1 min-w-0">
+          <label for="club-filter" class="sr-only">Filter by club</label>
+          <select
+            id="club-filter"
+            class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-emerald-500"
+          >
+            <option value="">All clubs</option>
+            {allTeams.map(team => (
+              <option value={team}>{team}</option>
+            ))}
+          </select>
+        </div>
+
+        <!-- Date from -->
+        <div class="flex-1 min-w-0">
+          <label for="date-from" class="sr-only">From date</label>
+          <input
+            id="date-from"
+            type="date"
+            class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-emerald-500"
+          />
+        </div>
+
+        <!-- Date to -->
+        <div class="flex-1 min-w-0">
+          <label for="date-to" class="sr-only">To date</label>
+          <input
+            id="date-to"
+            type="date"
+            class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-emerald-500"
+          />
+        </div>
+
+        <!-- Reset -->
+        <button
+          id="reset-filters"
+          class="px-4 py-2 text-sm text-zinc-400 hover:text-white border border-zinc-700 hover:border-zinc-500 rounded-lg transition-colors whitespace-nowrap"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fixtures list -->
+  <section class="py-8 lg:py-12">
+    <div class="container-wide">
+      <div id="fixtures-container">
+        {sortedDates.map(dateKey => (
+          <div class="fixture-group mb-8" data-date={dateKey}>
+            <h2 class="text-zinc-500 text-sm font-semibold uppercase tracking-widest mb-3 flex items-center gap-3">
+              <span>{formatDate(dateKey)}</span>
+              <span class="flex-1 h-px bg-zinc-800"></span>
+            </h2>
+            <div class="space-y-2">
+              {grouped[dateKey].map(fixture => (
+                <div
+                  class="fixture-card card p-4 flex items-center gap-4"
+                  data-home={fixture.homeTeam}
+                  data-away={fixture.awayTeam}
+                >
+                  <!-- Away team -->
+                  <div class="flex-1 text-right">
+                    {fixture.awaySlug ? (
+                      <a href={`/clubs/${fixture.awaySlug}/`} class="font-semibold text-white hover:text-emerald-400 transition-colors">
+                        {fixture.awayTeam}
+                      </a>
+                    ) : (
+                      <span class="font-semibold text-zinc-300">{fixture.awayTeam}</span>
+                    )}
+                  </div>
+
+                  <!-- Score / time / guide link -->
+                  <div class="flex-shrink-0 text-center w-28">
+                    {fixture.status === 'STATUS_FINAL' ? (
+                      <div class="font-bold text-white text-lg tabular-nums">
+                        {fixture.awayScore} – {fixture.homeScore}
+                      </div>
+                    ) : fixture.status === 'STATUS_IN_PROGRESS' ? (
+                      <div class="font-bold text-emerald-400 text-sm">LIVE</div>
+                    ) : (
+                      <div class="text-zinc-400 text-sm font-medium">{formatTime(fixture.date)}</div>
+                    )}
+                    <div class="text-zinc-600 text-xs mt-0.5">{fixture.venueCity}</div>
+                    <a href={matchSlug(fixture)} class="mt-1.5 block text-[10px] text-emerald-500 hover:text-emerald-400 transition-colors font-medium">
+                      Travel guide →
+                    </a>
+                  </div>
+
+                  <!-- Home team -->
+                  <div class="flex-1 text-left">
+                    {fixture.homeSlug ? (
+                      <a href={`/clubs/${fixture.homeSlug}/`} class="font-semibold text-white hover:text-emerald-400 transition-colors">
+                        {fixture.homeTeam}
+                      </a>
+                    ) : (
+                      <span class="font-semibold text-zinc-300">{fixture.homeTeam}</span>
+                    )}
+                  </div>
+
+                  <!-- Travel guide CTA -->
+                  <div class="hidden sm:block flex-shrink-0">
+                    <a
+                      href={matchSlug(fixture)}
+                      class="text-xs text-emerald-400 hover:text-emerald-300 border border-emerald-500/30 hover:border-emerald-500/60 rounded px-2 py-1 transition-colors whitespace-nowrap"
+                    >
+                      Hotels & guide
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        <!-- No results message -->
+        <div id="no-results" class="hidden text-center py-16">
+          <p class="text-zinc-500 text-lg">No fixtures match your filters.</p>
+          <button id="reset-no-results" class="mt-4 text-emerald-400 hover:text-emerald-300 text-sm">Clear filters</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<script define:vars={{ fixturesJson, teamsJson }}>
+  const fixtures = JSON.parse(fixturesJson);
+
+  const clubFilter = document.getElementById('club-filter');
+  const dateFrom = document.getElementById('date-from');
+  const dateTo = document.getElementById('date-to');
+  const resetBtn = document.getElementById('reset-filters');
+  const resetNoResults = document.getElementById('reset-no-results');
+  const noResults = document.getElementById('no-results');
+
+  // Set default date-from to today
+  const today = new Date().toISOString().substring(0, 10);
+  dateFrom.value = today;
+
+  function applyFilters() {
+    const club = clubFilter.value;
+    const from = dateFrom.value;
+    const to = dateTo.value;
+
+    const groups = document.querySelectorAll('.fixture-group');
+    let totalVisible = 0;
+
+    groups.forEach(group => {
+      const dateKey = group.dataset.date;
+      const cards = group.querySelectorAll('.fixture-card');
+      let groupVisible = 0;
+
+      cards.forEach(card => {
+        const home = card.dataset.home;
+        const away = card.dataset.away;
+
+        const clubMatch = !club || home === club || away === club;
+        const fromMatch = !from || dateKey >= from;
+        const toMatch = !to || dateKey <= to;
+
+        const show = clubMatch && fromMatch && toMatch;
+        card.style.display = show ? '' : 'none';
+        if (show) groupVisible++;
+      });
+
+      group.style.display = groupVisible > 0 ? '' : 'none';
+      totalVisible += groupVisible;
+    });
+
+    noResults.classList.toggle('hidden', totalVisible > 0);
+  }
+
+  function resetFilters() {
+    clubFilter.value = '';
+    dateFrom.value = today;
+    dateTo.value = '';
+    applyFilters();
+  }
+
+  clubFilter.addEventListener('change', applyFilters);
+  dateFrom.addEventListener('change', applyFilters);
+  dateTo.addEventListener('change', applyFilters);
+  resetBtn.addEventListener('click', resetFilters);
+  resetNoResults.addEventListener('click', resetFilters);
+
+  // Apply on load
+  applyFilters();
+</script>
