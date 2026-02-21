@@ -55,15 +55,17 @@ const shortDate = kickoffDate.toLocaleDateString('en-GB', {
 const metaTitle = `${fixture.awayTeam} vs ${fixture.homeTeam} Hotels & Travel Guide | ${shortDate}`;
 const metaDesc  = `Where to stay for ${fixture.awayTeam} vs ${fixture.homeTeam} on ${shortDate}. Hotels near ${fixture.venue ?? fixture.homeTeam + ' stadium'}, getting there, pre-match pubs and a weekend city break guide.`;
 
-// Price level symbols
-function priceSymbol(level: string | null) {
+// Price level symbols (priceLevel stored as int 1–4 in hotels.json)
+function priceSymbol(level: number | string | null) {
+  if (!level) return '';
+  if (typeof level === 'number') return '£'.repeat(Math.min(level, 4));
   const map: Record<string, string> = {
     PRICE_LEVEL_INEXPENSIVE: '£',
     PRICE_LEVEL_MODERATE: '££',
     PRICE_LEVEL_EXPENSIVE: '£££',
     PRICE_LEVEL_VERY_EXPENSIVE: '££££',
   };
-  return level ? (map[level] ?? '') : '';
+  return map[level] ?? '';
 }
 ---
 
@@ -82,31 +84,31 @@ function priceSymbol(level: string | null) {
       <!-- Teams -->
       <div class="flex items-center justify-center gap-4 sm:gap-8 mb-6">
         <!-- Away team (visiting) -->
-        <div class="flex-1 text-right">
+        <div class="flex-1 min-w-0 text-right">
           {fixture.awaySlug ? (
-            <a href={`/clubs/${fixture.awaySlug}/`} class="text-2xl sm:text-4xl font-bold text-white hover:text-emerald-400 transition-colors leading-tight block">
+            <a href={`/clubs/${fixture.awaySlug}/`} class="text-xl sm:text-4xl font-bold text-white hover:text-emerald-400 transition-colors leading-tight block break-words">
               {fixture.awayTeam}
             </a>
           ) : (
-            <span class="text-2xl sm:text-4xl font-bold text-white leading-tight block">{fixture.awayTeam}</span>
+            <span class="text-xl sm:text-4xl font-bold text-white leading-tight block break-words">{fixture.awayTeam}</span>
           )}
           <span class="text-zinc-500 text-xs sm:text-sm mt-1 block">Away</span>
         </div>
 
         <div class="flex-shrink-0 text-center">
-          <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-400 font-bold text-lg sm:text-xl">
+          <div class="w-10 h-10 sm:w-16 sm:h-16 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-400 font-bold text-sm sm:text-xl">
             vs
           </div>
         </div>
 
         <!-- Home team -->
-        <div class="flex-1 text-left">
+        <div class="flex-1 min-w-0 text-left">
           {fixture.homeSlug ? (
-            <a href={`/clubs/${fixture.homeSlug}/`} class="text-2xl sm:text-4xl font-bold text-white hover:text-emerald-400 transition-colors leading-tight block">
+            <a href={`/clubs/${fixture.homeSlug}/`} class="text-xl sm:text-4xl font-bold text-white hover:text-emerald-400 transition-colors leading-tight block break-words">
               {fixture.homeTeam}
             </a>
           ) : (
-            <span class="text-2xl sm:text-4xl font-bold text-white leading-tight block">{fixture.homeTeam}</span>
+            <span class="text-xl sm:text-4xl font-bold text-white leading-tight block break-words">{fixture.homeTeam}</span>
           )}
           <span class="text-zinc-500 text-xs sm:text-sm mt-1 block">Home</span>
         </div>
@@ -138,6 +140,33 @@ function priceSymbol(level: string | null) {
 
       <!-- Main content (2/3 width) -->
       <div class="lg:col-span-2 space-y-14">
+
+        <!-- ── City lifestyle images ─────────────────────────────────────── -->
+        {homeCity && (
+          <section>
+            <div class="grid grid-cols-3 gap-2 sm:gap-3 rounded-xl overflow-hidden">
+              <img
+                src={`https://picsum.photos/seed/${homeCity.slug}-life-1/600/400`}
+                alt={`${homeCity.name} city`}
+                class="w-full aspect-[4/3] object-cover"
+                loading="eager"
+              />
+              <img
+                src={`https://picsum.photos/seed/${homeCity.slug}-life-2/600/400`}
+                alt={`${homeCity.name} lifestyle`}
+                class="w-full aspect-[4/3] object-cover"
+                loading="eager"
+              />
+              <img
+                src={`https://picsum.photos/seed/${homeCity.slug}-life-3/600/400`}
+                alt={`${homeCity.name} culture`}
+                class="w-full aspect-[4/3] object-cover"
+                loading="eager"
+              />
+            </div>
+            <p class="text-zinc-600 text-xs mt-2 text-center">Your weekend in {homeCity.name}</p>
+          </section>
+        )}
 
         <!-- ── Getting There ──────────────────────────────────────────────── -->
         <section>
@@ -199,13 +228,19 @@ function priceSymbol(level: string | null) {
           {topHotels.length > 0 ? (
             <div class="space-y-3">
               {topHotels.map((hotel: any, i: number) => (
-                <div class="card p-4 flex items-center gap-4">
-                  {i === 0 && (
-                    <span class="absolute -mt-8 text-[10px] font-bold text-emerald-400 uppercase tracking-wider hidden"></span>
-                  )}
+                <div class="card p-3 sm:p-4 flex items-center gap-3 sm:gap-4">
+                  <!-- Thumbnail -->
+                  <div class="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden bg-zinc-800">
+                    <img
+                      src={hotel.photos?.[0] ?? `https://picsum.photos/seed/${hotel.id}/200/200`}
+                      alt={hotel.name}
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
                   <div class="flex-1 min-w-0">
                     <div class="flex items-start gap-2 flex-wrap">
-                      <h3 class="font-semibold text-white leading-tight">
+                      <h3 class="font-semibold text-white leading-tight text-sm sm:text-base">
                         {hotel.website ? (
                           <a href={hotel.website} target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">
                             {hotel.name}
@@ -215,7 +250,7 @@ function priceSymbol(level: string | null) {
                       {i === 0 && <span class="text-[10px] font-bold bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded uppercase tracking-wider">Top rated</span>}
                     </div>
                     {hotel.address && <p class="text-zinc-500 text-xs mt-0.5 truncate">{hotel.address}</p>}
-                    <div class="flex items-center gap-3 mt-1">
+                    <div class="flex items-center gap-3 mt-1 flex-wrap">
                       {hotel.rating && (
                         <span class="text-sm text-zinc-300">
                           ★ <span class="font-medium">{hotel.rating}</span>
@@ -223,7 +258,7 @@ function priceSymbol(level: string | null) {
                         </span>
                       )}
                       {hotel.priceLevel && <span class="text-zinc-500 text-sm">{priceSymbol(hotel.priceLevel)}</span>}
-                      {hotel.distance && <span class="text-zinc-600 text-xs">{hotel.distance.toFixed(1)} km from stadium</span>}
+                      {hotel.distanceKm && <span class="text-zinc-600 text-xs">{hotel.distanceKm.toFixed(1)} km from stadium</span>}
                     </div>
                   </div>
                   {fixture.homeSlug && (
@@ -364,10 +399,10 @@ function priceSymbol(level: string | null) {
       </div><!-- /main -->
 
       <!-- ── Sidebar ────────────────────────────────────────────────────────── -->
-      <aside class="space-y-6">
+      <aside class="space-y-6 lg:sticky lg:top-24 lg:self-start">
 
         <!-- Quick info card -->
-        <div class="card p-5 sticky top-24">
+        <div class="card p-5">
           <h3 class="font-bold text-white mb-4">Match Info</h3>
           <dl class="space-y-3 text-sm">
             <div>
