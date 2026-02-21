@@ -15,23 +15,17 @@ function dateSlug(isoDate: string) {
 }
 
 export function getStaticPaths() {
-  try {
-    const seen = new Set<string>();
-    const paths: { params: { slug: string }; props: { fixture: any } }[] = [];
-    for (const f of (fixtures as any[])) {
-      if (!f.homeTeam || !f.awayTeam || !f.date) continue;
-      const homeSlug: string = f.homeSlug ?? nameToSlug(String(f.homeTeam));
-      const awaySlug: string = f.awaySlug ?? nameToSlug(String(f.awayTeam));
-      const slug = `${homeSlug}-vs-${awaySlug}-${dateSlug(String(f.date))}`;
-      if (seen.has(slug)) continue;
-      seen.add(slug);
-      paths.push({ params: { slug }, props: { fixture: f } });
-    }
-    return paths;
-  } catch (err: any) {
-    console.error('[match/getStaticPaths] ERROR:', err?.message ?? String(err));
-    return [];
+  const seen = new Set<string>();
+  const paths: { params: { slug: string }; props: { fixture: typeof fixtures[number] } }[] = [];
+  for (const f of fixtures) {
+    const homeSlug = f.homeSlug ?? nameToSlug(f.homeTeam);
+    const awaySlug = f.awaySlug ?? nameToSlug(f.awayTeam);
+    const slug = `${homeSlug}-vs-${awaySlug}-${f.date.substring(0, 10)}`;
+    if (seen.has(slug)) continue;
+    seen.add(slug);
+    paths.push({ params: { slug }, props: { fixture: f } });
   }
+  return paths;
 }
 
 const { fixture } = Astro.props;

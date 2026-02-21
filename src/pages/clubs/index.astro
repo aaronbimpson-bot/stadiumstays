@@ -2,23 +2,46 @@
 import PageLayout from '../../layouts/PageLayout.astro';
 import ClubCard from '../../components/ClubCard.astro';
 import clubs from '../../data/clubs.json';
+import clubsEurope from '../../data/clubs-europe.json';
 import leagues from '../../data/leagues.json';
 import unsplashImages from '../../data/unsplash-images.json';
 
-const leagueLabels: Record<string, string> = Object.fromEntries(
-  leagues.map(l => [l.slug, l.name])
-);
+// European clubs that have hotel data (La Liga + Serie A)
+const europeanClubs = (clubsEurope as any[])
+  .filter((c: any) => c.leagueSlug === 'la-liga' || c.leagueSlug === 'serie-a')
+  .map((c: any) => ({
+    slug: c.slug,
+    name: c.name,
+    stadium: c.stadium,
+    city: c.city ?? c.leagueSlug,
+    league: c.leagueSlug,
+    stadiumCapacity: c.capacity ?? null,
+  }));
 
-// Group clubs by league
-const clubsByLeague = leagues.map(league => ({
-  league,
-  clubs: clubs.filter(c => c.league === league.slug),
-})).filter(g => g.clubs.length > 0);
+// All clubs combined
+const allClubs = [...clubs, ...europeanClubs];
+
+// League display names (add European leagues not in leagues.json)
+const leagueLabels: Record<string, string> = {
+  ...Object.fromEntries(leagues.map(l => [l.slug, l.name])),
+  'la-liga': 'La Liga',
+  'serie-a': 'Serie A',
+};
+
+// Group by league — UK leagues first, then European
+const leagueOrder = [...leagues.map(l => l.slug), 'la-liga', 'serie-a'];
+const clubsByLeague = leagueOrder
+  .map(slug => ({
+    leagueSlug: slug,
+    leagueName: leagueLabels[slug] ?? slug,
+    clubs: allClubs.filter(c => c.league === slug),
+  }))
+  .filter(g => g.clubs.length > 0);
 ---
 
 <PageLayout
   title="All Clubs — Hotels Near Every Stadium"
-  description="Find hotels near every football club in the UK. Browse all Premier League, Championship, and Scottish Premiership clubs."
+  description="Find hotels near football clubs across the UK, Spain and Italy. Browse Premier League, La Liga, Serie A, Championship and Scottish Premiership clubs."
 >
   <div class="container-wide py-12 lg:py-16">
     <!-- Breadcrumb -->
@@ -30,22 +53,23 @@ const clubsByLeague = leagues.map(league => ({
 
     <div class="mb-10">
       <h1 class="section-title text-3xl lg:text-4xl mb-3">All Clubs</h1>
-      <p class="section-subtitle text-base">Hotels near every football stadium in the UK</p>
+      <p class="section-subtitle text-base">Hotels near {allClubs.length} football stadiums across the UK, Spain and Italy</p>
     </div>
 
-    {clubsByLeague.map(({ league, clubs: leagueClubs }) => (
+    {clubsByLeague.map(({ leagueSlug, leagueName, clubs: leagueClubs }) => (
       <div class="mb-14">
         <div class="flex items-center justify-between mb-6">
           <div class="flex items-center gap-3">
-            <h2 class="text-xl font-bold text-white">{league.name}</h2>
-            <span class="badge bg-zinc-800 text-zinc-500 border border-zinc-700/50">{league.country}</span>
+            <h2 class="text-xl font-bold text-white">{leagueName}</h2>
           </div>
-          <a
-            href={`/leagues/${league.slug}/`}
-            class="text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors"
-          >
-            League guide →
-          </a>
+          {leagues.some(l => l.slug === leagueSlug) && (
+            <a
+              href={`/leagues/${leagueSlug}/`}
+              class="text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors"
+            >
+              League guide →
+            </a>
+          )}
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
