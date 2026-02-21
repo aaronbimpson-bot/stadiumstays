@@ -81,6 +81,6 @@ function fetchFixtures() {
 try {
   fetchFixtures();
 } catch (err) {
-  console.error('Failed to fetch fixtures:', err.message);
-  process.exit(1);
+  console.warn('Warning: failed to fetch fixtures — using existing fixtures.json data.', err.message);
+  process.exit(0);
 }
