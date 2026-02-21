@@ -15,16 +15,20 @@ function dateSlug(isoDate: string) {
 }
 
 export function getStaticPaths() {
-  return fixtures.map((fixture) => {
-    const homeSlug = fixture.homeSlug ?? nameToSlug(fixture.homeTeam);
-    const awaySlug = fixture.awaySlug ?? nameToSlug(fixture.awayTeam);
-    const slug = `${homeSlug}-vs-${awaySlug}-${dateSlug(fixture.date)}`;
-
-    return {
-      params: { slug },
-      props: { fixture },
-    };
-  });
+  const seen = new Set<string>();
+  return (fixtures as any[])
+    .filter((f: any) => f.homeTeam && f.awayTeam && f.date)
+    .map((fixture: any) => {
+      const homeSlug = fixture.homeSlug ?? nameToSlug(String(fixture.homeTeam));
+      const awaySlug = fixture.awaySlug ?? nameToSlug(String(fixture.awayTeam));
+      const slug = `${homeSlug}-vs-${awaySlug}-${dateSlug(String(fixture.date))}`;
+      return { params: { slug }, props: { fixture } };
+    })
+    .filter(({ params }: { params: { slug: string } }) => {
+      if (seen.has(params.slug)) return false;
+      seen.add(params.slug);
+      return true;
+    });
 }
 
 const { fixture } = Astro.props;
