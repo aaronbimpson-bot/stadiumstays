@@ -46,7 +46,9 @@ if (!API_KEY) {
 const LITEAPI_BASE = 'https://api.liteapi.travel/v3.0';
 const SEARCH_RADIUS_KM = 5;
 const SEARCH_RADIUS_M = SEARCH_RADIUS_KM * 1000;
-const MAX_RESULTS = 10;
+const MAX_RESULTS = 30;
+/** How many hotels to request from the API before sorting/slicing */
+const API_FETCH_LIMIT = 100;
 /** Delay between API requests (ms) — keeps us well within rate limits */
 const REQUEST_DELAY_MS = 600;
 
@@ -117,7 +119,7 @@ async function fetchHotelsForClub(club) {
     latitude: String(club.lat),
     longitude: String(club.lng),
     radius: String(SEARCH_RADIUS_M),
-    limit: String(MAX_RESULTS),
+    limit: String(API_FETCH_LIMIT),
   });
 
   const url = `${LITEAPI_BASE}/data/hotels?${params}`;
@@ -144,7 +146,9 @@ async function fetchHotelsForClub(club) {
       return {
         id: h.id,
         name: h.name,
-        stars: h.starRating ?? null,
+        stars: h.stars ?? null,
+        rating: h.rating ?? null,
+        reviewCount: h.reviewCount ?? null,
         photo: h.main_photo ?? h.thumbnail ?? null,
         distanceKm: distanceKm !== null ? Math.round(distanceKm * 100) / 100 : null,
         latitude: hotelLat,
@@ -152,7 +156,16 @@ async function fetchHotelsForClub(club) {
       };
     })
     .filter((h) => h.distanceKm !== null)
-    .sort((a, b) => a.distanceKm - b.distanceKm)
+    // Sort by stars desc, then rating desc, then distance asc — most popular/best first
+    .sort((a, b) => {
+      const starsA = a.stars ?? 0;
+      const starsB = b.stars ?? 0;
+      if (starsB !== starsA) return starsB - starsA;
+      const ratingA = a.rating ?? 0;
+      const ratingB = b.rating ?? 0;
+      if (ratingB !== ratingA) return ratingB - ratingA;
+      return a.distanceKm - b.distanceKm;
+    })
     .slice(0, MAX_RESULTS);
 }
 
@@ -165,7 +178,7 @@ async function main() {
   const errors = [];
 
   console.log(
-    `Fetching LiteAPI hotels for ${allClubs.length} clubs (radius ${SEARCH_RADIUS_KM} km)…`,
+    `Fetching LiteAPI hotels for ${allClubs.length} clubs (radius ${SEARCH_RADIUS_KM} km, top ${MAX_RESULTS} by stars+rating)…`,
   );
 
   for (const club of allClubs) {

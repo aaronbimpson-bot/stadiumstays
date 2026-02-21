@@ -55,8 +55,7 @@ const LITEAPI_BOOKING_BASE = 'https://sportystays.nuitee.link';
  *  Checkin / checkout are left as params so the booking page lets the user pick dates.
  */
 function getLiteApiBookingUrl(hotelId: string): string {
-  const params = new URLSearchParams({ hotelId });
-  return `${LITEAPI_BOOKING_BASE}/?${params}`;
+  return `${LITEAPI_BOOKING_BASE}/hotels/${hotelId}`;
 }
 
 /** Fallback white-label search URL for the city when no hotel results exist. */
@@ -73,13 +72,13 @@ const hasLiteHotels = liteHotels.length > 0;
 const _images = unsplashImages as Record<string, any>;
 const heroImage = _images[club.slug] ?? _images[cityLookupSlug] ?? null;
 
-// Closest-to-stadium badge for the first result
-const closestHotelId = hasLiteHotels ? liteHotels[0].id : null;
+// Top-rated badge for the first result (hotels sorted by stars + rating)
+const topRatedHotelId = hasLiteHotels ? liteHotels[0].id : null;
 ---
 
 <PageLayout
   title={`Hotels Near ${club.stadium} — ${club.name} | StadiumStays`}
-  description={`Find the best hotels near ${club.stadium}, home of ${club.name}. Compare hotels within 5 km of the stadium with live availability.`}
+  description={`Find the best hotels near ${club.stadium}, home of ${club.name}. Browse popular hotels in ${cityDisplayName} with live pricing and availability.`}
 >
   <div class="container-wide py-12 lg:py-16">
     <!-- Breadcrumb -->
@@ -202,7 +201,7 @@ const closestHotelId = hasLiteHotels ? liteHotels[0].id : null;
             <h2 class="text-xl font-bold text-white">
               {hasLiteHotels ? (
                 <>
-                  Hotels within 5 km
+                  Popular Hotels in {cityDisplayName}
                   <span class="text-zinc-500 font-normal text-base ml-2">({liteHotels.length} found)</span>
                 </>
               ) : (
@@ -229,14 +228,16 @@ const closestHotelId = hasLiteHotels ? liteHotels[0].id : null;
                     name={hotel.name}
                     stars={hotel.stars}
                     distanceKm={hotel.distanceKm}
+                    rating={hotel.rating ?? undefined}
+                    reviewCount={hotel.reviewCount ?? undefined}
                     imageUrl={hotel.photo ?? undefined}
-                    badge={hotel.id === closestHotelId ? 'Closest to stadium' : undefined}
+                    badge={hotel.id === topRatedHotelId ? 'Top rated' : undefined}
                     bookingUrl={getLiteApiBookingUrl(hotel.id)}
                   />
                 ))}
               </div>
               <p class="text-zinc-600 text-xs mt-4 text-center">
-                Hotels within 5 km of {club.stadium}. Select dates on the booking page for live pricing and availability.
+                Popular hotels near {club.stadium}. Select dates on the booking page for live pricing and availability.
               </p>
             </>
           ) : (
