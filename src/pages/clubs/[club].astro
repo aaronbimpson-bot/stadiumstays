@@ -47,26 +47,22 @@ const searchArea: string = isEuropean
 // ---------------------------------------------------------------------------
 // LiteAPI hotels — fetched at build time via scripts/fetch-liteapi-hotels.mjs
 // ---------------------------------------------------------------------------
-const LITEAPI_SUBDOMAIN = import.meta.env.LITEAPI_SUBDOMAIN ?? '';
+
+/** LiteAPI white-label booking base URL */
+const LITEAPI_BOOKING_BASE = 'https://sportystays.nuitee.link';
 
 /** Build a booking URL for a specific hotel ID.
- *  Checkin / checkout are left empty so the booking page lets the user pick dates.
+ *  Checkin / checkout are left as params so the booking page lets the user pick dates.
  */
 function getLiteApiBookingUrl(hotelId: string): string {
-  const base = LITEAPI_SUBDOMAIN
-    ? `https://book.${LITEAPI_SUBDOMAIN}.liteapi.travel`
-    : 'https://book.liteapi.travel';
   const params = new URLSearchParams({ hotelId });
-  return `${base}/?${params}`;
+  return `${LITEAPI_BOOKING_BASE}/?${params}`;
 }
 
 /** Fallback white-label search URL for the city when no hotel results exist. */
 function getLiteApiCitySearchUrl(): string {
-  const base = LITEAPI_SUBDOMAIN
-    ? `https://book.${LITEAPI_SUBDOMAIN}.liteapi.travel`
-    : 'https://book.liteapi.travel';
   const params = new URLSearchParams({ destination: cityDisplayName });
-  return `${base}/?${params}`;
+  return `${LITEAPI_BOOKING_BASE}/?${params}`;
 }
 
 const _allHotels = liteapiHotels as Record<string, any[]>;

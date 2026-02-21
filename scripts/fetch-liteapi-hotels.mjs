@@ -13,11 +13,23 @@
  * Or automatically via the "build" npm script.
  */
 
-import { writeFileSync, readFileSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Load .env file for local development (no dotenv dependency needed).
+// On Vercel / Netlify env vars are already injected into process.env.
+const envPath = join(__dirname, '../.env');
+if (existsSync(envPath)) {
+  for (const line of readFileSync(envPath, 'utf8').split('\n')) {
+    const [key, ...rest] = line.split('=');
+    if (key && key.trim() && !key.trim().startsWith('#') && rest.length) {
+      process.env[key.trim()] ??= rest.join('=').trim();
+    }
+  }
+}
 const OUTPUT_PATH = join(__dirname, '../src/data/liteapi-hotels.json');
 
 const API_KEY = process.env.LITEAPI_API_KEY;
