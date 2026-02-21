@@ -5,14 +5,10 @@
  * Uses the Places API Nearby Search endpoint with includedTypes: ["hotel"] to
  * return only traditional hotels (no serviced apartments or short-term lets).
  *
- * Booking URLs link to the hotel's Google Maps page which aggregates prices
- * from Booking.com, Expedia, and other providers.
- *
  * Required environment variable:
  *   GOOGLE_PLACES_API_KEY — Google Cloud API key with Places API (New) enabled
  *
  * Run via: node scripts/fetch-google-hotels.mjs
- * Or automatically via the "prebuild" npm script.
  */
 
 import { writeFileSync, readFileSync, existsSync } from 'fs';
@@ -42,17 +38,19 @@ if (!API_KEY) {
 }
 
 const SEARCH_RADIUS_M = 5000;
-const MAX_RESULTS = 20; // Google Places Nearby Search maximum
+const MAX_RESULTS = 20;
+const MAX_PHOTOS = 3;
 const REQUEST_DELAY_MS = 200;
 
-// Place types to search — "hotel" covers traditional hotels only, excluding
-// serviced apartments, Airbnb-style lets, and short-term rentals.
 const INCLUDED_TYPES = ['hotel'];
 
-// Fields to request — keeps costs low (Basic SKU fields only where possible)
+// Preferred-tier fields (formattedAddress, websiteUri) needed for detail pages
 const FIELD_MASK = [
   'places.id',
   'places.displayName',
+  'places.formattedAddress',
+  'places.websiteUri',
+  'places.editorialSummary',
   'places.rating',
   'places.userRatingCount',
   'places.priceLevel',
@@ -70,6 +68,7 @@ const allClubs = [
   ...clubs.map((c) => ({
     slug: c.slug,
     name: c.name,
+    stadium: c.stadium,
     lat: c.lat,
     lng: c.lng,
   })),
@@ -78,6 +77,7 @@ const allClubs = [
     .map((c) => ({
       slug: c.slug,
       name: c.name,
+      stadium: c.stadium,
       lat: c.latitude,
       lng: c.longitude,
     })),
@@ -101,10 +101,6 @@ function haversineKm(lat1, lng1, lat2, lng2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-/**
- * Map Google priceLevel string to an integer 1–4 for display as £/££/£££/££££.
- * PRICE_LEVEL_INEXPENSIVE → 1, MODERATE → 2, EXPENSIVE → 3, VERY_EXPENSIVE → 4
- */
 function priceLevelToInt(priceLevel) {
   const map = {
     PRICE_LEVEL_INEXPENSIVE: 1,
@@ -115,10 +111,7 @@ function priceLevelToInt(priceLevel) {
   return map[priceLevel] ?? null;
 }
 
-/**
- * Fetch the redirect URL for a Google Places photo without exposing the API key
- * in the final JSON. Returns null if the fetch fails.
- */
+/** Follow the redirect to get a stable CDN photo URL (no API key in final JSON). */
 function fetchPhotoUrl(photoName) {
   try {
     const mediaUrl = `https://places.googleapis.com/v1/${photoName}/media?maxWidthPx=800&key=${API_KEY}`;
@@ -126,7 +119,6 @@ function fetchPhotoUrl(photoName) {
       `curl -sf -L -o /dev/null -w "%{url_effective}" "${mediaUrl}"`,
       { encoding: 'utf8', timeout: 10000 },
     ).trim();
-    // url_effective returns the original URL if no redirect occurred
     return response && !response.includes('places.googleapis.com') ? response : null;
   } catch {
     return null;
@@ -169,25 +161,29 @@ async function fetchHotelsForClub(club) {
           ? Math.round(haversineKm(club.lat, club.lng, lat, lng) * 100) / 100
           : null;
 
-      // Fetch one photo URL during build time (no API key in final JSON)
-      const photoName = p.photos?.[0]?.name ?? null;
-      const photo = photoName ? fetchPhotoUrl(photoName) : null;
+      // Fetch up to MAX_PHOTOS photo CDN URLs at build time
+      const photoNames = (p.photos ?? []).slice(0, MAX_PHOTOS).map((ph) => ph.name);
+      const photos = photoNames.map(fetchPhotoUrl).filter(Boolean);
 
       return {
         id: p.id,
         name: p.displayName?.text ?? 'Unknown',
-        stars: null,
+        address: p.formattedAddress ?? null,
+        website: p.websiteUri ?? null,
+        description: p.editorialSummary?.text ?? null,
+        clubSlug: club.slug,
+        clubName: club.name,
+        stadiumName: club.stadium,
         priceLevel: priceLevelToInt(p.priceLevel),
         rating: p.rating ?? null,
         reviewCount: p.userRatingCount ?? null,
-        photo,
+        photos,
         distanceKm,
         latitude: lat,
         longitude: lng,
       };
     })
     .filter((h) => h.distanceKm !== null)
-    // Best-rated first, then closest
     .sort((a, b) => {
       const ra = a.rating ?? 0;
       const rb = b.rating ?? 0;
@@ -204,13 +200,13 @@ async function main() {
   const results = {};
   const errors = [];
 
-  console.log(`Fetching Google Places hotels for ${allClubs.length} clubs…`);
+  console.log(`Fetching Google Places hotels for ${allClubs.length} clubs (up to ${MAX_PHOTOS} photos each)…`);
 
   for (const club of allClubs) {
     try {
       const hotels = await fetchHotelsForClub(club);
       results[club.slug] = hotels;
-      console.log(`  ✓ ${club.slug} — ${hotels.length} hotel${hotels.length !== 1 ? 's' : ''}`);
+      console.log(`  ✓ ${club.slug} — ${hotels.length} hotels`);
     } catch (err) {
       errors.push(club.slug);
       results[club.slug] = [];

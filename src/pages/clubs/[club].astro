@@ -48,9 +48,9 @@ const searchArea: string = isEuropean
 // Hotels — fetched at build time via scripts/fetch-google-hotels.mjs
 // ---------------------------------------------------------------------------
 
-/** Link to a hotel's Google Maps page — shows reviews, photos, and booking options. */
+/** Link to the hotel's detail page on this site. */
 function getHotelUrl(placeId: string): string {
-  return `https://www.google.com/maps/place/?q=place_id:${placeId}`;
+  return `/hotels/${placeId}/`;
 }
 
 /** Fallback: Google Maps search for hotels near the stadium. */
@@ -225,7 +225,7 @@ const topRatedHotelId = hasHotels ? hotels[0].id : null;
                     priceLevel={hotel.priceLevel ?? undefined}
                     rating={hotel.rating ?? undefined}
                     reviewCount={hotel.reviewCount ?? undefined}
-                    imageUrl={hotel.photo ?? undefined}
+                    imageUrl={hotel.photos?.[0] ?? undefined}
                     badge={hotel.id === topRatedHotelId ? 'Top rated' : undefined}
                     bookingUrl={getHotelUrl(hotel.id)}
                   />
