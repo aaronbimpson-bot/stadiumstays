@@ -4,6 +4,7 @@ interface Props {
   stars: number | null;
   distanceKm: number | null;
   priceFrom?: number;
+  priceLevel?: number | null;
   rating?: number;
   reviewCount?: number;
   amenities?: string[];
@@ -17,6 +18,7 @@ const {
   stars,
   distanceKm,
   priceFrom,
+  priceLevel,
   rating,
   reviewCount,
   amenities = [],
@@ -24,6 +26,8 @@ const {
   imageUrl,
   badge,
 } = Astro.props;
+
+const priceLevelText = priceLevel ? '£'.repeat(priceLevel) : null;
 
 const distanceText =
   distanceKm === null || distanceKm === undefined
@@ -114,19 +118,22 @@ const starsArr = stars ? Array.from({ length: 5 }, (_, i) => i < stars) : [];
           <span class="text-xs text-zinc-500">From</span>
           <div class="text-lg font-bold text-white">£{priceFrom}<span class="text-sm font-normal text-zinc-400">/night</span></div>
         </div>
+      ) : priceLevelText ? (
+        <div>
+          <span class="text-xs text-zinc-500">Price guide</span>
+          <div class="text-sm font-semibold text-emerald-400">{priceLevelText}</div>
+        </div>
       ) : (
         <div />
       )}
       <a
         href={bookingUrl}
-        target="_blank"
-        rel="noopener noreferrer sponsored"
         class="btn-primary"
-        aria-label={`Book ${name}`}
+        aria-label={`View ${name}`}
       >
-        Book Now
+        View Hotel
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
       </a>
     </div>
