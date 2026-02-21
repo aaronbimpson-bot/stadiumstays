@@ -19,7 +19,7 @@ const europeanClubs = (clubsEurope as any[])
   }));
 
 // All clubs combined
-const allClubs = [...clubs, ...europeanClubs];
+const allClubs: any[] = [...clubs, ...europeanClubs];
 
 // League display names (add European leagues not in leagues.json)
 const leagueLabels: Record<string, string> = {

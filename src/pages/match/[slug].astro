@@ -16,7 +16,7 @@ function dateSlug(isoDate: string) {
 
 export function getStaticPaths() {
   const seen = new Set<string>();
-  const paths: { params: { slug: string }; props: { fixture: typeof fixtures[number] } }[] = [];
+  const paths: { params: { slug: string }; props: { fixture: any } }[] = [];
   for (const f of fixtures) {
     const homeSlug = f.homeSlug ?? nameToSlug(f.homeTeam);
     const awaySlug = f.awaySlug ?? nameToSlug(f.awayTeam);
