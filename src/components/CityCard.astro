@@ -5,9 +5,11 @@ interface Props {
   country: string;
   description: string;
   clubCount: number;
+  imageUrl?: string;
+  imageAlt?: string;
 }
 
-const { slug, name, country, description, clubCount } = Astro.props;
+const { slug, name, country, description, clubCount, imageUrl, imageAlt } = Astro.props;
 
 // Gradient palette keyed by country
 const gradients: Record<string, string> = {
@@ -27,17 +29,25 @@ const initial = name.charAt(0).toUpperCase();
 <a href={`/cities/${slug}/`} class="card group hover:border-zinc-700 transition-all hover:-translate-y-0.5 block">
   <!-- Visual banner -->
   <div class={`relative aspect-[16/9] bg-gradient-to-br ${gradient} overflow-hidden`}>
-    <!-- Large faded city initial -->
-    <span
-      class="absolute inset-0 flex items-center justify-center text-[9rem] font-black text-white/5 select-none leading-none"
-      aria-hidden="true"
-    >{initial}</span>
+    {imageUrl ? (
+      <img
+        src={imageUrl.includes('?') ? `${imageUrl}&w=800&q=80` : `${imageUrl}?w=800&q=80`}
+        alt={imageAlt ?? name}
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+    ) : (
+      <!-- Large faded city initial -->
+      <span
+        class="absolute inset-0 flex items-center justify-center text-[9rem] font-black text-white/5 select-none leading-none"
+        aria-hidden="true"
+      >{initial}</span>
+    )}
     <!-- City name overlay -->
-    <div class="absolute inset-0 flex flex-col items-start justify-end p-4">
-      <span class="text-xs font-semibold tracking-widest uppercase text-white/40 mb-1">{country}</span>
-      <span class="text-xl font-bold text-white/80 leading-tight">{name}</span>
+    <div class="absolute inset-0 flex flex-col items-start justify-end p-4 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+      <span class="text-xs font-semibold tracking-widest uppercase text-white/60 mb-1">{country}</span>
+      <span class="text-xl font-bold text-white leading-tight">{name}</span>
     </div>
-    <div class="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-zinc-900/60 to-transparent" aria-hidden="true"></div>
   </div>
 
   <div class="p-5">

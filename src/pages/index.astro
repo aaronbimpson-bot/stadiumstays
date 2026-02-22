@@ -47,6 +47,7 @@ function fixtureTime(iso: string) {
 const featuredCities = cities.slice(0, 4).map(city => ({
   ...city,
   clubCount: clubs.filter(c => c.city === city.slug).length,
+  image: (unsplashImages as Record<string, any>)[city.slug] ?? null,
 }));
 
 const stats = [
@@ -274,6 +275,8 @@ const stats = [
             country={city.country}
             description={city.description}
             clubCount={city.clubCount}
+            imageUrl={city.image?.url}
+            imageAlt={city.image?.altDescription}
           />
         ))}
       </div>
