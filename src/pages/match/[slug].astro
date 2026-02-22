@@ -137,7 +137,7 @@ function priceSymbol(level: number | string | null) {
 
   <!-- ── Page body ─────────────────────────────────────────────────────────── -->
   <div class="container-wide py-12 lg:py-16">
-    <div class="grid lg:grid-cols-3 gap-10 lg:gap-14">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-14">
 
       <!-- Main content (2/3 width) -->
       <div class="lg:col-span-2 space-y-14">
@@ -181,7 +181,7 @@ function priceSymbol(level: number | string | null) {
                 <p class="text-zinc-300 leading-relaxed">{homeClub.travelTips}</p>
               </div>
               {homeCity && (
-                <div class="grid sm:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {homeCity.airports?.length && (
                     <div class="card p-4">
                       <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
@@ -372,7 +372,7 @@ function priceSymbol(level: number | string | null) {
                 </p>
               )}
 
-              <div class="grid sm:grid-cols-3 gap-3 mb-5">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
                 <div class="bg-zinc-800/50 rounded-lg p-3 text-center">
                   <div class="text-emerald-400 font-bold text-sm mb-1">Friday night</div>
                   <p class="text-zinc-400 text-xs">Arrive, check in, explore {homeCity.bestAreas?.[0]?.name ?? 'the city centre'}</p>

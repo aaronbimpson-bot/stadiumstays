@@ -81,7 +81,7 @@ const heroImage = (unsplashImages as Record<string, any>)[city.slug] ?? null;
             <h2 class="text-xl font-bold text-white mb-6">
               Football Clubs in {city.name}
             </h2>
-            <div class="grid sm:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {cityClubs.map((club) => {
                 const img = (unsplashImages as any)[club.slug];
                 return (
