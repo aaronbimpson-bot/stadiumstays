@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
+import CityGuideContent from '../../components/CityGuideContent.astro';
 import fixtures from '../../data/fixtures.json';
 import clubs from '../../data/clubs.json';
 import cities from '../../data/cities.json';
@@ -7,8 +8,6 @@ import hotels from '../../data/hotels.json';
 import unsplashImages from '../../data/unsplash-images.json';
 
 export function getStaticPaths() {
-  // Helper defined inside getStaticPaths so it's always in scope
-  // (Astro runs getStaticPaths in isolation from other frontmatter code)
   const toSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const seen = new Set<string>();
   const paths: { params: { slug: string }; props: { fixture: any } }[] = [];
@@ -23,16 +22,16 @@ export function getStaticPaths() {
   return paths;
 }
 
-// Build a slug from any team name (used in rendering, outside getStaticPaths)
-function nameToSlug(name: string) {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-}
-
 const { fixture } = Astro.props;
 
 // ── Lookup data ──────────────────────────────────────────────────────────────
 const homeClub  = fixture.homeSlug ? (clubs as any[]).find((c: any) => c.slug === fixture.homeSlug) ?? null : null;
 const homeCity  = homeClub ? (cities as any[]).find((c: any) => c.slug === homeClub.city) ?? null : null;
+
+// City clubs for the city guide section (UK clubs only on fixture pages)
+const cityClubs = homeCity
+  ? (clubs as any[]).filter((c: any) => c.city === homeCity.slug)
+  : [];
 
 const homeHotels: any[] = fixture.homeSlug ? ((hotels as any)[fixture.homeSlug] ?? []) : [];
 const topHotels = [...homeHotels]
@@ -56,7 +55,11 @@ const shortDate = kickoffDate.toLocaleDateString('en-GB', {
 const metaTitle = `${fixture.awayTeam} vs ${fixture.homeTeam} Hotels & Travel Guide | ${shortDate}`;
 const metaDesc  = `Where to stay for ${fixture.awayTeam} vs ${fixture.homeTeam} on ${shortDate}. Hotels near ${fixture.venue ?? fixture.homeTeam + ' stadium'}, getting there, pre-match pubs and a weekend city break guide.`;
 
-// Price level symbols (priceLevel stored as int 1–4 in hotels.json)
+// ── Hero image ───────────────────────────────────────────────────────────────
+const imgs = unsplashImages as Record<string, any>;
+const cityHeroImg = homeCity ? (imgs[homeCity.slug] ?? null) : null;
+
+// Price level symbols
 function priceSymbol(level: number | string | null) {
   if (!level) return '';
   if (typeof level === 'number') return '£'.repeat(Math.min(level, 4));
@@ -137,36 +140,37 @@ function priceSymbol(level: number | string | null) {
 
   <!-- ── Page body ─────────────────────────────────────────────────────────── -->
   <div class="container-wide py-12 lg:py-16">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-14">
+    <div class="grid lg:grid-cols-3 gap-10 lg:gap-14">
 
       <!-- Main content (2/3 width) -->
       <div class="lg:col-span-2 space-y-14">
 
-        <!-- ── City lifestyle images ─────────────────────────────────────── -->
-        {homeCity && (
+        <!-- ── City hero image ────────────────────────────────────────────── -->
+        {homeCity && cityHeroImg && (
           <section>
-            {(() => {
-              const alts = [`${homeCity.name} city`, `${homeCity.name} lifestyle`, `${homeCity.name} culture`];
-              return (
-                <div class="grid grid-cols-3 gap-2 sm:gap-3 rounded-xl overflow-hidden">
-                  {[1, 2, 3].map((n, i) => {
-                    const img = (unsplashImages as any)[`${homeCity.slug}-life-${n}`] ?? (unsplashImages as any)[homeCity.slug];
-                    const src = img
-                      ? `${img.url}&w=600&h=400&fit=crop&q=80&auto=format`
-                      : `https://picsum.photos/seed/${homeCity.slug}-city-${n}/600/400`;
-                    return (
-                      <img
-                        src={src}
-                        alt={alts[i]}
-                        class="w-full aspect-[4/3] object-cover"
-                        loading="eager"
-                      />
-                    );
-                  })}
-                </div>
-              );
-            })()}
-            <p class="text-zinc-600 text-xs mt-2 text-center">Your weekend in {homeCity.name}</p>
+            <div class="rounded-xl overflow-hidden relative">
+              <img
+                src={cityHeroImg.url}
+                alt={cityHeroImg.altDescription || `${homeCity.name} city`}
+                class="w-full h-56 sm:h-72 object-cover"
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div class="absolute bottom-0 left-0 p-4">
+                <p class="text-white font-semibold text-lg">Your weekend in {homeCity.name}</p>
+                <p class="text-zinc-300 text-sm">{homeCity.description}</p>
+              </div>
+              {cityHeroImg.photographer && (
+                <p class="absolute bottom-0 right-0 bg-black/60 text-white/60 text-[10px] px-3 py-1.5">
+                  <a
+                    href={`https://unsplash.com/@${cityHeroImg.photographerUsername}?utm_source=stadiumstays&utm_medium=referral`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-white"
+                  >{cityHeroImg.photographer}</a> / Unsplash
+                </p>
+              )}
+            </div>
           </section>
         )}
 
@@ -181,7 +185,7 @@ function priceSymbol(level: number | string | null) {
                 <p class="text-zinc-300 leading-relaxed">{homeClub.travelTips}</p>
               </div>
               {homeCity && (
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid sm:grid-cols-2 gap-4">
                   {homeCity.airports?.length && (
                     <div class="card p-4">
                       <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
@@ -231,7 +235,6 @@ function priceSymbol(level: number | string | null) {
             <div class="space-y-3">
               {topHotels.map((hotel: any, i: number) => (
                 <div class="card p-3 sm:p-4 flex items-center gap-3 sm:gap-4">
-                  <!-- Thumbnail -->
                   <div class="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden bg-zinc-800">
                     <img
                       src={hotel.photos?.[0] ?? `https://picsum.photos/seed/${hotel.id}/200/200`}
@@ -310,7 +313,7 @@ function priceSymbol(level: number | string | null) {
                   <span class="text-emerald-400 mt-0.5 flex-shrink-0">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                   </span>
-                  <p class="text-zinc-300 text-sm leading-relaxed flex-1 min-w-0">{tip}</p>
+                  <p class="text-zinc-300 text-sm leading-relaxed">{tip}</p>
                 </li>
               ))}
             </ul>
@@ -324,78 +327,18 @@ function priceSymbol(level: number | string | null) {
           )}
         </section>
 
-        <!-- ── After the Match ────────────────────────────────────────────── -->
+        <!-- ── City Guide ─────────────────────────────────────────────────── -->
         {homeCity && (
-          <section>
-            <h2 class="section-title mb-2">After the Match</h2>
-            <p class="section-subtitle mb-6">Make the most of your evening in {homeCity.name}</p>
-
-            <div class="space-y-4">
-              {homeCity.highlights?.length && (
-                <div class="card p-5">
-                  <h3 class="font-semibold text-white mb-3">Highlights of {homeCity.name}</h3>
-                  <div class="flex flex-wrap gap-2">
-                    {homeCity.highlights.map((h: string) => (
-                      <span class="badge max-w-full"><span class="break-words">{h}</span></span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {homeCity.bestAreas?.length && (
-                <div class="space-y-3">
-                  <h3 class="font-semibold text-white">Best areas to explore</h3>
-                  {homeCity.bestAreas.slice(0, 3).map((area: any) => (
-                    <div class="card p-4">
-                      <div class="font-semibold text-white mb-1">{area.name}</div>
-                      <p class="text-zinc-400 text-sm leading-relaxed">{area.description}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
+          <div class="space-y-14 pt-4 border-t border-zinc-800">
+            <div>
+              <h2 class="section-title mb-1">{homeCity.name} City Guide</h2>
+              <p class="section-subtitle">
+                Everything you need to know about {homeCity.name} for your visit
+                — <a href={`/cities/${homeCity.slug}/`} class="text-emerald-400 hover:text-emerald-300 transition-colors">view full guide →</a>
+              </p>
             </div>
-          </section>
-        )}
-
-        <!-- ── Weekend Trip ───────────────────────────────────────────────── -->
-        {homeCity && (
-          <section>
-            <h2 class="section-title mb-2">Turn It Into a Weekend Trip</h2>
-            <p class="section-subtitle mb-6">How to do {homeCity.name} as a 2-night city break</p>
-
-            <div class="card p-6">
-              {homeCity.longDescription ? (
-                <p class="text-zinc-300 leading-relaxed mb-5">{homeCity.longDescription}</p>
-              ) : (
-                <p class="text-zinc-300 leading-relaxed mb-5">
-                  {homeCity.name} is worth more than a day trip. Arrive the evening before, check into one of the hotels above, explore the city on match day morning, then catch the game. Stay the night after and spend Sunday at your leisure before heading home.
-                </p>
-              )}
-
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
-                <div class="bg-zinc-800/50 rounded-lg p-3 text-center">
-                  <div class="text-emerald-400 font-bold text-sm mb-1">Friday night</div>
-                  <p class="text-zinc-400 text-xs">Arrive, check in, explore {homeCity.bestAreas?.[0]?.name ?? 'the city centre'}</p>
-                </div>
-                <div class="bg-zinc-800/50 rounded-lg p-3 text-center">
-                  <div class="text-emerald-400 font-bold text-sm mb-1">Match day</div>
-                  <p class="text-zinc-400 text-xs">Pre-match pubs, kick-off, post-match drinks</p>
-                </div>
-                <div class="bg-zinc-800/50 rounded-lg p-3 text-center">
-                  <div class="text-emerald-400 font-bold text-sm mb-1">Sunday</div>
-                  <p class="text-zinc-400 text-xs">Brunch, sightseeing, head home</p>
-                </div>
-              </div>
-
-              <a
-                href={`/cities/${homeCity.slug}/`}
-                class="btn-primary inline-flex"
-              >
-                Full {homeCity.name} city guide
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </section>
+            <CityGuideContent city={homeCity} cityClubs={cityClubs} unsplashImages={imgs} />
+          </div>
         )}
 
       </div><!-- /main -->

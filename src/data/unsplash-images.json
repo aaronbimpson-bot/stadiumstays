@@ -93,7 +93,7 @@
     "url": "https://picsum.photos/seed/san-sebastian-spain/1200/500",
     "photographer": "",
     "photographerUsername": "",
-    "altDescription": "San Sebastián pintxos old town street life"
+    "altDescription": "San Sebasti\u00e1n pintxos old town street life"
   },
   "vigo": {
     "url": "https://picsum.photos/seed/vigo-spain/1200/500",
@@ -135,7 +135,7 @@
     "url": "https://picsum.photos/seed/leganes-spain/1200/500",
     "photographer": "",
     "photographerUsername": "",
-    "altDescription": "Leganés Spain street life"
+    "altDescription": "Legan\u00e9s Spain street life"
   },
   "eibar": {
     "url": "https://picsum.photos/seed/eibar-spain/1200/500",
@@ -153,7 +153,7 @@
     "url": "https://picsum.photos/seed/gijon-spain/1200/500",
     "photographer": "",
     "photographerUsername": "",
-    "altDescription": "Gijón Spain beach promenade"
+    "altDescription": "Gij\u00f3n Spain beach promenade"
   },
   "milan": {
     "url": "https://picsum.photos/seed/milan-italy/1200/500",
@@ -177,7 +177,7 @@
     "url": "https://picsum.photos/seed/bergamo-italy/1200/500",
     "photographer": "",
     "photographerUsername": "",
-    "altDescription": "Bergamo Città Alta old town street"
+    "altDescription": "Bergamo Citt\u00e0 Alta old town street"
   },
   "rome": {
     "url": "https://picsum.photos/seed/rome-italy/1200/500",
@@ -292,5 +292,377 @@
     "photographer": "",
     "photographerUsername": "",
     "altDescription": "Venice canal street gondola"
+  },
+  "london-life-1": {
+    "url": "https://picsum.photos/seed/london-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "London city"
+  },
+  "london-life-2": {
+    "url": "https://picsum.photos/seed/london-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "London city"
+  },
+  "london-life-3": {
+    "url": "https://picsum.photos/seed/london-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "London city"
+  },
+  "manchester-life-1": {
+    "url": "https://picsum.photos/seed/manchester-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Manchester city"
+  },
+  "manchester-life-2": {
+    "url": "https://picsum.photos/seed/manchester-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Manchester city"
+  },
+  "manchester-life-3": {
+    "url": "https://picsum.photos/seed/manchester-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Manchester city"
+  },
+  "liverpool-life-1": {
+    "url": "https://picsum.photos/seed/liverpool-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Liverpool city"
+  },
+  "liverpool-life-2": {
+    "url": "https://picsum.photos/seed/liverpool-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Liverpool city"
+  },
+  "liverpool-life-3": {
+    "url": "https://picsum.photos/seed/liverpool-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Liverpool city"
+  },
+  "birmingham-life-1": {
+    "url": "https://picsum.photos/seed/birmingham-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Birmingham city"
+  },
+  "birmingham-life-2": {
+    "url": "https://picsum.photos/seed/birmingham-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Birmingham city"
+  },
+  "birmingham-life-3": {
+    "url": "https://picsum.photos/seed/birmingham-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Birmingham city"
+  },
+  "newcastle-life-1": {
+    "url": "https://picsum.photos/seed/newcastle-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Newcastle city"
+  },
+  "newcastle-life-2": {
+    "url": "https://picsum.photos/seed/newcastle-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Newcastle city"
+  },
+  "newcastle-life-3": {
+    "url": "https://picsum.photos/seed/newcastle-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Newcastle city"
+  },
+  "brighton-life-1": {
+    "url": "https://picsum.photos/seed/brighton-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Brighton city"
+  },
+  "brighton-life-2": {
+    "url": "https://picsum.photos/seed/brighton-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Brighton city"
+  },
+  "brighton-life-3": {
+    "url": "https://picsum.photos/seed/brighton-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Brighton city"
+  },
+  "glasgow-life-1": {
+    "url": "https://picsum.photos/seed/glasgow-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Glasgow city"
+  },
+  "glasgow-life-2": {
+    "url": "https://picsum.photos/seed/glasgow-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Glasgow city"
+  },
+  "glasgow-life-3": {
+    "url": "https://picsum.photos/seed/glasgow-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Glasgow city"
+  },
+  "leeds-life-1": {
+    "url": "https://picsum.photos/seed/leeds-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Leeds city"
+  },
+  "leeds-life-2": {
+    "url": "https://picsum.photos/seed/leeds-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Leeds city"
+  },
+  "leeds-life-3": {
+    "url": "https://picsum.photos/seed/leeds-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Leeds city"
+  },
+  "sheffield-life-1": {
+    "url": "https://picsum.photos/seed/sheffield-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Sheffield city"
+  },
+  "sheffield-life-2": {
+    "url": "https://picsum.photos/seed/sheffield-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Sheffield city"
+  },
+  "sheffield-life-3": {
+    "url": "https://picsum.photos/seed/sheffield-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Sheffield city"
+  },
+  "sunderland-life-1": {
+    "url": "https://picsum.photos/seed/sunderland-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Sunderland city"
+  },
+  "sunderland-life-2": {
+    "url": "https://picsum.photos/seed/sunderland-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Sunderland city"
+  },
+  "sunderland-life-3": {
+    "url": "https://picsum.photos/seed/sunderland-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Sunderland city"
+  },
+  "nottingham-life-1": {
+    "url": "https://picsum.photos/seed/nottingham-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Nottingham city"
+  },
+  "nottingham-life-2": {
+    "url": "https://picsum.photos/seed/nottingham-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Nottingham city"
+  },
+  "nottingham-life-3": {
+    "url": "https://picsum.photos/seed/nottingham-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Nottingham city"
+  },
+  "wolverhampton-life-1": {
+    "url": "https://picsum.photos/seed/wolverhampton-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Wolverhampton city"
+  },
+  "wolverhampton-life-2": {
+    "url": "https://picsum.photos/seed/wolverhampton-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Wolverhampton city"
+  },
+  "wolverhampton-life-3": {
+    "url": "https://picsum.photos/seed/wolverhampton-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Wolverhampton city"
+  },
+  "burnley-life-1": {
+    "url": "https://picsum.photos/seed/burnley-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Burnley city"
+  },
+  "burnley-life-2": {
+    "url": "https://picsum.photos/seed/burnley-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Burnley city"
+  },
+  "burnley-life-3": {
+    "url": "https://picsum.photos/seed/burnley-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Burnley city"
+  },
+  "bournemouth-life-1": {
+    "url": "https://picsum.photos/seed/bournemouth-lifestyle-1/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Bournemouth city"
+  },
+  "bournemouth-life-2": {
+    "url": "https://picsum.photos/seed/bournemouth-lifestyle-2/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Bournemouth city"
+  },
+  "bournemouth-life-3": {
+    "url": "https://picsum.photos/seed/bournemouth-lifestyle-3/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "Bournemouth city"
+  },
+  "arsenal": {
+    "url": "https://picsum.photos/seed/arsenal-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "arsenal stadium"
+  },
+  "chelsea": {
+    "url": "https://picsum.photos/seed/chelsea-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "chelsea stadium"
+  },
+  "tottenham-hotspur": {
+    "url": "https://picsum.photos/seed/tottenham-hotspur-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "tottenham-hotspur stadium"
+  },
+  "west-ham-united": {
+    "url": "https://picsum.photos/seed/west-ham-united-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "west-ham-united stadium"
+  },
+  "brentford": {
+    "url": "https://picsum.photos/seed/brentford-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "brentford stadium"
+  },
+  "crystal-palace": {
+    "url": "https://picsum.photos/seed/crystal-palace-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "crystal-palace stadium"
+  },
+  "fulham": {
+    "url": "https://picsum.photos/seed/fulham-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "fulham stadium"
+  },
+  "everton": {
+    "url": "https://picsum.photos/seed/everton-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "everton stadium"
+  },
+  "manchester-city": {
+    "url": "https://picsum.photos/seed/manchester-city-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "manchester-city stadium"
+  },
+  "manchester-united": {
+    "url": "https://picsum.photos/seed/manchester-united-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "manchester-united stadium"
+  },
+  "newcastle-united": {
+    "url": "https://picsum.photos/seed/newcastle-united-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "newcastle-united stadium"
+  },
+  "aston-villa": {
+    "url": "https://picsum.photos/seed/aston-villa-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "aston-villa stadium"
+  },
+  "leeds-united": {
+    "url": "https://picsum.photos/seed/leeds-united-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "leeds-united stadium"
+  },
+  "sheffield-united": {
+    "url": "https://picsum.photos/seed/sheffield-united-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "sheffield-united stadium"
+  },
+  "nottingham-forest": {
+    "url": "https://picsum.photos/seed/nottingham-forest-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "nottingham-forest stadium"
+  },
+  "burnley": {
+    "url": "https://picsum.photos/seed/burnley-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "burnley stadium"
+  },
+  "wolverhampton-wanderers": {
+    "url": "https://picsum.photos/seed/wolverhampton-wanderers-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "wolverhampton-wanderers stadium"
+  },
+  "afc-bournemouth": {
+    "url": "https://picsum.photos/seed/afc-bournemouth-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "afc-bournemouth stadium"
+  },
+  "celtic": {
+    "url": "https://picsum.photos/seed/celtic-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "celtic stadium"
+  },
+  "rangers": {
+    "url": "https://picsum.photos/seed/rangers-stadium/1200/500",
+    "photographer": "",
+    "photographerUsername": "",
+    "altDescription": "rangers stadium"
   }
 }
