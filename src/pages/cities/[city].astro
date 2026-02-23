@@ -3,6 +3,7 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import ClubCard from '../../components/ClubCard.astro';
 import cities from '../../data/cities.json';
 import clubs from '../../data/clubs.json';
+import clubsEurope from '../../data/clubs-europe.json';
 import unsplashImages from '../../data/unsplash-images.json';
 
 export function getStaticPaths() {
@@ -13,15 +14,31 @@ export function getStaticPaths() {
 }
 
 const { city } = Astro.props;
-const cityClubs = clubs.filter((c) => c.city === city.slug);
+const ukClubs = clubs.filter((c) => c.city === city.slug);
+const euClubs = (clubsEurope as any[])
+  .filter((c: any) => c.citySlug === city.slug && (c.leagueSlug === 'la-liga' || c.leagueSlug === 'serie-a'))
+  .map((c: any) => ({
+    slug: c.slug,
+    name: c.name,
+    stadium: c.stadium,
+    city: c.citySlug,
+    league: c.leagueSlug,
+    stadiumCapacity: c.capacity ?? 0,
+  }));
+const cityClubs = [...ukClubs, ...euClubs];
 const heroImage = (unsplashImages as Record<string, any>)[city.slug] ?? null;
+
+// Typed helpers for the rich content fields
+const c = city as any;
+const hasRichContent = !!(c.intro || c.matchDayGuide || c.eatAndDrink || c.gettingAround);
 ---
 
 <PageLayout
-  title={`${city.name} Football Hotels — Stadium Stays Guide`}
-  description={`Hotels near football stadiums in ${city.name}. ${city.description} Find the best places to stay on match day.`}
+  title={`${city.name} Football Hotels & Match Day Guide | StadiumStays`}
+  description={`The complete football fan's guide to ${city.name}: best areas to stay, pre-match pubs, restaurants, getting there, and things to do beyond the match.`}
 >
   <div class="container-wide py-12 lg:py-16">
+
     <!-- Breadcrumb -->
     <nav class="flex items-center gap-2 text-sm text-zinc-500 mb-8" aria-label="Breadcrumb">
       <a href="/" class="hover:text-zinc-300 transition-colors">Home</a>
@@ -33,57 +50,75 @@ const heroImage = (unsplashImages as Record<string, any>)[city.slug] ?? null;
 
     <!-- City hero image -->
     {heroImage && (
-      <div class="mb-8 rounded-xl overflow-hidden relative">
+      <div class="mb-10 rounded-2xl overflow-hidden relative">
         <img
           src={heroImage.url}
           alt={heroImage.altDescription}
-          class="w-full h-56 sm:h-72 object-cover"
+          class="w-full h-64 sm:h-80 lg:h-96 object-cover"
           loading="eager"
         />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div class="absolute bottom-0 left-0 p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-xs font-semibold tracking-widest uppercase text-emerald-400">{city.country}</span>
+            {cityClubs.length > 0 && (
+              <span class="text-xs text-zinc-400">{cityClubs.length} {cityClubs.length === 1 ? 'club' : 'clubs'}</span>
+            )}
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">{city.name}</h1>
+          <p class="text-zinc-300 mt-2 text-base max-w-xl">{city.description}</p>
+        </div>
         {heroImage.photographer && (
-          <p class="absolute bottom-0 right-0 bg-black/60 text-white/80 text-xs px-3 py-1.5">
-            Photo by{' '}
+          <p class="absolute bottom-0 right-0 bg-black/60 text-white/60 text-[10px] px-3 py-1.5">
             <a
               href={`https://unsplash.com/@${heroImage.photographerUsername}?utm_source=stadiumstays&utm_medium=referral`}
               target="_blank"
               rel="noopener noreferrer"
-              class="underline hover:text-white"
-            >{heroImage.photographer}</a>
-            {' '}on{' '}
-            <a
-              href="https://unsplash.com/?utm_source=stadiumstays&utm_medium=referral"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="underline hover:text-white"
-            >Unsplash</a>
+              class="hover:text-white"
+            >{heroImage.photographer}</a> / Unsplash
           </p>
         )}
       </div>
     )}
 
-    <!-- Hero -->
-    <div class="mb-12">
-      <div class="flex items-center gap-3 mb-4">
-        <span class="badge bg-zinc-800 text-zinc-400 border border-zinc-700/50">{city.country}</span>
-        <span class="badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-          {cityClubs.length} {cityClubs.length === 1 ? 'club' : 'clubs'}
-        </span>
-      </div>
-      <h1 class="text-3xl lg:text-4xl font-bold text-white mb-4">{city.name} Football Guide</h1>
-      <p class="text-zinc-400 text-lg leading-relaxed max-w-3xl">{city.longDescription}</p>
-    </div>
+    <div class="lg:grid lg:grid-cols-3 lg:gap-12">
 
-    <div class="lg:grid lg:grid-cols-3 lg:gap-10">
-      <div class="lg:col-span-2">
-        <!-- Clubs in city -->
+      <!-- ── Main content ──────────────────────────────────────────────────── -->
+      <div class="lg:col-span-2 space-y-14">
+
+        <!-- ── City Intro ──────────────────────────────────────────────────── -->
+        {c.intro && (
+          <section>
+            <h2 class="text-2xl font-bold text-white mb-5">
+              Why Football Fans Love {city.name}
+            </h2>
+            <div class="prose-custom">
+              <p class="text-zinc-300 leading-relaxed text-[1.0625rem]">{c.intro}</p>
+            </div>
+          </section>
+        )}
+
+        <!-- ── Match Day Guide ─────────────────────────────────────────────── -->
+        {c.matchDayGuide && (
+          <section>
+            <h2 class="text-2xl font-bold text-white mb-5">
+              Match Day in {city.name}
+            </h2>
+            <div class="card p-6 border-l-4 border-l-emerald-500">
+              <p class="text-zinc-300 leading-relaxed text-[1.0625rem]">{c.matchDayGuide}</p>
+            </div>
+          </section>
+        )}
+
+        <!-- ── Clubs in city ───────────────────────────────────────────────── -->
         {cityClubs.length > 0 && (
-          <section class="mb-12">
-            <h2 class="text-xl font-bold text-white mb-6">
+          <section>
+            <h2 class="text-2xl font-bold text-white mb-6">
               Football Clubs in {city.name}
             </h2>
             <div class="grid sm:grid-cols-2 gap-4">
               {cityClubs.map((club) => {
-                const img = (unsplashImages as any)[club.slug];
+                const img = (unsplashImages as any)[club.slug] ?? (unsplashImages as any)[city.slug];
                 return (
                   <ClubCard
                     slug={club.slug}
@@ -103,82 +138,278 @@ const heroImage = (unsplashImages as Record<string, any>)[city.slug] ?? null;
           </section>
         )}
 
-        <!-- Best areas to stay -->
-        <section class="mb-12">
-          <h2 class="text-xl font-bold text-white mb-6">Best Areas to Stay</h2>
-          <div class="space-y-4">
-            {city.bestAreas.map((area, i) => (
-              <div class="card p-5 flex gap-4">
-                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0 text-emerald-400 text-sm font-bold">
-                  {i + 1}
+        <!-- ── Best Areas to Stay ─────────────────────────────────────────── -->
+        {city.bestAreas?.length > 0 && (
+          <section>
+            <h2 class="text-2xl font-bold text-white mb-2">Best Areas to Stay</h2>
+            <p class="text-zinc-400 mb-6">Where to base yourself for the best matchday experience</p>
+            <div class="space-y-4">
+              {city.bestAreas.map((area: any, i: number) => (
+                <div class="card p-5 flex gap-4">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0 text-emerald-400 text-sm font-bold">
+                    {i + 1}
+                  </div>
+                  <div class="min-w-0">
+                    <div class="flex flex-wrap items-center gap-2 mb-1">
+                      <h3 class="font-semibold text-white">{area.name}</h3>
+                      {area.priceRange && (
+                        <span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-zinc-800 text-zinc-400 border border-zinc-700">
+                          {area.priceRange}
+                        </span>
+                      )}
+                      {area.distanceToStadium && (
+                        <span class="text-[11px] text-zinc-500">{area.distanceToStadium}</span>
+                      )}
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed">{area.description}</p>
+                    {area.recommendation && (
+                      <p class="text-emerald-400 text-xs mt-2 font-medium">→ {area.recommendation}</p>
+                    )}
+                  </div>
                 </div>
-                <div class="min-w-0">
-                  <h3 class="font-semibold text-white mb-1">{area.name}</h3>
-                  <p class="text-zinc-400 text-sm leading-relaxed">{area.description}</p>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- ── Where to Eat & Drink ────────────────────────────────────────── -->
+        {c.eatAndDrink && (
+          <section>
+            <h2 class="text-2xl font-bold text-white mb-2">Where to Eat & Drink</h2>
+            <p class="text-zinc-400 mb-6">Pre-match pubs, great restaurants, and post-match spots</p>
+
+            <div class="space-y-8">
+
+              {/* Pre-match pubs */}
+              {c.eatAndDrink.preMatchPubs?.length > 0 && (
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0"></span>
+                    Pre-Match Pubs
+                  </h3>
+                  <div class="space-y-3">
+                    {c.eatAndDrink.preMatchPubs.map((pub: any) => (
+                      <div class="card p-4 flex gap-3">
+                        <div class="flex-1 min-w-0">
+                          <div class="flex flex-wrap items-baseline gap-2">
+                            <span class="font-semibold text-white text-sm">{pub.name}</span>
+                            {pub.distance && <span class="text-zinc-600 text-xs">{pub.distance}</span>}
+                          </div>
+                          <p class="text-zinc-400 text-sm mt-0.5">{pub.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              )}
 
-        <!-- Highlights -->
-        <section class="mb-12">
-          <h2 class="text-xl font-bold text-white mb-6">City Highlights</h2>
-          <div class="flex flex-wrap gap-3">
-            {city.highlights.map((highlight) => (
-              <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-sm max-w-full">
-                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="break-words">{highlight}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-      </div>
+              {/* Restaurants */}
+              {c.eatAndDrink.restaurants?.length > 0 && (
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-blue-400 flex-shrink-0"></span>
+                    Restaurants
+                  </h3>
+                  <div class="space-y-3">
+                    {c.eatAndDrink.restaurants.map((r: any) => (
+                      <div class="card p-4">
+                        <div class="flex flex-wrap items-baseline gap-2">
+                          <span class="font-semibold text-white text-sm">{r.name}</span>
+                          {(r.area || r.distance) && (
+                            <span class="text-zinc-600 text-xs">{r.area ?? r.distance}</span>
+                          )}
+                        </div>
+                        <p class="text-zinc-400 text-sm mt-0.5">{r.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
-      <!-- Sidebar -->
-      <aside class="mt-10 lg:mt-0 space-y-6">
-        <!-- Getting there -->
+              {/* Post-match */}
+              {c.eatAndDrink.postMatch?.length > 0 && (
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-amber-400 flex-shrink-0"></span>
+                    Post-Match
+                  </h3>
+                  <div class="space-y-3">
+                    {c.eatAndDrink.postMatch.map((v: any) => (
+                      <div class="card p-4">
+                        <div class="flex flex-wrap items-baseline gap-2">
+                          <span class="font-semibold text-white text-sm">{v.name}</span>
+                          {(v.area || v.distance) && (
+                            <span class="text-zinc-600 text-xs">{v.area ?? v.distance}</span>
+                          )}
+                        </div>
+                        <p class="text-zinc-400 text-sm mt-0.5">{v.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
+        <!-- ── Getting Around ──────────────────────────────────────────────── -->
+        {c.gettingAround && (
+          <section>
+            <h2 class="text-2xl font-bold text-white mb-6">Getting Around</h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+              {c.gettingAround.fromAirport && (
+                <div class="card p-5">
+                  <h3 class="font-semibold text-white mb-2 flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                    </svg>
+                    From the Airport
+                  </h3>
+                  <p class="text-zinc-400 text-sm leading-relaxed">{c.gettingAround.fromAirport}</p>
+                </div>
+              )}
+              {c.gettingAround.fromStation && (
+                <div class="card p-5">
+                  <h3 class="font-semibold text-white mb-2 flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                    </svg>
+                    By Train
+                  </h3>
+                  <p class="text-zinc-400 text-sm leading-relaxed">{c.gettingAround.fromStation}</p>
+                </div>
+              )}
+              {c.gettingAround.betweenStadiums && (
+                <div class="card p-5">
+                  <h3 class="font-semibold text-white mb-2 flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/>
+                    </svg>
+                    Between Stadiums
+                  </h3>
+                  <p class="text-zinc-400 text-sm leading-relaxed">{c.gettingAround.betweenStadiums}</p>
+                </div>
+              )}
+              {c.gettingAround.localTransport && (
+                <div class="card p-5">
+                  <h3 class="font-semibold text-white mb-2 flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                    </svg>
+                    Local Transport
+                  </h3>
+                  <p class="text-zinc-400 text-sm leading-relaxed">{c.gettingAround.localTransport}</p>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
+        <!-- ── Beyond the Football ────────────────────────────────────────── -->
+        {c.beyondFootball?.length > 0 && (
+          <section>
+            <h2 class="text-2xl font-bold text-white mb-2">Beyond the Football</h2>
+            <p class="text-zinc-400 mb-6">What to do if you're making a weekend of it</p>
+            <div class="space-y-3">
+              {c.beyondFootball.map((item: any, i: number) => (
+                <div class="card p-5 flex gap-4">
+                  <div class="w-7 h-7 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center flex-shrink-0 text-zinc-400 text-xs font-bold">
+                    {i + 1}
+                  </div>
+                  <div class="min-w-0">
+                    <h3 class="font-semibold text-white text-sm mb-1">{item.name}</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- ── Insider Tips ────────────────────────────────────────────────── -->
+        {c.insiderTips?.length > 0 && (
+          <section>
+            <h2 class="text-2xl font-bold text-white mb-6">Insider Tips</h2>
+            <div class="card p-6">
+              <ul class="space-y-4">
+                {c.insiderTips.map((tip: string) => (
+                  <li class="flex gap-3">
+                    <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <p class="text-zinc-300 text-sm leading-relaxed">{tip}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        <!-- ── Highlights (fallback for cities without rich content) ─────── -->
+        {!hasRichContent && city.highlights?.length > 0 && (
+          <section class="mb-12">
+            <h2 class="text-xl font-bold text-white mb-6">City Highlights</h2>
+            <div class="flex flex-wrap gap-3">
+              {city.highlights.map((highlight: string) => (
+                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-sm max-w-full">
+                  <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="break-words">{highlight}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+      </div><!-- /main -->
+
+      <!-- ── Sidebar ────────────────────────────────────────────────────────── -->
+      <aside class="mt-14 lg:mt-0 space-y-6 lg:sticky lg:top-24 lg:self-start">
+
+        <!-- Quick reference -->
         <div class="card p-5">
-          <h3 class="font-semibold text-white mb-3 flex items-center gap-2 text-sm">
-            <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
-            </svg>
-            Airports
-          </h3>
-          <ul class="space-y-1.5">
-            {city.airports.map((airport) => (
-              <li class="text-zinc-400 text-sm flex items-center gap-2">
-                <svg class="w-3.5 h-3.5 text-zinc-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <circle cx="12" cy="12" r="3" />
-                </svg>
-                {airport}
-              </li>
-            ))}
-          </ul>
+          <h3 class="font-bold text-white mb-4 text-sm uppercase tracking-wider">Travel Essentials</h3>
+          <dl class="space-y-4 text-sm">
+            {city.airports?.length > 0 && (
+              <div>
+                <dt class="text-zinc-500 text-xs uppercase tracking-wider mb-1.5">Airports</dt>
+                <dd>
+                  <ul class="space-y-1">
+                    {city.airports.map((a: string) => (
+                      <li class="text-zinc-300 flex items-start gap-1.5">
+                        <span class="text-emerald-500 mt-0.5 flex-shrink-0">✈</span>
+                        <span class="break-words">{a}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            )}
+            {city.mainStation && (
+              <div>
+                <dt class="text-zinc-500 text-xs uppercase tracking-wider mb-1">Main Station</dt>
+                <dd class="text-zinc-300">🚂 {city.mainStation}</dd>
+              </div>
+            )}
+          </dl>
         </div>
 
-        <div class="card p-5">
-          <h3 class="font-semibold text-white mb-2 text-sm">Main Train Station</h3>
-          <p class="text-zinc-400 text-sm">{city.mainStation}</p>
-        </div>
-
-        <!-- Quick links to clubs -->
+        <!-- Clubs quick links -->
         {cityClubs.length > 0 && (
           <div class="card p-5">
-            <h3 class="font-semibold text-white mb-3 text-sm">Find Hotels Near</h3>
+            <h3 class="font-bold text-white mb-3 text-sm uppercase tracking-wider">Find Hotels Near</h3>
             <div class="space-y-2">
               {cityClubs.map((club) => (
                 <a
                   href={`/clubs/${club.slug}/`}
                   class="flex items-center justify-between p-3 rounded-lg bg-zinc-800/50 hover:bg-zinc-800 border border-transparent hover:border-zinc-700 transition-all group"
                 >
-                  <div>
-                    <div class="text-sm font-medium text-white group-hover:text-emerald-400 transition-colors">{club.name}</div>
-                    <div class="text-xs text-zinc-500">{club.stadium}</div>
+                  <div class="min-w-0">
+                    <div class="text-sm font-medium text-white group-hover:text-emerald-400 transition-colors truncate">{club.name}</div>
+                    <div class="text-xs text-zinc-500 truncate">{club.stadium}</div>
                   </div>
-                  <svg class="w-4 h-4 text-zinc-600 group-hover:text-emerald-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg class="w-4 h-4 text-zinc-600 group-hover:text-emerald-400 transition-colors flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
@@ -186,6 +417,12 @@ const heroImage = (unsplashImages as Record<string, any>)[city.slug] ?? null;
             </div>
           </div>
         )}
+
+        <!-- All cities link -->
+        <a href="/cities/" class="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors text-center">
+          ← All city guides
+        </a>
+
       </aside>
     </div>
   </div>
