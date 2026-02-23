@@ -62,9 +62,9 @@ const _allHotels = googleHotels as Record<string, any[]>;
 const hotels: any[] = _allHotels[club.slug] ?? [];
 const hasHotels = hotels.length > 0;
 
-// Hero image: prefer club-specific stadium image, fall back to city image
+// Hero image: prefer club-specific stadium image (keyed as {slug}-stadium), fall back to city image
 const _images = unsplashImages as Record<string, any>;
-const heroImage = _images[club.slug] ?? _images[cityLookupSlug] ?? null;
+const heroImage = _images[club.slug + '-stadium'] ?? _images[club.slug] ?? _images[cityLookupSlug] ?? null;
 
 // Top-rated badge for the highest-rated result
 const topRatedHotelId = hasHotels ? hotels[0].id : null;

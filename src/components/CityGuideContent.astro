@@ -48,7 +48,7 @@ const hasRichContent = !!(c.intro || c.matchDayGuide || c.eatAndDrink || c.getti
     </h2>
     <div class="grid sm:grid-cols-2 gap-4">
       {cityClubs.map((club: any) => {
-        const img = unsplashImages[club.slug] ?? unsplashImages[city.slug];
+        const img = unsplashImages[club.slug + '-stadium'] ?? unsplashImages[club.slug] ?? unsplashImages[city.slug];
         return (
           <ClubCard
             slug={club.slug}
