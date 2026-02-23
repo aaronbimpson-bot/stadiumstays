@@ -5,9 +5,16 @@
  * Requires the UNSPLASH_ACCESS_KEY environment variable.
  * Run via: node scripts/fetch-unsplash.mjs
  * Or automatically via the "build" npm script on Vercel.
+ *
+ * Incremental: existing real Unsplash images are preserved and only missing
+ * or placeholder (picsum) entries are re-fetched. This allows the script to
+ * be re-run after rate limit resets without losing previously fetched data.
+ *
+ * Rate limit: Unsplash demo keys allow 50 requests/hr. The script respects
+ * the X-Ratelimit-Remaining header and pauses automatically when needed.
  */
 
-import { writeFileSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -18,6 +25,17 @@ const ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 if (!ACCESS_KEY) {
   console.warn('Warning: UNSPLASH_ACCESS_KEY not set — skipping image fetch, pages will build without hero images.');
   process.exit(0);
+}
+
+// Load existing data so we can preserve already-fetched real images
+const existing = existsSync(OUTPUT_PATH)
+  ? JSON.parse(readFileSync(OUTPUT_PATH, 'utf8'))
+  : {};
+
+/** Returns true if the key already has a real Unsplash image (not a picsum placeholder). */
+function alreadyFetched(key) {
+  const entry = existing[key];
+  return entry && entry.url && entry.url.includes('images.unsplash.com');
 }
 
 // Per-club stadium images — searched by stadium name, city skyline as fallback.
@@ -221,21 +239,34 @@ const CITIES = [
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function fetchCity({ key, query }) {
-  const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=1&orientation=landscape`;
+/** Tracks remaining requests from the last API response. */
+let rateLimitRemaining = 50;
+
+async function unsplashFetch(url) {
   const res = await fetch(url, {
     headers: { Authorization: `Client-ID ${ACCESS_KEY}` },
   });
+  // Track rate limit headers
+  const remaining = res.headers.get('X-Ratelimit-Remaining');
+  if (remaining !== null) rateLimitRemaining = parseInt(remaining, 10);
 
-  if (!res.ok) {
-    throw new Error(`HTTP ${res.status} for ${key}`);
+  if (res.status === 429) {
+    const resetHeader = res.headers.get('X-Ratelimit-Reset');
+    const waitUntil = resetHeader ? parseInt(resetHeader, 10) * 1000 : Date.now() + 3600_000;
+    const waitMs = Math.max(waitUntil - Date.now(), 0) + 5000;
+    console.warn(`  ⏳ Rate limit hit — waiting ${Math.ceil(waitMs / 60000)} min for reset...`);
+    await sleep(waitMs);
+    return unsplashFetch(url); // retry after wait
   }
 
-  const data = await res.json();
-  if (!data.results?.length) {
-    throw new Error(`No results for "${query}"`);
-  }
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
+}
 
+async function fetchCity({ key, query }) {
+  const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=1&orientation=landscape`;
+  const data = await unsplashFetch(url);
+  if (!data.results?.length) throw new Error(`No results for "${query}"`);
   const photo = data.results[0];
   return {
     key,
@@ -251,19 +282,8 @@ async function fetchCity({ key, query }) {
 /** Fetches up to 3 photos for a city and returns entries keyed as `${key}-life-1/2/3`. */
 async function fetchCityTriple({ key, query }) {
   const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=3&orientation=landscape`;
-  const res = await fetch(url, {
-    headers: { Authorization: `Client-ID ${ACCESS_KEY}` },
-  });
-
-  if (!res.ok) {
-    throw new Error(`HTTP ${res.status} for ${key}`);
-  }
-
-  const data = await res.json();
-  if (!data.results?.length) {
-    throw new Error(`No results for "${query}"`);
-  }
-
+  const data = await unsplashFetch(url);
+  if (!data.results?.length) throw new Error(`No results for "${query}"`);
   return data.results.slice(0, 3).map((photo, i) => ({
     key: `${key}-life-${i + 1}`,
     value: {
@@ -276,12 +296,21 @@ async function fetchCityTriple({ key, query }) {
 }
 
 async function main() {
-  const results = {};
+  // Start with existing data — preserves real images already fetched in prior runs
+  const results = { ...existing };
   const errors = [];
 
+  // Count how many we actually need to fetch
+  const clubsToFetch = CLUBS.filter(c => !alreadyFetched(c.key));
+  const citiesToFetch = CITIES.filter(c => !alreadyFetched(c.key));
+  const alreadyDone = CLUBS.length - clubsToFetch.length + (CITIES.length - citiesToFetch.length);
+  if (alreadyDone > 0) {
+    console.log(`Skipping ${alreadyDone} already-fetched images.`);
+  }
+
   // Fetch club stadium images first
-  console.log(`Fetching Unsplash images for ${CLUBS.length} clubs…`);
-  for (const club of CLUBS) {
+  console.log(`Fetching Unsplash images for ${clubsToFetch.length} clubs…`);
+  for (const club of clubsToFetch) {
     try {
       const { key, value } = await fetchCity(club);
       results[key] = value;
@@ -304,13 +333,15 @@ async function main() {
         console.warn(`  ✗ ${club.key}: ${err.message}`);
       }
     }
+    // Save incrementally so progress isn't lost if interrupted
+    writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
     await sleep(250);
   }
 
   // Fetch city images (3 per city for the match page lifestyle grid;
   // the first result is also stored under the plain city slug as the city guide hero image)
-  console.log(`\nFetching Unsplash images for ${CITIES.length} cities…`);
-  for (const city of CITIES) {
+  console.log(`\nFetching Unsplash images for ${citiesToFetch.length} cities…`);
+  for (const city of citiesToFetch) {
     try {
       const entries = await fetchCityTriple(city);
       // Hero image for the city guide page (e.g. "london")
@@ -324,6 +355,8 @@ async function main() {
       errors.push(city.key);
       console.warn(`  ✗ ${city.key}: ${err.message}`);
     }
+    // Save incrementally
+    writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
     // Stay well within Unsplash's rate limit (50 req/hr on demo keys)
     await sleep(250);
   }
