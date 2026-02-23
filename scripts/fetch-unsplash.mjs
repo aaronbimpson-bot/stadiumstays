@@ -159,64 +159,64 @@ const CLUB_CITY_FALLBACKS = {
 
 // All cities needed across UK city guide pages and European club pages.
 // key = slug used in cities.json / citySlug in clubs-europe.json
-// query = what we search on Unsplash
+// query = lifestyle search — street scenes, cafes, markets, culture (NOT stadiums or skylines)
 const CITIES = [
   // UK (city guide pages + Premier League / Scottish clubs)
-  { key: 'london',      query: 'London city skyline' },
-  { key: 'manchester',  query: 'Manchester city' },
-  { key: 'liverpool',   query: 'Liverpool city' },
-  { key: 'birmingham',  query: 'Birmingham city UK' },
-  { key: 'newcastle',   query: 'Newcastle upon Tyne city' },
-  { key: 'brighton',    query: 'Brighton city seafront' },
-  { key: 'glasgow',     query: 'Glasgow city Scotland' },
-  { key: 'leeds',       query: 'Leeds city UK' },
-  { key: 'sheffield',   query: 'Sheffield city UK' },
-  { key: 'sunderland',      query: 'Sunderland city UK' },
-  { key: 'nottingham',      query: 'Nottingham city UK River Trent' },
-  { key: 'wolverhampton',   query: 'Wolverhampton city West Midlands UK' },
-  { key: 'burnley',         query: 'Burnley Lancashire town UK' },
-  { key: 'bournemouth',     query: 'Bournemouth beach seafront Dorset England' },
+  { key: 'london',      query: 'London street market people lifestyle' },
+  { key: 'manchester',  query: 'Manchester Northern Quarter street cafe' },
+  { key: 'liverpool',   query: 'Liverpool Albert Dock waterfront people' },
+  { key: 'birmingham',  query: 'Birmingham Bullring street market people' },
+  { key: 'newcastle',   query: 'Newcastle Grainger Market street life' },
+  { key: 'brighton',    query: 'Brighton Lanes street cafe people' },
+  { key: 'glasgow',     query: 'Glasgow Merchant City street life cafe' },
+  { key: 'leeds',       query: 'Leeds city centre street market people' },
+  { key: 'sheffield',   query: 'Sheffield street life cafe people' },
+  { key: 'sunderland',      query: 'Sunderland city street life people' },
+  { key: 'nottingham',      query: 'Nottingham Lace Market street life cafe' },
+  { key: 'wolverhampton',   query: 'Wolverhampton city street market people' },
+  { key: 'burnley',         query: 'Burnley Lancashire town street life' },
+  { key: 'bournemouth',     query: 'Bournemouth beach promenade people lifestyle' },
   // La Liga
-  { key: 'madrid',        query: 'Madrid city Spain' },
-  { key: 'barcelona',     query: 'Barcelona city Spain' },
-  { key: 'bilbao',        query: 'Bilbao city Spain' },
-  { key: 'villarreal',    query: 'Villarreal city Spain' },
-  { key: 'seville',       query: 'Seville city Spain' },
-  { key: 'san-sebastian', query: 'San Sebastian city Spain' },
-  { key: 'vigo',          query: 'Vigo city Spain' },
-  { key: 'pamplona',      query: 'Pamplona city Spain' },
-  { key: 'getafe',        query: 'Getafe city Spain' },
-  { key: 'palma',         query: 'Palma Mallorca city' },
-  { key: 'girona',        query: 'Girona city Spain' },
-  { key: 'vitoria-gasteiz', query: 'Vitoria-Gasteiz city Spain' },
-  { key: 'leganes',       query: 'Leganés city Spain' },
-  { key: 'eibar',         query: 'Eibar city Spain' },
-  { key: 'zaragoza',      query: 'Zaragoza city Spain' },
-  { key: 'gijon',         query: 'Gijón city Spain' },
-  { key: 'las-palmas',    query: 'Las Palmas Gran Canaria city' },
-  { key: 'valencia',      query: 'Valencia city Spain' },
-  { key: 'valladolid',    query: 'Valladolid city Spain' },
+  { key: 'madrid',        query: 'Madrid street cafe tapas bar people lifestyle' },
+  { key: 'barcelona',     query: 'Barcelona Las Ramblas street market people' },
+  { key: 'bilbao',        query: 'Bilbao pintxos bar old town street life' },
+  { key: 'villarreal',    query: 'Villarreal Spain street life people' },
+  { key: 'seville',       query: 'Seville tapas bar street market people lifestyle' },
+  { key: 'san-sebastian', query: 'San Sebastian pintxos old town street life' },
+  { key: 'vigo',          query: 'Vigo Spain street market seafood people' },
+  { key: 'pamplona',      query: 'Pamplona old town street cafe people' },
+  { key: 'getafe',        query: 'Getafe Spain street life people' },
+  { key: 'palma',         query: 'Palma Mallorca street cafe old town people' },
+  { key: 'girona',        query: 'Girona old town colourful houses river' },
+  { key: 'vitoria-gasteiz', query: 'Vitoria-Gasteiz old town street cafe Spain' },
+  { key: 'leganes',       query: 'Leganés Spain street life people' },
+  { key: 'eibar',         query: 'Eibar Spain street life people' },
+  { key: 'zaragoza',      query: 'Zaragoza Spain street market people' },
+  { key: 'gijon',         query: 'Gijón Spain beach promenade people lifestyle' },
+  { key: 'las-palmas',    query: 'Las Palmas Gran Canaria street market people' },
+  { key: 'valencia',      query: 'Valencia Spain market street paella people' },
+  { key: 'valladolid',    query: 'Valladolid Spain street plaza people' },
   // Serie A
-  { key: 'milan',         query: 'Milan city Italy' },
-  { key: 'turin',         query: 'Turin city Italy' },
-  { key: 'naples',        query: 'Naples city Italy' },
-  { key: 'bergamo',       query: 'Bergamo city Italy' },
-  { key: 'rome',          query: 'Rome city Italy' },
-  { key: 'florence',      query: 'Florence city Italy' },
-  { key: 'bologna',       query: 'Bologna city Italy' },
-  { key: 'udine',         query: 'Udine city Italy' },
-  { key: 'genoa',         query: 'Genoa city Italy' },
-  { key: 'cagliari',      query: 'Cagliari city Italy' },
-  { key: 'empoli',        query: 'Empoli city Italy' },
-  { key: 'verona',        query: 'Verona city Italy' },
-  { key: 'parma',         query: 'Parma city Italy' },
-  { key: 'como',          query: 'Como city Italy lake' },
-  { key: 'reggio-emilia', query: 'Reggio Emilia city Italy' },
-  { key: 'pisa',          query: 'Pisa city Italy' },
-  { key: 'la-spezia',     query: 'La Spezia city Italy' },
-  { key: 'monza',         query: 'Monza city Italy' },
-  { key: 'lecce',         query: 'Lecce city Italy' },
-  { key: 'venice',        query: 'Venice city Italy' },
+  { key: 'milan',         query: 'Milan street fashion cafe Navigli people' },
+  { key: 'turin',         query: 'Turin street cafe piazza people lifestyle' },
+  { key: 'naples',        query: 'Naples street pizza market Spaccanapoli people' },
+  { key: 'bergamo',       query: 'Bergamo old town Città Alta street people' },
+  { key: 'rome',          query: 'Rome street piazza cafe people lifestyle' },
+  { key: 'florence',      query: 'Florence street market piazza people lifestyle' },
+  { key: 'bologna',       query: 'Bologna portico street market food people' },
+  { key: 'udine',         query: 'Udine Italy street piazza people' },
+  { key: 'genoa',         query: 'Genoa caruggi old town street people' },
+  { key: 'cagliari',      query: 'Cagliari Sardinia street market harbour people' },
+  { key: 'empoli',        query: 'Empoli Italy street piazza people' },
+  { key: 'verona',        query: 'Verona street piazza people lifestyle' },
+  { key: 'parma',         query: 'Parma Italy street food market people' },
+  { key: 'como',          query: 'Como lakeside promenade cafe people lifestyle' },
+  { key: 'reggio-emilia', query: 'Reggio Emilia Italy street piazza people' },
+  { key: 'pisa',          query: 'Pisa Italy street cafe people lifestyle' },
+  { key: 'la-spezia',     query: 'La Spezia Italy harbour street people' },
+  { key: 'monza',         query: 'Monza Italy street piazza people' },
+  { key: 'lecce',         query: 'Lecce Baroque street old town people' },
+  { key: 'venice',        query: 'Venice canal street gondola people lifestyle' },
 ];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -307,11 +307,15 @@ async function main() {
     await sleep(250);
   }
 
-  // Fetch city images (3 per city for the match page lifestyle grid)
+  // Fetch city images (3 per city for the match page lifestyle grid;
+  // the first result is also stored under the plain city slug as the city guide hero image)
   console.log(`\nFetching Unsplash images for ${CITIES.length} cities…`);
   for (const city of CITIES) {
     try {
       const entries = await fetchCityTriple(city);
+      // Hero image for the city guide page (e.g. "london")
+      results[city.key] = entries[0].value;
+      // Lifestyle grid images (e.g. "london-life-1", "london-life-2", "london-life-3")
       for (const { key, value } of entries) {
         results[key] = value;
       }
