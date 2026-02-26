@@ -38,141 +38,146 @@ function alreadyFetched(key) {
   return entry && entry.url && entry.url.includes('images.unsplash.com');
 }
 
-// Per-club stadium images — searched by stadium name, city skyline as fallback.
-// key = club slug from clubs.json
+// Per-club stadium images — stored under "{slug}-stadium" key to avoid collisions
+// with city lifestyle images (some clubs share a slug with their city, e.g. "liverpool").
 const CLUBS = [
   // Premier League
-  { key: 'arsenal',           query: 'Emirates Stadium Arsenal London' },
-  { key: 'chelsea',           query: 'Stamford Bridge Chelsea London' },
-  { key: 'liverpool',         query: 'Anfield stadium Liverpool' },
-  { key: 'manchester-city',   query: 'Etihad Stadium Manchester City' },
-  { key: 'manchester-united', query: 'Old Trafford Manchester United stadium' },
-  { key: 'tottenham-hotspur', query: 'Tottenham Hotspur Stadium London' },
-  { key: 'newcastle-united',  query: "St James Park Newcastle United stadium" },
-  { key: 'aston-villa',       query: 'Villa Park Birmingham Aston Villa' },
-  { key: 'west-ham-united',   query: 'London Stadium Olympic Park West Ham' },
-  { key: 'brighton',          query: 'Amex Stadium Brighton football' },
-  { key: 'everton',           query: 'Goodison Park Everton Liverpool stadium' },
-  { key: 'fulham',            query: 'Craven Cottage Fulham Thames stadium' },
-  // Championship / other Premier League
-  { key: 'leeds-united',              query: 'Elland Road Leeds United stadium' },
-  { key: 'sunderland',                query: 'Stadium of Light Sunderland football' },
-  { key: 'sheffield-united',          query: 'Bramall Lane Sheffield United stadium' },
-  { key: 'brentford',                 query: 'Gtech Community Stadium Brentford London' },
-  { key: 'crystal-palace',            query: 'Selhurst Park Crystal Palace stadium London' },
-  { key: 'nottingham-forest',         query: 'City Ground Nottingham Forest River Trent' },
-  { key: 'burnley',                   query: 'Turf Moor Burnley FC stadium Lancashire' },
-  { key: 'wolverhampton-wanderers',   query: 'Molineux Stadium Wolverhampton Wanderers' },
-  { key: 'afc-bournemouth',           query: 'Vitality Stadium Bournemouth Dean Court' },
+  { key: 'arsenal-stadium',           query: 'Emirates Stadium Arsenal London' },
+  { key: 'chelsea-stadium',           query: 'Stamford Bridge Chelsea London' },
+  { key: 'liverpool-stadium',         query: 'Anfield stadium Liverpool' },
+  { key: 'manchester-city-stadium',   query: 'Etihad Stadium Manchester City' },
+  { key: 'manchester-united-stadium', query: 'Old Trafford Manchester United stadium' },
+  { key: 'tottenham-hotspur-stadium', query: 'Tottenham Hotspur Stadium London' },
+  { key: 'newcastle-united-stadium',  query: "St James Park Newcastle United stadium" },
+  { key: 'aston-villa-stadium',       query: 'Villa Park Birmingham Aston Villa' },
+  { key: 'west-ham-united-stadium',   query: 'London Stadium Olympic Park West Ham' },
+  { key: 'brighton-stadium',          query: 'Amex Stadium Brighton football' },
+  { key: 'everton-stadium',           query: 'Goodison Park Everton Liverpool stadium' },
+  { key: 'fulham-stadium',            query: 'Craven Cottage Fulham Thames stadium' },
+  // Championship / other UK
+  { key: 'leeds-united-stadium',              query: 'Elland Road Leeds United stadium' },
+  { key: 'sunderland-stadium',                query: 'Stadium of Light Sunderland football' },
+  { key: 'sheffield-united-stadium',          query: 'Bramall Lane Sheffield United stadium' },
+  { key: 'brentford-stadium',                 query: 'Gtech Community Stadium Brentford London' },
+  { key: 'crystal-palace-stadium',            query: 'Selhurst Park Crystal Palace stadium London' },
+  { key: 'nottingham-forest-stadium',         query: 'City Ground Nottingham Forest River Trent' },
+  { key: 'burnley-stadium',                   query: 'Turf Moor Burnley FC stadium Lancashire' },
+  { key: 'wolverhampton-wanderers-stadium',   query: 'Molineux Stadium Wolverhampton Wanderers' },
+  { key: 'afc-bournemouth-stadium',           query: 'Vitality Stadium Bournemouth Dean Court' },
+  { key: 'celtic-stadium',                    query: 'Celtic Park stadium Glasgow' },
+  { key: 'rangers-stadium',                   query: 'Ibrox Stadium Rangers Glasgow' },
   // La Liga
-  { key: 'real-madrid',       query: 'Santiago Bernabéu stadium Madrid' },
-  { key: 'barcelona',         query: 'Camp Nou Barcelona stadium' },
-  { key: 'atletico-madrid',   query: 'Civitas Metropolitano Atletico Madrid stadium' },
-  { key: 'athletic-bilbao',   query: 'San Mames stadium Bilbao' },
-  { key: 'real-sociedad',     query: 'Reale Arena stadium San Sebastian' },
-  { key: 'real-betis',        query: 'Estadio Benito Villamarin Seville stadium' },
-  { key: 'sevilla',           query: 'Ramon Sanchez-Pizjuan stadium Seville' },
-  { key: 'villarreal',        query: 'Estadio de la Ceramica Villarreal stadium' },
-  { key: 'girona',            query: 'Estadi Montilivi Girona stadium' },
-  { key: 'osasuna',           query: 'El Sadar stadium Pamplona football' },
-  { key: 'celta-vigo',        query: 'Estadio Balaidos Celta Vigo stadium' },
-  { key: 'mallorca',          query: 'Son Moix stadium Mallorca football' },
-  { key: 'rayo-vallecano',    query: 'Estadio Vallecas Madrid football' },
-  { key: 'getafe',            query: 'Coliseum Alfonso Perez Getafe stadium' },
-  { key: 'alaves',            query: 'Mendizorrotza stadium Vitoria-Gasteiz' },
-  { key: 'las-palmas',        query: 'Estadio Gran Canaria Las Palmas football' },
-  { key: 'valencia',          query: 'Mestalla stadium Valencia Spain' },
-  { key: 'espanyol',          query: 'RCDE Stadium Espanyol Barcelona' },
-  { key: 'leganes',           query: 'Estadio Butarque Leganes Madrid' },
-  { key: 'real-valladolid',   query: 'Estadio Zorrilla Valladolid Spain' },
+  { key: 'real-madrid-stadium',       query: 'Santiago Bernabéu stadium Madrid' },
+  { key: 'barcelona-stadium',         query: 'Camp Nou Barcelona stadium' },
+  { key: 'atletico-madrid-stadium',   query: 'Civitas Metropolitano Atletico Madrid stadium' },
+  { key: 'athletic-bilbao-stadium',   query: 'San Mames stadium Bilbao' },
+  { key: 'real-sociedad-stadium',     query: 'Reale Arena stadium San Sebastian' },
+  { key: 'real-betis-stadium',        query: 'Estadio Benito Villamarin Seville stadium' },
+  { key: 'sevilla-stadium',           query: 'Ramon Sanchez-Pizjuan stadium Seville' },
+  { key: 'villarreal-stadium',        query: 'Estadio de la Ceramica Villarreal stadium' },
+  { key: 'girona-stadium',            query: 'Estadi Montilivi Girona stadium' },
+  { key: 'osasuna-stadium',           query: 'El Sadar stadium Pamplona football' },
+  { key: 'celta-vigo-stadium',        query: 'Estadio Balaidos Celta Vigo stadium' },
+  { key: 'mallorca-stadium',          query: 'Son Moix stadium Mallorca football' },
+  { key: 'rayo-vallecano-stadium',    query: 'Estadio Vallecas Madrid football' },
+  { key: 'getafe-stadium',            query: 'Coliseum Alfonso Perez Getafe stadium' },
+  { key: 'alaves-stadium',            query: 'Mendizorrotza stadium Vitoria-Gasteiz' },
+  { key: 'las-palmas-stadium',        query: 'Estadio Gran Canaria Las Palmas football' },
+  { key: 'valencia-stadium',          query: 'Mestalla stadium Valencia Spain' },
+  { key: 'espanyol-stadium',          query: 'RCDE Stadium Espanyol Barcelona' },
+  { key: 'leganes-stadium',           query: 'Estadio Butarque Leganes Madrid' },
+  { key: 'real-valladolid-stadium',   query: 'Estadio Zorrilla Valladolid Spain' },
   // Serie A
-  { key: 'inter-milan',       query: 'Giuseppe Meazza San Siro stadium Milan' },
-  { key: 'ac-milan',          query: 'San Siro stadium AC Milan Italy' },
-  { key: 'juventus',          query: 'Allianz Stadium Juventus Turin' },
-  { key: 'napoli',            query: 'Stadio Maradona Napoli Naples stadium' },
-  { key: 'roma',              query: 'Stadio Olimpico Roma football' },
-  { key: 'lazio',             query: 'Stadio Olimpico Lazio Rome football' },
-  { key: 'atalanta',          query: 'Gewiss Stadium Atalanta Bergamo' },
-  { key: 'fiorentina',        query: 'Stadio Franchi Fiorentina Florence' },
-  { key: 'bologna',           query: 'Stadio Dall Ara Bologna football' },
-  { key: 'torino',            query: 'Stadio Olimpico Grande Torino football' },
-  { key: 'monza',             query: 'U-Power Stadium Monza Italy football' },
-  { key: 'genoa',             query: 'Stadio Luigi Ferraris Genoa football' },
-  { key: 'cagliari',          query: 'Unipol Domus Cagliari Sardinia football' },
-  { key: 'udinese',           query: 'Bluenergy Stadium Udinese football' },
-  { key: 'empoli',            query: 'Stadio Castellani Empoli Italy football' },
-  { key: 'parma',             query: 'Stadio Tardini Parma Italy football' },
-  { key: 'hellas-verona',     query: 'Stadio Bentegodi Verona Italy football' },
-  { key: 'como',              query: 'Stadio Sinigaglia Como lake Italy' },
-  { key: 'lecce',             query: 'Stadio Via del Mare Lecce Italy football' },
-  { key: 'venezia',           query: 'Stadio Penzo Venice Italy football' },
+  { key: 'inter-milan-stadium',       query: 'Giuseppe Meazza San Siro stadium Milan' },
+  { key: 'ac-milan-stadium',          query: 'San Siro stadium AC Milan Italy' },
+  { key: 'juventus-stadium',          query: 'Allianz Stadium Juventus Turin' },
+  { key: 'napoli-stadium',            query: 'Stadio Maradona Napoli Naples stadium' },
+  { key: 'roma-stadium',              query: 'Stadio Olimpico Roma football' },
+  { key: 'lazio-stadium',             query: 'Stadio Olimpico Lazio Rome football' },
+  { key: 'atalanta-stadium',          query: 'Gewiss Stadium Atalanta Bergamo' },
+  { key: 'fiorentina-stadium',        query: 'Stadio Franchi Fiorentina Florence' },
+  { key: 'bologna-stadium',           query: 'Stadio Dall Ara Bologna football' },
+  { key: 'torino-stadium',            query: 'Stadio Olimpico Grande Torino football' },
+  { key: 'monza-stadium',             query: 'U-Power Stadium Monza Italy football' },
+  { key: 'genoa-stadium',             query: 'Stadio Luigi Ferraris Genoa football' },
+  { key: 'cagliari-stadium',          query: 'Unipol Domus Cagliari Sardinia football' },
+  { key: 'udinese-stadium',           query: 'Bluenergy Stadium Udinese football' },
+  { key: 'empoli-stadium',            query: 'Stadio Castellani Empoli Italy football' },
+  { key: 'parma-stadium',             query: 'Stadio Tardini Parma Italy football' },
+  { key: 'hellas-verona-stadium',     query: 'Stadio Bentegodi Verona Italy football' },
+  { key: 'como-stadium',              query: 'Stadio Sinigaglia Como lake Italy' },
+  { key: 'lecce-stadium',             query: 'Stadio Via del Mare Lecce Italy football' },
+  { key: 'venezia-stadium',           query: 'Stadio Penzo Venice Italy football' },
 ];
 
-// City fallback queries, used when a stadium search returns no results
+// City fallback queries for club images, used when a stadium search returns no results.
+// Keys now use the "-stadium" suffix to match the CLUBS array above.
 const CLUB_CITY_FALLBACKS = {
-  'arsenal':           'London city skyline',
-  'chelsea':           'London city skyline',
-  'tottenham-hotspur': 'London city skyline',
-  'west-ham-united':   'London city skyline',
-  'fulham':            'London city skyline',
-  'liverpool':         'Liverpool city waterfront',
-  'everton':           'Liverpool city waterfront',
-  'manchester-city':   'Manchester city skyline',
-  'manchester-united': 'Manchester city skyline',
-  'newcastle-united':  'Newcastle upon Tyne city',
-  'aston-villa':       'Birmingham city UK',
-  'brighton':          'Brighton seafront',
-  'leeds-united':                'Leeds city UK',
-  'sunderland':                  'Sunderland city UK',
-  'sheffield-united':            'Sheffield city UK',
-  'brentford':                   'London west skyline Thames',
-  'crystal-palace':              'London south Croydon skyline',
-  'nottingham-forest':           'Nottingham city River Trent',
-  'burnley':                     'Burnley Lancashire town',
-  'wolverhampton-wanderers':     'Wolverhampton city West Midlands',
-  'afc-bournemouth':             'Bournemouth beach seafront Dorset',
+  'arsenal-stadium':           'London city skyline',
+  'chelsea-stadium':           'London city skyline',
+  'tottenham-hotspur-stadium': 'London city skyline',
+  'west-ham-united-stadium':   'London city skyline',
+  'fulham-stadium':            'London west Thames skyline',
+  'liverpool-stadium':         'Liverpool city waterfront',
+  'everton-stadium':           'Liverpool city waterfront',
+  'manchester-city-stadium':   'Manchester city skyline',
+  'manchester-united-stadium': 'Manchester city skyline',
+  'newcastle-united-stadium':  'Newcastle upon Tyne city',
+  'aston-villa-stadium':       'Birmingham city UK',
+  'brighton-stadium':          'Brighton seafront',
+  'leeds-united-stadium':                'Leeds city UK',
+  'sunderland-stadium':                  'Sunderland city UK',
+  'sheffield-united-stadium':            'Sheffield city UK',
+  'brentford-stadium':                   'London west skyline Thames',
+  'crystal-palace-stadium':              'London south Croydon skyline',
+  'nottingham-forest-stadium':           'Nottingham city River Trent',
+  'burnley-stadium':                     'Burnley Lancashire town',
+  'wolverhampton-wanderers-stadium':     'Wolverhampton city West Midlands',
+  'afc-bournemouth-stadium':             'Bournemouth beach seafront Dorset',
+  'celtic-stadium':                      'Glasgow city Scotland',
+  'rangers-stadium':                     'Glasgow city Scotland',
   // La Liga
-  'real-madrid':       'Madrid city Spain',
-  'barcelona':         'Barcelona city Spain',
-  'atletico-madrid':   'Madrid city Spain',
-  'athletic-bilbao':   'Bilbao city Spain',
-  'real-sociedad':     'San Sebastian city Spain',
-  'real-betis':        'Seville city Spain',
-  'sevilla':           'Seville city Spain',
-  'villarreal':        'Villarreal city Spain',
-  'girona':            'Girona city Spain',
-  'osasuna':           'Pamplona city Spain',
-  'celta-vigo':        'Vigo city Spain',
-  'mallorca':          'Palma Mallorca city',
-  'rayo-vallecano':    'Madrid city Spain',
-  'getafe':            'Getafe city Spain',
-  'alaves':            'Vitoria-Gasteiz city Spain',
-  'las-palmas':        'Las Palmas Gran Canaria city',
-  'valencia':          'Valencia city Spain',
-  'espanyol':          'Barcelona city Spain',
-  'leganes':           'Leganés city Spain',
-  'real-valladolid':   'Valladolid city Spain',
+  'real-madrid-stadium':       'Madrid city Spain',
+  'barcelona-stadium':         'Barcelona city Spain',
+  'atletico-madrid-stadium':   'Madrid city Spain',
+  'athletic-bilbao-stadium':   'Bilbao city Spain',
+  'real-sociedad-stadium':     'San Sebastian city Spain',
+  'real-betis-stadium':        'Seville city Spain',
+  'sevilla-stadium':           'Seville city Spain',
+  'villarreal-stadium':        'Villarreal city Spain',
+  'girona-stadium':            'Girona city Spain',
+  'osasuna-stadium':           'Pamplona city Spain',
+  'celta-vigo-stadium':        'Vigo city Spain',
+  'mallorca-stadium':          'Palma Mallorca city',
+  'rayo-vallecano-stadium':    'Madrid city Spain',
+  'getafe-stadium':            'Getafe city Spain',
+  'alaves-stadium':            'Vitoria-Gasteiz city Spain',
+  'las-palmas-stadium':        'Las Palmas Gran Canaria city',
+  'valencia-stadium':          'Valencia city Spain',
+  'espanyol-stadium':          'Barcelona city Spain',
+  'leganes-stadium':           'Leganés city Spain',
+  'real-valladolid-stadium':   'Valladolid city Spain',
   // Serie A
-  'inter-milan':       'Milan city Italy',
-  'ac-milan':          'Milan city Italy',
-  'juventus':          'Turin city Italy',
-  'napoli':            'Naples city Italy',
-  'roma':              'Rome city Italy',
-  'lazio':             'Rome city Italy',
-  'atalanta':          'Bergamo city Italy',
-  'fiorentina':        'Florence city Italy',
-  'bologna':           'Bologna city Italy',
-  'torino':            'Turin city Italy',
-  'monza':             'Monza city Italy',
-  'genoa':             'Genoa city Italy',
-  'cagliari':          'Cagliari Sardinia Italy',
-  'udinese':           'Udine city Italy',
-  'empoli':            'Empoli city Italy',
-  'parma':             'Parma city Italy',
-  'hellas-verona':     'Verona city Italy',
-  'como':              'Como lake city Italy',
-  'lecce':             'Lecce city Italy',
-  'venezia':           'Venice city Italy',
+  'inter-milan-stadium':       'Milan city Italy',
+  'ac-milan-stadium':          'Milan city Italy',
+  'juventus-stadium':          'Turin city Italy',
+  'napoli-stadium':            'Naples city Italy',
+  'roma-stadium':              'Rome city Italy',
+  'lazio-stadium':             'Rome city Italy',
+  'atalanta-stadium':          'Bergamo city Italy',
+  'fiorentina-stadium':        'Florence city Italy',
+  'bologna-stadium':           'Bologna city Italy',
+  'torino-stadium':            'Turin city Italy',
+  'monza-stadium':             'Monza city Italy',
+  'genoa-stadium':             'Genoa city Italy',
+  'cagliari-stadium':          'Cagliari Sardinia Italy',
+  'udinese-stadium':           'Udine city Italy',
+  'empoli-stadium':            'Empoli city Italy',
+  'parma-stadium':             'Parma city Italy',
+  'hellas-verona-stadium':     'Verona city Italy',
+  'como-stadium':              'Como lake city Italy',
+  'lecce-stadium':             'Lecce city Italy',
+  'venezia-stadium':           'Venice city Italy',
 };
 
 // All cities needed across UK city guide pages and European club pages.
@@ -241,6 +246,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /** Tracks remaining requests from the last API response. */
 let rateLimitRemaining = 50;
+/** Set to true when we hit the rate limit — signals main() to stop and save progress. */
+let rateLimitHit = false;
 
 async function unsplashFetch(url) {
   const res = await fetch(url, {
@@ -251,12 +258,10 @@ async function unsplashFetch(url) {
   if (remaining !== null) rateLimitRemaining = parseInt(remaining, 10);
 
   if (res.status === 429) {
-    const resetHeader = res.headers.get('X-Ratelimit-Reset');
-    const waitUntil = resetHeader ? parseInt(resetHeader, 10) * 1000 : Date.now() + 3600_000;
-    const waitMs = Math.max(waitUntil - Date.now(), 0) + 5000;
-    console.warn(`  ⏳ Rate limit hit — waiting ${Math.ceil(waitMs / 60000)} min for reset...`);
-    await sleep(waitMs);
-    return unsplashFetch(url); // retry after wait
+    // Don't wait — save progress and exit so the build can complete.
+    // The next build will pick up remaining images via alreadyFetched().
+    rateLimitHit = true;
+    throw new Error('RATE_LIMIT');
   }
 
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -311,11 +316,13 @@ async function main() {
   // Fetch club stadium images first
   console.log(`Fetching Unsplash images for ${clubsToFetch.length} clubs…`);
   for (const club of clubsToFetch) {
+    if (rateLimitHit) break;
     try {
       const { key, value } = await fetchCity(club);
       results[key] = value;
       console.log(`  ✓ ${key} — Photo by ${value.photographer}`);
     } catch (err) {
+      if (rateLimitHit) break;
       // Try city fallback query
       const fallbackQuery = CLUB_CITY_FALLBACKS[club.key];
       if (fallbackQuery) {
@@ -324,10 +331,12 @@ async function main() {
           results[club.key] = value;
           console.log(`  ✓ ${club.key} (fallback) — Photo by ${value.photographer}`);
         } catch (fbErr) {
-          errors.push(club.key);
-          console.warn(`  ✗ ${club.key}: ${fbErr.message}`);
+          if (!rateLimitHit) {
+            errors.push(club.key);
+            console.warn(`  ✗ ${club.key}: ${fbErr.message}`);
+          }
         }
-        await sleep(250);
+        if (!rateLimitHit) await sleep(50);
       } else {
         errors.push(club.key);
         console.warn(`  ✗ ${club.key}: ${err.message}`);
@@ -335,13 +344,21 @@ async function main() {
     }
     // Save incrementally so progress isn't lost if interrupted
     writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
-    await sleep(250);
+    if (!rateLimitHit) await sleep(50);
+  }
+
+  if (rateLimitHit) {
+    writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
+    console.warn('\n⚠ Rate limit reached — saved progress. Re-run (or redeploy) to fetch remaining images.');
+    console.log(`Wrote ${Object.keys(results).length} images so far.`);
+    return;
   }
 
   // Fetch city images (3 per city for the match page lifestyle grid;
   // the first result is also stored under the plain city slug as the city guide hero image)
   console.log(`\nFetching Unsplash images for ${citiesToFetch.length} cities…`);
   for (const city of citiesToFetch) {
+    if (rateLimitHit) break;
     try {
       const entries = await fetchCityTriple(city);
       // Hero image for the city guide page (e.g. "london")
@@ -352,13 +369,22 @@ async function main() {
       }
       console.log(`  ✓ ${city.key} (×${entries.length}) — Photo by ${entries[0].value.photographer}`);
     } catch (err) {
-      errors.push(city.key);
-      console.warn(`  ✗ ${city.key}: ${err.message}`);
+      if (!rateLimitHit) {
+        errors.push(city.key);
+        console.warn(`  ✗ ${city.key}: ${err.message}`);
+      }
     }
     // Save incrementally
     writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
     // Stay well within Unsplash's rate limit (50 req/hr on demo keys)
-    await sleep(250);
+    if (!rateLimitHit) await sleep(50);
+  }
+
+  if (rateLimitHit) {
+    writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
+    console.warn('\n⚠ Rate limit reached — saved progress. Re-run (or redeploy) to fetch remaining images.');
+    console.log(`Wrote ${Object.keys(results).length} images so far.`);
+    return;
   }
 
   writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));

@@ -1,1538 +1,188 @@
 {
-  "london": {
-    "url": "https://picsum.photos/seed/london-uk/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "London city"
-  },
-  "london-life-1": {
-    "url": "https://picsum.photos/seed/london-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "London city"
-  },
-  "london-life-2": {
-    "url": "https://picsum.photos/seed/london-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "London city"
-  },
-  "london-life-3": {
-    "url": "https://picsum.photos/seed/london-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "London city"
-  },
-  "manchester": {
-    "url": "https://picsum.photos/seed/manchester-uk/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Manchester city"
-  },
-  "manchester-life-1": {
-    "url": "https://picsum.photos/seed/manchester-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Manchester city"
-  },
-  "manchester-life-2": {
-    "url": "https://picsum.photos/seed/manchester-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Manchester city"
-  },
-  "manchester-life-3": {
-    "url": "https://picsum.photos/seed/manchester-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Manchester city"
-  },
-  "liverpool": {
+  "liverpool-stadium": {
     "url": "https://images.unsplash.com/photo-1731931539748-40ff51b863c5?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxBbmZpZWxkJTIwc3RhZGl1bSUyMExpdmVycG9vbHxlbnwwfDB8fHwxNzcxODYzMDIxfDA&ixlib=rb-4.1.0",
     "photographer": "Nathan Wong",
     "photographerUsername": "nathan_wong",
     "altDescription": "A group of people standing on top of a soccer field"
   },
-  "liverpool-life-1": {
-    "url": "https://picsum.photos/seed/liverpool-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Liverpool city"
-  },
-  "liverpool-life-2": {
-    "url": "https://picsum.photos/seed/liverpool-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Liverpool city"
-  },
-  "liverpool-life-3": {
-    "url": "https://picsum.photos/seed/liverpool-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Liverpool city"
-  },
-  "birmingham": {
-    "url": "https://picsum.photos/seed/birmingham-uk/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Birmingham city"
-  },
-  "birmingham-life-1": {
-    "url": "https://picsum.photos/seed/birmingham-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Birmingham city"
-  },
-  "birmingham-life-2": {
-    "url": "https://picsum.photos/seed/birmingham-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Birmingham city"
-  },
-  "birmingham-life-3": {
-    "url": "https://picsum.photos/seed/birmingham-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Birmingham city"
-  },
-  "newcastle": {
-    "url": "https://picsum.photos/seed/newcastle-uk/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Newcastle city"
-  },
-  "newcastle-life-1": {
-    "url": "https://picsum.photos/seed/newcastle-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Newcastle city"
-  },
-  "newcastle-life-2": {
-    "url": "https://picsum.photos/seed/newcastle-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Newcastle city"
-  },
-  "newcastle-life-3": {
-    "url": "https://picsum.photos/seed/newcastle-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Newcastle city"
-  },
-  "brighton": {
+  "brighton-stadium": {
     "url": "https://images.unsplash.com/photo-1557868363-3bb025a6bdf3?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxCcmlnaHRvbiUyMHNlYWZyb250fGVufDB8MHx8fDE3NzE4NjMwMjl8MA&ixlib=rb-4.1.0",
     "photographer": "Tom Wheatley",
     "photographerUsername": "mikeballet",
     "altDescription": "people walking at the amusement park"
   },
-  "brighton-life-1": {
-    "url": "https://picsum.photos/seed/brighton-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Brighton city"
-  },
-  "brighton-life-2": {
-    "url": "https://picsum.photos/seed/brighton-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Brighton city"
-  },
-  "brighton-life-3": {
-    "url": "https://picsum.photos/seed/brighton-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Brighton city"
-  },
-  "glasgow": {
-    "url": "https://picsum.photos/seed/glasgow-uk/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Glasgow city"
-  },
-  "glasgow-life-1": {
-    "url": "https://picsum.photos/seed/glasgow-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Glasgow city"
-  },
-  "glasgow-life-2": {
-    "url": "https://picsum.photos/seed/glasgow-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Glasgow city"
-  },
-  "glasgow-life-3": {
-    "url": "https://picsum.photos/seed/glasgow-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Glasgow city"
-  },
-  "leeds": {
-    "url": "https://picsum.photos/seed/leeds-uk/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Leeds city"
-  },
-  "leeds-life-1": {
-    "url": "https://picsum.photos/seed/leeds-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Leeds city"
-  },
-  "leeds-life-2": {
-    "url": "https://picsum.photos/seed/leeds-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Leeds city"
-  },
-  "leeds-life-3": {
-    "url": "https://picsum.photos/seed/leeds-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Leeds city"
-  },
-  "sheffield": {
-    "url": "https://picsum.photos/seed/sheffield-uk/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Sheffield city"
-  },
-  "sheffield-life-1": {
-    "url": "https://picsum.photos/seed/sheffield-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Sheffield city"
-  },
-  "sheffield-life-2": {
-    "url": "https://picsum.photos/seed/sheffield-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Sheffield city"
-  },
-  "sheffield-life-3": {
-    "url": "https://picsum.photos/seed/sheffield-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Sheffield city"
-  },
-  "sunderland": {
+  "sunderland-stadium": {
     "url": "https://images.unsplash.com/photo-1658926942507-e7bfbd47fd4c?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxTdGFkaXVtJTIwb2YlMjBMaWdodCUyMFN1bmRlcmxhbmQlMjBmb290YmFsbHxlbnwwfDB8fHwxNzcxODYzMDMzfDA&ixlib=rb-4.1.0",
     "photographer": "Ged Mullen-Buick",
     "photographerUsername": "mynameisged",
     "altDescription": "a clock hanging from the side of a building"
   },
-  "sunderland-life-1": {
-    "url": "https://picsum.photos/seed/sunderland-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Sunderland city"
-  },
-  "sunderland-life-2": {
-    "url": "https://picsum.photos/seed/sunderland-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Sunderland city"
-  },
-  "sunderland-life-3": {
-    "url": "https://picsum.photos/seed/sunderland-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Sunderland city"
-  },
-  "nottingham": {
-    "url": "https://picsum.photos/seed/nottingham-uk/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Nottingham city"
-  },
-  "nottingham-life-1": {
-    "url": "https://picsum.photos/seed/nottingham-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Nottingham city"
-  },
-  "nottingham-life-2": {
-    "url": "https://picsum.photos/seed/nottingham-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Nottingham city"
-  },
-  "nottingham-life-3": {
-    "url": "https://picsum.photos/seed/nottingham-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Nottingham city"
-  },
-  "wolverhampton": {
-    "url": "https://picsum.photos/seed/wolverhampton-uk/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Wolverhampton city"
-  },
-  "wolverhampton-life-1": {
-    "url": "https://picsum.photos/seed/wolverhampton-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Wolverhampton city"
-  },
-  "wolverhampton-life-2": {
-    "url": "https://picsum.photos/seed/wolverhampton-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Wolverhampton city"
-  },
-  "wolverhampton-life-3": {
-    "url": "https://picsum.photos/seed/wolverhampton-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Wolverhampton city"
-  },
-  "burnley": {
-    "url": "https://picsum.photos/seed/burnley-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "burnley stadium"
-  },
-  "burnley-life-1": {
-    "url": "https://picsum.photos/seed/burnley-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Burnley city"
-  },
-  "burnley-life-2": {
-    "url": "https://picsum.photos/seed/burnley-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Burnley city"
-  },
-  "burnley-life-3": {
-    "url": "https://picsum.photos/seed/burnley-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Burnley city"
-  },
-  "bournemouth": {
-    "url": "https://picsum.photos/seed/bournemouth-uk/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bournemouth city"
-  },
-  "bournemouth-life-1": {
-    "url": "https://picsum.photos/seed/bournemouth-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bournemouth city"
-  },
-  "bournemouth-life-2": {
-    "url": "https://picsum.photos/seed/bournemouth-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bournemouth city"
-  },
-  "bournemouth-life-3": {
-    "url": "https://picsum.photos/seed/bournemouth-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bournemouth city"
-  },
-  "madrid": {
-    "url": "https://picsum.photos/seed/madrid/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Madrid city"
-  },
-  "madrid-life-1": {
-    "url": "https://picsum.photos/seed/madrid-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Madrid city"
-  },
-  "madrid-life-2": {
-    "url": "https://picsum.photos/seed/madrid-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Madrid city"
-  },
-  "madrid-life-3": {
-    "url": "https://picsum.photos/seed/madrid-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Madrid city"
-  },
-  "barcelona": {
+  "barcelona-stadium": {
     "url": "https://images.unsplash.com/photo-1656357386325-3faecf2438cf?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxDYW1wJTIwTm91JTIwQmFyY2Vsb25hJTIwc3RhZGl1bXxlbnwwfDB8fHwxNzcxODYzMDQ2fDA&ixlib=rb-4.1.0",
     "photographer": "Paul Steiner",
     "photographerUsername": "paul_steiner",
     "altDescription": "a large stadium with a green field"
   },
-  "barcelona-life-1": {
-    "url": "https://picsum.photos/seed/barcelona-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Barcelona city"
-  },
-  "barcelona-life-2": {
-    "url": "https://picsum.photos/seed/barcelona-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Barcelona city"
-  },
-  "barcelona-life-3": {
-    "url": "https://picsum.photos/seed/barcelona-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Barcelona city"
-  },
-  "bilbao": {
-    "url": "https://picsum.photos/seed/bilbao/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bilbao city"
-  },
-  "bilbao-life-1": {
-    "url": "https://picsum.photos/seed/bilbao-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bilbao city"
-  },
-  "bilbao-life-2": {
-    "url": "https://picsum.photos/seed/bilbao-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bilbao city"
-  },
-  "bilbao-life-3": {
-    "url": "https://picsum.photos/seed/bilbao-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bilbao city"
-  },
-  "villarreal": {
+  "villarreal-stadium": {
     "url": "https://images.unsplash.com/photo-1762010297288-777f70c0e74c?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxFc3RhZGlvJTIwZGUlMjBsYSUyMENlcmFtaWNhJTIwVmlsbGFycmVhbCUyMHN0YWRpdW18ZW58MHwwfHx8MTc3MTg2MzA1Mnww&ixlib=rb-4.1.0",
     "photographer": "Jun Ren",
     "photographerUsername": "renjunn",
     "altDescription": "Empty stadium seating with trees in background"
   },
-  "villarreal-life-1": {
-    "url": "https://picsum.photos/seed/villarreal-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Villarreal city"
-  },
-  "villarreal-life-2": {
-    "url": "https://picsum.photos/seed/villarreal-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Villarreal city"
-  },
-  "villarreal-life-3": {
-    "url": "https://picsum.photos/seed/villarreal-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Villarreal city"
-  },
-  "seville": {
-    "url": "https://picsum.photos/seed/seville/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Seville city"
-  },
-  "seville-life-1": {
-    "url": "https://picsum.photos/seed/seville-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Seville city"
-  },
-  "seville-life-2": {
-    "url": "https://picsum.photos/seed/seville-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Seville city"
-  },
-  "seville-life-3": {
-    "url": "https://picsum.photos/seed/seville-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Seville city"
-  },
-  "san-sebastian": {
-    "url": "https://picsum.photos/seed/san-sebastian/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "San-sebastian city"
-  },
-  "san-sebastian-life-1": {
-    "url": "https://picsum.photos/seed/san-sebastian-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "San-sebastian city"
-  },
-  "san-sebastian-life-2": {
-    "url": "https://picsum.photos/seed/san-sebastian-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "San-sebastian city"
-  },
-  "san-sebastian-life-3": {
-    "url": "https://picsum.photos/seed/san-sebastian-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "San-sebastian city"
-  },
-  "vigo": {
-    "url": "https://picsum.photos/seed/vigo/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Vigo city"
-  },
-  "vigo-life-1": {
-    "url": "https://picsum.photos/seed/vigo-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Vigo city"
-  },
-  "vigo-life-2": {
-    "url": "https://picsum.photos/seed/vigo-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Vigo city"
-  },
-  "vigo-life-3": {
-    "url": "https://picsum.photos/seed/vigo-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Vigo city"
-  },
-  "pamplona": {
-    "url": "https://picsum.photos/seed/pamplona/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Pamplona city"
-  },
-  "pamplona-life-1": {
-    "url": "https://picsum.photos/seed/pamplona-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Pamplona city"
-  },
-  "pamplona-life-2": {
-    "url": "https://picsum.photos/seed/pamplona-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Pamplona city"
-  },
-  "pamplona-life-3": {
-    "url": "https://picsum.photos/seed/pamplona-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Pamplona city"
-  },
-  "getafe": {
-    "url": "https://picsum.photos/seed/getafe-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "getafe stadium"
-  },
-  "getafe-life-1": {
-    "url": "https://picsum.photos/seed/getafe-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Getafe city"
-  },
-  "getafe-life-2": {
-    "url": "https://picsum.photos/seed/getafe-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Getafe city"
-  },
-  "getafe-life-3": {
-    "url": "https://picsum.photos/seed/getafe-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Getafe city"
-  },
-  "palma": {
-    "url": "https://picsum.photos/seed/palma/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Palma city"
-  },
-  "palma-life-1": {
-    "url": "https://picsum.photos/seed/palma-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Palma city"
-  },
-  "palma-life-2": {
-    "url": "https://picsum.photos/seed/palma-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Palma city"
-  },
-  "palma-life-3": {
-    "url": "https://picsum.photos/seed/palma-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Palma city"
-  },
-  "girona": {
+  "girona-stadium": {
     "url": "https://images.unsplash.com/photo-1700853985077-dc9e4795d471?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxHaXJvbmElMjBjaXR5JTIwU3BhaW58ZW58MHwwfHx8MTc3MTg2MzA1M3ww&ixlib=rb-4.1.0",
     "photographer": "Lucas Chizzali",
     "photographerUsername": "chizze",
     "altDescription": "a view of a city from the top of a hill"
   },
-  "girona-life-1": {
-    "url": "https://picsum.photos/seed/girona-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Girona city"
-  },
-  "girona-life-2": {
-    "url": "https://picsum.photos/seed/girona-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Girona city"
-  },
-  "girona-life-3": {
-    "url": "https://picsum.photos/seed/girona-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Girona city"
-  },
-  "vitoria-gasteiz": {
-    "url": "https://picsum.photos/seed/vitoria-gasteiz/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Vitoria-gasteiz city"
-  },
-  "vitoria-gasteiz-life-1": {
-    "url": "https://picsum.photos/seed/vitoria-gasteiz-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Vitoria-gasteiz city"
-  },
-  "vitoria-gasteiz-life-2": {
-    "url": "https://picsum.photos/seed/vitoria-gasteiz-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Vitoria-gasteiz city"
-  },
-  "vitoria-gasteiz-life-3": {
-    "url": "https://picsum.photos/seed/vitoria-gasteiz-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Vitoria-gasteiz city"
-  },
-  "leganes": {
-    "url": "https://picsum.photos/seed/leganes-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "leganes stadium"
-  },
-  "leganes-life-1": {
-    "url": "https://picsum.photos/seed/leganes-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Leganes city"
-  },
-  "leganes-life-2": {
-    "url": "https://picsum.photos/seed/leganes-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Leganes city"
-  },
-  "leganes-life-3": {
-    "url": "https://picsum.photos/seed/leganes-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Leganes city"
-  },
-  "eibar": {
-    "url": "https://picsum.photos/seed/eibar/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Eibar city"
-  },
-  "eibar-life-1": {
-    "url": "https://picsum.photos/seed/eibar-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Eibar city"
-  },
-  "eibar-life-2": {
-    "url": "https://picsum.photos/seed/eibar-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Eibar city"
-  },
-  "eibar-life-3": {
-    "url": "https://picsum.photos/seed/eibar-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Eibar city"
-  },
-  "zaragoza": {
-    "url": "https://picsum.photos/seed/zaragoza/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Zaragoza city"
-  },
-  "zaragoza-life-1": {
-    "url": "https://picsum.photos/seed/zaragoza-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Zaragoza city"
-  },
-  "zaragoza-life-2": {
-    "url": "https://picsum.photos/seed/zaragoza-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Zaragoza city"
-  },
-  "zaragoza-life-3": {
-    "url": "https://picsum.photos/seed/zaragoza-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Zaragoza city"
-  },
-  "gijon": {
-    "url": "https://picsum.photos/seed/gijon/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Gijon city"
-  },
-  "gijon-life-1": {
-    "url": "https://picsum.photos/seed/gijon-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Gijon city"
-  },
-  "gijon-life-2": {
-    "url": "https://picsum.photos/seed/gijon-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Gijon city"
-  },
-  "gijon-life-3": {
-    "url": "https://picsum.photos/seed/gijon-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Gijon city"
-  },
-  "las-palmas": {
-    "url": "https://picsum.photos/seed/las-palmas-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "las-palmas stadium"
-  },
-  "las-palmas-life-1": {
-    "url": "https://picsum.photos/seed/las-palmas-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Las-palmas city"
-  },
-  "las-palmas-life-2": {
-    "url": "https://picsum.photos/seed/las-palmas-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Las-palmas city"
-  },
-  "las-palmas-life-3": {
-    "url": "https://picsum.photos/seed/las-palmas-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Las-palmas city"
-  },
-  "valencia": {
-    "url": "https://picsum.photos/seed/valencia-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "valencia stadium"
-  },
-  "valencia-life-1": {
-    "url": "https://picsum.photos/seed/valencia-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Valencia city"
-  },
-  "valencia-life-2": {
-    "url": "https://picsum.photos/seed/valencia-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Valencia city"
-  },
-  "valencia-life-3": {
-    "url": "https://picsum.photos/seed/valencia-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Valencia city"
-  },
-  "valladolid": {
-    "url": "https://picsum.photos/seed/valladolid/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Valladolid city"
-  },
-  "valladolid-life-1": {
-    "url": "https://picsum.photos/seed/valladolid-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Valladolid city"
-  },
-  "valladolid-life-2": {
-    "url": "https://picsum.photos/seed/valladolid-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Valladolid city"
-  },
-  "valladolid-life-3": {
-    "url": "https://picsum.photos/seed/valladolid-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Valladolid city"
-  },
-  "milan": {
-    "url": "https://picsum.photos/seed/milan/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Milan city"
-  },
-  "milan-life-1": {
-    "url": "https://picsum.photos/seed/milan-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Milan city"
-  },
-  "milan-life-2": {
-    "url": "https://picsum.photos/seed/milan-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Milan city"
-  },
-  "milan-life-3": {
-    "url": "https://picsum.photos/seed/milan-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Milan city"
-  },
-  "turin": {
-    "url": "https://picsum.photos/seed/turin/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Turin city"
-  },
-  "turin-life-1": {
-    "url": "https://picsum.photos/seed/turin-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Turin city"
-  },
-  "turin-life-2": {
-    "url": "https://picsum.photos/seed/turin-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Turin city"
-  },
-  "turin-life-3": {
-    "url": "https://picsum.photos/seed/turin-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Turin city"
-  },
-  "naples": {
-    "url": "https://picsum.photos/seed/naples/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Naples city"
-  },
-  "naples-life-1": {
-    "url": "https://picsum.photos/seed/naples-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Naples city"
-  },
-  "naples-life-2": {
-    "url": "https://picsum.photos/seed/naples-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Naples city"
-  },
-  "naples-life-3": {
-    "url": "https://picsum.photos/seed/naples-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Naples city"
-  },
-  "bergamo": {
-    "url": "https://picsum.photos/seed/bergamo/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bergamo city"
-  },
-  "bergamo-life-1": {
-    "url": "https://picsum.photos/seed/bergamo-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bergamo city"
-  },
-  "bergamo-life-2": {
-    "url": "https://picsum.photos/seed/bergamo-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bergamo city"
-  },
-  "bergamo-life-3": {
-    "url": "https://picsum.photos/seed/bergamo-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bergamo city"
-  },
-  "rome": {
-    "url": "https://picsum.photos/seed/rome/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Rome city"
-  },
-  "rome-life-1": {
-    "url": "https://picsum.photos/seed/rome-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Rome city"
-  },
-  "rome-life-2": {
-    "url": "https://picsum.photos/seed/rome-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Rome city"
-  },
-  "rome-life-3": {
-    "url": "https://picsum.photos/seed/rome-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Rome city"
-  },
-  "florence": {
-    "url": "https://picsum.photos/seed/florence/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Florence city"
-  },
-  "florence-life-1": {
-    "url": "https://picsum.photos/seed/florence-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Florence city"
-  },
-  "florence-life-2": {
-    "url": "https://picsum.photos/seed/florence-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Florence city"
-  },
-  "florence-life-3": {
-    "url": "https://picsum.photos/seed/florence-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Florence city"
-  },
-  "bologna": {
-    "url": "https://picsum.photos/seed/bologna-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "bologna stadium"
-  },
-  "bologna-life-1": {
-    "url": "https://picsum.photos/seed/bologna-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bologna city"
-  },
-  "bologna-life-2": {
-    "url": "https://picsum.photos/seed/bologna-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bologna city"
-  },
-  "bologna-life-3": {
-    "url": "https://picsum.photos/seed/bologna-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Bologna city"
-  },
-  "udine": {
-    "url": "https://picsum.photos/seed/udine/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Udine city"
-  },
-  "udine-life-1": {
-    "url": "https://picsum.photos/seed/udine-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Udine city"
-  },
-  "udine-life-2": {
-    "url": "https://picsum.photos/seed/udine-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Udine city"
-  },
-  "udine-life-3": {
-    "url": "https://picsum.photos/seed/udine-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Udine city"
-  },
-  "genoa": {
-    "url": "https://picsum.photos/seed/genoa-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "genoa stadium"
-  },
-  "genoa-life-1": {
-    "url": "https://picsum.photos/seed/genoa-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Genoa city"
-  },
-  "genoa-life-2": {
-    "url": "https://picsum.photos/seed/genoa-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Genoa city"
-  },
-  "genoa-life-3": {
-    "url": "https://picsum.photos/seed/genoa-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Genoa city"
-  },
-  "cagliari": {
-    "url": "https://picsum.photos/seed/cagliari-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "cagliari stadium"
-  },
-  "cagliari-life-1": {
-    "url": "https://picsum.photos/seed/cagliari-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Cagliari city"
-  },
-  "cagliari-life-2": {
-    "url": "https://picsum.photos/seed/cagliari-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Cagliari city"
-  },
-  "cagliari-life-3": {
-    "url": "https://picsum.photos/seed/cagliari-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Cagliari city"
-  },
-  "empoli": {
-    "url": "https://picsum.photos/seed/empoli-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "empoli stadium"
-  },
-  "empoli-life-1": {
-    "url": "https://picsum.photos/seed/empoli-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Empoli city"
-  },
-  "empoli-life-2": {
-    "url": "https://picsum.photos/seed/empoli-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Empoli city"
-  },
-  "empoli-life-3": {
-    "url": "https://picsum.photos/seed/empoli-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Empoli city"
-  },
-  "verona": {
-    "url": "https://picsum.photos/seed/verona/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Verona city"
-  },
-  "verona-life-1": {
-    "url": "https://picsum.photos/seed/verona-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Verona city"
-  },
-  "verona-life-2": {
-    "url": "https://picsum.photos/seed/verona-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Verona city"
-  },
-  "verona-life-3": {
-    "url": "https://picsum.photos/seed/verona-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Verona city"
-  },
-  "parma": {
-    "url": "https://picsum.photos/seed/parma-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "parma stadium"
-  },
-  "parma-life-1": {
-    "url": "https://picsum.photos/seed/parma-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Parma city"
-  },
-  "parma-life-2": {
-    "url": "https://picsum.photos/seed/parma-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Parma city"
-  },
-  "parma-life-3": {
-    "url": "https://picsum.photos/seed/parma-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Parma city"
-  },
-  "como": {
-    "url": "https://picsum.photos/seed/como-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "como stadium"
-  },
-  "como-life-1": {
-    "url": "https://picsum.photos/seed/como-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Como city"
-  },
-  "como-life-2": {
-    "url": "https://picsum.photos/seed/como-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Como city"
-  },
-  "como-life-3": {
-    "url": "https://picsum.photos/seed/como-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Como city"
-  },
-  "reggio-emilia": {
-    "url": "https://picsum.photos/seed/reggio-emilia/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Reggio-emilia city"
-  },
-  "reggio-emilia-life-1": {
-    "url": "https://picsum.photos/seed/reggio-emilia-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Reggio-emilia city"
-  },
-  "reggio-emilia-life-2": {
-    "url": "https://picsum.photos/seed/reggio-emilia-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Reggio-emilia city"
-  },
-  "reggio-emilia-life-3": {
-    "url": "https://picsum.photos/seed/reggio-emilia-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Reggio-emilia city"
-  },
-  "pisa": {
-    "url": "https://picsum.photos/seed/pisa/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Pisa city"
-  },
-  "pisa-life-1": {
-    "url": "https://picsum.photos/seed/pisa-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Pisa city"
-  },
-  "pisa-life-2": {
-    "url": "https://picsum.photos/seed/pisa-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Pisa city"
-  },
-  "pisa-life-3": {
-    "url": "https://picsum.photos/seed/pisa-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Pisa city"
-  },
-  "la-spezia": {
-    "url": "https://picsum.photos/seed/la-spezia/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "La-spezia city"
-  },
-  "la-spezia-life-1": {
-    "url": "https://picsum.photos/seed/la-spezia-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "La-spezia city"
-  },
-  "la-spezia-life-2": {
-    "url": "https://picsum.photos/seed/la-spezia-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "La-spezia city"
-  },
-  "la-spezia-life-3": {
-    "url": "https://picsum.photos/seed/la-spezia-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "La-spezia city"
-  },
-  "monza": {
-    "url": "https://picsum.photos/seed/monza-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "monza stadium"
-  },
-  "monza-life-1": {
-    "url": "https://picsum.photos/seed/monza-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Monza city"
-  },
-  "monza-life-2": {
-    "url": "https://picsum.photos/seed/monza-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Monza city"
-  },
-  "monza-life-3": {
-    "url": "https://picsum.photos/seed/monza-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Monza city"
-  },
-  "lecce": {
-    "url": "https://picsum.photos/seed/lecce-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "lecce stadium"
-  },
-  "lecce-life-1": {
-    "url": "https://picsum.photos/seed/lecce-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Lecce city"
-  },
-  "lecce-life-2": {
-    "url": "https://picsum.photos/seed/lecce-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Lecce city"
-  },
-  "lecce-life-3": {
-    "url": "https://picsum.photos/seed/lecce-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Lecce city"
-  },
-  "venice": {
-    "url": "https://picsum.photos/seed/venice/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Venice city"
-  },
-  "venice-life-1": {
-    "url": "https://picsum.photos/seed/venice-lifestyle-1/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Venice city"
-  },
-  "venice-life-2": {
-    "url": "https://picsum.photos/seed/venice-lifestyle-2/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Venice city"
-  },
-  "venice-life-3": {
-    "url": "https://picsum.photos/seed/venice-lifestyle-3/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "Venice city"
-  },
-  "arsenal": {
+  "arsenal-stadium": {
     "url": "https://images.unsplash.com/photo-1745944791952-524910fcb00d?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxFbWlyYXRlcyUyMFN0YWRpdW0lMjBBcnNlbmFsJTIwTG9uZG9ufGVufDB8MHx8fDE3NzE4NjMwMjB8MA&ixlib=rb-4.1.0",
     "photographer": "Omar Ramadan",
     "photographerUsername": "omarvellous14",
     "altDescription": "Inside the empty emirates stadium, a football field."
   },
-  "chelsea": {
+  "chelsea-stadium": {
     "url": "https://images.unsplash.com/photo-1640013534578-fdb9eaff2f38?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxTdGFtZm9yZCUyMEJyaWRnZSUyMENoZWxzZWElMjBMb25kb258ZW58MHwwfHx8MTc3MTg2MzAyMXww&ixlib=rb-4.1.0",
     "photographer": "Virginia Marinova",
     "photographerUsername": "virginiaphotostories",
     "altDescription": "a stadium filled with lots of blue seats"
   },
-  "manchester-city": {
+  "manchester-city-stadium": {
     "url": "https://images.unsplash.com/photo-1714213450890-3f465d40ed46?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxFdGloYWQlMjBTdGFkaXVtJTIwTWFuY2hlc3RlciUyMENpdHl8ZW58MHwwfHx8MTc3MTg2MzAyMnww&ixlib=rb-4.1.0",
     "photographer": "Mylo Kaye",
     "photographerUsername": "mylokaye",
     "altDescription": "an aerial view of a soccer field in a stadium"
   },
-  "manchester-united": {
+  "manchester-united-stadium": {
     "url": "https://images.unsplash.com/photo-1649771542579-f29502b6bf20?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxPbGQlMjBUcmFmZm9yZCUyME1hbmNoZXN0ZXIlMjBVbml0ZWQlMjBzdGFkaXVtfGVufDB8MHx8fDE3NzE4NjMwMjN8MA&ixlib=rb-4.1.0",
     "photographer": "Colin + Meg",
     "photographerUsername": "colinandmeg",
     "altDescription": "a stadium with a green field and red seats"
   },
-  "tottenham-hotspur": {
+  "tottenham-hotspur-stadium": {
     "url": "https://images.unsplash.com/photo-1637519486551-d1660fe5e2b2?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxUb3R0ZW5oYW0lMjBIb3RzcHVyJTIwU3RhZGl1bSUyMExvbmRvbnxlbnwwfDB8fHwxNzcxODYzMDI0fDA&ixlib=rb-4.1.0",
     "photographer": "Omri Yamin",
     "photographerUsername": "omriz",
     "altDescription": "a group of people standing outside of a building"
   },
-  "newcastle-united": {
+  "newcastle-united-stadium": {
     "url": "https://images.unsplash.com/photo-1630330574033-de18b7772feb?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxOZXdjYXN0bGUlMjB1cG9uJTIwVHluZSUyMGNpdHl8ZW58MHwwfHx8MTc3MTg2MzAyNXww&ixlib=rb-4.1.0",
     "photographer": "Nathan Eddy",
     "photographerUsername": "nathan_eddy_creative",
     "altDescription": "city skyline during night time"
   },
-  "aston-villa": {
+  "aston-villa-stadium": {
     "url": "https://images.unsplash.com/photo-1695838709696-32cf15847bb4?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxCaXJtaW5naGFtJTIwY2l0eSUyMFVLfGVufDB8MHx8fDE3NzE4NjMwMjd8MA&ixlib=rb-4.1.0",
     "photographer": "Shoeib Abolhassani",
     "photographerUsername": "shoeibabhn",
     "altDescription": "a large building with a yellow sign on top of it"
   },
-  "west-ham-united": {
+  "west-ham-united-stadium": {
     "url": "https://images.unsplash.com/photo-1632570458650-abf854df8124?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxMb25kb24lMjBTdGFkaXVtJTIwT2x5bXBpYyUyMFBhcmslMjBXZXN0JTIwSGFtfGVufDB8MHx8fDE3NzE4NjMwMjh8MA&ixlib=rb-4.1.0",
     "photographer": "Dan Poulton",
     "photographerUsername": "danpoulton",
     "altDescription": "a stadium with a large sign on the side of it"
   },
-  "everton": {
+  "everton-stadium": {
     "url": "https://images.unsplash.com/photo-1520894554740-b5e06c0e0ce4?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxHb29kaXNvbiUyMFBhcmslMjBFdmVydG9uJTIwTGl2ZXJwb29sJTIwc3RhZGl1bXxlbnwwfDB8fHwxNzcxODYzMDMwfDA&ixlib=rb-4.1.0",
     "photographer": "Zach Rowlandson",
     "photographerUsername": "zachr1992",
     "altDescription": "people lining up on store"
   },
-  "fulham": {
+  "fulham-stadium": {
     "url": "https://images.unsplash.com/photo-1480449649358-ee14c6ee0b17?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxMb25kb24lMjBjaXR5JTIwc2t5bGluZXxlbnwwfDB8fHwxNzcxODYzMDMxfDA&ixlib=rb-4.1.0",
     "photographer": "Robert Bye",
     "photographerUsername": "robertbye",
     "altDescription": "aerial view of building"
   },
-  "celtic": {
+  "celtic-stadium": {
     "url": "https://images.unsplash.com/photo-1621519604512-85ea63c15ca2?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxHbGFzZ293JTIwY2l0eSUyMFNjb3RsYW5kfGVufDB8MHx8fDE3NzE4NjMwNDN8MA&ixlib=rb-4.1.0",
     "photographer": "Paulina B",
     "photographerUsername": "paulina_2b",
     "altDescription": "brown concrete building under blue sky during daytime"
   },
-  "rangers": {
+  "rangers-stadium": {
     "url": "https://images.unsplash.com/photo-1702977634389-91c861a40048?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxJYnJveCUyMFN0YWRpdW0lMjBSYW5nZXJzJTIwR2xhc2dvd3xlbnwwfDB8fHwxNzcxODYzMDQ1fDA&ixlib=rb-4.1.0",
     "photographer": "Winston Tjia",
     "photographerUsername": "winstontjia",
     "altDescription": "a large building with a welcome sign on it"
   },
-  "leeds-united": {
+  "leeds-united-stadium": {
     "url": "https://images.unsplash.com/photo-1600980425146-0d68673ffa20?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxFbGxhbmQlMjBSb2FkJTIwTGVlZHMlMjBVbml0ZWQlMjBzdGFkaXVtfGVufDB8MHx8fDE3NzE4NjMwMzJ8MA&ixlib=rb-4.1.0",
-    "photographer": "JUNH\u00d8",
+    "photographer": "JUNHØ",
     "photographerUsername": "junhochak",
     "altDescription": "people walking on pedestrian lane during daytime"
   },
-  "sheffield-united": {
+  "sheffield-united-stadium": {
     "url": "https://images.unsplash.com/photo-1703454468866-831af5b76d4b?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxTaGVmZmllbGQlMjBjaXR5JTIwVUt8ZW58MHwwfHx8MTc3MTg2MzAzNHww&ixlib=rb-4.1.0",
     "photographer": "BEN ELLIOTT",
     "photographerUsername": "benjaminelliott",
     "altDescription": "a view of a city with tall buildings"
   },
-  "brentford": {
+  "brentford-stadium": {
     "url": "https://images.unsplash.com/photo-1659944804457-506a7348d43e?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxMb25kb24lMjB3ZXN0JTIwc2t5bGluZSUyMFRoYW1lc3xlbnwwfDB8fHwxNzcxODYzMDM1fDA&ixlib=rb-4.1.0",
     "photographer": "Igor Sporynin",
     "photographerUsername": "igorharrier",
     "altDescription": "a body of water with a bridge and buildings in the background"
   },
-  "crystal-palace": {
+  "crystal-palace-stadium": {
     "url": "https://images.unsplash.com/photo-1736453713137-06cb937d2bbd?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxMb25kb24lMjBzb3V0aCUyMENyb3lkb24lMjBza3lsaW5lfGVufDB8MHx8fDE3NzE4NjMwMzZ8MA&ixlib=rb-4.1.0",
     "photographer": "Ashish Shekhar",
     "photographerUsername": "sheikh_shack",
     "altDescription": "A view of a city from a high rise building"
   },
-  "nottingham-forest": {
+  "nottingham-forest-stadium": {
     "url": "https://images.unsplash.com/photo-1666364554348-06526c49241d?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxOb3R0aW5naGFtJTIwY2l0eSUyMFJpdmVyJTIwVHJlbnR8ZW58MHwwfHx8MTc3MTg2MzAzOHww&ixlib=rb-4.1.0",
     "photographer": "Mia Truong",
     "photographerUsername": "miatruong",
     "altDescription": "a body of water with buildings along it"
   },
-  "wolverhampton-wanderers": {
-    "url": "https://picsum.photos/seed/wolverhampton-wanderers-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "wolverhampton-wanderers stadium"
-  },
-  "afc-bournemouth": {
+  "afc-bournemouth-stadium": {
     "url": "https://images.unsplash.com/photo-1566823740747-a9afb04d85f6?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxCb3VybmVtb3V0aCUyMGJlYWNoJTIwc2VhZnJvbnQlMjBEb3JzZXR8ZW58MHwwfHx8MTc3MTg2MzA0Mnww&ixlib=rb-4.1.0",
     "photographer": "Dami Akinbode",
     "photographerUsername": "darmiedr",
     "altDescription": "dock during daytime"
   },
-  "real-madrid": {
+  "real-madrid-stadium": {
     "url": "https://images.unsplash.com/photo-1625344050820-7b3e75adea3d?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxTYW50aWFnbyUyMEJlcm5hYiVDMyVBOXUlMjBzdGFkaXVtJTIwTWFkcmlkfGVufDB8MHx8fDE3NzE4NjMwNDV8MA&ixlib=rb-4.1.0",
-    "photographer": "Tom\u00e1s Evaristo",
+    "photographer": "Tomás Evaristo",
     "photographerUsername": "tomasevaristo",
     "altDescription": "blue and white stadium seats"
   },
-  "atletico-madrid": {
+  "atletico-madrid-stadium": {
     "url": "https://images.unsplash.com/photo-1662639894378-58595eefd88d?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxDaXZpdGFzJTIwTWV0cm9wb2xpdGFubyUyMEF0bGV0aWNvJTIwTWFkcmlkJTIwc3RhZGl1bXxlbnwwfDB8fHwxNzcxODYzMDQ3fDA&ixlib=rb-4.1.0",
     "photographer": "Joshi Milestoner",
     "photographerUsername": "joshimilestoner",
     "altDescription": "a building with a sign on it"
   },
-  "athletic-bilbao": {
+  "athletic-bilbao-stadium": {
     "url": "https://images.unsplash.com/photo-1745865797237-5dd0fabdb2a3?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxTYW4lMjBNYW1lcyUyMHN0YWRpdW0lMjBCaWxiYW98ZW58MHwwfHx8MTc3MTg2MzA0OHww&ixlib=rb-4.1.0",
     "photographer": "Josip Ivankovic",
     "photographerUsername": "piak",
     "altDescription": "The modern building has a unique, linear design."
   },
-  "real-sociedad": {
+  "real-sociedad-stadium": {
     "url": "https://images.unsplash.com/photo-1559657085-cdab765e0f29?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxTYW4lMjBTZWJhc3RpYW4lMjBjaXR5JTIwU3BhaW58ZW58MHwwfHx8MTc3MTg2MzA0OXww&ixlib=rb-4.1.0",
-    "photographer": "I\u00f1igo De la Maza",
+    "photographer": "Iñigo De la Maza",
     "photographerUsername": "idelamaza",
     "altDescription": "aerial photo of dock"
   },
-  "real-betis": {
+  "real-betis-stadium": {
     "url": "https://images.unsplash.com/photo-1687082448603-a3d7041df54e?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxFc3RhZGlvJTIwQmVuaXRvJTIwVmlsbGFtYXJpbiUyMFNldmlsbGUlMjBzdGFkaXVtfGVufDB8MHx8fDE3NzE4NjMwNTB8MA&ixlib=rb-4.1.0",
     "photographer": "Abhishek Kaginkar",
     "photographerUsername": "abhi7200",
     "altDescription": "a view of a train station from a distance"
   },
-  "sevilla": {
+  "sevilla-stadium": {
     "url": "https://images.unsplash.com/photo-1589831756592-ac5374343726?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxTZXZpbGxlJTIwY2l0eSUyMFNwYWlufGVufDB8MHx8fDE3NzE4NjMwNTF8MA&ixlib=rb-4.1.0",
     "photographer": "Henrique Ferreira",
     "photographerUsername": "rickpsd",
     "altDescription": "brown concrete building under blue sky during daytime"
   },
-  "osasuna": {
+  "osasuna-stadium": {
     "url": "https://images.unsplash.com/photo-1533551223731-024de510ab2c?ixid=M3w4NzkxMTZ8MHwxfHNlYXJjaHwxfHxQYW1wbG9uYSUyMGNpdHklMjBTcGFpbnxlbnwwfDB8fHwxNzcxODYzMDU0fDA&ixlib=rb-4.1.0",
     "photographer": "San Fermin Pamplona - Navarra",
     "photographerUsername": "sanfermin",
     "altDescription": "group of people outside the building during day time"
-  },
-  "celta-vigo": {
-    "url": "https://picsum.photos/seed/celta-vigo-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "celta-vigo stadium"
-  },
-  "mallorca": {
-    "url": "https://picsum.photos/seed/mallorca-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "mallorca stadium"
-  },
-  "rayo-vallecano": {
-    "url": "https://picsum.photos/seed/rayo-vallecano-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "rayo-vallecano stadium"
-  },
-  "alaves": {
-    "url": "https://picsum.photos/seed/alaves-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "alaves stadium"
-  },
-  "espanyol": {
-    "url": "https://picsum.photos/seed/espanyol-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "espanyol stadium"
-  },
-  "real-valladolid": {
-    "url": "https://picsum.photos/seed/real-valladolid-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "real-valladolid stadium"
-  },
-  "inter-milan": {
-    "url": "https://picsum.photos/seed/inter-milan-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "inter-milan stadium"
-  },
-  "ac-milan": {
-    "url": "https://picsum.photos/seed/ac-milan-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "ac-milan stadium"
-  },
-  "juventus": {
-    "url": "https://picsum.photos/seed/juventus-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "juventus stadium"
-  },
-  "napoli": {
-    "url": "https://picsum.photos/seed/napoli-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "napoli stadium"
-  },
-  "roma": {
-    "url": "https://picsum.photos/seed/roma-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "roma stadium"
-  },
-  "lazio": {
-    "url": "https://picsum.photos/seed/lazio-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "lazio stadium"
-  },
-  "atalanta": {
-    "url": "https://picsum.photos/seed/atalanta-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "atalanta stadium"
-  },
-  "fiorentina": {
-    "url": "https://picsum.photos/seed/fiorentina-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "fiorentina stadium"
-  },
-  "torino": {
-    "url": "https://picsum.photos/seed/torino-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "torino stadium"
-  },
-  "udinese": {
-    "url": "https://picsum.photos/seed/udinese-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "udinese stadium"
-  },
-  "hellas-verona": {
-    "url": "https://picsum.photos/seed/hellas-verona-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "hellas-verona stadium"
-  },
-  "venezia": {
-    "url": "https://picsum.photos/seed/venezia-stadium/1200/500",
-    "photographer": "",
-    "photographerUsername": "",
-    "altDescription": "venezia stadium"
   }
 }
