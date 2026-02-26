@@ -246,6 +246,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /** Tracks remaining requests from the last API response. */
 let rateLimitRemaining = 50;
+/** Set to true when we hit the rate limit — signals main() to stop and save progress. */
+let rateLimitHit = false;
 
 async function unsplashFetch(url) {
   const res = await fetch(url, {
@@ -256,12 +258,10 @@ async function unsplashFetch(url) {
   if (remaining !== null) rateLimitRemaining = parseInt(remaining, 10);
 
   if (res.status === 429) {
-    const resetHeader = res.headers.get('X-Ratelimit-Reset');
-    const waitUntil = resetHeader ? parseInt(resetHeader, 10) * 1000 : Date.now() + 3600_000;
-    const waitMs = Math.max(waitUntil - Date.now(), 0) + 5000;
-    console.warn(`  ⏳ Rate limit hit — waiting ${Math.ceil(waitMs / 60000)} min for reset...`);
-    await sleep(waitMs);
-    return unsplashFetch(url); // retry after wait
+    // Don't wait — save progress and exit so the build can complete.
+    // The next build will pick up remaining images via alreadyFetched().
+    rateLimitHit = true;
+    throw new Error('RATE_LIMIT');
   }
 
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -316,11 +316,13 @@ async function main() {
   // Fetch club stadium images first
   console.log(`Fetching Unsplash images for ${clubsToFetch.length} clubs…`);
   for (const club of clubsToFetch) {
+    if (rateLimitHit) break;
     try {
       const { key, value } = await fetchCity(club);
       results[key] = value;
       console.log(`  ✓ ${key} — Photo by ${value.photographer}`);
     } catch (err) {
+      if (rateLimitHit) break;
       // Try city fallback query
       const fallbackQuery = CLUB_CITY_FALLBACKS[club.key];
       if (fallbackQuery) {
@@ -329,10 +331,12 @@ async function main() {
           results[club.key] = value;
           console.log(`  ✓ ${club.key} (fallback) — Photo by ${value.photographer}`);
         } catch (fbErr) {
-          errors.push(club.key);
-          console.warn(`  ✗ ${club.key}: ${fbErr.message}`);
+          if (!rateLimitHit) {
+            errors.push(club.key);
+            console.warn(`  ✗ ${club.key}: ${fbErr.message}`);
+          }
         }
-        await sleep(250);
+        if (!rateLimitHit) await sleep(250);
       } else {
         errors.push(club.key);
         console.warn(`  ✗ ${club.key}: ${err.message}`);
@@ -340,13 +344,21 @@ async function main() {
     }
     // Save incrementally so progress isn't lost if interrupted
     writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
-    await sleep(250);
+    if (!rateLimitHit) await sleep(250);
+  }
+
+  if (rateLimitHit) {
+    writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
+    console.warn('\n⚠ Rate limit reached — saved progress. Re-run (or redeploy) to fetch remaining images.');
+    console.log(`Wrote ${Object.keys(results).length} images so far.`);
+    return;
   }
 
   // Fetch city images (3 per city for the match page lifestyle grid;
   // the first result is also stored under the plain city slug as the city guide hero image)
   console.log(`\nFetching Unsplash images for ${citiesToFetch.length} cities…`);
   for (const city of citiesToFetch) {
+    if (rateLimitHit) break;
     try {
       const entries = await fetchCityTriple(city);
       // Hero image for the city guide page (e.g. "london")
@@ -357,13 +369,22 @@ async function main() {
       }
       console.log(`  ✓ ${city.key} (×${entries.length}) — Photo by ${entries[0].value.photographer}`);
     } catch (err) {
-      errors.push(city.key);
-      console.warn(`  ✗ ${city.key}: ${err.message}`);
+      if (!rateLimitHit) {
+        errors.push(city.key);
+        console.warn(`  ✗ ${city.key}: ${err.message}`);
+      }
     }
     // Save incrementally
     writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
     // Stay well within Unsplash's rate limit (50 req/hr on demo keys)
-    await sleep(250);
+    if (!rateLimitHit) await sleep(250);
+  }
+
+  if (rateLimitHit) {
+    writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
+    console.warn('\n⚠ Rate limit reached — saved progress. Re-run (or redeploy) to fetch remaining images.');
+    console.log(`Wrote ${Object.keys(results).length} images so far.`);
+    return;
   }
 
   writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
