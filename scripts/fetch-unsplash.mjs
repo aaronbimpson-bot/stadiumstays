@@ -336,7 +336,7 @@ async function main() {
             console.warn(`  ✗ ${club.key}: ${fbErr.message}`);
           }
         }
-        if (!rateLimitHit) await sleep(250);
+        if (!rateLimitHit) await sleep(50);
       } else {
         errors.push(club.key);
         console.warn(`  ✗ ${club.key}: ${err.message}`);
@@ -344,7 +344,7 @@ async function main() {
     }
     // Save incrementally so progress isn't lost if interrupted
     writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
-    if (!rateLimitHit) await sleep(250);
+    if (!rateLimitHit) await sleep(50);
   }
 
   if (rateLimitHit) {
@@ -377,7 +377,7 @@ async function main() {
     // Save incrementally
     writeFileSync(OUTPUT_PATH, JSON.stringify(results, null, 2));
     // Stay well within Unsplash's rate limit (50 req/hr on demo keys)
-    if (!rateLimitHit) await sleep(250);
+    if (!rateLimitHit) await sleep(50);
   }
 
   if (rateLimitHit) {
